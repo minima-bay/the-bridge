@@ -1,0 +1,170 @@
+{
+  "manifestVersion": 1,
+  "generatedAt": "2026-08-18T19:51:15.558Z",
+  "scope": "no-funds ZK light-client and native Minima verifier research",
+  "exclusions": [
+    "upstream bare repository internals",
+    "generated .sha256 sidecars",
+    "this manifest itself"
+  ],
+  "currentFixtureEvidence": "evidence/rfc-fixture-validation-20260818T194947Z.json",
+  "currentFixtureSha256": "0x8963d393bf810c062d0e9e425550c7a80b16aae9bdf36b5072bce20165500be0",
+  "currentValidatorSha256": "0x6c46e974b4228fc9a75468403df55cf6230b742ffcfc3aaa072d3a4429728389",
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 3621,
+      "sha256": "63d93cf2000ae364f239cd17e407b72df101798b1a5e742b8163d9b9ad2bef8f"
+    },
+    {
+      "file": "feasibility-findings-2026-08-18.md",
+      "bytes": 7576,
+      "sha256": "bb8bac9dbf9eff1945500f3a1b5862e9167e16f6b3c98247b26a9ec97093649e"
+    },
+    {
+      "file": "minima-core-zk-verifier-rfc-2026-08-18.md",
+      "bytes": 13772,
+      "sha256": "32d76cb38af4cc9ef6e88f9c9f0c40ed3272eb4a2de201f58c98dd1f113ee841"
+    },
+    {
+      "file": "bridge-public-inputs-v1.md",
+      "bytes": 21589,
+      "sha256": "81d82e169fbc9dc25cec5b5753ef25af7675bfa10276f1d039d219f0660ac4c7"
+    },
+    {
+      "file": "reserve-covenant-transition-spec-v1.md",
+      "bytes": 16154,
+      "sha256": "d7ecb2ae2fbbe7d39c0b1bccaf8db2fe4295f6ffea5d152e3c9e243b0cfdffde"
+    },
+    {
+      "file": "proof-system-selection-matrix.md",
+      "bytes": 5643,
+      "sha256": "b3665a5a273165d7fac669a5856725010a499b36884e874b88a6a3639c500f2f"
+    },
+    {
+      "file": "adversarial-verification-plan.md",
+      "bytes": 8215,
+      "sha256": "aba5c4a92ef717a260850995df8e54592c8c416fdfe3dfac9bffec7da947e6b6"
+    },
+    {
+      "file": "open-decisions.md",
+      "bytes": 2029,
+      "sha256": "db22cfa9ddd2afe024cedacb1808fe5ea5e727a88740f6f989298cb54b8148e6"
+    },
+    {
+      "file": "fixtures/bridge-public-inputs-v1.json",
+      "bytes": 5584,
+      "sha256": "8963d393bf810c062d0e9e425550c7a80b16aae9bdf36b5072bce20165500be0"
+    },
+    {
+      "file": "validate-rfc-fixtures.mjs",
+      "bytes": 25723,
+      "sha256": "6c46e974b4228fc9a75468403df55cf6230b742ffcfc3aaa072d3a4429728389"
+    },
+    {
+      "file": "minima-runtime-probe.mjs",
+      "bytes": 4175,
+      "sha256": "7a7b759ef4e9fd1254bfb8c656d9b0cf7ae4bbaa44d8dc3b70b0a959de6b1cfd"
+    },
+    {
+      "file": "minima-kernel-probe.mjs",
+      "bytes": 5791,
+      "sha256": "dcff4b58b91d901b41fd4672fd0130a5b64c8d4cd8c1e613ab00b58d94a11bc8"
+    },
+    {
+      "file": "winterfell-sha3-instrumentation-notes.md",
+      "bytes": 1995,
+      "sha256": "9c14fe8850811678ccc153e663c4c0134daee7eefd081747931a458439a02fb2"
+    },
+    {
+      "file": "evidence/README.md",
+      "bytes": 602,
+      "sha256": "4b6e688ec55c60fe4738ea08f9e32ddb0424ddf4335b5308120c8e4edbe67559"
+    },
+    {
+      "file": "evidence/minima-kernel-probe-20260818T174142Z.json",
+      "bytes": 3478916,
+      "sha256": "7aec2d02bef2f1fc37f683c4ca9c5abb95cd1f616838c7bf9d51ac2e9f2588b2"
+    },
+    {
+      "file": "evidence/minima-kernel-probe-20260818T174231Z.json",
+      "bytes": 3484183,
+      "sha256": "8d8ff743ab75dc62c1cb6b2e64e6b8548d2772f76d14f9b5791f7a39211a519c"
+    },
+    {
+      "file": "evidence/minima-runtime-probe-20260818T165850Z.json",
+      "bytes": 205579,
+      "sha256": "8d96dce2502d761ea3c82122ed3f80ce0f1e2059004f9766cd3b81a96df1ff76"
+    },
+    {
+      "file": "evidence/rfc-fixture-validation-20260818T190029Z.json",
+      "bytes": 3647,
+      "sha256": "ff18ca07d3d3acde0e3e9e3039942351b147121ff1756baf5e7c5421fc90ea85"
+    },
+    {
+      "file": "evidence/rfc-fixture-validation-20260818T190149Z.json",
+      "bytes": 3844,
+      "sha256": "33037be05278eeea1c13f9dd9b87d8f13c54b582b55faee9ec7351ad459b41b8"
+    },
+    {
+      "file": "evidence/rfc-fixture-validation-20260818T190317Z.json",
+      "bytes": 3844,
+      "sha256": "e415c5800eb8f605d58703a2b028a805fc7626d9ef3ba8fcc761524de37d47dc"
+    },
+    {
+      "file": "evidence/rfc-fixture-validation-20260818T190344Z.json",
+      "bytes": 3703,
+      "sha256": "ebe00b83e730688dfef322341ff34094d926e73f6a812650c0413d1dd20f369c"
+    },
+    {
+      "file": "evidence/rfc-fixture-validation-20260818T191821Z.json",
+      "bytes": 6000,
+      "sha256": "a8d0535481a031f66569165957f8d354e4ed6fa0d7cccb1ad1f16e70742ff78e"
+    },
+    {
+      "file": "evidence/rfc-fixture-validation-20260818T191925Z.json",
+      "bytes": 6000,
+      "sha256": "0833f0d5a53dcf0a1470db1d4bf80d373dc59acd3549eee169d6118895ea81a7"
+    },
+    {
+      "file": "evidence/rfc-fixture-validation-20260818T192002Z.json",
+      "bytes": 8609,
+      "sha256": "d97bf9cd594e13c194727c7592f24d17c071a7940fbc57cd8ce08c999e249f5a"
+    },
+    {
+      "file": "evidence/rfc-fixture-validation-20260818T193255Z.json",
+      "bytes": 10247,
+      "sha256": "e05fbfe45e83412210ec63af96cf9d128e1c4383df456e70c9084661b1c40061"
+    },
+    {
+      "file": "evidence/rfc-fixture-validation-20260818T194129Z.json",
+      "bytes": 10702,
+      "sha256": "9bf370fb445d26d312a137a886e8030ed5c64d8c4ac7086ae583e52b2edec000"
+    },
+    {
+      "file": "evidence/rfc-fixture-validation-20260818T194623Z.json",
+      "bytes": 11150,
+      "sha256": "8f20720e6e082d02c927510cd666a8d1d4aa4b4eae69075e08849000a68ed453"
+    },
+    {
+      "file": "evidence/rfc-fixture-validation-20260818T194947Z.json",
+      "bytes": 11380,
+      "sha256": "de2a75410735f3547aa448c502c48d4c2185f0f534a304704d601d820d28c155"
+    },
+    {
+      "file": "evidence/winterfell-sha3-fib1024-20260818.bin",
+      "bytes": 22813,
+      "sha256": "e95723134c500397f7dab401c73049ad6531ae49ae4b58ddfd5eeed84d69a883"
+    },
+    {
+      "file": "evidence/winterfell-sha3-fib1024-default-instrumented-20260818.bin",
+      "bytes": 22813,
+      "sha256": "e95723134c500397f7dab401c73049ad6531ae49ae4b58ddfd5eeed84d69a883"
+    },
+    {
+      "file": "evidence/winterfell-sha3-fib1024-q64e2-instrumented-20260818.bin",
+      "bytes": 56934,
+      "sha256": "a674f9659af879417309bdcbd9348509b85441f2c4d92bbabd8825e0315eec9a"
+    }
+  ]
+}

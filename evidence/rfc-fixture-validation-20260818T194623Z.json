@@ -1,0 +1,355 @@
+{
+  "evidenceType": "schema-fixture-validation-only",
+  "createdAt": "2026-08-18T19:46:23.199Z",
+  "nodeVersion": "v25.8.0",
+  "fixture": "fixtures/bridge-public-inputs-v1.json",
+  "fixtureSha256": "0x42fa6f96cc5e2ca0f81e29ee208fd3188d55bcd9f13aa52a06265ca6fc97295e",
+  "validatorSha256": "0x1505fe899b2dc1d104abb7818ed29fab62f426388d8c5ffbc9c7887897826ea4",
+  "schemaEncodedBytes": 1005,
+  "basePublicValuesHash": "0xf16c8c20d99811e17278bfe0bee6de6746e504840b66a1a4297a47984d63861d",
+  "recipientMutationChangesHash": true,
+  "results": [
+    {
+      "name": "valid inbound",
+      "expected": "accept",
+      "observed": "accept",
+      "detail": {
+        "encodedBytes": 1005,
+        "publicValuesHash": "0xf16c8c20d99811e17278bfe0bee6de6746e504840b66a1a4297a47984d63861d"
+      }
+    },
+    {
+      "name": "valid client update",
+      "expected": "accept",
+      "observed": "accept",
+      "detail": {
+        "encodedBytes": 1005,
+        "publicValuesHash": "0xbbf581fc06b84cdcbeeedbb004cb376f3a5d2ac37ae9dc44c2685b2353b842e7"
+      }
+    },
+    {
+      "name": "valid payout acknowledgement",
+      "expected": "accept",
+      "observed": "accept",
+      "detail": {
+        "encodedBytes": 1005,
+        "publicValuesHash": "0xce18b837f541266a192870f936752ed055d3d2983e6dc0e7da805dad610e8ff4"
+      }
+    },
+    {
+      "name": "valid same-slot payout acknowledgement",
+      "expected": "accept",
+      "observed": "accept",
+      "detail": {
+        "encodedBytes": 1005,
+        "publicValuesHash": "0x647191e8f188df27967a7d1c24892843f9423d127d2f124ca748c6cf6634b952"
+      }
+    },
+    {
+      "name": "valid two-payout batch at full utilization",
+      "expected": "accept",
+      "observed": "accept",
+      "detail": {
+        "encodedBytes": 1005,
+        "publicValuesHash": "0xbcaaa53b2a582fc74572d909677032f6a2120edd3705483791ba8982d4c18de4"
+      }
+    },
+    {
+      "name": "valid second deposit at same finalized slot",
+      "expected": "accept",
+      "observed": "accept",
+      "detail": {
+        "encodedBytes": 1005,
+        "publicValuesHash": "0xde720b6db6b1d886295b2f68eb7fe04609f12d97bcbeba726eaf8651468ff9ff"
+      }
+    },
+    {
+      "name": "wrong source chain",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "sourceChainId binding: expected 1, got 2"
+      }
+    },
+    {
+      "name": "wrong destination network",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "destinationNetworkId binding: expected 0x2222222222222222222222222222222222222222222222222222222222222222, got 0x2525252525252525252525252525252525252525252525252525252525252525"
+      }
+    },
+    {
+      "name": "wrong proof system",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "proofSystemId binding: expected 1, got 2"
+      }
+    },
+    {
+      "name": "wrong verifier version",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "verifierVersion binding: expected 1, got 2"
+      }
+    },
+    {
+      "name": "wrong vault",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "vaultAddress binding: expected 0x4444444444444444444444444444444444444444, got 0x4545454545454545454545454545454545454545"
+      }
+    },
+    {
+      "name": "wrong vault code",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "vaultCodeHash binding: expected 0x7777777777777777777777777777777777777777777777777777777777777777, got 0x2222222222222222222222222222222222222222222222222222222222222222"
+      }
+    },
+    {
+      "name": "wrong vault implementation",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "vaultImplementationHash binding: expected 0x0000000000000000000000000000000000000000000000000000000000000000, got 0x2626262626262626262626262626262626262626262626262626262626262626"
+      }
+    },
+    {
+      "name": "wrong vault admin state",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "vaultAdminStateHash binding: expected 0x0000000000000000000000000000000000000000000000000000000000000000, got 0x2727272727272727272727272727272727272727272727272727272727272727"
+      }
+    },
+    {
+      "name": "wrong token code",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "tokenCodeHash binding: expected 0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa, got 0x2828282828282828282828282828282828282828282828282828282828282828"
+      }
+    },
+    {
+      "name": "wrong token semantics",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "tokenStateSemanticsHash binding: expected 0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb, got 0x2323232323232323232323232323232323232323232323232323232323232323"
+      }
+    },
+    {
+      "name": "wrong recipient data",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "recipientAddressData binding: expected 0x1515151515151515151515151515151515151515151515151515151515151515, got 0x1818181818181818181818181818181818181818181818181818181818181818"
+      }
+    },
+    {
+      "name": "wrong amount transition",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "inbound decimal conversion mismatch"
+      }
+    },
+    {
+      "name": "wrong decimal scale",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "decimalScale binding: expected 1, got 100"
+      }
+    },
+    {
+      "name": "wrong program",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "programHash binding: expected 0x5555555555555555555555555555555555555555555555555555555555555555, got 0x2020202020202020202020202020202020202020202020202020202020202020"
+      }
+    },
+    {
+      "name": "wrong verification key",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "verificationKeyHash binding: expected 0x6666666666666666666666666666666666666666666666666666666666666666, got 0x1919191919191919191919191919191919191919191919191919191919191919"
+      }
+    },
+    {
+      "name": "cross-direction replay",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "direction: expected 1, got 2"
+      }
+    },
+    {
+      "name": "wrong configuration epoch",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "configurationEpoch binding: expected 1, got 2"
+      }
+    },
+    {
+      "name": "backward client slot",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "inbound release: finalized slot moved backwards"
+      }
+    },
+    {
+      "name": "same-slot release changes Ethereum state",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "same-slot release: Ethereum client state changed"
+      }
+    },
+    {
+      "name": "expired equal-head release",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "same-slot release: authenticated Ethereum head is stale"
+      }
+    },
+    {
+      "name": "advancing proof has stale acceptance block",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "advancing release: accepted Minima block outside posting-lag bound"
+      }
+    },
+    {
+      "name": "advancing old Ethereum head ratchet",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "Ethereum execution timestamp exceeds source-age bound"
+      }
+    },
+    {
+      "name": "Ethereum head exceeds future skew",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "Ethereum execution timestamp exceeds future-skew bound"
+      }
+    },
+    {
+      "name": "issued plus pending above vault balance",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "issued plus pending liability exceeds proof-bound vault balance"
+      }
+    },
+    {
+      "name": "record ID not bound into message",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "messageId derivation: expected 0xf97eaec968c17f94e0316467c5d970cb728f526e358132258c8362903c692dcd, got 0x13ab126aa8afd82503aa5571dc2b4a66bc01275f6a048111a7d1ba5b447f6c85"
+      }
+    },
+    {
+      "name": "client update changes liability",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "client update: issued liability changed"
+      }
+    },
+    {
+      "name": "client update carries message",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "client update: messageId must be zero"
+      }
+    },
+    {
+      "name": "client update creates insolvency",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "client update: issued plus pending exceeds vault balance"
+      }
+    },
+    {
+      "name": "inbound changes payout cursor",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "inbound payout cursor changed"
+      }
+    },
+    {
+      "name": "payout pending underflow",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "payout pending-redemption transition mismatch"
+      }
+    },
+    {
+      "name": "payout cumulative delta mismatch",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "payout aggregate does not equal cumulative delta"
+      }
+    },
+    {
+      "name": "valid redemption commitment",
+      "expected": "accept",
+      "observed": "accept",
+      "detail": {
+        "derivedRedemptionId": "0x3b49f569c96dfec7caabd926d2455f82312551701b3721bdd65fdc4c17b550fd"
+      }
+    },
+    {
+      "name": "redemption amount mutation",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "derivedRedemptionId": "0x801211dff38ade079cd52e8795715eabd4d720b79bd8acf82d418356732cbfda"
+      }
+    },
+    {
+      "name": "redemption recipient mutation",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "derivedRedemptionId": "0xa4536e49d62a4bc864439731ea60703f18c3ebd6f6316aa9a7a1a1ef9c4fd174"
+      }
+    },
+    {
+      "name": "eight-decimal outbound dust",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "outbound amount contains non-redeemable decimal dust"
+      }
+    }
+  ],
+  "passed": true,
+  "limitations": [
+    "No ZK proof was generated or verified.",
+    "No client-state or reserve-state commitment implementation was executed.",
+    "No Minima covenant was parsed, signed, posted or mined.",
+    "No Ethereum finality, receipt, vault or token state was authenticated.",
+    "A local schema validator is not consensus evidence."
+  ]
+}

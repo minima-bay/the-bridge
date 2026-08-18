@@ -1,0 +1,185 @@
+{
+  "evidenceType": "schema-fixture-validation-only",
+  "createdAt": "2026-08-18T19:19:25.518Z",
+  "nodeVersion": "v25.8.0",
+  "fixture": "fixtures/bridge-public-inputs-v1.json",
+  "fixtureSha256": "0x67812d97d42e53e505265e6543e56ee055bc2b1c12b70689a6e4552d11e7611e",
+  "validatorSha256": "0x19efa4f1574140e86eaa5e98558ea6714cd24221453ceb2e242c75dfe49968cf",
+  "schemaEncodedBytes": 945,
+  "basePublicValuesHash": "0x8e2db80a5290ce868b7a85307126d8b837d416811e505e1b3c31df1b6e92dc79",
+  "recipientMutationChangesHash": true,
+  "results": [
+    {
+      "name": "valid inbound",
+      "expected": "accept",
+      "observed": "accept",
+      "detail": {
+        "encodedBytes": 945,
+        "publicValuesHash": "0x8e2db80a5290ce868b7a85307126d8b837d416811e505e1b3c31df1b6e92dc79"
+      }
+    },
+    {
+      "name": "valid client update",
+      "expected": "accept",
+      "observed": "accept",
+      "detail": {
+        "encodedBytes": 945,
+        "publicValuesHash": "0x151a125524a451accb7b49f978be77751bf66d8b431cecfc4cc99a09700eed37"
+      }
+    },
+    {
+      "name": "valid payout acknowledgement",
+      "expected": "accept",
+      "observed": "accept",
+      "detail": {
+        "encodedBytes": 945,
+        "publicValuesHash": "0x68b74cd147b3167cfc50f033dfe34dac574fd5d1ddcc9ce86cdff3fff6df2cc1"
+      }
+    },
+    {
+      "name": "valid second deposit at same finalized slot",
+      "expected": "accept",
+      "observed": "accept",
+      "detail": {
+        "encodedBytes": 945,
+        "publicValuesHash": "0x4037cd4c068b1da935dc2119c6fbd9f8ff01bfd005dc942dfedc8d118f9c9841"
+      }
+    },
+    {
+      "name": "wrong source chain",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "sourceChainId binding: expected 1, got 2"
+      }
+    },
+    {
+      "name": "wrong proof system",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "proofSystemId binding: expected 1, got 2"
+      }
+    },
+    {
+      "name": "wrong verifier version",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "verifierVersion binding: expected 1, got 2"
+      }
+    },
+    {
+      "name": "wrong vault",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "vaultAddress binding: expected 0x4444444444444444444444444444444444444444, got 0x4545454545454545454545454545454545454545"
+      }
+    },
+    {
+      "name": "wrong vault code",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "vaultCodeHash binding: expected 0x7777777777777777777777777777777777777777777777777777777777777777, got 0x2222222222222222222222222222222222222222222222222222222222222222"
+      }
+    },
+    {
+      "name": "wrong token semantics",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "tokenStateSemanticsHash binding: expected 0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb, got 0x2323232323232323232323232323232323232323232323232323232323232323"
+      }
+    },
+    {
+      "name": "wrong recipient data",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "recipientAddressData binding: expected 0x1515151515151515151515151515151515151515151515151515151515151515, got 0x1818181818181818181818181818181818181818181818181818181818181818"
+      }
+    },
+    {
+      "name": "wrong amount transition",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "inbound decimal conversion mismatch"
+      }
+    },
+    {
+      "name": "wrong program",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "programHash binding: expected 0x5555555555555555555555555555555555555555555555555555555555555555, got 0x2020202020202020202020202020202020202020202020202020202020202020"
+      }
+    },
+    {
+      "name": "wrong verification key",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "verificationKeyHash binding: expected 0x6666666666666666666666666666666666666666666666666666666666666666, got 0x1919191919191919191919191919191919191919191919191919191919191919"
+      }
+    },
+    {
+      "name": "cross-direction replay",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "direction: expected 1, got 2"
+      }
+    },
+    {
+      "name": "backward client slot",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "inbound release: finalized slot moved backwards"
+      }
+    },
+    {
+      "name": "issued plus pending above vault balance",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "issued plus pending liability exceeds proof-bound vault balance"
+      }
+    },
+    {
+      "name": "record ID not bound into message",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "messageId derivation: expected 0xf97eaec968c17f94e0316467c5d970cb728f526e358132258c8362903c692dcd, got 0x13ab126aa8afd82503aa5571dc2b4a66bc01275f6a048111a7d1ba5b447f6c85"
+      }
+    },
+    {
+      "name": "client update changes liability",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "client update: issued liability changed"
+      }
+    },
+    {
+      "name": "eight-decimal outbound dust",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "outbound amount contains non-redeemable decimal dust"
+      }
+    }
+  ],
+  "passed": true,
+  "limitations": [
+    "No ZK proof was generated or verified.",
+    "No client-state or reserve-state commitment implementation was executed.",
+    "No Minima covenant was parsed, signed, posted or mined.",
+    "No Ethereum finality, receipt, vault or token state was authenticated.",
+    "A local schema validator is not consensus evidence."
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "evidenceType": "schema-fixture-validation-only",
+  "createdAt": "2026-08-18T19:03:44.361Z",
+  "nodeVersion": "v25.8.0",
+  "fixture": "fixtures/bridge-public-inputs-v1.json",
+  "fixtureSha256": "0x4ea6c86c2cad7f43fad1590b1158232845fd0e1b0a1a7ee98c400a478ca24eea",
+  "validatorSha256": "0x1ad52a1baf08f71d59c6a8eef47d16a112f4502a6d1491e2b2de235347402866",
+  "schemaEncodedBytes": 913,
+  "basePublicValuesHash": "0x71d66ffa07675981de6d053ba513578dcb31ffb4d16ec1ea6051f76d3e6f0610",
+  "recipientMutationChangesHash": true,
+  "results": [
+    {
+      "name": "valid inbound",
+      "expected": "accept",
+      "observed": "accept",
+      "detail": {
+        "encodedBytes": 913,
+        "publicValuesHash": "0x71d66ffa07675981de6d053ba513578dcb31ffb4d16ec1ea6051f76d3e6f0610"
+      }
+    },
+    {
+      "name": "wrong source chain",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "sourceChainId binding: expected 1, got 2"
+      }
+    },
+    {
+      "name": "wrong vault",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "vaultAddress binding: expected 0x4444444444444444444444444444444444444444, got 0x4545454545454545454545454545454545454545"
+      }
+    },
+    {
+      "name": "wrong recipient binding",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "recipientCommitment binding: expected 0x1515151515151515151515151515151515151515151515151515151515151515, got 0x1818181818181818181818181818181818181818181818181818181818181818"
+      }
+    },
+    {
+      "name": "wrong amount transition",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "inbound decimal conversion mismatch"
+      }
+    },
+    {
+      "name": "wrong program",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "programHash binding: expected 0x5555555555555555555555555555555555555555555555555555555555555555, got 0x2020202020202020202020202020202020202020202020202020202020202020"
+      }
+    },
+    {
+      "name": "wrong verification key",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "verificationKeyHash binding: expected 0x6666666666666666666666666666666666666666666666666666666666666666, got 0x1919191919191919191919191919191919191919191919191919191919191919"
+      }
+    },
+    {
+      "name": "cross-direction replay",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "direction: expected 1, got 2"
+      }
+    },
+    {
+      "name": "stale client slot",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "newFinalizedSlot: must advance"
+      }
+    },
+    {
+      "name": "liability above vault balance",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "new liability exceeds proof-bound vault balance"
+      }
+    },
+    {
+      "name": "nonce gap",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "laneNonce: expected exactly priorLaneNonce + 1 for this fixture policy"
+      }
+    },
+    {
+      "name": "eight-decimal outbound dust",
+      "expected": "reject",
+      "observed": "reject",
+      "detail": {
+        "error": "outbound amount contains non-redeemable decimal dust"
+      }
+    }
+  ],
+  "passed": true,
+  "limitations": [
+    "No ZK proof was generated or verified.",
+    "No Minima covenant was parsed, signed, posted or mined.",
+    "No Ethereum finality, receipt, vault or token state was authenticated.",
+    "A local schema validator is not consensus evidence."
+  ]
+}
