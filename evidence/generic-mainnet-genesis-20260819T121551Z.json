@@ -1,0 +1,82 @@
+{
+  "schema": "generic-bridge-mainnet-genesis-evidence/v1",
+  "capturedAt": "2026-08-19T12:15:51Z",
+  "authorizedBy": [
+    "D-USDTM-020",
+    "D-USDTM-021"
+  ],
+  "minima": {
+    "network": "mainnet",
+    "coreVersion": "1.1.2.6",
+    "coreJarSha256": "e8e8b20356d4a688b48d77550fbac2c141107c292af3d9de8ffeb84b3ff8a535",
+    "domain": "0x7AA6D7A6BD1F75D2E50B21B7036FC6A2206193BCAF64BB86367842C1A23E4F08"
+  },
+  "committee": {
+    "threshold": 5,
+    "members": 7,
+    "root": "0xD2D97FE239F65977DD867DEE7D2535DC01BA06ECBFC6F02620383D417E9188F2",
+    "singleControllerFixture": true,
+    "decentralizationEvidence": false
+  },
+  "lanes": [
+    {
+      "name": "USDTm",
+      "valuelessTestToken": true,
+      "bridgeTokenId": "0xDC9CCD739C3C6AE2C33A6E7E21D0AFA98323D7161FDB41F22F18B476C43D0869",
+      "controlTokenId": "0xE36572F874E17273EF463426D7D095803FA84251A79FFE0FBD5D70E1C443F14E",
+      "covenantAddress": "0x43061D1B6E0AABFBE595EE690E89A25FE889C18C6CDF862DEBA951FB4EEAA58F",
+      "scriptSha256": "0f84beed6ccfc8c1f220b5f94b6527f0fd24139f15345509cebff6a9e518e6a1",
+      "transactionId": "0x932C3BF9C64DA28CDA1AEFE7FD46B53341C0A6821A26D46FF312353394374A10",
+      "minedTxPoW": "0x000026F453A1E9C85BCB27D8BCAD6D4E8F03C96166C0F45596193FA32D706348",
+      "createdBlock": "2269336",
+      "controlCoinId": "0xF07FE59C4B59AE993D1F03E5D105695E733FC482C08AA8827C8B1BD84AEC681E",
+      "reserveCoinId": "0x8EACA0B7F838DBF04758FEFB13260EDCFFCD884C629C85E938A8539236270DD6",
+      "controlTokenAmount": "1",
+      "reserveTokenAmount": "1000001",
+      "controlStatePorts": 40,
+      "reserveStatePorts": 0,
+      "genesisStateExact": true
+    },
+    {
+      "name": "ETHm",
+      "valuelessTestToken": true,
+      "bridgeTokenId": "0x3BB3FC4C84DA5B2F073BEEB350E95D5F78A9D471BE038DCE0297898ACE4EDD10",
+      "controlTokenId": "0x86928B5B76DB425886931C946FF3889C78777864F10391F0F08872EDE106DB0C",
+      "covenantAddress": "0xFBCC294A827D6F30A1F8E1A42E121162D447D6307F05BE1D162B4D69B9A2F7D7",
+      "scriptSha256": "558919db7038675a7a9a1f24c09a09dda1d668f74c28d8471e5d60c7600188f7",
+      "transactionId": "0xBA9526432A4D89D533EB08B21E368C8A11AF290773A5C1FC91043F229758D7EE",
+      "minedTxPoW": "0x0000169BB1C4FA93445BF1C11F90C7A36CFB1659DC1986CF427CEDA4F501458B",
+      "createdBlock": "2269338",
+      "controlCoinId": "0x10236A6A0A3AEDBFC1A923993FB62B8D2E9710A83E32A5316DE0D4A1B3DCF7B9",
+      "reserveCoinId": "0xCEAB55CD2EA44DDDC1A537A5E2072A579585A185DDBC02587E3EAD19C09E8133",
+      "controlTokenAmount": "1",
+      "reserveTokenAmount": "11",
+      "controlStatePorts": 40,
+      "reserveStatePorts": 0,
+      "genesisStateExact": true
+    }
+  ],
+  "fundingReturn": {
+    "transactionId": "0x3F72F5F4AD56A02B70F23FA1A61CF732F7825E892005ED08216886637E2D60C5",
+    "minedTxPoW": "0x0000353D65DA255AF7E1470FA816ADF83D8CF9CC0AEC8F06DB1A17380026C001",
+    "createdBlock": "2269339",
+    "coinId": "0xDBEA64DED27AD9FCFCF7C3C1D4815C63842688C588E783B7F751FD24970F84D3",
+    "address": "0x846A660E08EAB006945172218A613D91308C0F3D1398E94350DAD89FC245F321",
+    "amount": "0.09999999999999999999999988999998999998999998",
+    "burn": "0",
+    "issuerNonzeroBalanceEntriesAfterConfirmation": 0,
+    "issuerSendableCoinsAfterConfirmation": 0
+  },
+  "assertions": {
+    "bothGenesisTransactionsMined": true,
+    "bothControlCoinsCarryExactlyFortyStatePorts": true,
+    "bothReserveCoinsCarryNoState": true,
+    "allGenesisStateValuesMatchMainnetLanes": true,
+    "allControlAndReserveTokenAmountsExact": true,
+    "bothCovenantsVisibleFromIndependentSignerNode": true,
+    "allRemainingMinimaReturnedToPinnedInputAddress": true,
+    "issuerRetired": true
+  },
+  "phaseGatePassed": false,
+  "remainingGate": "A real 5-of-7 signed covenant transition must pass txncheck, mine on mainnet, and reproduce the exact successor state and output shape. The seven test keys are controlled by one fixture node and therefore do not prove decentralized operation. Synthetic Ethereum facts do not prove source-chain authenticity."
+}

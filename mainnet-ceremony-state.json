@@ -1,0 +1,150 @@
+{
+  "schema": "generic-bridge-mainnet-ceremony-state/v1",
+  "status": "genesis-confirmed-issuer-retired-p7-live-refuted",
+  "authorizedBy": "D-USDTM-020,D-USDTM-021",
+  "node": {
+    "name": "USDTmIssuer",
+    "basePort": 9601,
+    "rpcPort": 9605,
+    "version": "1.1.2.6",
+    "jarSha256": "e8e8b20356d4a688b48d77550fbac2c141107c292af3d9de8ffeb84b3ff8a535",
+    "issuerAddress": "0x80C66F196712E3CF3D1FEEAC70C5CFE92BE371BDF85DF5D424B7B73157C8A2EE",
+    "issuerMiniAddress": "MxG0840ZPNHWPZWSF7JQ7VEYHZCBJV95FHN3FFZBNQT895NMSZYFW52TRQ1AY60",
+    "fundingReturnAddress": "0x846A660E08EAB006945172218A613D91308C0F3D1398E94350DAD89FC245F321",
+    "seedCopies": 1,
+    "retired": true,
+    "retiredReason": "All four token coins were consumed into the two lane genesis transactions and every remaining Minima atom was returned to the pinned funding-input address. This one-use issuer must never be funded or reused."
+  },
+  "preparedAt": "2026-08-19T11:19:39Z",
+  "dryRun": {
+    "block": "2269276",
+    "mempoolBefore": 0,
+    "mempoolAfter": 0,
+    "USDTm": "No Minima Coins available!",
+    "ETHm": "No Minima Coins available!"
+  },
+  "genesis": {
+    "USDTm": {
+      "transactionId": "0x932C3BF9C64DA28CDA1AEFE7FD46B53341C0A6821A26D46FF312353394374A10",
+      "minedTxPoW": "0x000026F453A1E9C85BCB27D8BCAD6D4E8F03C96166C0F45596193FA32D706348",
+      "createdBlock": "2269336",
+      "covenantAddress": "0x43061D1B6E0AABFBE595EE690E89A25FE889C18C6CDF862DEBA951FB4EEAA58F",
+      "controlCoinId": "0xF07FE59C4B59AE993D1F03E5D105695E733FC482C08AA8827C8B1BD84AEC681E",
+      "reserveCoinId": "0x8EACA0B7F838DBF04758FEFB13260EDCFFCD884C629C85E938A8539236270DD6",
+      "controlTokenAmount": "1",
+      "reserveTokenAmount": "1000001",
+      "controlStatePorts": 40,
+      "reserveStatePorts": 0,
+      "genesisStateExact": true
+    },
+    "ETHm": {
+      "transactionId": "0xBA9526432A4D89D533EB08B21E368C8A11AF290773A5C1FC91043F229758D7EE",
+      "minedTxPoW": "0x0000169BB1C4FA93445BF1C11F90C7A36CFB1659DC1986CF427CEDA4F501458B",
+      "createdBlock": "2269338",
+      "covenantAddress": "0xFBCC294A827D6F30A1F8E1A42E121162D447D6307F05BE1D162B4D69B9A2F7D7",
+      "controlCoinId": "0x10236A6A0A3AEDBFC1A923993FB62B8D2E9710A83E32A5316DE0D4A1B3DCF7B9",
+      "reserveCoinId": "0xCEAB55CD2EA44DDDC1A537A5E2072A579585A185DDBC02587E3EAD19C09E8133",
+      "controlTokenAmount": "1",
+      "reserveTokenAmount": "11",
+      "controlStatePorts": 40,
+      "reserveStatePorts": 0,
+      "genesisStateExact": true
+    }
+  },
+  "fundingReturn": {
+    "transactionId": "0x3F72F5F4AD56A02B70F23FA1A61CF732F7825E892005ED08216886637E2D60C5",
+    "minedTxPoW": "0x0000353D65DA255AF7E1470FA816ADF83D8CF9CC0AEC8F06DB1A17380026C001",
+    "createdBlock": "2269339",
+    "coinId": "0xDBEA64DED27AD9FCFCF7C3C1D4815C63842688C588E783B7F751FD24970F84D3",
+    "address": "0x846A660E08EAB006945172218A613D91308C0F3D1398E94350DAD89FC245F321",
+    "amount": "0.09999999999999999999999988999998999998999998",
+    "tokenId": "0x00",
+    "burn": "0",
+    "issuerNonzeroBalanceEntriesAfterConfirmation": 0,
+    "issuerSendableCoinsAfterConfirmation": 0
+  },
+  "liveTransitionAttempts": [
+    {
+      "lane": "USDTm",
+      "candidate": "deployed-v1",
+      "transactionId": "0xA26C2F308749DBB513ADE421460C042C45B166C0EF845831B94B50E4E313F5BC",
+      "provisionalTxPoW": "0x0C241ACD530029EB47562E01669F30969CBA0A4C676AC636B0FC938591368BA9",
+      "depositId": "0xC180442D88F299A118FE0B73D0F462C47B5B1E188CBACF4534F4235E6DB574D7",
+      "constructionBlock": "2269351",
+      "signatureCount": 5,
+      "initialTxncheckPassed": true,
+      "mined": false,
+      "mempoolAfterHeightAdvanced": 0,
+      "inputsRemainUnspent": true,
+      "failure": "STATE(17) EQ @BLOCK became false after mempool admission and before inclusion. The exact-height rule is an operational mineability defect."
+    }
+  ],
+  "candidateV2": {
+    "configuration": "mainnet-lanes-v2-candidate.json",
+    "fix": "Advancing-head port 17 is monotonic, not future, and no more than port 18 blocks behind @BLOCK; exact equality is removed.",
+    "addressesAreProvisional": true,
+    "requiresFreshPurposeCreatedTokenAndControlIds": true,
+    "offlineSyntheticValidationPassed": true,
+    "hostileRereviewPassed": true,
+    "hostileRereviewEvidence": "evidence/generic-p7-v2-hostile-rereview-20260819T124647Z.json",
+    "assertionCount": 70,
+    "hostileChecksPerLane": 66,
+    "mainnetAuthorized": true,
+    "mainnetAuthorization": "D-USDTM-022",
+    "mainnetDeployed": false
+  },
+  "tokens": {
+    "USDTm": {
+      "decimals": 6,
+      "fixedSupply": "1000001",
+      "fixedSupplyAtoms": "1000001000000",
+      "capAtoms": "999999999999",
+      "tokenLevelScript": "RETURN TRUE",
+      "mintTxPoW": "0xDF0D8AE7D9B533F481D92DA5F2F1ACD8544B38A37C13274A57883DAA7A0971D9",
+      "mintTokenCoin": "0x01B47319C9D0E2B53177534E251D140921F3E1AF97F847C346118C4EDAF7722C",
+      "provisionalTokenId": "0x404526585D3EABAAE6A73B92E5E98B778CC785478FEFD0F8F49C8FBBD1BC5683",
+      "tokenId": "0xDC9CCD739C3C6AE2C33A6E7E21D0AFA98323D7161FDB41F22F18B476C43D0869",
+      "createdBlock": "2269310",
+      "minedTxPoW": "0x00003B90047379DAF7A725808AC6CB4EEC54B939CAA98103899B77356A0A8C0E"
+    },
+    "ETHm": {
+      "decimals": 18,
+      "fixedSupply": "11",
+      "fixedSupplyAtoms": "11000000000000000000",
+      "capAtoms": "10000000000000000000",
+      "tokenLevelScript": "RETURN TRUE",
+      "mintTxPoW": "0x15413A6C6A9D09D9BCBE7BA2FE8779E11914FFEAA6B34FCEA7E2D37461F70F72",
+      "mintTokenCoin": "0x79896B45F892D5FBCF5377AC2C4B78FAB111D2C9DF3FF7B3E856F5940F46B5D8",
+      "provisionalTokenId": "0xD7BD2CA033F55C0BA953D21C15C9BA7F336A9474F5B6C67F8A4E3DC207014EFC",
+      "tokenId": "0x3BB3FC4C84DA5B2F073BEEB350E95D5F78A9D471BE038DCE0297898ACE4EDD10",
+      "createdBlock": "2269314",
+      "minedTxPoW": "0x000037F048CAA27278CF7DDCE02165ABA423A2194A4BDEC4263B0DB057A0262B"
+    },
+    "USDTmControl": {
+      "decimals": 0,
+      "fixedSupply": "1",
+      "fixedSupplyAtoms": "1",
+      "capAtoms": "0",
+      "tokenLevelScript": "RETURN TRUE",
+      "mintTxPoW": "0x70AC8F61BB603A254A438A16C03B4D9A4D31379F2A87A4DD4D8867DB232C99EA",
+      "mintTokenCoin": "0xC9F91A568F6235732BB7819E2CEAA801CEFA4C2EFDB5A99FE59A5E235DD9C7F9",
+      "provisionalTokenId": "0x9F2497CB666C96BBF92BF75D7E02C4A8B90826C6007040018D9FB65D66655B2D",
+      "tokenId": "0xE36572F874E17273EF463426D7D095803FA84251A79FFE0FBD5D70E1C443F14E",
+      "createdBlock": "2269318",
+      "minedTxPoW": "0x00003BA2968845FD5DB4177136CF86A774BB55EF3C15DDC8C85335D0070172F1"
+    },
+    "ETHmControl": {
+      "decimals": 0,
+      "fixedSupply": "1",
+      "fixedSupplyAtoms": "1",
+      "capAtoms": "0",
+      "tokenLevelScript": "RETURN TRUE",
+      "mintTxPoW": "0x56A4F28655F336EA0EA832E626D0DBD4AC10D6F354D4DE8AF7BCDE8A217DF6EA",
+      "mintTokenCoin": "0x8D6B4B2FFA93A1FD25A5A2D8048523BB72147DDF6ECA2A1A8C83BD06BB039E8C",
+      "provisionalTokenId": "0x37F8B5BD17061D908A7C5BD32F44A6B9D8C2EB1D05D8D92B8F2014F18D97E4BD",
+      "tokenId": "0x86928B5B76DB425886931C946FF3889C78777864F10391F0F08872EDE106DB0C",
+      "createdBlock": "2269322",
+      "minedTxPoW": "0x00002346045835DBCC4744D75ECB0D1B75283CF187BC406D2C09173EDA4D4586"
+    }
+  }
+}

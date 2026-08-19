@@ -1,0 +1,20 @@
+{
+  "schema": "usdtm-p4-vault-model-validation/v1",
+  "createdAtUtc": "2026-08-19T06:40:29.673Z",
+  "status": "partial-pass",
+  "validator": "validate-usdtm-p4-vault-model.mjs",
+  "validatorSha256": "831658aa0b72146210bcc956406f90386346ab6ca1f2c235f1e4ba4a6b3cddcc",
+  "vaultSourceSha256": "2446e3cbfddc8c744e02f3a504302df115e0c79a34b3551885cffda5eb4fcd3c",
+  "mockTokenSourceSha256": "bbd1421b6ac247f086a91b3da4b50c3aca7bfc0e3b99ac60e1e49d346e1ba088",
+  "mockVerifierSourceSha256": "9d5fb17c4a14af916caa2a4aeb2880b710e712326186e2d01a2d14bedb14d9ed",
+  "assertionCount": 35,
+  "phaseGatePassed": false,
+  "blockers": [
+    "No persistent public-network Ethereum deployment is authorized, so public runtime bytecode cannot be matched to the reviewed compiler artifact.",
+    "MockMinimaProofVerifier proves interface behavior only, never Minima proof authenticity."
+  ],
+  "limitations": [
+    "This validator is a JavaScript semantic model plus Solidity source assertions; separate P4 evidence owns compilation and local EVM execution.",
+    "No network, transaction, token, vault, funds or mainnet action occurred."
+  ]
+}

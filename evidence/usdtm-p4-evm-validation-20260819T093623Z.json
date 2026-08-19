@@ -1,0 +1,50 @@
+{
+  "schema": "generic-bridge-p4-evm-validation/v2",
+  "createdAtUtc": "2026-08-19T09:36:23.164Z",
+  "status": "local-pass",
+  "phaseGatePassed": false,
+  "validator": "validate-usdtm-p4-evm.mjs",
+  "validatorSha256": "7a1ca99d668604bc4bd1cdbee46e9f14a4b4fbcca950921058d11f193e908c83",
+  "packageLockSha256": "7b73d3c0cc65ee5ba1664e0cb67e61eb0daa227e39df5e3a6f352337841dfdb6",
+  "configSha256": "409e1095dcc4cbd15af84d9bfb7cbd1d039ae9ddabece0f70c7a3763b9431978",
+  "testSourceSha256": "5ea13fe58078c1c7539f912e730be6369904ed2afebc9ce9132db746d3a5b0e5",
+  "nativeTestSourceSha256": "afa0bda9db4524d644b736b3c1418d6af900634a716cc890b91d11c4e764dcfd",
+  "vaultSourceSha256": "0c89e77848c29db565a53b8211aeaf00d465a54d8ed0985a98ca5f1822135bb9",
+  "nativeVaultSourceSha256": "9c8a883d419d6b9c4e11b19268700b76d129581deddf1917acf7ffe45403f2b3",
+  "nativeReceiverSourceSha256": "929bd5673a07fc6b580411ba1ad24eedbcdb51822864cd5e3f1c0393cc46ae31",
+  "compiler": "0.8.24+commit.e11b9ed9",
+  "hardhat": "3.13.0",
+  "evmTarget": "shanghai",
+  "optimizer": {
+    "enabled": true,
+    "runs": 200
+  },
+  "mochaTestsPassed": 22,
+  "compilationObserved": true,
+  "creationBytecodeBytes": 6614,
+  "creationBytecodeSha256": "c48cc9c4cbd1228a3755fe62333a32ff10e5c75137b791ad794c742905ab33f5",
+  "deployedBytecodeTemplateBytes": 5849,
+  "deployedBytecodeTemplateSha256": "2909c5da8c0ef29dcc25a78acec65b303ccba6dd4181047e70287d0daaf8ebcf",
+  "nativeCreationBytecodeBytes": 6641,
+  "nativeCreationBytecodeSha256": "86ad4781d18dbe49245cd357f32011607565dfbe57621d4e909606a25d828625",
+  "nativeDeployedBytecodeTemplateBytes": 5671,
+  "nativeDeployedBytecodeTemplateSha256": "6dade1cfef483630b953bda53d1510988bf8c59990a4ef42cfa1551222ae7fc7",
+  "dependencyAudit": {
+    "critical": 0,
+    "high": 0,
+    "moderate": 0,
+    "low": 11,
+    "info": 0
+  },
+  "blockers": [
+    "Bay law 14 still requires an independent hostile review of both ERC-20 and native-asset P4 lanes before the phase gate can pass.",
+    "The generic canonical lane-record bytes and native ETH proof-verifier binding are not yet frozen."
+  ],
+  "limitations": [
+    "This is local Hardhat EVM execution with a mock token, native ETH and a mock proof verifier, not a public-chain deployment.",
+    "MockMinimaProofVerifier proves interface behavior only and never establishes Minima proof authenticity; that is intentionally outside P4.",
+    "The 11 low dependency-audit findings are transitive optional verification and ignition tooling findings with no available fix in the pinned toolbox graph.",
+    "Forced ETH is tested with a throwaway SELFDESTRUCT helper; EIP-6780 retains the transfer behavior but changes code-deletion semantics.",
+    "No public network, wallet, signature, transaction post, token creation, persistent vault deployment, funds or mainnet action occurred."
+  ]
+}

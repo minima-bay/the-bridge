@@ -1,0 +1,23 @@
+{
+  "schema": "usdtm-p3-reference-validation/v1",
+  "createdAtUtc": "2026-08-19T06:19:09.386Z",
+  "status": "passed",
+  "validator": "usdtm-p3-reference.mjs",
+  "validatorSha256": "148ddef796a3cae4c17ccdaa21f6db9d183bdf4fc4c1bb1d7a37abdbaf907fcb",
+  "assertionCount": 1177,
+  "fuzzSeeds": 64,
+  "fuzzSteps": 128,
+  "attemptedFuzzActions": 8192,
+  "committedTransitions": 6144,
+  "rejectedActionsChecked": 1878,
+  "crashRetryChecks": 3,
+  "deliberateMutationCount": 10,
+  "mutationsDetected": 10,
+  "nullifierAccumulator": "tagged sparse SHA2-256 tree, depth 256",
+  "limitations": [
+    "Chain-independent pure state model only; source proofs, signatures, EVM callbacks, KISS scripts, MMRs and consensus are modeled values, not runtime executions.",
+    "Fuzzing is deterministic and bounded, not a proof over all sequences.",
+    "The late-heavier-Minima-fork double-settlement risk remains the explicit P1 settlement-finality assumption and is outside one-history reference semantics.",
+    "No network, transaction, token, vault, funds or mainnet action occurred."
+  ]
+}

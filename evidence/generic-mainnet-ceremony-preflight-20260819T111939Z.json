@@ -1,0 +1,71 @@
+{
+  "schema": "generic-bridge-mainnet-ceremony-preflight/v1",
+  "observedAt": "2026-08-19T11:19:39Z",
+  "status": "prepared-unfunded",
+  "phaseGatePassed": false,
+  "authorization": [
+    "D-USDTM-020",
+    "D-USDTM-021"
+  ],
+  "node": {
+    "name": "USDTmIssuer",
+    "network": "Minima mainnet",
+    "basePort": 9601,
+    "rpcPort": 9605,
+    "version": "1.1.2.6",
+    "jarSha256": "e8e8b20356d4a688b48d77550fbac2c141107c292af3d9de8ffeb84b3ff8a535",
+    "block": "2269276",
+    "connectedPeers": 2,
+    "issuerAddress": "0x80C66F196712E3CF3D1FEEAC70C5CFE92BE371BDF85DF5D424B7B73157C8A2EE",
+    "issuerMiniAddress": "MxG0840ZPNHWPZWSF7JQ7VEYHZCBJV95FHN3FFZBNQT895NMSZYFW52TRQ1AY60",
+    "seedOrPasswordRecorded": false
+  },
+  "wallet": {
+    "minimaConfirmed": "0",
+    "minimaSendable": "0",
+    "minimaUnconfirmed": "0",
+    "fundingReturnAddressPinned": false
+  },
+  "commands": {
+    "USDTm": "tokencreate name:{\"name\":\"USDTm\",\"ticker\":\"USDTm\",\"description\":\"Valueless Minima mainnet bridge test token. Not issued by Tether, not USDT or USDT0, and not redeemable. No monetary value.\"} amount:1000001 decimals:6",
+    "ETHm": "tokencreate name:{\"name\":\"ETHm\",\"ticker\":\"ETHm\",\"description\":\"Valueless Minima mainnet bridge test token. Not ETH, not issued by Ethereum, and not redeemable. No monetary value.\"} amount:11 decimals:18 uselimits:false"
+  },
+  "lanes": [
+    {
+      "name": "USDTm",
+      "decimals": 6,
+      "fixedSupply": "1000001",
+      "fixedSupplyAtoms": "1000001000000",
+      "capAtoms": "999999999999",
+      "tokenLevelScript": "RETURN TRUE"
+    },
+    {
+      "name": "ETHm",
+      "decimals": 18,
+      "fixedSupply": "11",
+      "fixedSupplyAtoms": "11000000000000000000",
+      "capAtoms": "10000000000000000000",
+      "tokenLevelScript": "RETURN TRUE"
+    }
+  ],
+  "checks": {
+    "actualCoreJarVersionChecked": true,
+    "actualCoreBytecodeFloorsTokenCountBeforeDecimalScaling": true,
+    "bothExactCommandsParsed": true,
+    "eighteenDecimalUseLimitsFalseParsed": true,
+    "bothCommandsStoppedAtNoMinimaCoins": true,
+    "knownTokenCountBefore": 3,
+    "knownTokenCountAfter": 3,
+    "mempoolBefore": 0,
+    "mempoolAfter": 0,
+    "tokenCreated": false,
+    "transactionSigned": false,
+    "transactionPosted": false,
+    "transactionMined": false
+  },
+  "blockers": [
+    "The issuer has no sendable Minima. It must receive a small confirmed funding coin before token creation.",
+    "The exact funding return address must be pinned before any mint.",
+    "Real mainnet control tokens, reserve genesis transactions, operator keys, txncheck results and mined successor coins do not yet exist."
+  ]
+}

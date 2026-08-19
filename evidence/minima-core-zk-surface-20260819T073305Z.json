@@ -1,0 +1,58 @@
+{
+  "schema": "minima-core-zk-surface-inspection/v1",
+  "createdAtUtc": "2026-08-19T07:33:05.911Z",
+  "status": "source-inspected",
+  "phaseGatePassed": false,
+  "validator": "validate-minima-core-zk-surface.mjs",
+  "validatorSha256": "8fed6b48217b5aa6d0662b184033aad73e805f3addb96d6be189106f51a8f0c1",
+  "repository": "https://github.com/minima-global/Minima.git",
+  "commit": "52542f25605a28a776e9b3b43b0808a05dceab01",
+  "commitDate": "2026-08-17T11:14:49+01:00",
+  "shallowClone": true,
+  "javaFilesScanned": 456,
+  "zkSurfaceMatches": [],
+  "checks": {
+    "officialRemote": true,
+    "functionRegistryHasCurrentCryptoSurface": true,
+    "noNativeZkFunctionFound": true,
+    "witnessHasOnlyThreeProofCollections": true,
+    "hardTxpowLimit64KiB": true,
+    "hardKissLimit1024": true,
+    "contractDefaultLimit1024": true,
+    "checkSigPresent": true,
+    "mmrProofPresent": true
+  },
+  "inspectedFiles": [
+    {
+      "file": "src/org/minima/kissvm/functions/MinimaFunction.java",
+      "sha256": "6dc5edc8948539f3bbb45ae4cd6c1482579b14e9bfd9a1499e5a2be139c374a8"
+    },
+    {
+      "file": "src/org/minima/objects/Witness.java",
+      "sha256": "c9376da9c55494df1b80251c0b7ed3595c1dd2b653fe1a9de21416fda90696a1"
+    },
+    {
+      "file": "src/org/minima/objects/Magic.java",
+      "sha256": "9093ce1f5b833ff1d0a6d47028ab0349645091d5b477213c5cf87deacefcd01e"
+    },
+    {
+      "file": "src/org/minima/kissvm/Contract.java",
+      "sha256": "629d1dbb7851062e01cf787932b75626463e2013b28a91ef1fb2227d8f8be6fa"
+    },
+    {
+      "file": "src/org/minima/kissvm/functions/sigs/CHECKSIG.java",
+      "sha256": "edfe5d5534a137a3866c64d4bbe4f58b7abdcd7b7acc1804c0def2aab432a4f3"
+    },
+    {
+      "file": "src/org/minima/kissvm/functions/sha/PROOF.java",
+      "sha256": "13e319a58b33b167b378ccbb9d93129843f9f45cd2c90a261ba2b9575fb3f481"
+    }
+  ],
+  "conclusion": "The inspected Core source has no native general ZK verifier and no generic proof-witness collection. The native-verifier path requires a consensus-level Core change, which D-USDTM-016 excludes. A proof-only bridge now needs an exact verifier built entirely from already-shipped primitives under current limits.",
+  "blocker": "No exact stock-Core verifier has been demonstrated within the 1,024-operation and 64 KiB limits; a Core fork, new opcode or maintainer commitment cannot pass the revised P7 gate.",
+  "limitations": [
+    "Source inspection is not node runtime, consensus activation, benchmark or mined-transaction evidence.",
+    "The clone is pinned to one official commit; later Core revisions may change the surface.",
+    "No Core fork, build, network message, wallet command, signature, token or transaction occurred."
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "generic-bridge-p7-live-refutation/v1",
+  "capturedAt": "2026-08-19T12:29:14Z",
+  "network": "Minima mainnet",
+  "coreVersion": "1.1.2.6",
+  "lane": "USDTm deployed v1",
+  "phaseGatePassed": false,
+  "verdict": "REFUTED",
+  "transaction": {
+    "loadedId": "usdtmreleasev1",
+    "transactionId": "0xA26C2F308749DBB513ADE421460C042C45B166C0EF845831B94B50E4E313F5BC",
+    "provisionalTxPoW": "0x0C241ACD530029EB47562E01669F30969CBA0A4C676AC636B0FC938591368BA9",
+    "constructionBlock": "2269351",
+    "depositId": "0xC180442D88F299A118FE0B73D0F462C47B5B1E188CBACF4534F4235E6DB574D7",
+    "recordDigest": "0xD59862F55C54A18316F5C1D154B14FC3AACC7197456A00954E4AD3AB3E5717D8",
+    "sourceFactsSynthetic": true,
+    "signatureCount": 5,
+    "burn": "0"
+  },
+  "initialTxncheck": {
+    "inputs": 2,
+    "outputs": 3,
+    "tokens": 2,
+    "validAmounts": true,
+    "allSignaturesValid": true,
+    "basic": true,
+    "mmrProofs": true,
+    "scripts": true
+  },
+  "laterObservation": {
+    "observedBlock": "2269356",
+    "mempoolCount": 0,
+    "basic": true,
+    "signatureCount": 5,
+    "allSignaturesStillValid": true,
+    "mmrProofs": true,
+    "scripts": false,
+    "controlInputUnspent": true,
+    "reserveInputUnspent": true,
+    "successorControlExists": false,
+    "successorReserveExists": false,
+    "payoutExists": false
+  },
+  "wotsJournal": {
+    "signerIndexes": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "usesBefore": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "usesAfter": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    "signaturesMustNeverBeReused": true
+  },
+  "rootCause": "The deployed advancing-head branch required STATE(17) EQ @BLOCK. It passed at construction/mempool height 2269351, then became false when the mainnet height advanced before inclusion. The transaction was dropped without spending either input.",
+  "candidateV2": {
+    "rule": [
+      "STATE(17) GTE PREVSTATE(17)",
+      "STATE(17) LTE @BLOCK",
+      "(@BLOCK-STATE(17)) LTE PREVSTATE(18)"
+    ],
+    "usdtmAddress": "0xCD1F63CE75B9451960F91259612555991872ACE09F44A4A78BB7BB382E392E8E",
+    "usdtmScriptSha256": "15cc028c55f9c519acc194929ea9021d3fab94bf2a45976b18a3553bc3e5892a",
+    "ethmAddress": "0x5BE42C805C0EE30C77CD23D2A16CDB6A9F5095B9D48B27CA6699A16848DBA8AF",
+    "ethmScriptSha256": "2960a121f7a421aafc08caae73711c0253a4689453c71a10109a6ed42141645c",
+    "mainnetAuthorized": false,
+    "mainnetDeployed": false
+  },
+  "requiredBeforeRetry": "Candidate v2 must pass the full offline validator and hostile rereview. A fresh valueless token/control ceremony is then required because deployed v1 forces all successors back to its immutable v1 covenant address."
+}

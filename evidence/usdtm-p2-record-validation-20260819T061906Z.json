@@ -1,0 +1,26 @@
+{
+  "schema": "usdtm-p2-record-validation/v1",
+  "createdAtUtc": "2026-08-19T06:19:06.947Z",
+  "status": "passed",
+  "validator": "validate-usdtm-p2-records.mjs",
+  "validatorSha256": "3e36e80245e4fab117cd1a14d668320c955667c1449e2f8fb05af62ac167c944",
+  "fixture": "fixtures/usdtm-p2-records-v1.json",
+  "fixtureSha256": "ffdddd2ffcab77d4ff1d721c8f26c996516e973b012276488077429e1ad80288",
+  "recordCount": 5,
+  "assertionCount": 191,
+  "fieldMutationCount": 136,
+  "mutationsDetected": 136,
+  "invalidSemanticCaseCount": 19,
+  "recordCommitments": {
+    "deposit": "53f5cf05f486f508f93a7f50acbd877055702c195dabd6efb5abd971e77eb677",
+    "refund": "578b536335aa23dfcb204bf1749c4673e85dc7603560d6db7221955d60779df9",
+    "redemption": "216a2eaadc9e823877e73f5815b38781f5b2bfd916d20a0ace8241f6e0d23b19",
+    "payoutBatch": "6e5345256917ff566948beee561ba95a41501794ebeaeab541509d30c6f2d3ec",
+    "clientState": "a77b537251a278b14aba8533fe121bb4b383e6100bc5ae7d06d29b8ce164969a"
+  },
+  "limitations": [
+    "Canonical local record bytes only; no source inclusion, chain finality, ZK verification, KISS execution, signature runtime or transaction mineability is proved.",
+    "P2 authority scheme selection remains a schema identifier until P6/P8 runtime evidence.",
+    "No network, transaction, token, vault, funds or mainnet action occurred."
+  ]
+}

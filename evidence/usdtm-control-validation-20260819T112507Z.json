@@ -1,0 +1,19 @@
+{
+  "schema": "usdtm-control-validation/v1",
+  "createdAtUtc": "2026-08-19T11:25:07.122Z",
+  "document": "USDTM-ZK-PROTOTYPE.md",
+  "documentSha256": "bcacf7fecd047e4e1b1650d736eaf28c954afa75cf5765b45805f638d8c30869",
+  "validator": "validate-usdtm-control.mjs",
+  "validatorSha256": "04df153bec34d917874c8c8bf6afa6af79e9f99e623953a4ecce56044247fbb8",
+  "status": "passed",
+  "file": "C:\\Users\\Charles\\Documents\\The bay\\Pool\\1_working_files\\working-files\\zk-light-client-research\\USDTM-ZK-PROTOTYPE.md",
+  "phaseCount": 14,
+  "now": "P7",
+  "decisionCount": 21,
+  "openDecisionCount": 13,
+  "findingCount": 60,
+  "evidenceCount": 22,
+  "exactEvidenceReferencesChecked": 6,
+  "noEmDash": true,
+  "fundsBoundary": "valueless-only"
+}

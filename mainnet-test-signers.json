@@ -1,0 +1,106 @@
+{
+  "schema": "generic-bridge-mainnet-test-signers/v1",
+  "node": "BridgeTestSigners",
+  "rpcPort": 9705,
+  "coreVersion": "1.1.2.6",
+  "threshold": 5,
+  "memberCount": 7,
+  "singleControllerFixture": true,
+  "decentralizationEvidence": false,
+  "usesAtCreation": 0,
+  "maximumUsesPerTreeKey": 262144,
+  "publicKeys": [
+    "0x7E10CDBE13C9DCDBA5B58EE5AEDACC246CA4B9A36649645427A8290B61E85614",
+    "0xDBD30A4EB60C34CD9F605765013AA9425972EB1E16EB45681DEA354A7E6E1CBA",
+    "0x391595838D46D6B34F61623F4CF634B229B48640F86D706CB4F716B8DA7DB4D3",
+    "0x752C27FC1F4CAD6009AB653E20BC4409DAF2F540D8C54FA5959A41A68975B94C",
+    "0xD44F4D6DF300F8718AD553877D9EC560F1A709DC0FD80AFFE1A05A2AF4BA3F94",
+    "0x23628DC0CAD42EF41AE95087CD47979E6D648F78F5D93EB6CA49A292CD53B950",
+    "0x28DA6E6F6A8403C8156F2A39CE42999C75840E35549F74C9140D68112E8F058A"
+  ],
+  "committeeRootSha3": "0xD2D97FE239F65977DD867DEE7D2535DC01BA06ECBFC6F02620383D417E9188F2",
+  "keyUsesAfterLiveV2Ceremony": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    0,
+    0
+  ],
+  "failedAttempts": [
+    {
+      "lane": "USDTm deployed v1",
+      "transactionId": "0xA26C2F308749DBB513ADE421460C042C45B166C0EF845831B94B50E4E313F5BC",
+      "depositId": "0xC180442D88F299A118FE0B73D0F462C47B5B1E188CBACF4534F4235E6DB574D7",
+      "constructionBlock": "2269351",
+      "signerIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "wotsUsesConsumedPerSigner": 1,
+      "outcome": "Passed txncheck at construction height, then scripts became false after the chain advanced. The network dropped the transaction from the mempool; both inputs remain unspent and no successor output was created. Never reuse these five signatures or this transaction intent."
+    },
+    {
+      "lane": "USDTm-v2",
+      "transactionId": "0x30CB8B9DDA8930DBEFA5C5A4C5D885CEC15ABB23A216816304B677C57591D926",
+      "constructionBlock": "2269501",
+      "signerIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "wotsUsesConsumedPerSigner": 1,
+      "posted": false,
+      "outcome": "The signed transaction passed signatures, MMR proofs, conservation and exact outputs, but txncheck rejected the rolling-nullifier successor. The exact signed intent remains preserved. Never reuse these five signatures or this transaction intent."
+    }
+  ],
+  "successfulLiveV2Releases": [
+    {
+      "lane": "USDTm-v2",
+      "transactionId": "0xF50BD0998288AFC9B29693C3FD20E87BA1CD23071F021B430589EFEF544056C1",
+      "minedTxPoW": "0x000076DAE71AABB4A694F7D383FDAD50C6E507B958990098D8FD6F658F84F33A",
+      "createdBlock": "2269510",
+      "signerIndexes": [0, 1, 2, 3, 4],
+      "wotsUsesConsumedPerSigner": 1
+    },
+    {
+      "lane": "ETHm-v2",
+      "transactionId": "0x679CF5E1B0617C751C0807CF41C95AAB0FC3726A47530D76BF050C033CFC97B5",
+      "minedTxPoW": "0x0000BBCFF7288915CADE94964087D2876D63FD5DA61FB086C7671DFCBCE13810",
+      "createdBlock": "2269511",
+      "signerIndexes": [0, 1, 2, 3, 4],
+      "wotsUsesConsumedPerSigner": 1
+    }
+  ],
+  "normalRestartDurabilityCheck": {
+    "observedAt": "2026-08-19T12:42:00Z",
+    "usesBeforeRestart": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    "usesAfterRestart": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    "failedTransactionIntentPersisted": true,
+    "nodeStoppedAfterCheck": true,
+    "limitation": "This proves one normal graceful restart only. Backup restore, database rollback and concurrent restored-seed protection remain later P9/P12 gates."
+  },
+  "warning": "All seven keys are held by one local fixture wallet. This can prove stock-node signing and mineability only. It cannot satisfy P6 operator independence, bonding, geographic diversity or production security."
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "generic-mainnet-v2-ceremony-preflight/v1",
+  "timestamp": "2026-08-19T13:12:13Z",
+  "authorization": "D-USDTM-022",
+  "node": {
+    "name": "USDTmIssuerV2",
+    "version": "1.1.2.6",
+    "jarSha256": "e8e8b20356d4a688b48d77550fbac2c141107c292af3d9de8ffeb84b3ff8a535",
+    "basePort": 9801,
+    "rpcPort": 9805,
+    "block": "2269410",
+    "connected": 2,
+    "issuerAddress": "0x086626437068AA89BCB8E02C25B840301364E0E973453338A946705C2472C67E",
+    "issuerMiniAddress": "MxG0808CZJ46S38YA4RPE705GWRGG1G2DWE1QBJ8KPJHAA6E1E28SM6FREGWYMZ",
+    "seedCopies": 1,
+    "databaseEncrypted": true,
+    "secretPrinted": false
+  },
+  "before": {
+    "mempool": 0,
+    "tokenCount": 9
+  },
+  "after": {
+    "mempool": 0,
+    "tokenCount": 9
+  },
+  "expectedNoFundsErrors": {
+    "USDTm": "No Minima Coins available!",
+    "ETHm": "No Minima Coins available!",
+    "USDTmControl": "No Minima Coins available!",
+    "ETHmControl": "No Minima Coins available!"
+  },
+  "commands": {
+    "USDTm": "tokencreate name:{\"name\":\"USDTm-v2\",\"ticker\":\"USDTm-v2\",\"description\":\"Valueless Minima mainnet bridge v2 test token. Not issued by Tether, not USDT or USDT0, and not redeemable. No monetary value.\"} amount:1000001 decimals:6",
+    "ETHm": "tokencreate name:{\"name\":\"ETHm-v2\",\"ticker\":\"ETHm-v2\",\"description\":\"Valueless Minima mainnet bridge v2 test token. Not ETH, not issued by Ethereum, and not redeemable. No monetary value.\"} amount:11 decimals:18 uselimits:false",
+    "USDTmControl": "tokencreate name:{\"name\":\"USDTm-v2 Lane Control\",\"ticker\":\"USDTmV2CTRL\",\"description\":\"Valueless one-unit lineage marker for the corrected USDTm-v2 bridge mainnet test lane. Not transferable value and not redeemable.\"} amount:1 decimals:0",
+    "ETHmControl": "tokencreate name:{\"name\":\"ETHm-v2 Lane Control\",\"ticker\":\"ETHmV2CTRL\",\"description\":\"Valueless one-unit lineage marker for the corrected ETHm-v2 bridge mainnet test lane. Not transferable value and not redeemable.\"} amount:1 decimals:0"
+  },
+  "chainWrites": 0,
+  "passed": true
+}

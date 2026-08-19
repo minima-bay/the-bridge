@@ -1,21 +1,22 @@
 # Proof-system selection matrix
 
-Date: 2026-08-18  
-Status: research comparison, no selection made
+Date: 2026-08-18, amended 2026-08-19
+Status: stock-Core-only research comparison, no candidate passes
 
 ## Decision rule
 
-Benchmark a compact pairing-based proof and a hash-based transparent proof against the same fixed
-public-value schema. Do not select by proof size alone. The winning candidate must have deterministic
-Core verification, a bounded malformed-input cost, an acceptable trust/governance model and a full
-signed transaction that mines under the consensus size limit.
+Under `D-USDTM-016`, reject any candidate that requires a new Core operation, witness type or
+consensus-limit change. Benchmark only proof verification expressible with already-shipped KISS and
+witness primitives against the fixed public-value schema. Do not select by proof size alone. A
+candidate must have deterministic stock-Core verification, bounded malformed-input cost, an
+acceptable trust model and a fully signed transaction that mines under the current limits.
 
 | Candidate | Reference proof size | Native capability needed | Main benefit | Main blocker | Current evidence |
 |---|---:|---|---|---|---|
-| SP1 Groth16 wrap | about 260 bytes | BN254 field, groups, subgroup rules, pairing, transcript and fixed VK | smallest witness target and bounded verifier shape | new consensus cryptography, trusted setup, exact SP1 compatibility and key governance | official documentation only; no Minima verifier |
-| SP1 PLONK wrap | about 868 bytes | exact PLONK curve, transcript, commitments and VK | compact, avoids a circuit-specific setup | still new consensus cryptography; reference proving time and verifier differ | official documentation only; no Minima verifier |
+| SP1 Groth16 wrap | about 260 bytes | BN254 field, groups, subgroup rules, pairing, transcript and fixed VK | smallest witness target and bounded verifier shape | required pairing operations are not shipped | excluded by the stock-Core-only decision |
+| SP1 PLONK wrap | about 868 bytes | exact PLONK curve, transcript, commitments and VK | compact, avoids a circuit-specific setup | required curve and commitment operations are not shipped | excluded by the stock-Core-only decision |
 | Winterfell SHA3 STARK | 22,813 to 56,934 bytes in tested profiles | native field arithmetic, Merkle/FRI/transcript hashing | transparent and hash-based | pure KISS exceeded arithmetic and instruction capability; stronger proof leaves little TxPoW room | proof generation and off-chain verification executed; Minima verification refuted |
-| Native Ethereum light client | update-dependent, not a succinct wrapper | BLS12-381, SSZ, fork schedule, committee state, MPT/RLP | no external proof-system soundness assumption | much larger consensus surface and continuous fork maintenance | specification research only |
+| Native Ethereum light client | update-dependent, not a succinct wrapper | BLS12-381, SSZ, fork schedule, committee state, MPT/RLP | no external proof-system soundness assumption | BLS and the required parser/state machinery are not shipped | excluded by the stock-Core-only decision |
 | Generic hash-based zkVM proof | system-dependent | exact field, hash, FRI/STARK verifier and proof parser | transparent possibility | proof size, CPU, memory and worst-case TxPoW are unknown | hypothesis only |
 
 The documented sizes are source claims or observed proof files, not promised Minima TxPoW sizes.
@@ -94,9 +95,11 @@ bounded and the maximum complete transaction mines.
 | Failure behavior | unknown versions, forks and token semantics halt before payout |
 | Auditability | source, binaries, vectors, logs and hashes retained |
 
-No candidate currently passes. Groth16 is the recommended first native feasibility target because its
-witness is compact, not because it is already safe. The transparent STARK track should continue only
-as a native-Core benchmark; the ordinary KISS route is already refuted.
+No candidate currently passes. Groth16, PLONK and a native Ethereum light client are excluded because
+they require unshipped consensus cryptography. The executed Winterfell KISS route is refuted by the
+numeric and instruction limits. A different generic hash-based proof remains a hypothesis only and
+must first demonstrate an exact verifier under 1,024 operations and a fully signed TxPoW under 64
+KiB. Failure of that narrow P7 experiment stops the proof-only direction.
 
 ## Primary sources
 

@@ -1,0 +1,78 @@
+{
+  "schema": "generic-bridge-p7-v2-hostile-rereview/v1",
+  "capturedAt": "2026-08-19T12:46:47Z",
+  "verdict": "PASS_AT_OFFLINE_V2_CORRECTION_GATE",
+  "hostileRereviewPassed": true,
+  "phaseGatePassed": false,
+  "unresolvedCriticalOrHighDefects": 0,
+  "reviewed": {
+    "validator": "validate-generic-lane-txpow.mjs",
+    "validatorSha256": "06debbced353ed4ca3cfff3a865ac4e9bc9a955411c93c538a604c1dcff999f8",
+    "harness": "p7/GenericLaneTxPowBenchmark.java",
+    "harnessSha256": "4155eecdf4176a2ef380bb4916c314aeb195c9990871220de018d82b993bd104",
+    "currentValidationEvidence": "generic-p7-txpow-validation-20260819T124631Z.json",
+    "currentValidationEvidenceSha256": "711f9ea8488e04a73a2b132b9576b30b05704178a9f38bdaaee8e763caad6bd4",
+    "pinnedCoreCommit": "52542f25605a28a776e9b3b43b0808a05dceab01",
+    "pinnedMinimaJarSha256": "b22182ec5c9389fe52c7cababa79e7e7966726b8996d6a31593f8ae69232af20"
+  },
+  "candidateV2Rule": [
+    "STATE(17) GTE PREVSTATE(17)",
+    "STATE(17) LTE @BLOCK",
+    "(@BLOCK-STATE(17)) LTE PREVSTATE(18)"
+  ],
+  "attacks": {
+    "zeroPostingLagAccepted": true,
+    "oneBlockPostingLagAccepted": true,
+    "monotonicBoundaryAccepted": true,
+    "exactMaximumPostingLagAccepted": true,
+    "futureAcceptedHeadRejected": true,
+    "acceptedHeadRollbackRejected": true,
+    "oneBeyondMaximumPostingLagRejectedIndependently": true,
+    "equalHeadReuseBoundStillEnforced": true,
+    "allThirtyOneRecordFieldMutationsInvalidateOriginalSignatures": true,
+    "allFourteenFreshlySignedStructuralMutationsRejected": true,
+    "allSixPreservedPortsNineteenThroughTwentyFourRejectFreshlySignedMutation": true,
+    "payoutCountersCannotAdvanceDuringRelease": true,
+    "reserveFloorAndExactThreeOutputShapeStillEnforced": true,
+    "crossLaneRecordRejected": true,
+    "fourOfSevenRejected": true,
+    "sourceTimeAgeAndFutureSkewRejected": true
+  },
+  "measurements": {
+    "assertions": 70,
+    "hostileChecksPerLane": 66,
+    "maximumSerializedTxPoWBytes": 32134,
+    "maximumExecutedInstructions": 553,
+    "txPoWHardLimitBytes": 65536,
+    "kissInstructionLimit": 1024
+  },
+  "wots": {
+    "failedV1UsesPersistedAcrossNormalRestart": true,
+    "usesAfterRestart": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    "failedSignedTransactionIntentPersisted": true,
+    "nodeStoppedAfterCheck": true,
+    "restoreAndRollbackDurabilityProved": false
+  },
+  "containedLimitations": [
+    "Candidate v2 has no real mainnet UTXO, node txncheck or mined transition.",
+    "The displayed template addresses bind the trapped v1 token IDs and are provisional. Fresh token and control IDs must regenerate lane IDs, scripts and final addresses.",
+    "The seven fixture keys remain under one controller and provide no decentralization evidence.",
+    "Only a normal graceful restart was checked for WOTS counters. Backup restore, database rollback and simultaneous restored-seed defense remain P9/P12 blockers.",
+    "Historical deposit non-reuse remains the founder-accepted quorum-journal assumption, not a KISS non-membership proof.",
+    "Ethereum source facts remain synthetic and do not prove source-chain authenticity."
+  ],
+  "authorization": {
+    "replacementTokenCreationAuthorized": false,
+    "replacementFundingAuthorized": false,
+    "candidateV2MainnetSigningAuthorized": false
+  },
+  "nextGate": "Freeze fresh-token ceremony parameters, obtain explicit founder authorization, regenerate final token-bound v2 scripts after token IDs exist, then require exact txncheck, ordinary posting-lag survival, mined outputs and full successor-state verification on both valueless lanes."
+}

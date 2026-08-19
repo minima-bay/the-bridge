@@ -1,0 +1,278 @@
+{
+  "schema": "generic-bridge-mainnet-v2-live-p7-evidence/v1",
+  "capturedAt": "2026-08-19T14:30:29Z",
+  "authorizedBy": [
+    "D-USDTM-020",
+    "D-USDTM-022"
+  ],
+  "minima": {
+    "network": "mainnet",
+    "coreVersion": "1.1.2.6",
+    "coreJarSha256": "e8e8b20356d4a688b48d77550fbac2c141107c292af3d9de8ffeb84b3ff8a535",
+    "domain": "0x7AA6D7A6BD1F75D2E50B21B7036FC6A2206193BCAF64BB86367842C1A23E4F08"
+  },
+  "committee": {
+    "threshold": 5,
+    "members": 7,
+    "root": "0xD2D97FE239F65977DD867DEE7D2535DC01BA06ECBFC6F02620383D417E9188F2",
+    "publicKeys": [
+      "0x7E10CDBE13C9DCDBA5B58EE5AEDACC246CA4B9A36649645427A8290B61E85614",
+      "0xDBD30A4EB60C34CD9F605765013AA9425972EB1E16EB45681DEA354A7E6E1CBA",
+      "0x391595838D46D6B34F61623F4CF634B229B48640F86D706CB4F716B8DA7DB4D3",
+      "0x752C27FC1F4CAD6009AB653E20BC4409DAF2F540D8C54FA5959A41A68975B94C",
+      "0xD44F4D6DF300F8718AD553877D9EC560F1A709DC0FD80AFFE1A05A2AF4BA3F94",
+      "0x23628DC0CAD42EF41AE95087CD47979E6D648F78F5D93EB6CA49A292CD53B950",
+      "0x28DA6E6F6A8403C8156F2A39CE42999C75840E35549F74C9140D68112E8F058A"
+    ],
+    "finalTreeKeyUses": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      0,
+      0
+    ],
+    "singleControllerFixture": true,
+    "decentralizationEvidence": false
+  },
+  "tokens": {
+    "USDTm": {
+      "tokenId": "0xC76C5506EB4D178A0249967BF1AB86B2D0D1E3B0A00DB623DD0F14CD073F1149",
+      "decimals": 6,
+      "fixedSupply": "1000001",
+      "mintTransactionId": "0xA3F8E4E4B1745C4D6817DCD397E7B99ECEC5A1F3439B12BC7A0BB917FADC4ED5",
+      "minedTxPoW": "0x00004737A4D40389E0716F292C64D5C5065216A4E4367E26FAE093E7FD5CEDE8",
+      "createdBlock": "2269460"
+    },
+    "ETHm": {
+      "tokenId": "0xE63A90F606EF77FECE42D95E0ED12DD826BE30A56B90D5374840BF674863AAF5",
+      "decimals": 18,
+      "fixedSupply": "11",
+      "mintTransactionId": "0xE57A836BC18D6B0D445EE75D6E43C8597E6A0C739EC8217292F08137923D0E28",
+      "minedTxPoW": "0x0000253E1A9E33694A532CFFB2F4C5A2158466DC27FFADBFC2FA64507B28753A",
+      "createdBlock": "2269465"
+    },
+    "USDTmControl": {
+      "tokenId": "0x90AF522C2F75071123E701591DEC5904344AFBC7F89ABF8424E197B31CA21633",
+      "decimals": 0,
+      "fixedSupply": "1",
+      "mintTransactionId": "0x24757DF6B705EF008B9F6B192B8E4A3355299DBB88B112F8DC7A4FA18FAF4A1E",
+      "minedTxPoW": "0x000017D3BD3068183AE9C34673084FA4B99D8D8CB7D15564837B872621980D3C",
+      "createdBlock": "2269469"
+    },
+    "ETHmControl": {
+      "tokenId": "0x09837EE2411C2968DF445F792C68028B4944DE157B71F6981D1E2BA8C126978A",
+      "decimals": 0,
+      "fixedSupply": "1",
+      "mintTransactionId": "0x7FDA1C71850E728594F68F174D0D048D52B0ECB2EA94A8CEC06A5448267AFF44",
+      "minedTxPoW": "0x00005CC5D61CD524B598F867DB6E0475F9E16DB9BC9F0D9FE7E8C88CA57C603D",
+      "createdBlock": "2269474"
+    }
+  },
+  "genesis": {
+    "USDTm": {
+      "customTransactionId": "bridge-v2-usdtm-genesis",
+      "transactionId": "0xD64113130AE0C60EB7E26BF8C00D1BE229901B2042AB642B9EEAF205D33E1B0D",
+      "controlCoinId": "0x4E6344E855520EDA06EA8710C1529AF4448CF4E327204BBBEF475F65BCBA5872",
+      "reserveCoinId": "0xDC489364B6D5478DDF2C7FC9E051138D8C7E48EA2A952F418FA44AF1F05C0D55",
+      "txncheck": {
+        "validtransaction": true,
+        "validamounts": true,
+        "allsignaturesvalid": true,
+        "basic": true,
+        "mmrproofs": true,
+        "scripts": true,
+        "burn": "0"
+      },
+      "postTxPoW": "0xC43233AA9DC93607BF391A258607AA66E193FC68A4926BD5E2447240CD686108",
+      "minedTxPoW": "0x000021C23BDDE0955E0E4A92301E56BA52E8047E5353AC0E4E3FCCD3400A90EF",
+      "createdBlock": "2269492",
+      "genesisStateExact": true
+    },
+    "ETHm": {
+      "customTransactionId": "bridge-v2-ethm-genesis",
+      "transactionId": "0xF8EE28C73BF66CC447AEC6C5A296F83428E643B333FD620881029896D8CE6BA3",
+      "controlCoinId": "0x76848AEDC17F104C11AC347C2F29A132ACAF14321B6AAF674ECAC7A30F0E9CC5",
+      "reserveCoinId": "0xC5B47B0F052C3CAB9FFE020782D5706B1100F27F072C1ACD0BC8EAE8E8D18769",
+      "txncheck": {
+        "validtransaction": true,
+        "validamounts": true,
+        "allsignaturesvalid": true,
+        "basic": true,
+        "mmrproofs": true,
+        "scripts": true,
+        "burn": "0"
+      },
+      "postTxPoW": "0xD5B61E1F8F6B960B847F001C2EE47584E5287D4DFCB255CCA3113F441759BCE3",
+      "minedTxPoW": "0x000086812A0CC931532B92B50D7D414FF30AD441140905FCEF855996FB777AF7",
+      "createdBlock": "2269496",
+      "genesisStateExact": true
+    }
+  },
+  "releases": [
+    {
+      "name": "USDTm",
+      "laneId": "0xCC6EBD579AD362AD222BD88C5E8529F4926DD4DD77E108A984696A5FF7C16B28",
+      "bridgeTokenId": "0xC76C5506EB4D178A0249967BF1AB86B2D0D1E3B0A00DB623DD0F14CD073F1149",
+      "controlTokenId": "0x90AF522C2F75071123E701591DEC5904344AFBC7F89ABF8424E197B31CA21633",
+      "covenantAddress": "0x82FD9B73CD126358D84DA46A249DACDE96F2697AF29337DEDAC0F4A167D4F5AB",
+      "scriptSha256": "f9da14b13a5418f88757472e0ea420c81c902d89e40aa828012c777194f48cdc",
+      "transactionId": "0xF50BD0998288AFC9B29693C3FD20E87BA1CD23071F021B430589EFEF544056C1",
+      "minedTxPoW": "0x000076DAE71AABB4A694F7D383FDAD50C6E507B958990098D8FD6F658F84F33A",
+      "createdBlock": "2269510",
+      "serializedTxPoWBytes": 31201,
+      "controlCoinId": "0x9605E332A966031C42B5E59E292985166C4E68ECB63B23CA120395876784C796",
+      "reserveCoinId": "0xE60EB3500E91BBC78C7BDE055FE8D526BFCE38ADD4DF47AAE128A14D5CF383BD",
+      "payoutCoinId": "0xD64DBCF8A812D88D34D207A034723CBC84C75682936BEEAD3E0C372DDE90A661",
+      "payoutAmount": "1.25",
+      "reserveAmount": "999999.75",
+      "recordDigest": "0xaefb4cbf90866eaf8dbc0c5823f439737a1d351d0751de77fb55f9d09b1d59d1",
+      "recordBytes": 444,
+      "persistedControlPorts": 41,
+      "keyUsesBefore": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "keyUsesAfter": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "txncheck": {
+        "validtransaction": true,
+        "validamounts": true,
+        "allsignaturesvalid": true,
+        "basic": true,
+        "mmrproofs": true,
+        "scripts": true,
+        "signatures": 5,
+        "burn": "0"
+      },
+      "minedStateExact": true,
+      "burn": "0"
+    },
+    {
+      "name": "ETHm",
+      "laneId": "0x3D4269C3C06E175DD5CA6A66A8A39372FA38444557DAF2EA6075CC87B845A437",
+      "bridgeTokenId": "0xE63A90F606EF77FECE42D95E0ED12DD826BE30A56B90D5374840BF674863AAF5",
+      "controlTokenId": "0x09837EE2411C2968DF445F792C68028B4944DE157B71F6981D1E2BA8C126978A",
+      "covenantAddress": "0xA0B23140248AC15CCB8C0FBC2DA3E0F54E06BF935C5F2A6B573E882FED05E931",
+      "scriptSha256": "965d292713ec3774aa0d933a61dc76322fd2b67442e4ae2d990e8324d9537e47",
+      "transactionId": "0x679CF5E1B0617C751C0807CF41C95AAB0FC3726A47530D76BF050C033CFC97B5",
+      "minedTxPoW": "0x0000BBCFF7288915CADE94964087D2876D63FD5DA61FB086C7671DFCBCE13810",
+      "createdBlock": "2269511",
+      "serializedTxPoWBytes": 31224,
+      "controlCoinId": "0x2E7C447B205175401BDBF1CC8853225D3941689B09A02E74A6DAFD0B5812DE1C",
+      "reserveCoinId": "0xE329928ECAD1FDC6F5B8CF4DED5356FE9DAC934092817E1D9EAFD932D074ECC1",
+      "payoutCoinId": "0x6DC03282FBA7374A7E75633A0E3E4735B25BF5ADE2EC52B3E9AC3DB514B771AF",
+      "payoutAmount": "1.25",
+      "reserveAmount": "9.75",
+      "recordDigest": "0x16f638a8b971e5eba7f31e2657985f0cdcebac2819e6433d35f223fc6f67f834",
+      "recordBytes": 444,
+      "persistedControlPorts": 41,
+      "keyUsesBefore": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "keyUsesAfter": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "txncheck": {
+        "validtransaction": true,
+        "validamounts": true,
+        "allsignaturesvalid": true,
+        "basic": true,
+        "mmrproofs": true,
+        "scripts": true,
+        "signatures": 5,
+        "burn": "0"
+      },
+      "minedStateExact": true,
+      "burn": "0"
+    }
+  ],
+  "failedSignedIntent": {
+    "customTransactionId": "bridge-v2-usdtm-release",
+    "transactionId": "0x30CB8B9DDA8930DBEFA5C5A4C5D885CEC15ABB23A216816304B677C57591D926",
+    "posted": false,
+    "rejection": "All signatures, MMR proofs, amounts and outputs passed; KISS rejected the incorrect rolling-nullifier successor.",
+    "incorrectSuccessor": "0x43B0481A20E6170A167A8804DD311EFB2852B3E6CF9513003FFB3510C7819B50",
+    "liveKissSuccessor": "0x27E8C53E89BC9689DA44FDD63784D7B0708BACE129659FE77B250E8EA589F894",
+    "keyUsesBefore": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "keyUsesAfter": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "preservedNeverReuse": true
+  },
+  "fundingReturn": {
+    "fundingTxPoW": "0x000011F41EF24D1D094861283DEF9AF30CE1EF4196A119C30A7DB3622EA74635",
+    "fundingCoinId": "0xE5852E77996C6D8909A6CC2CF118BBFF74FBBFC4AC913B658B6E60E24B06C144",
+    "fundingBlock": "2269455",
+    "fundingAmount": "0.1",
+    "address": "0x479333E2459305E0ADB212423A9857730960858FE2E0A911F36CC9A0500B017F",
+    "inputCoinId": "0x072AB7F19593C8BC3D1FA537E3C1E3FB7FA93F60DA3A5BADA7DAE0E8B3B7889E",
+    "transactionId": "0x7D9D9B1CD3A683D91BB68263FD4E92A3CDE887118CEECA3EEFA8A1356EF24CF8",
+    "outputCoinId": "0x06504FC9AC74252346F65DD785482A661F0E1B51ABCC47538569139BA8968CDC",
+    "amount": "0.09999999999999999999999988999998999998999998",
+    "minedTxPoW": "0x00007F52A37813C0E84ADD0739A2DB4D36C98D2E058B2543008CE8DAA5F6136F",
+    "createdBlock": "2269514",
+    "burn": "0",
+    "issuerNonzeroBalanceEntriesAfterConfirmation": 0,
+    "issuerSendableCoinsAfterConfirmation": 0
+  },
+  "issuer": {
+    "name": "USDTmIssuerV2",
+    "address": "0x086626437068AA89BCB8E02C25B840301364E0E973453338A946705C2472C67E",
+    "emptyBeforeShutdown": true,
+    "stopped": true,
+    "retired": true,
+    "marker": "NEVER-REUSE",
+    "seedCopies": 1
+  },
+  "assertions": {
+    "bothFreshV2GenesisTransactionsMined": true,
+    "bothFiveSignatureReleasesPassedNodeTxncheck": true,
+    "bothFiveSignatureReleasesMinedOnStockMainnet": true,
+    "bothReleasesPreserveExactOutputAndSuccessorShape": true,
+    "bothReleaseTxPoWsBelow65536Bytes": true,
+    "bothReleaseBranchesWithin1024KissOperations": true,
+    "eighteenDecimalETHmReleaseExact": true,
+    "crossLaneTokenAndCovenantBindingExact": true,
+    "failedWotsUsesJournaledAndNeverReused": true,
+    "allResidualMinimaReturnedToPinnedFundingInputAddress": true,
+    "issuerEmptyStoppedAndRetired": true
+  },
+  "phaseGate": "P7",
+  "phaseGatePassed": true,
+  "limitations": [
+    "The seven test keys remain controlled by one fixture node and do not prove decentralized operation.",
+    "The attested Ethereum facts are synthetic and do not prove source-chain authenticity.",
+    "Only the inbound release branch mined in v2; P8 still owns the complete covenant branch set.",
+    "No backup rollback or restore test proves TreeKey non-reuse durability.",
+    "No real USDT, ETH or other collateral was accepted or represented."
+  ],
+  "nextGate": "P8 must mine every exact generic-lane covenant branch for both valueless lane instances and retain cross-lane isolation, conservation and recovery invariants."
+}

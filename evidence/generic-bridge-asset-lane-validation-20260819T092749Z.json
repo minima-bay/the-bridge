@@ -1,0 +1,44 @@
+{
+  "createdAtUtc": "2026-08-19T09:27:49.389Z",
+  "schema": "generic-bridge-asset-lane-validation/v1",
+  "status": "semantic-and-source-pass",
+  "phaseGatePassed": false,
+  "validator": "validate-bridge-asset-lanes.mjs",
+  "validatorSha256": "1590bf2b6e34cca1a2b5eed95f01731ef5822b225a0b192004df4be77bc8f566",
+  "assertionCount": 48,
+  "atomicRejectCount": 14,
+  "laneCount": 2,
+  "lanes": [
+    {
+      "name": "USDTm",
+      "kind": "ERC20",
+      "decimals": 6,
+      "capAtoms": "1000000000"
+    },
+    {
+      "name": "ETHm-provisional",
+      "kind": "NATIVE",
+      "decimals": 18,
+      "capAtoms": "10000000000000000000"
+    }
+  ],
+  "ethExactWeiModeled": true,
+  "ethSingleLimbMaximumWei": "18446744073709551615",
+  "ethSingleLimbMaximum": "18.446744073709551615 ETH",
+  "ethPrototypeCapWei": "10000000000000000000",
+  "forcedEthExcludedFromAttributableCollateral": true,
+  "crossLaneReplayRejected": true,
+  "crossLaneStateIsolationChecked": true,
+  "erc20MeasuredIncreaseChecked": true,
+  "nativePayoutAtomicityAndReentrancyChecked": true,
+  "tokenCreate18DecimalsRuntimeExecuted": false,
+  "kissRuntimeExecuted": false,
+  "exactSignedTxPowMeasured": false,
+  "tokenWalletOrNodeCommandExecuted": false,
+  "sourceInspection": {
+    "minimaCommit": "52542f25605a28a776e9b3b43b0808a05dceab01",
+    "tokencreateSha256": "70e9270cbc38878ddcd735a6807615197340f41a1ebc859fa17498362f753349",
+    "miniNumberSha256": "ba39b3c5e3a6384517e8ea332c14fc14941ebf8328c32fa74352d537c2339d4c",
+    "contractSha256": "629d1dbb7851062e01cf787932b75626463e2013b28a91ef1fb2227d8f8be6fa"
+  }
+}

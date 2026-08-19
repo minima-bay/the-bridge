@@ -46,6 +46,31 @@ The 203-call measurement is deliberately favorable. It performs almost no proof 
 arithmetic, transcript logic or covenant checks. It is therefore an upper bound for that exact
 KISS script shape, not a complete-verifier benchmark.
 
+## First mainnet consensus fixture rung
+
+The read-only fixture collector captured 32 mainnet blocks from Minima 1.1.2.6:
+
+- 24 recent blocks, heights 2,268,209 through 2,268,232;
+- 8 blocks beginning at the live Cascade boundary, heights 2,267,194 through 2,267,201;
+- anchor `0x00000047C40297A516D1C87D8FF7E9571BA79D6C2C65384839B23698FE9BDA68`
+  at height 2,268,232 with 8 confirmations at lookup;
+- unchanged initial and final tip 2,268,240 during the capture;
+- displayed `header.chainid` value `0x00` in all 32 responses.
+
+The validator recomputed every stored response SHA-256, checked exact heights, displayed
+`txpowid <= blkdiff`, unique identifiers, compacted immediate-parent continuity and anchor identity,
+then rejected seven deliberate in-memory corruptions.
+
+The first validation attempt failed at height 2,267,196 because it assumed an immediate parent must
+always have a displayed difficulty-zero entry. The preserved RPC response instead begins with
+`difficulty:1,count:2` and still names height 2,267,195 as the immediate parent. The corrected
+validator checks the first compacted super-parent entry. It does not claim to implement expansion or
+Cascade semantics.
+
+This is evidence for the declared RPC consistency checks only. It does not recompute a TxPoW ID from
+canonical bytes, validate difficulty adjustment, calculate cumulative work, choose between forks,
+validate the Cascade, or verify an MMR proof. Core golden binary vectors remain the next dependency.
+
 ## Authentic Winterfell proof experiment
 
 Upstream source was pinned to Winterfell commit
@@ -92,14 +117,15 @@ over the blob proves that somebody signed it, not that Minima consensus verified
 
 ## Recommended next work
 
-Prepare a Minima Core feasibility RFC for one bounded, versioned proof-verification primitive. It
-should expose only fixed public inputs and a fixed proof system or program hash, charge a consensus
-bounded cost, reject unknown versions, and be exercised against malformed proofs and worst-case
-transactions before any bridge covenant is designed.
+The original recommendation was to prepare a Minima Core feasibility RFC for one bounded, versioned
+proof-verification primitive. The RFC was prepared and the official Core source was inspected.
 
-The founder decision is whether to pursue protocol-level support with Minima Core. If that is not
-available, the Ethereum-to-Minima route must remain either research-only or explicitly federated.
-It must not be described as trustless.
+Superseded on 2026-08-19: the founder decided not to depend on Minima-team priorities or a Minima
+Core change. The public-chain target must run on stock Minima mainnet. The Ethereum-to-Minima route
+therefore proceeds only through a verifier built from already-shipped primitives under the current
+1,024-operation and 64 KiB limits. If that local gate fails, the proof-only bridge stops. Any
+threshold-attestation design is an explicitly trusted alternative and requires a separate founder
+decision. It must not be described as trustless or as ZK verification.
 
 In parallel, Minima-to-Ethereum can be researched independently as a stateful Ethereum verifier for
 Minima TxPoW, cumulative work, cascade and UTXO inclusion. That direction does not solve the reverse
@@ -114,11 +140,15 @@ direction and must retain explicit probabilistic reorg and delayed-settlement ru
 | `evidence/winterfell-sha3-fib1024-20260818.bin` | `e95723134c500397f7dab401c73049ad6531ae49ae4b58ddfd5eeed84d69a883` |
 | `evidence/winterfell-sha3-fib1024-default-instrumented-20260818.bin` | `e95723134c500397f7dab401c73049ad6531ae49ae4b58ddfd5eeed84d69a883` |
 | `evidence/winterfell-sha3-fib1024-q64e2-instrumented-20260818.bin` | `a674f9659af879417309bdcbd9348509b85441f2c4d92bbabd8825e0315eec9a` |
+| `fixtures/minima-consensus-mainnet-20260818T203435Z.json` | `438761834fe6d98ec8808b426e1d08696b6cef42fe4f6c34e0e494f8f74db68e` |
+| `evidence/minima-consensus-fixture-validation-20260818T203519Z.json` | `88a63dc22e4bda309731804fbd7aef75cdb5a296e7981c7da4e4afd016b3352f` |
 
 Harness hashes:
 
 - `minima-runtime-probe.mjs`: `7a7b759ef4e9fd1254bfb8c656d9b0cf7ae4bbaa44d8dc3b70b0a959de6b1cfd`
 - `minima-kernel-probe.mjs`: `dcff4b58b91d901b41fd4672fd0130a5b64c8d4cd8c1e613ab00b58d94a11bc8`
+- `capture-minima-consensus-fixtures.mjs`: `749a0c36825f8da31984d569c6723a45f6dc418a550f0b48f279bc48879c8b2b`
+- `validate-minima-consensus-fixture.mjs`: `c0303c36dd8f8893a3548c01dc146f2a00d6d03fbdc06575488a2ce53b1ae333`
 
 ## Primary source anchors
 

@@ -1,0 +1,62 @@
+{
+  "schema": "generic-bridge-mainnet-p8-ceremony-preflight/v1",
+  "status": "pass",
+  "phaseGatePassed": false,
+  "authorizedBy": "D-USDTM-023",
+  "preparedAt": "2026-08-19T16:08:33.565Z",
+  "node": {
+    "name": "USDTmIssuerP8",
+    "basePort": 9901,
+    "rpcPort": 9905,
+    "version": "1.1.2.6",
+    "jarSha256": "e8e8b20356d4a688b48d77550fbac2c141107c292af3d9de8ffeb84b3ff8a535",
+    "issuerAddress": "0xD432C25C7EDA5EC27E2AB8D7F417EC55EF5E51DABE5344392F369713BAB24A5E",
+    "issuerMiniAddress": "MxG086K6B15ZVMQBR17SAYZQVQ1FR2YTTF53MYUAD23WBPMWS9RYCWABQ191627",
+    "fundingReturnAddress": null,
+    "seedCopies": 1,
+    "retired": false,
+    "retirementMarker": null
+  },
+  "before": {
+    "version": "1.1.2.6",
+    "block": "2269624",
+    "chainHash": "0x0000003546F2C5CAF160BE486669B37F9B810E8510C53BB380A7F26B2AB995AC",
+    "chainLength": 1036,
+    "connected": 6,
+    "mempool": 0,
+    "minima": {
+      "confirmed": "0",
+      "sendable": "0",
+      "unconfirmed": "0"
+    }
+  },
+  "after": {
+    "version": "1.1.2.6",
+    "block": "2269624",
+    "chainHash": "0x0000003546F2C5CAF160BE486669B37F9B810E8510C53BB380A7F26B2AB995AC",
+    "chainLength": 1036,
+    "connected": 6,
+    "mempool": 0,
+    "minima": {
+      "confirmed": "0",
+      "sendable": "0",
+      "unconfirmed": "0"
+    }
+  },
+  "tokenCountBefore": 17,
+  "tokenCountAfter": 17,
+  "dryMintErrors": {
+    "USDTm": "No Minima Coins available!",
+    "ETHm": "No Minima Coins available!",
+    "USDTmControl": "No Minima Coins available!",
+    "ETHmControl": "No Minima Coins available!"
+  },
+  "commands": {
+    "USDTm": "tokencreate name:{\"name\":\"USDTm-P8\",\"ticker\":\"USDTm-P8\",\"description\":\"Valueless Minima mainnet P8 bridge test token. Not issued by Tether, not USDT or USDT0, not redeemable, and no monetary value.\"} amount:1000001 decimals:6",
+    "ETHm": "tokencreate name:{\"name\":\"ETHm-P8\",\"ticker\":\"ETHm-P8\",\"description\":\"Valueless Minima mainnet P8 bridge test token. Not ETH, not issued by Ethereum, not redeemable, and no monetary value.\"} amount:11 decimals:18 uselimits:false",
+    "USDTmControl": "tokencreate name:{\"name\":\"USDTm P8 Lane Control\",\"ticker\":\"USDTmP8CTRL\",\"description\":\"Valueless one-unit lineage marker for the USDTm P8 bridge mainnet test lane. Not transferable value and not redeemable.\"} amount:1 decimals:0",
+    "ETHmControl": "tokencreate name:{\"name\":\"ETHm P8 Lane Control\",\"ticker\":\"ETHmP8CTRL\",\"description\":\"Valueless one-unit lineage marker for the ETHm P8 bridge mainnet test lane. Not transferable value and not redeemable.\"} amount:1 decimals:0"
+  },
+  "noNodeWalletTokenSignatureOrTransactionCommandSucceeded": true,
+  "nextGate": "fund the exact issuer address with a small valueless Minima amount and pin the funding input address"
+}

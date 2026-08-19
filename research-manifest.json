@@ -1,40 +1,81 @@
 {
   "manifestVersion": 1,
-  "generatedAt": "2026-08-18T19:51:15.558Z",
+  "generatedAt": "2026-08-19T06:37:13.845Z",
   "scope": "no-funds ZK light-client and native Minima verifier research",
   "exclusions": [
     "upstream bare repository internals",
     "generated .sha256 sidecars",
     "this manifest itself"
   ],
-  "currentFixtureEvidence": "evidence/rfc-fixture-validation-20260818T194947Z.json",
+  "currentFixtureEvidence": "evidence/rfc-fixture-validation-20260818T210649Z.json",
   "currentFixtureSha256": "0x8963d393bf810c062d0e9e425550c7a80b16aae9bdf36b5072bce20165500be0",
   "currentValidatorSha256": "0x6c46e974b4228fc9a75468403df55cf6230b742ffcfc3aaa072d3a4429728389",
+  "currentConsensusFixture": "fixtures/minima-consensus-mainnet-20260818T203435Z.json",
+  "currentConsensusFixtureSha256": "438761834fe6d98ec8808b426e1d08696b6cef42fe4f6c34e0e494f8f74db68e",
+  "currentConsensusValidatorSha256": "c0303c36dd8f8893a3548c01dc146f2a00d6d03fbdc06575488a2ce53b1ae333",
+  "currentConsensusFixtureEvidence": "evidence/minima-consensus-fixture-validation-20260818T210649Z.json",
+  "controlDocumentSha256": "21f0e2b09a8169f108e2ca68833600d54c2877ce45425aa15b51216faac7513e",
+  "controlValidatorSha256": "b112fc3ce3dc8fa75efc71a99dbf5a526e9257e76e67422e3e0c2e89329c193a",
+  "currentControlEvidence": "evidence/usdtm-control-validation-20260819T063708Z.json",
+  "p1ModelValidatorSha256": "c9a43db992a8884d73f91795531659cf1c17a40f7e365dea4cdeb06847cdce9c",
+  "currentP1ModelEvidence": "evidence/usdtm-p1-model-validation-20260818T225043Z.json",
+  "p2CancellationValidatorSha256": "d2a40df7bda11b6b8c607f0f2e3e2ae861f1d025b22af05ef17f6c5c62d0b364",
+  "p2CancellationFixtureSha256": "f8ca122b243dc2d5a282667e73b4a679664f3c7ee2a433135fbcd1a320b4fe9e",
+  "currentP2CancellationEvidence": "evidence/usdtm-p2-cancellation-validation-20260819T061906Z.json",
+  "p2RecordsValidatorSha256": "3e36e80245e4fab117cd1a14d668320c955667c1449e2f8fb05af62ac167c944",
+  "p2RecordsFixtureSha256": "ffdddd2ffcab77d4ff1d721c8f26c996516e973b012276488077429e1ad80288",
+  "currentP2RecordsEvidence": "evidence/usdtm-p2-record-validation-20260819T061906Z.json",
+  "p3ReferenceValidatorSha256": "148ddef796a3cae4c17ccdaa21f6db9d183bdf4fc4c1bb1d7a37abdbaf907fcb",
+  "currentP3ReferenceEvidence": "evidence/usdtm-p3-reference-validation-20260819T061909Z.json",
+  "p4VaultModelValidatorSha256": "4b1a52533f2ff9d1bb7a52a534ee11f626768cfb69e05d4f5a883910f0804b2a",
+  "currentP4VaultModelEvidence": "evidence/usdtm-p4-vault-model-validation-20260819T063707Z.json",
+  "p4EvmValidatorSha256": "edb7630ed546aab3ab5913146f695ca5cc4f0f663023c70e9c5733c7e4d30e91",
+  "currentP4EvmEvidence": "evidence/usdtm-p4-evm-validation-20260819T063701Z.json",
+  "scopeValidatorSha256": "2e23879f2f49cd46799394deb850995cb5bae44fcf4ce7c111bb6c20f6f76bf2",
+  "currentScopeEvidence": "evidence/usdtm-scope-validation-20260819T061920Z.json",
+  "repositoryHead": "cc86043296cb2128efe50fd044bac4ec8debc544",
+  "protectedTreeHash": "d80ee9238c9ba582f3fe5c19b731b86562eb8893",
+  "manifestGeneratorSha256": "d53f6f8449273c284e223adb744a56db927decfac479db965db8b8dbd03b30a1",
   "files": [
     {
       "file": "README.md",
-      "bytes": 3621,
-      "sha256": "63d93cf2000ae364f239cd17e407b72df101798b1a5e742b8163d9b9ad2bef8f"
+      "bytes": 7273,
+      "sha256": "ca653dc5aa27ce3fe277d42866b544c1e2d03efb2e80984b417644a89fe40ad9"
+    },
+    {
+      "file": "USDTM-ZK-PROTOTYPE.md",
+      "bytes": 71003,
+      "sha256": "21f0e2b09a8169f108e2ca68833600d54c2877ce45425aa15b51216faac7513e"
     },
     {
       "file": "feasibility-findings-2026-08-18.md",
-      "bytes": 7576,
-      "sha256": "bb8bac9dbf9eff1945500f3a1b5862e9167e16f6b3c98247b26a9ec97093649e"
+      "bytes": 9552,
+      "sha256": "263b451fc9cbd42b2b1fe7f16a851e247d821670f7818028fc88328ffe0f3dcb"
     },
     {
       "file": "minima-core-zk-verifier-rfc-2026-08-18.md",
-      "bytes": 13772,
-      "sha256": "32d76cb38af4cc9ef6e88f9c9f0c40ed3272eb4a2de201f58c98dd1f113ee841"
+      "bytes": 14383,
+      "sha256": "e03333376c287fb81727e318e4062e8f628f9586636b57b0a778a0dd1fabbf89"
+    },
+    {
+      "file": "minima-core-native-verifier-proposal-2026-08-18.md",
+      "bytes": 7254,
+      "sha256": "05cab8a606d7752160cf747df041f7d48c335022d944a4afde140eac96fa6167"
+    },
+    {
+      "file": "minima-consensus-fixture-spec-v1.md",
+      "bytes": 3756,
+      "sha256": "4c889ee223e0688ebf05d4d755f2a9ef97022e2148d44450f46a8b524b06bbb1"
     },
     {
       "file": "bridge-public-inputs-v1.md",
-      "bytes": 21589,
-      "sha256": "81d82e169fbc9dc25cec5b5753ef25af7675bfa10276f1d039d219f0660ac4c7"
+      "bytes": 22230,
+      "sha256": "e4735b97480b9229063010c710e8fcec33dac019f8dbd14cda0c2e137d40f471"
     },
     {
       "file": "reserve-covenant-transition-spec-v1.md",
-      "bytes": 16154,
-      "sha256": "d7ecb2ae2fbbe7d39c0b1bccaf8db2fe4295f6ffea5d152e3c9e243b0cfdffde"
+      "bytes": 22802,
+      "sha256": "b94759f478ca8043289a5b143d4906dc7b87c9afdc85eec36b9706f24b7b278b"
     },
     {
       "file": "proof-system-selection-matrix.md",
@@ -43,23 +84,153 @@
     },
     {
       "file": "adversarial-verification-plan.md",
-      "bytes": 8215,
-      "sha256": "aba5c4a92ef717a260850995df8e54592c8c416fdfe3dfac9bffec7da947e6b6"
+      "bytes": 12454,
+      "sha256": "2e9154b0956b05d1a8fbb197278a668fed5a50c7a4ba26ba139a1a6911387b52"
+    },
+    {
+      "file": "usdtm-p1-threat-model.md",
+      "bytes": 22992,
+      "sha256": "a8f797fb1ff5519a355392bbaeda4b1fc488d4d022a77105f818d0d51d24e97e"
+    },
+    {
+      "file": "usdtm-p2-canonical-schema-v1.md",
+      "bytes": 9144,
+      "sha256": "e35526d305b138e6bcea7a2958c205851fda23702cd5ed30be4ac5a92ba9b38d"
+    },
+    {
+      "file": "usdtm-p3-reference-state-machine.md",
+      "bytes": 2159,
+      "sha256": "73db17af86ef41bff4386fb1bb1329b8e957a7c55c7a947eb3a372101b423b32"
+    },
+    {
+      "file": "usdtm-p4-vault-status.md",
+      "bytes": 1759,
+      "sha256": "65a92ac85421cfa7aa32833f97f301cba22d424c9e8a995075ccb2a74d121b5f"
     },
     {
       "file": "open-decisions.md",
-      "bytes": 2029,
-      "sha256": "db22cfa9ddd2afe024cedacb1808fe5ea5e727a88740f6f989298cb54b8148e6"
+      "bytes": 4123,
+      "sha256": "36af847886795554c36dd7d25379a0f7ef544bc08e855c3a95fcb222af455410"
     },
     {
-      "file": "fixtures/bridge-public-inputs-v1.json",
-      "bytes": 5584,
-      "sha256": "8963d393bf810c062d0e9e425550c7a80b16aae9bdf36b5072bce20165500be0"
+      "file": "build-research-manifest.mjs",
+      "bytes": 14340,
+      "sha256": "d53f6f8449273c284e223adb744a56db927decfac479db965db8b8dbd03b30a1"
     },
     {
       "file": "validate-rfc-fixtures.mjs",
       "bytes": 25723,
       "sha256": "6c46e974b4228fc9a75468403df55cf6230b742ffcfc3aaa072d3a4429728389"
+    },
+    {
+      "file": "validate-usdtm-control.mjs",
+      "bytes": 7720,
+      "sha256": "b112fc3ce3dc8fa75efc71a99dbf5a526e9257e76e67422e3e0c2e89329c193a"
+    },
+    {
+      "file": "validate-usdtm-scope.mjs",
+      "bytes": 3871,
+      "sha256": "2e23879f2f49cd46799394deb850995cb5bae44fcf4ce7c111bb6c20f6f76bf2"
+    },
+    {
+      "file": "validate-usdtm-p1-model.mjs",
+      "bytes": 50270,
+      "sha256": "c9a43db992a8884d73f91795531659cf1c17a40f7e365dea4cdeb06847cdce9c"
+    },
+    {
+      "file": "usdtm-p2-primary-encoder.mjs",
+      "bytes": 3149,
+      "sha256": "7ba3933ff47486c67c1c9a6f96aa328ca4b65724c21b0ad870ddd5763e070e4d"
+    },
+    {
+      "file": "usdtm-p2-independent-encoder.mjs",
+      "bytes": 1828,
+      "sha256": "c0de23f0366c2f7d901779219d66943a9afd586d25b504a2c993d5ed96121aa2"
+    },
+    {
+      "file": "validate-usdtm-p2-cancellation.mjs",
+      "bytes": 4710,
+      "sha256": "d2a40df7bda11b6b8c607f0f2e3e2ae861f1d025b22af05ef17f6c5c62d0b364"
+    },
+    {
+      "file": "usdtm-p2-records-primary.mjs",
+      "bytes": 5485,
+      "sha256": "6167894e068b2a984eaa560ea332f860df96614a661c1d746727631807110188"
+    },
+    {
+      "file": "usdtm-p2-records-independent.mjs",
+      "bytes": 4429,
+      "sha256": "74a7f94829667aecfa39e1b55a255fad5ed1587c1dd5e94fb6ee2182e43e717f"
+    },
+    {
+      "file": "validate-usdtm-p2-records.mjs",
+      "bytes": 8228,
+      "sha256": "3e36e80245e4fab117cd1a14d668320c955667c1449e2f8fb05af62ac167c944"
+    },
+    {
+      "file": "usdtm-p3-reference.mjs",
+      "bytes": 16716,
+      "sha256": "148ddef796a3cae4c17ccdaa21f6db9d183bdf4fc4c1bb1d7a37abdbaf907fcb"
+    },
+    {
+      "file": "validate-usdtm-p4-vault-model.mjs",
+      "bytes": 7479,
+      "sha256": "4b1a52533f2ff9d1bb7a52a534ee11f626768cfb69e05d4f5a883910f0804b2a"
+    },
+    {
+      "file": "validate-usdtm-p4-evm.mjs",
+      "bytes": 5336,
+      "sha256": "edb7630ed546aab3ab5913146f695ca5cc4f0f663023c70e9c5733c7e4d30e91"
+    },
+    {
+      "file": "p4/package.json",
+      "bytes": 426,
+      "sha256": "85283bf05dbc84023ed4a53630704dbf51a558b7fa29713e5c20110b7d64b7ec"
+    },
+    {
+      "file": "p4/package-lock.json",
+      "bytes": 150337,
+      "sha256": "7b73d3c0cc65ee5ba1664e0cb67e61eb0daa227e39df5e3a6f352337841dfdb6"
+    },
+    {
+      "file": "p4/hardhat.config.js",
+      "bytes": 690,
+      "sha256": "409e1095dcc4cbd15af84d9bfb7cbd1d039ae9ddabece0f70c7a3763b9431978"
+    },
+    {
+      "file": "p4/.gitignore",
+      "bytes": 32,
+      "sha256": "bbfaccd425ad1b4ed06d9e096afa8f2fe83274ddb96944d8f405f4b37183ed67"
+    },
+    {
+      "file": "p4/test/USDTmVaultV1.js",
+      "bytes": 14387,
+      "sha256": "37a84605ff05ecc46f3cf8c857cefca298bc587a1b0de18cde655e06e4cbeac5"
+    },
+    {
+      "file": "p4/contracts/USDTmVaultV1.sol",
+      "bytes": 7327,
+      "sha256": "2446e3cbfddc8c744e02f3a504302df115e0c79a34b3551885cffda5eb4fcd3c"
+    },
+    {
+      "file": "p4/contracts/MockUSDT6.sol",
+      "bytes": 1784,
+      "sha256": "bbd1421b6ac247f086a91b3da4b50c3aca7bfc0e3b99ac60e1e49d346e1ba088"
+    },
+    {
+      "file": "p4/contracts/MockMinimaProofVerifier.sol",
+      "bytes": 1123,
+      "sha256": "9d5fb17c4a14af916caa2a4aeb2880b710e712326186e2d01a2d14bedb14d9ed"
+    },
+    {
+      "file": "capture-minima-consensus-fixtures.mjs",
+      "bytes": 6986,
+      "sha256": "749a0c36825f8da31984d569c6723a45f6dc418a550f0b48f279bc48879c8b2b"
+    },
+    {
+      "file": "validate-minima-consensus-fixture.mjs",
+      "bytes": 10408,
+      "sha256": "c0303c36dd8f8893a3548c01dc146f2a00d6d03fbdc06575488a2ce53b1ae333"
     },
     {
       "file": "minima-runtime-probe.mjs",
@@ -77,9 +248,39 @@
       "sha256": "9c14fe8850811678ccc153e663c4c0134daee7eefd081747931a458439a02fb2"
     },
     {
+      "file": "fixtures/bridge-public-inputs-v1.json",
+      "bytes": 5584,
+      "sha256": "8963d393bf810c062d0e9e425550c7a80b16aae9bdf36b5072bce20165500be0"
+    },
+    {
+      "file": "fixtures/minima-consensus-mainnet-20260818T203435Z.json",
+      "bytes": 134983,
+      "sha256": "438761834fe6d98ec8808b426e1d08696b6cef42fe4f6c34e0e494f8f74db68e"
+    },
+    {
+      "file": "fixtures/usdtm-p2-cancellation-v1.json",
+      "bytes": 1833,
+      "sha256": "f8ca122b243dc2d5a282667e73b4a679664f3c7ee2a433135fbcd1a320b4fe9e"
+    },
+    {
+      "file": "fixtures/usdtm-p2-records-v1.json",
+      "bytes": 9039,
+      "sha256": "ffdddd2ffcab77d4ff1d721c8f26c996516e973b012276488077429e1ad80288"
+    },
+    {
       "file": "evidence/README.md",
-      "bytes": 602,
-      "sha256": "4b6e688ec55c60fe4738ea08f9e32ddb0424ddf4335b5308120c8e4edbe67559"
+      "bytes": 2728,
+      "sha256": "c9457b52f09413b2c19c8302068b2ccabf53fdf84433f8aabb2abf233be130cc"
+    },
+    {
+      "file": "evidence/minima-consensus-fixture-validation-20260818T203519Z.json",
+      "bytes": 2259,
+      "sha256": "88a63dc22e4bda309731804fbd7aef75cdb5a296e7981c7da4e4afd016b3352f"
+    },
+    {
+      "file": "evidence/minima-consensus-fixture-validation-20260818T210649Z.json",
+      "bytes": 2259,
+      "sha256": "b0b37f222a370ec53bdaa27b4ca42d481d5dabacb1c32b4347ed1eebde215623"
     },
     {
       "file": "evidence/minima-kernel-probe-20260818T174142Z.json",
@@ -150,6 +351,101 @@
       "file": "evidence/rfc-fixture-validation-20260818T194947Z.json",
       "bytes": 11380,
       "sha256": "de2a75410735f3547aa448c502c48d4c2185f0f534a304704d601d820d28c155"
+    },
+    {
+      "file": "evidence/rfc-fixture-validation-20260818T210649Z.json",
+      "bytes": 11380,
+      "sha256": "71fb814e27a3a9e5d6951fd822866b7e0a9140997805f9ffafff698285be22ec"
+    },
+    {
+      "file": "evidence/usdtm-control-validation-20260818T210728Z.json",
+      "bytes": 700,
+      "sha256": "3b7a9ac7034998a6607464b48820760426777628d92a07d9f21eb9bb710c9b6f"
+    },
+    {
+      "file": "evidence/usdtm-control-validation-20260818T213325Z.json",
+      "bytes": 739,
+      "sha256": "60ff9e33e264ece9ad3de471edec5257be78972b477d5bb450e334402c8aacf6"
+    },
+    {
+      "file": "evidence/usdtm-control-validation-20260818T225043Z.json",
+      "bytes": 740,
+      "sha256": "bee81c20e4672fc4dea245b5c463ec2d41bdfa8621a4f67eef251b98274323e4"
+    },
+    {
+      "file": "evidence/usdtm-control-validation-20260819T061907Z.json",
+      "bytes": 740,
+      "sha256": "545b87ce0c4f72463b95414b4a0ae0bcfd8245cacf6e4ecb79202945359a52bc"
+    },
+    {
+      "file": "evidence/usdtm-control-validation-20260819T063708Z.json",
+      "bytes": 740,
+      "sha256": "5c43224a6d47f275ee0445c89e58f28095148610b6764420305737f8b7345e28"
+    },
+    {
+      "file": "evidence/usdtm-p1-model-validation-20260818T225043Z.json",
+      "bytes": 1126,
+      "sha256": "100c57fb97f0c4805c8a56ce32eaa5ca8916c075a021bc4d9e739450249e0212"
+    },
+    {
+      "file": "evidence/usdtm-p2-cancellation-validation-20260818T225043Z.json",
+      "bytes": 1167,
+      "sha256": "4e2602313de31d85cddc8752caa1c734243d0fb6817baa7543361f9a81d867ec"
+    },
+    {
+      "file": "evidence/usdtm-p2-cancellation-validation-20260819T061906Z.json",
+      "bytes": 1209,
+      "sha256": "72bb6dc69e2863c067045b9ccae61ed0151a9f8cc76086b923bf174295eaf6d5"
+    },
+    {
+      "file": "evidence/usdtm-p2-record-validation-20260819T061906Z.json",
+      "bytes": 1346,
+      "sha256": "2274a9cb0a39c9fa2c5d94491d58d9a2137e4ebd6a813597b32df56c8d1af066"
+    },
+    {
+      "file": "evidence/usdtm-p3-reference-validation-20260819T061909Z.json",
+      "bytes": 1074,
+      "sha256": "43eae97a722be66445efa4178a3ad4fe784dc286e0d6af41c22165eb88d8a390"
+    },
+    {
+      "file": "evidence/usdtm-p4-evm-validation-20260819T063701Z.json",
+      "bytes": 1925,
+      "sha256": "93a7eddf86db0c7d3c3949f2dbe309c137fc383ba9ef5da77c1a58aa0ad42bc0"
+    },
+    {
+      "file": "evidence/usdtm-p4-vault-model-validation-20260819T061907Z.json",
+      "bytes": 1164,
+      "sha256": "3430e89027699e51140ea0198f96a7810504d96ae13a0ddb0d43b9bf43aaac69"
+    },
+    {
+      "file": "evidence/usdtm-p4-vault-model-validation-20260819T063707Z.json",
+      "bytes": 1109,
+      "sha256": "35c9e77a6143317ffea186c771d5e1437ed76799f324f3ad18bb5ac93e75c71c"
+    },
+    {
+      "file": "evidence/usdtm-scope-validation-20260818T213328Z.json",
+      "bytes": 4479,
+      "sha256": "785b43a5778226420577edb286356654714b5cc1b68f0fa004707fd5c406379e"
+    },
+    {
+      "file": "evidence/usdtm-scope-validation-20260818T225044Z.json",
+      "bytes": 6240,
+      "sha256": "a852fd8ed04c154c133bbb2c58926d4286a81cb942d46bdd315966c51ab5de28"
+    },
+    {
+      "file": "evidence/usdtm-scope-validation-20260819T061908Z.json",
+      "bytes": 8677,
+      "sha256": "44a779e9ef6179e0c947dbf4bdd390686ddd952810dab7806eaa113ccec4d222"
+    },
+    {
+      "file": "evidence/usdtm-scope-validation-20260819T061920Z.json",
+      "bytes": 9201,
+      "sha256": "34a0fa759a4e71681b0949b0ad804cb2582646aa5b1d42ba89d96024d5a1a14d"
+    },
+    {
+      "file": "evidence/usdtm-scope-validation-20260819T063713Z.json",
+      "bytes": 13149,
+      "sha256": "35d2b489813d03b14aebdd5eb7ffc650a047074b0b0d334658c5f1cdbe32830f"
     },
     {
       "file": "evidence/winterfell-sha3-fib1024-20260818.bin",

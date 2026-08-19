@@ -1,0 +1,21 @@
+{
+  "schema": "usdtm-p2-cancellation-validation/v1",
+  "createdAtUtc": "2026-08-18T22:50:43.591Z",
+  "status": "passed",
+  "validator": "validate-usdtm-p2-cancellation.mjs",
+  "validatorSha256": "968b01cbfebcb543fb9b7ca39697897fd4d317be88618e27bc4bd6f9caf93276",
+  "fixture": "fixtures/usdtm-p2-cancellation-v1.json",
+  "fixtureSha256": "f8ca122b243dc2d5a282667e73b4a679664f3c7ee2a433135fbcd1a320b4fe9e",
+  "encodedBytes": 512,
+  "recordSha256": "b52171ece1092767811a99d301785f9097967b2327bf91ac4c663507d2650736",
+  "assertionCount": 37,
+  "fieldMutationCount": 27,
+  "mutationsDetected": 27,
+  "forbiddenStateOrActionCount": 4,
+  "limitations": [
+    "This is a cancellation authorization record only; remaining P2 deposit, redemption, payout-batch and client-state records are not frozen.",
+    "Authority scheme 1 and its 32-byte key are schema values only; no Minima signature opcode or runtime verification executed.",
+    "The fixture proves deterministic local bytes and mutation sensitivity, not source inclusion, finality, ZK verification, KISS execution or mineability.",
+    "No network, transaction, token, vault, funds or mainnet action occurred."
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "usdtm-p4-vault-model-validation/v1",
+  "createdAtUtc": "2026-08-19T07:00:05.908Z",
+  "status": "partial-pass",
+  "validator": "validate-usdtm-p4-vault-model.mjs",
+  "validatorSha256": "4d24c92e521738c665c0f35fb40cea3fc0659899fd929527b51c048082e48302",
+  "vaultSourceSha256": "0c89e77848c29db565a53b8211aeaf00d465a54d8ed0985a98ca5f1822135bb9",
+  "mockTokenSourceSha256": "bbd1421b6ac247f086a91b3da4b50c3aca7bfc0e3b99ac60e1e49d346e1ba088",
+  "mockVerifierSourceSha256": "6690e744d45735e8530c6c415f755e75f7f8ca8ef621367c7c3cd0ca1f8a011f",
+  "assertionCount": 40,
+  "phaseGatePassed": false,
+  "blockers": [
+    "Bay law 14 still requires an independent hostile review of the corrected P4 package before the phase gate can pass."
+  ],
+  "limitations": [
+    "This validator is a JavaScript semantic model plus Solidity source assertions; separate P4 evidence owns compilation and local EVM execution.",
+    "MockMinimaProofVerifier proves interface behavior only and never establishes Minima proof authenticity; that is intentionally outside P4.",
+    "No network, transaction, token, vault, funds or mainnet action occurred."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "usdtm-p4-evm-validation/v1",
+  "createdAtUtc": "2026-08-19T06:40:29.566Z",
+  "status": "partial-pass",
+  "phaseGatePassed": false,
+  "validator": "validate-usdtm-p4-evm.mjs",
+  "validatorSha256": "97d3e5a2ad158fe439fabf7f1cfa455d77fdd420ed650ac908e93ad088597bfb",
+  "packageLockSha256": "7b73d3c0cc65ee5ba1664e0cb67e61eb0daa227e39df5e3a6f352337841dfdb6",
+  "configSha256": "409e1095dcc4cbd15af84d9bfb7cbd1d039ae9ddabece0f70c7a3763b9431978",
+  "testSourceSha256": "37a84605ff05ecc46f3cf8c857cefca298bc587a1b0de18cde655e06e4cbeac5",
+  "vaultSourceSha256": "2446e3cbfddc8c744e02f3a504302df115e0c79a34b3551885cffda5eb4fcd3c",
+  "compiler": "0.8.24+commit.e11b9ed9",
+  "hardhat": "3.13.0",
+  "evmTarget": "shanghai",
+  "optimizer": {
+    "enabled": true,
+    "runs": 200
+  },
+  "mochaTestsPassed": 11,
+  "compilationObserved": true,
+  "creationBytecodeBytes": 5892,
+  "creationBytecodeSha256": "ff6e19e0853518e8bb5ac1812886e3b02d752e8079e52f2241e224099616363b",
+  "deployedBytecodeTemplateBytes": 5141,
+  "deployedBytecodeTemplateSha256": "419b8edfd310239578892ce804982f66df9fda239868657472fd0f6421071380",
+  "dependencyAudit": {
+    "critical": 0,
+    "high": 0,
+    "moderate": 0,
+    "low": 11,
+    "info": 0
+  },
+  "blockers": [
+    "No persistent public-network Ethereum deployment is authorized, so public runtime bytecode has not been matched to the reviewed compiler artifact.",
+    "MockMinimaProofVerifier proves interface behavior only and never establishes Minima proof authenticity."
+  ],
+  "limitations": [
+    "This is local Hardhat EVM execution with a mock token and mock proof verifier, not a public-chain deployment.",
+    "The 11 low dependency-audit findings are transitive optional verification and ignition tooling findings with no available fix in the pinned toolbox graph.",
+    "No network, wallet, signature, transaction post, token creation, vault deployment, funds or mainnet action occurred."
+  ]
+}

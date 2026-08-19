@@ -1,0 +1,66 @@
+{
+  "schema": "generic-bridge-mainnet-p8-ceremony-state/v1",
+  "status": "p8-preflight-passed-awaiting-funding",
+  "authorizedBy": "D-USDTM-023",
+  "node": {
+    "name": "USDTmIssuerP8",
+    "basePort": 9901,
+    "rpcPort": 9905,
+    "version": "1.1.2.6",
+    "jarSha256": "e8e8b20356d4a688b48d77550fbac2c141107c292af3d9de8ffeb84b3ff8a535",
+    "issuerAddress": "0xD432C25C7EDA5EC27E2AB8D7F417EC55EF5E51DABE5344392F369713BAB24A5E",
+    "issuerMiniAddress": "MxG086K6B15ZVMQBR17SAYZQVQ1FR2YTTF53MYUAD23WBPMWS9RYCWABQ191627",
+    "fundingReturnAddress": null,
+    "seedCopies": 1,
+    "retired": false,
+    "retirementMarker": null
+  },
+  "preparedAt": "2026-08-19T16:08:33.565Z",
+  "dryRun": {
+    "block": "2269624",
+    "chainHash": "0x0000003546F2C5CAF160BE486669B37F9B810E8510C53BB380A7F26B2AB995AC",
+    "connected": 6,
+    "mempoolBefore": 0,
+    "mempoolAfter": 0,
+    "tokenCountBefore": 17,
+    "tokenCountAfter": 17,
+    "USDTm": "No Minima Coins available!",
+    "ETHm": "No Minima Coins available!",
+    "USDTmControl": "No Minima Coins available!",
+    "ETHmControl": "No Minima Coins available!"
+  },
+  "tokens": {
+    "USDTm": {
+      "decimals": 6,
+      "fixedSupply": "1000001",
+      "fixedSupplyAtoms": "1000001000000",
+      "capAtoms": "999999999999",
+      "tokenLevelScript": "RETURN TRUE"
+    },
+    "ETHm": {
+      "decimals": 18,
+      "fixedSupply": "11",
+      "fixedSupplyAtoms": "11000000000000000000",
+      "capAtoms": "10000000000000000000",
+      "tokenLevelScript": "RETURN TRUE"
+    },
+    "USDTmControl": {
+      "decimals": 0,
+      "fixedSupply": "1",
+      "fixedSupplyAtoms": "1",
+      "capAtoms": "0",
+      "tokenLevelScript": "RETURN TRUE"
+    },
+    "ETHmControl": {
+      "decimals": 0,
+      "fixedSupply": "1",
+      "fixedSupplyAtoms": "1",
+      "capAtoms": "0",
+      "tokenLevelScript": "RETURN TRUE"
+    }
+  },
+  "genesis": {},
+  "branches": {},
+  "residualReturn": {},
+  "issuerRetirement": {}
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "minima-consensus-fixture-validation/v1",
+  "createdAtUtc": "2026-08-18T21:06:49.522Z",
+  "fixture": "minima-consensus-mainnet-20260818T203435Z.json",
+  "fixtureSha256": "438761834fe6d98ec8808b426e1d08696b6cef42fe4f6c34e0e494f8f74db68e",
+  "validator": "validate-minima-consensus-fixture.mjs",
+  "validatorSha256": "c0303c36dd8f8893a3548c01dc146f2a00d6d03fbdc06575488a2ce53b1ae333",
+  "passed": true,
+  "baseline": {
+    "blocks": 32,
+    "ranges": {
+      "boundary": {
+        "start": 2267194,
+        "end": 2267201,
+        "count": 8
+      },
+      "recent": {
+        "start": 2268209,
+        "end": 2268232,
+        "count": 24,
+        "anchorDepth": 8
+      }
+    },
+    "chainIds": [
+      "0x00"
+    ],
+    "anchorHeight": 2268232,
+    "anchorId": "0x00000047C40297A516D1C87D8FF7E9571BA79D6C2C65384839B23698FE9BDA68",
+    "anchorConfirmations": 8,
+    "nodeVersion": "1.1.2.6",
+    "initialTip": 2268240,
+    "finalTip": 2268240
+  },
+  "cases": [
+    {
+      "id": "raw-response-hash-mutation",
+      "rejected": true,
+      "error": "response hash mismatch for txpow block:2268209"
+    },
+    {
+      "id": "wrong-returned-height",
+      "rejected": true,
+      "error": "wrong returned height for 2268209"
+    },
+    {
+      "id": "broken-parent-link",
+      "rejected": true,
+      "error": "broken parent link at 2268210"
+    },
+    {
+      "id": "txpow-id-above-target",
+      "rejected": true,
+      "error": "TxPoW ID exceeds target at 2268209"
+    },
+    {
+      "id": "duplicate-txpow-id",
+      "rejected": true,
+      "error": "duplicate TxPoW ID 0x0000001A0F34894F75B511AA999FA4C61115032CA97013B915201FCEF6E5521D"
+    },
+    {
+      "id": "malformed-txpow-id",
+      "rejected": true,
+      "error": "TxPoW ID at 2268209 must be hexadecimal"
+    },
+    {
+      "id": "anchor-id-mismatch",
+      "rejected": true,
+      "error": "anchor lookup ID mismatch"
+    }
+  ],
+  "limitations": [
+    "RPC JSON is not canonical consensus serialization.",
+    "The collector does not recompute TxPoW IDs, difficulty adjustment, cumulative work, fork choice, Cascade transitions, or MMR proofs.",
+    "On-chain lookup and parent continuity describe this node observation and do not prove that no heavier unseen branch exists."
+  ]
+}

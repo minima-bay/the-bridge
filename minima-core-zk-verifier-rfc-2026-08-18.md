@@ -1,7 +1,7 @@
 # RFC: bounded native ZK proof verification for Minima
 
 Date: 2026-08-18  
-Status: research proposal, not implemented  
+Status: superseded research proposal, retained for history and not to be sent under `D-USDTM-016`
 Scope: Minima Core consensus capability, not a bridge deployment
 
 ## 1. Decision requested from Minima Core
@@ -236,34 +236,43 @@ The verifier cannot replace:
 - replay and client-state transitions;
 - adversarial mined testing.
 
-## 11. Promotion gates
+## 11. Native-verifier promotion gates
 
-P0, specification:
+These `NV` identifiers are deliberately separate from the USDTm control document's `P0` through
+`P13` phase board. Current status: none passed.
+
+NV0, specification:
 
 - proof format, curve, transcript, key, public encoding and resource model fixed;
 - independent reviewer can implement every decoder from the RFC alone;
 - Core team accepts that this is a consensus change.
 
-P1, deterministic prototype:
+NV1, deterministic prototype:
 
 - two independent implementations agree on all valid and invalid vectors;
 - fuzzing finds no crash, unbounded allocation or divergent verdict;
 - exact source revision and vector hashes retained.
 
-P2, Core integration on a private network:
+Development-only local or private integration, not a promotion gate:
 
-- full signed transactions pass validation and mine;
-- block-level maximum corpus remains within the approved time and memory budget;
-- old nodes reject the activated witness as specified;
-- unknown versions fail closed.
+- exercise full signed transactions and block-level maximum corpora during Core development;
+- measure old-node and unknown-version behavior before any mainnet proposal;
+- retain the results as development evidence only, never as Bay promotion evidence.
 
-P3, public valueless network test:
+NV2, valueless Minima mainnet activation and mining:
 
-- proof transactions mine and survive restart, catch-up and reorg handling;
+- purpose-created valueless proof transactions mine on Minima mainnet;
+- proof transactions survive restart, catch-up and reorg handling;
 - independent nodes reproduce the verdict and resulting state;
 - adversarial malformed proofs cannot stall block validation.
 
-P4, bridge research may start:
+NV3, mainnet adversarial operations:
+
+- worst-case signed valueless transactions mine under the activated resource limits;
+- restart, catch-up, malformed-proof and supported-reorg corpora preserve deterministic verdicts;
+- unknown verifier versions and unsupported forks halt before state or value changes.
+
+NV4, bridge research may start:
 
 - all prior gates pass;
 - the exact production verifier and key governance are decided;

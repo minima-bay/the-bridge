@@ -1,0 +1,1525 @@
+{
+  "createdAtUtc": "2026-08-19T15:10:18.988Z",
+  "schema": "generic-bridge-p8-record-validation/v1",
+  "status": "canonical-action-records-pass",
+  "phaseGatePassed": false,
+  "validator": "validate-generic-p8-records.mjs",
+  "validatorSha256": "8bfa212bcd0e5ab4fd05806ad16e812180895d3a77c65d2a89244ff9fdc0d84d",
+  "primaryEncoderSha256": "bfa25c3414209bdadeae57cc66e9073a674174c30dbb75aa9f6915a2f4d415a4",
+  "independentEncoderSha256": "a58b604647626c2c1abb6bd63c699252b8a2ed6448a064c89eceb2614619b40f",
+  "fixtureGeneratorSha256": "e80f54b3e7570aaa735c0724617102665179e0f2397ce79a55905373d17288b1",
+  "schemaDocumentSha256": "294695839a7de463430a465511ede03129f488fa30852d5e829923b154dec475",
+  "actionCount": 5,
+  "laneCount": 2,
+  "recordCount": 10,
+  "assertionCount": 454,
+  "mutationCount": 346,
+  "semanticRejectionCount": 17,
+  "expectedLengths": {
+    "CLIENT_UPDATE": 501,
+    "RELEASE": 581,
+    "RETURN": 417,
+    "CANCEL": 634,
+    "PAYOUT_ACK": 661
+  },
+  "records": [
+    {
+      "name": "erc20-client_update",
+      "type": "CLIENT_UPDATE",
+      "mode": "erc20",
+      "recordBytes": 501,
+      "fieldCount": 32,
+      "recordDigest": "0x78ebaa9c03d3a89ba28fbaefe1e5d7790c34b3122ed7734e8015374eee9c699a",
+      "encodedHex": "0x4252494447455f4c414e455f434c49454e545f5632000000000000000000000000010001000201060600000000000000010000000000000001000000e8d4a50fff0000000000000001f7b1e0507cfae5e7ca97c0c0136285f324fbcff3d107ab13bec1979b0c2a31805a5b6359e10dee03b23937a42cdabc7ea237a1eda9eaec55ca6530ad722b0ce93d94432d529c0c07a10904fe9329e35d50c9882e43980186a4ba7564e276838520767ebe56d2b615ceb9a11cb73db472226ec35984427e9452c08473eb991abc1602a15e58e15c1dbd6b88af53aee91db17d9437a50ac919d1f50040f02774bfc133be7c17fd7c4d7486e886c421d58ec0ae5fa8d0ab4d3399ca77e71d91359d4289bb35f5770ece000000000000000100000009ae6da87d7ef5014bf94c38900be1e2eb8b9a0c67a0c7300054c9c3a5d9456edd0000000000000011000000000000001200000000015193c14920196155616a10e496b29de829df5541a694ab4ce2a629e062f37bddf2ca9bc03713e957789acc2ae97df521f965026193eaaf17482ec7151d55dbd963836d27a3c90081dc2fa002b097f0c1c1036fd8244f017f26e75fe55379374ad9e3303f8e753a9be15c36c59705ea093b553d978ea9400495559490af9b5bbdae006600000000004c4b4000000000000000030000000000030d400000018bcfe56800",
+      "offsets": {
+        "domainTag": {
+          "offset": 0,
+          "width": 32
+        },
+        "schemaVersion": {
+          "offset": 32,
+          "width": 2
+        },
+        "action": {
+          "offset": 34,
+          "width": 2
+        },
+        "laneVersion": {
+          "offset": 36,
+          "width": 2
+        },
+        "sourceAssetKind": {
+          "offset": 38,
+          "width": 1
+        },
+        "sourceDecimals": {
+          "offset": 39,
+          "width": 1
+        },
+        "destinationDecimals": {
+          "offset": 40,
+          "width": 1
+        },
+        "sourceQuantumAtoms": {
+          "offset": 41,
+          "width": 8
+        },
+        "destinationQuantumAtoms": {
+          "offset": 49,
+          "width": 8
+        },
+        "laneExposureCapDestinationAtoms": {
+          "offset": 57,
+          "width": 8
+        },
+        "ethereumChainId": {
+          "offset": 65,
+          "width": 8
+        },
+        "minimaNetwork": {
+          "offset": 73,
+          "width": 32
+        },
+        "ethereumVault": {
+          "offset": 105,
+          "width": 20
+        },
+        "sourceAsset": {
+          "offset": 125,
+          "width": 20
+        },
+        "laneId": {
+          "offset": 145,
+          "width": 32
+        },
+        "destinationTokenId": {
+          "offset": 177,
+          "width": 32
+        },
+        "reserveCovenant": {
+          "offset": 209,
+          "width": 32
+        },
+        "controlTokenId": {
+          "offset": 241,
+          "width": 32
+        },
+        "configurationEpoch": {
+          "offset": 273,
+          "width": 8
+        },
+        "committeeEpoch": {
+          "offset": 281,
+          "width": 4
+        },
+        "committeeRoot": {
+          "offset": 285,
+          "width": 32
+        },
+        "previousVaultStateVersion": {
+          "offset": 317,
+          "width": 8
+        },
+        "vaultStateVersion": {
+          "offset": 325,
+          "width": 8
+        },
+        "finalizedBlockNumber": {
+          "offset": 333,
+          "width": 8
+        },
+        "finalizedBlockHash": {
+          "offset": 341,
+          "width": 32
+        },
+        "sourceRecordHash": {
+          "offset": 373,
+          "width": 32
+        },
+        "newClientStateHash": {
+          "offset": 405,
+          "width": 32
+        },
+        "newBridgeStateHash": {
+          "offset": 437,
+          "width": 32
+        },
+        "vaultBalanceSourceAtoms": {
+          "offset": 469,
+          "width": 8
+        },
+        "vaultPayoutCursor": {
+          "offset": 477,
+          "width": 8
+        },
+        "vaultCumulativePaidSourceAtoms": {
+          "offset": 485,
+          "width": 8
+        },
+        "sourceExecutionTimeMilliseconds": {
+          "offset": 493,
+          "width": 8
+        }
+      }
+    },
+    {
+      "name": "erc20-release",
+      "type": "RELEASE",
+      "mode": "erc20",
+      "recordBytes": 581,
+      "fieldCount": 36,
+      "recordDigest": "0x7f711a494ef30ee52037f37cdae99c1a22a6e059f52ccd2cf427e96d38ca09a6",
+      "encodedHex": "0x4252494447455f4c414e455f52454c454153455f56320000000000000000000000010002000201060600000000000000010000000000000001000000e8d4a50fff0000000000000001f7b1e0507cfae5e7ca97c0c0136285f324fbcff3d107ab13bec1979b0c2a31805a5b6359e10dee03b23937a42cdabc7ea237a1eda9eaec55ca6530ad722b0ce93d94432d529c0c07a10904fe9329e35d50c9882e43980186a4ba7564e276838520767ebe56d2b615ceb9a11cb73db472226ec35984427e9452c08473eb991abc1602a15e58e15c1dbd6b88af53aee91db17d9437a50ac919d1f50040f02774bfc133be7c17fd7c4d7486e886c421d58ec0ae5fa8d0ab4d3399ca77e71d91359d4289bb35f5770ece000000000000000100000009ae6da87d7ef5014bf94c38900be1e2eb8b9a0c67a0c7300054c9c3a5d9456edd9f7c59140a5035777a17267cee39ff1985046bfae82f49b2026a9a2f0c44793900000000001312d000000000001312d09c97341fce47d2942dd9032dc7f289f4e728204a001781e60895bb0f108dc8f700000000015193c12f8c7b2f8899da7c977a01c0e3fc4d3ea6ba99e998ca0947ebe43cbd137f006107f8e3fe6ee6d2d81e38a04b7c78000d1528fc5bca894a97cb51ca039ae2eb6900000000000000110000000000000012b7e9061c77f08b7f44af7d9267054b5d0ff6558e3f9cbf4c7ef5629b71ee3dc14e449ed727b321c132eead16a637475f6ff7723575dd68b794308a40a9d8493200000000004c4b4000000000000000030000000000030d400000018bcfe56800",
+      "offsets": {
+        "domainTag": {
+          "offset": 0,
+          "width": 32
+        },
+        "schemaVersion": {
+          "offset": 32,
+          "width": 2
+        },
+        "action": {
+          "offset": 34,
+          "width": 2
+        },
+        "laneVersion": {
+          "offset": 36,
+          "width": 2
+        },
+        "sourceAssetKind": {
+          "offset": 38,
+          "width": 1
+        },
+        "sourceDecimals": {
+          "offset": 39,
+          "width": 1
+        },
+        "destinationDecimals": {
+          "offset": 40,
+          "width": 1
+        },
+        "sourceQuantumAtoms": {
+          "offset": 41,
+          "width": 8
+        },
+        "destinationQuantumAtoms": {
+          "offset": 49,
+          "width": 8
+        },
+        "laneExposureCapDestinationAtoms": {
+          "offset": 57,
+          "width": 8
+        },
+        "ethereumChainId": {
+          "offset": 65,
+          "width": 8
+        },
+        "minimaNetwork": {
+          "offset": 73,
+          "width": 32
+        },
+        "ethereumVault": {
+          "offset": 105,
+          "width": 20
+        },
+        "sourceAsset": {
+          "offset": 125,
+          "width": 20
+        },
+        "laneId": {
+          "offset": 145,
+          "width": 32
+        },
+        "destinationTokenId": {
+          "offset": 177,
+          "width": 32
+        },
+        "reserveCovenant": {
+          "offset": 209,
+          "width": 32
+        },
+        "controlTokenId": {
+          "offset": 241,
+          "width": 32
+        },
+        "configurationEpoch": {
+          "offset": 273,
+          "width": 8
+        },
+        "committeeEpoch": {
+          "offset": 281,
+          "width": 4
+        },
+        "committeeRoot": {
+          "offset": 285,
+          "width": 32
+        },
+        "depositId": {
+          "offset": 317,
+          "width": 32
+        },
+        "amountSourceAtoms": {
+          "offset": 349,
+          "width": 8
+        },
+        "amountDestinationAtoms": {
+          "offset": 357,
+          "width": 8
+        },
+        "minimaRecipient": {
+          "offset": 365,
+          "width": 32
+        },
+        "finalizedBlockNumber": {
+          "offset": 397,
+          "width": 8
+        },
+        "finalizedBlockHash": {
+          "offset": 405,
+          "width": 32
+        },
+        "sourceRecordHash": {
+          "offset": 437,
+          "width": 32
+        },
+        "previousVaultStateVersion": {
+          "offset": 469,
+          "width": 8
+        },
+        "vaultStateVersion": {
+          "offset": 477,
+          "width": 8
+        },
+        "newClientStateHash": {
+          "offset": 485,
+          "width": 32
+        },
+        "newBridgeStateHash": {
+          "offset": 517,
+          "width": 32
+        },
+        "vaultBalanceSourceAtoms": {
+          "offset": 549,
+          "width": 8
+        },
+        "vaultPayoutCursor": {
+          "offset": 557,
+          "width": 8
+        },
+        "vaultCumulativePaidSourceAtoms": {
+          "offset": 565,
+          "width": 8
+        },
+        "sourceExecutionTimeMilliseconds": {
+          "offset": 573,
+          "width": 8
+        }
+      }
+    },
+    {
+      "name": "erc20-return",
+      "type": "RETURN",
+      "mode": "erc20",
+      "recordBytes": 417,
+      "fieldCount": 26,
+      "recordDigest": "0x816c5fb986e0f5e8bafb87ffb7ce39d071a1fe4f8cf0845a5445ab751dbe4744",
+      "encodedHex": "0x4252494447455f4c414e455f52455455524e5f5632000000000000000000000000010003000201060600000000000000010000000000000001000000e8d4a50fff0000000000000001f7b1e0507cfae5e7ca97c0c0136285f324fbcff3d107ab13bec1979b0c2a31805a5b6359e10dee03b23937a42cdabc7ea237a1eda9eaec55ca6530ad722b0ce93d94432d529c0c07a10904fe9329e35d50c9882e43980186a4ba7564e276838520767ebe56d2b615ceb9a11cb73db472226ec35984427e9452c08473eb991abc1602a15e58e15c1dbd6b88af53aee91db17d9437a50ac919d1f50040f02774bfc133be7c17fd7c4d7486e886c421d58ec0ae5fa8d0ab4d3399ca77e71d91359d4289bb35f5770ece000000000000000100000009ae6da87d7ef5014bf94c38900be1e2eb8b9a0c67a0c7300054c9c3a5d9456edd1e301089ddd341454554fab034b0955edf49412c218d66e8bc866ba7d3081f33000000000007a120000000000007a120145397d259484659c2fa9e24ff45361f5d8e44063f9c07aa08e2e635189d6ba5b37bcb308f223a719b8fe9437419a7b2ad67fce3",
+      "offsets": {
+        "domainTag": {
+          "offset": 0,
+          "width": 32
+        },
+        "schemaVersion": {
+          "offset": 32,
+          "width": 2
+        },
+        "action": {
+          "offset": 34,
+          "width": 2
+        },
+        "laneVersion": {
+          "offset": 36,
+          "width": 2
+        },
+        "sourceAssetKind": {
+          "offset": 38,
+          "width": 1
+        },
+        "sourceDecimals": {
+          "offset": 39,
+          "width": 1
+        },
+        "destinationDecimals": {
+          "offset": 40,
+          "width": 1
+        },
+        "sourceQuantumAtoms": {
+          "offset": 41,
+          "width": 8
+        },
+        "destinationQuantumAtoms": {
+          "offset": 49,
+          "width": 8
+        },
+        "laneExposureCapDestinationAtoms": {
+          "offset": 57,
+          "width": 8
+        },
+        "ethereumChainId": {
+          "offset": 65,
+          "width": 8
+        },
+        "minimaNetwork": {
+          "offset": 73,
+          "width": 32
+        },
+        "ethereumVault": {
+          "offset": 105,
+          "width": 20
+        },
+        "sourceAsset": {
+          "offset": 125,
+          "width": 20
+        },
+        "laneId": {
+          "offset": 145,
+          "width": 32
+        },
+        "destinationTokenId": {
+          "offset": 177,
+          "width": 32
+        },
+        "reserveCovenant": {
+          "offset": 209,
+          "width": 32
+        },
+        "controlTokenId": {
+          "offset": 241,
+          "width": 32
+        },
+        "configurationEpoch": {
+          "offset": 273,
+          "width": 8
+        },
+        "committeeEpoch": {
+          "offset": 281,
+          "width": 4
+        },
+        "committeeRoot": {
+          "offset": 285,
+          "width": 32
+        },
+        "returnedCoinId": {
+          "offset": 317,
+          "width": 32
+        },
+        "amountSourceAtoms": {
+          "offset": 349,
+          "width": 8
+        },
+        "amountDestinationAtoms": {
+          "offset": 357,
+          "width": 8
+        },
+        "ethereumRecipient": {
+          "offset": 365,
+          "width": 20
+        },
+        "redemptionId": {
+          "offset": 385,
+          "width": 32
+        }
+      }
+    },
+    {
+      "name": "erc20-cancel",
+      "type": "CANCEL",
+      "mode": "erc20",
+      "recordBytes": 634,
+      "fieldCount": 39,
+      "recordDigest": "0x97e1eb773d66cc74f68eb40009d7661c2737c99d5989027dda3059d5d8f97d7d",
+      "encodedHex": "0x4252494447455f4c414e455f43414e43454c5f5632000000000000000000000000010005000201060600000000000000010000000000000001000000e8d4a50fff0000000000000001f7b1e0507cfae5e7ca97c0c0136285f324fbcff3d107ab13bec1979b0c2a31805a5b6359e10dee03b23937a42cdabc7ea237a1eda9eaec55ca6530ad722b0ce93d94432d529c0c07a10904fe9329e35d50c9882e43980186a4ba7564e276838520767ebe56d2b615ceb9a11cb73db472226ec35984427e9452c08473eb991abc1602a15e58e15c1dbd6b88af53aee91db17d9437a50ac919d1f50040f02774bfc133be7c17fd7c4d7486e886c421d58ec0ae5fa8d0ab4d3399ca77e71d91359d4289bb35f5770ece000000000000000100000009ae6da87d7ef5014bf94c38900be1e2eb8b9a0c67a0c7300054c9c3a5d9456eddb9f4d3f92cb2be37aacea99a4baf744f571d65da1a570b801ef133d298a00ef400000000001312d000000000001312d06b3a1d34761d66b4c43acd18c0c5c32535bf8adced42e9fd9a37281515a48a573c558ab60baf03397f0524e4bedddbd890a58afdf40eb0cd1473cf86d4ec3d8106ca9212f9f7eb0698497039a11ca612f3124c300100000000015193c15e42910cf2789c50fce04d6acbee7a68d77bfad45296bdd76085cd2399b95f3a23882a5929a94b9320d7519c3475a736a318a1afef9015334dd92459a18c3933000000000000001100000000000000126179a8e62d8c11e9b7e237337249a3d0f53b9734b6bd76734b24d7364521f1498cce9edb10643f6289bf06de58e312a804d9a290b1275367b8a0bf853f5aed0700000000004c4b4000000000000000030000000000030d400000018bcfe56800",
+      "offsets": {
+        "domainTag": {
+          "offset": 0,
+          "width": 32
+        },
+        "schemaVersion": {
+          "offset": 32,
+          "width": 2
+        },
+        "action": {
+          "offset": 34,
+          "width": 2
+        },
+        "laneVersion": {
+          "offset": 36,
+          "width": 2
+        },
+        "sourceAssetKind": {
+          "offset": 38,
+          "width": 1
+        },
+        "sourceDecimals": {
+          "offset": 39,
+          "width": 1
+        },
+        "destinationDecimals": {
+          "offset": 40,
+          "width": 1
+        },
+        "sourceQuantumAtoms": {
+          "offset": 41,
+          "width": 8
+        },
+        "destinationQuantumAtoms": {
+          "offset": 49,
+          "width": 8
+        },
+        "laneExposureCapDestinationAtoms": {
+          "offset": 57,
+          "width": 8
+        },
+        "ethereumChainId": {
+          "offset": 65,
+          "width": 8
+        },
+        "minimaNetwork": {
+          "offset": 73,
+          "width": 32
+        },
+        "ethereumVault": {
+          "offset": 105,
+          "width": 20
+        },
+        "sourceAsset": {
+          "offset": 125,
+          "width": 20
+        },
+        "laneId": {
+          "offset": 145,
+          "width": 32
+        },
+        "destinationTokenId": {
+          "offset": 177,
+          "width": 32
+        },
+        "reserveCovenant": {
+          "offset": 209,
+          "width": 32
+        },
+        "controlTokenId": {
+          "offset": 241,
+          "width": 32
+        },
+        "configurationEpoch": {
+          "offset": 273,
+          "width": 8
+        },
+        "committeeEpoch": {
+          "offset": 281,
+          "width": 4
+        },
+        "committeeRoot": {
+          "offset": 285,
+          "width": 32
+        },
+        "depositId": {
+          "offset": 317,
+          "width": 32
+        },
+        "amountSourceAtoms": {
+          "offset": 349,
+          "width": 8
+        },
+        "amountDestinationAtoms": {
+          "offset": 357,
+          "width": 8
+        },
+        "minimaRecipient": {
+          "offset": 365,
+          "width": 32
+        },
+        "refundRecipient": {
+          "offset": 397,
+          "width": 20
+        },
+        "cancellationAuthorityPublicKey": {
+          "offset": 417,
+          "width": 32
+        },
+        "ethereumRecordStatus": {
+          "offset": 449,
+          "width": 1
+        },
+        "finalizedBlockNumber": {
+          "offset": 450,
+          "width": 8
+        },
+        "finalizedBlockHash": {
+          "offset": 458,
+          "width": 32
+        },
+        "sourceRecordHash": {
+          "offset": 490,
+          "width": 32
+        },
+        "previousVaultStateVersion": {
+          "offset": 522,
+          "width": 8
+        },
+        "vaultStateVersion": {
+          "offset": 530,
+          "width": 8
+        },
+        "newClientStateHash": {
+          "offset": 538,
+          "width": 32
+        },
+        "newBridgeStateHash": {
+          "offset": 570,
+          "width": 32
+        },
+        "vaultBalanceSourceAtoms": {
+          "offset": 602,
+          "width": 8
+        },
+        "vaultPayoutCursor": {
+          "offset": 610,
+          "width": 8
+        },
+        "vaultCumulativePaidSourceAtoms": {
+          "offset": 618,
+          "width": 8
+        },
+        "sourceExecutionTimeMilliseconds": {
+          "offset": 626,
+          "width": 8
+        }
+      }
+    },
+    {
+      "name": "erc20-payout_ack",
+      "type": "PAYOUT_ACK",
+      "mode": "erc20",
+      "recordBytes": 661,
+      "fieldCount": 40,
+      "recordDigest": "0x679dd588dd49c5e61cc82acd942b9274e0797ef3680440e9c13af5d2ceebb01d",
+      "encodedHex": "0x4252494447455f4c414e455f5041594f55545f5632000000000000000000000000010007000201060600000000000000010000000000000001000000e8d4a50fff0000000000000001f7b1e0507cfae5e7ca97c0c0136285f324fbcff3d107ab13bec1979b0c2a31805a5b6359e10dee03b23937a42cdabc7ea237a1eda9eaec55ca6530ad722b0ce93d94432d529c0c07a10904fe9329e35d50c9882e43980186a4ba7564e276838520767ebe56d2b615ceb9a11cb73db472226ec35984427e9452c08473eb991abc1602a15e58e15c1dbd6b88af53aee91db17d9437a50ac919d1f50040f02774bfc133be7c17fd7c4d7486e886c421d58ec0ae5fa8d0ab4d3399ca77e71d91359d4289bb35f5770ece000000000000000100000009ae6da87d7ef5014bf94c38900be1e2eb8b9a0c67a0c7300054c9c3a5d9456eddd76d8d0f9aa9064ab143a52e11602930e12a6ae06bf938bbeaa38096168253f0000000000000000300000000000000040000000000030d400000000000061a800000000000030d400000000000030d4090ba90243e2aca861dab2a222d6862b5c38da21ee00fddfaaf60b09f2a2800416960f5b69472e92a9a404aa92c22f142d79370e364a81e2effabb905c1795e5b35bb01e644c622d32a278f453ac5b924771a6f42d3607b213d8f02eeba9d316e00000000015193c21aeb101d3a023c5522be0645962949e3a71852dd313d54a8a7377d5b899163531d5eae728c710a3639b9c9fc01876b005728691db3612691598057ebf0570067000000000000001200000000000000136fe21951c176b508c222e7d153bcabb049a0e438cb09cd149d5bffdaf45a0ebf5de89db6a648a3336eff02631a007499e8a2a377abe5bbce894f0bf144e44e100000000000493e000000018bcfe56800",
+      "offsets": {
+        "domainTag": {
+          "offset": 0,
+          "width": 32
+        },
+        "schemaVersion": {
+          "offset": 32,
+          "width": 2
+        },
+        "action": {
+          "offset": 34,
+          "width": 2
+        },
+        "laneVersion": {
+          "offset": 36,
+          "width": 2
+        },
+        "sourceAssetKind": {
+          "offset": 38,
+          "width": 1
+        },
+        "sourceDecimals": {
+          "offset": 39,
+          "width": 1
+        },
+        "destinationDecimals": {
+          "offset": 40,
+          "width": 1
+        },
+        "sourceQuantumAtoms": {
+          "offset": 41,
+          "width": 8
+        },
+        "destinationQuantumAtoms": {
+          "offset": 49,
+          "width": 8
+        },
+        "laneExposureCapDestinationAtoms": {
+          "offset": 57,
+          "width": 8
+        },
+        "ethereumChainId": {
+          "offset": 65,
+          "width": 8
+        },
+        "minimaNetwork": {
+          "offset": 73,
+          "width": 32
+        },
+        "ethereumVault": {
+          "offset": 105,
+          "width": 20
+        },
+        "sourceAsset": {
+          "offset": 125,
+          "width": 20
+        },
+        "laneId": {
+          "offset": 145,
+          "width": 32
+        },
+        "destinationTokenId": {
+          "offset": 177,
+          "width": 32
+        },
+        "reserveCovenant": {
+          "offset": 209,
+          "width": 32
+        },
+        "controlTokenId": {
+          "offset": 241,
+          "width": 32
+        },
+        "configurationEpoch": {
+          "offset": 273,
+          "width": 8
+        },
+        "committeeEpoch": {
+          "offset": 281,
+          "width": 4
+        },
+        "committeeRoot": {
+          "offset": 285,
+          "width": 32
+        },
+        "payoutBatchId": {
+          "offset": 317,
+          "width": 32
+        },
+        "priorPayoutCursor": {
+          "offset": 349,
+          "width": 8
+        },
+        "newPayoutCursor": {
+          "offset": 357,
+          "width": 8
+        },
+        "priorCumulativePaidSourceAtoms": {
+          "offset": 365,
+          "width": 8
+        },
+        "newCumulativePaidSourceAtoms": {
+          "offset": 373,
+          "width": 8
+        },
+        "batchPaidSourceAtoms": {
+          "offset": 381,
+          "width": 8
+        },
+        "batchPaidDestinationAtoms": {
+          "offset": 389,
+          "width": 8
+        },
+        "firstRedemptionId": {
+          "offset": 397,
+          "width": 32
+        },
+        "lastRedemptionId": {
+          "offset": 429,
+          "width": 32
+        },
+        "payoutRangeRoot": {
+          "offset": 461,
+          "width": 32
+        },
+        "finalizedBlockNumber": {
+          "offset": 493,
+          "width": 8
+        },
+        "finalizedBlockHash": {
+          "offset": 501,
+          "width": 32
+        },
+        "sourceRecordHash": {
+          "offset": 533,
+          "width": 32
+        },
+        "previousVaultStateVersion": {
+          "offset": 565,
+          "width": 8
+        },
+        "vaultStateVersion": {
+          "offset": 573,
+          "width": 8
+        },
+        "newClientStateHash": {
+          "offset": 581,
+          "width": 32
+        },
+        "newBridgeStateHash": {
+          "offset": 613,
+          "width": 32
+        },
+        "vaultBalanceSourceAtoms": {
+          "offset": 645,
+          "width": 8
+        },
+        "sourceExecutionTimeMilliseconds": {
+          "offset": 653,
+          "width": 8
+        }
+      }
+    },
+    {
+      "name": "eth-client_update",
+      "type": "CLIENT_UPDATE",
+      "mode": "eth",
+      "recordBytes": 501,
+      "fieldCount": 32,
+      "recordDigest": "0x5e320a32bf1aca9fffe865c1110ea56f7409ff932ffa6fccbe9ace523a8d5da8",
+      "encodedHex": "0x4252494447455f4c414e455f434c49454e545f56320000000000000000000000000100010002001212000000000000000100000000000000018ac7230489e800000000000000000001f7b1e0507cfae5e7ca97c0c0136285f324fbcff3d107ab13bec1979b0c2a3180b47b32ca4d18c41e72261191d786c83fcf0b4c670000000000000000000000000000000000000000d7bd65e879a59e7240adb739fa12e41c89e80efe9fcfc2ef2c8d5a94a73fad4947c769ff748d8123d39a6282605bf3ceec585ac0b90872488f16b2b34d876026195171390773db181d6400de7ef44664a5717d26d2c911a3e94f8756f00464f0e19cc400ebb38698e6b6ec9a5f4ae49420df3124de9aca74a2863e05edbec0a6000000000000000100000009ae6da87d7ef5014bf94c38900be1e2eb8b9a0c67a0c7300054c9c3a5d9456edd0000000000000011000000000000001200000000015193c1898e8cd81fa16fe4fc64516735e09869966dd41e826b407ee8bc674c78566fa92e3345a42a34039d9f29aad08046a47c1bafca3dba902775e44b4f66a931b7b358736b449f2f6bea53227306e966636f46f9feab83117cad4fe9a51269992fbeb9078d935fdc970e3ce462a42fff997e490b2d01ccde71813a37c5a67402800d4563918244f40000000000000000000302c68af0bb1400000000018bcfe56800",
+      "offsets": {
+        "domainTag": {
+          "offset": 0,
+          "width": 32
+        },
+        "schemaVersion": {
+          "offset": 32,
+          "width": 2
+        },
+        "action": {
+          "offset": 34,
+          "width": 2
+        },
+        "laneVersion": {
+          "offset": 36,
+          "width": 2
+        },
+        "sourceAssetKind": {
+          "offset": 38,
+          "width": 1
+        },
+        "sourceDecimals": {
+          "offset": 39,
+          "width": 1
+        },
+        "destinationDecimals": {
+          "offset": 40,
+          "width": 1
+        },
+        "sourceQuantumAtoms": {
+          "offset": 41,
+          "width": 8
+        },
+        "destinationQuantumAtoms": {
+          "offset": 49,
+          "width": 8
+        },
+        "laneExposureCapDestinationAtoms": {
+          "offset": 57,
+          "width": 8
+        },
+        "ethereumChainId": {
+          "offset": 65,
+          "width": 8
+        },
+        "minimaNetwork": {
+          "offset": 73,
+          "width": 32
+        },
+        "ethereumVault": {
+          "offset": 105,
+          "width": 20
+        },
+        "sourceAsset": {
+          "offset": 125,
+          "width": 20
+        },
+        "laneId": {
+          "offset": 145,
+          "width": 32
+        },
+        "destinationTokenId": {
+          "offset": 177,
+          "width": 32
+        },
+        "reserveCovenant": {
+          "offset": 209,
+          "width": 32
+        },
+        "controlTokenId": {
+          "offset": 241,
+          "width": 32
+        },
+        "configurationEpoch": {
+          "offset": 273,
+          "width": 8
+        },
+        "committeeEpoch": {
+          "offset": 281,
+          "width": 4
+        },
+        "committeeRoot": {
+          "offset": 285,
+          "width": 32
+        },
+        "previousVaultStateVersion": {
+          "offset": 317,
+          "width": 8
+        },
+        "vaultStateVersion": {
+          "offset": 325,
+          "width": 8
+        },
+        "finalizedBlockNumber": {
+          "offset": 333,
+          "width": 8
+        },
+        "finalizedBlockHash": {
+          "offset": 341,
+          "width": 32
+        },
+        "sourceRecordHash": {
+          "offset": 373,
+          "width": 32
+        },
+        "newClientStateHash": {
+          "offset": 405,
+          "width": 32
+        },
+        "newBridgeStateHash": {
+          "offset": 437,
+          "width": 32
+        },
+        "vaultBalanceSourceAtoms": {
+          "offset": 469,
+          "width": 8
+        },
+        "vaultPayoutCursor": {
+          "offset": 477,
+          "width": 8
+        },
+        "vaultCumulativePaidSourceAtoms": {
+          "offset": 485,
+          "width": 8
+        },
+        "sourceExecutionTimeMilliseconds": {
+          "offset": 493,
+          "width": 8
+        }
+      }
+    },
+    {
+      "name": "eth-release",
+      "type": "RELEASE",
+      "mode": "eth",
+      "recordBytes": 581,
+      "fieldCount": 36,
+      "recordDigest": "0x2f0079d9cfdcb71fc526901edda1c711f7e12893b015f36eddaf3bb14c9ba144",
+      "encodedHex": "0x4252494447455f4c414e455f52454c454153455f563200000000000000000000000100020002001212000000000000000100000000000000018ac7230489e800000000000000000001f7b1e0507cfae5e7ca97c0c0136285f324fbcff3d107ab13bec1979b0c2a3180b47b32ca4d18c41e72261191d786c83fcf0b4c670000000000000000000000000000000000000000d7bd65e879a59e7240adb739fa12e41c89e80efe9fcfc2ef2c8d5a94a73fad4947c769ff748d8123d39a6282605bf3ceec585ac0b90872488f16b2b34d876026195171390773db181d6400de7ef44664a5717d26d2c911a3e94f8756f00464f0e19cc400ebb38698e6b6ec9a5f4ae49420df3124de9aca74a2863e05edbec0a6000000000000000100000009ae6da87d7ef5014bf94c38900be1e2eb8b9a0c67a0c7300054c9c3a5d9456edd9a5032d13a6d02bf1755bf450fd9369ec32ec32e99d373c718bc85c75e810b621158e460913d00001158e460913d0000f6965bfda62c8d90811f7aa4e2278004c9106227509e98353e32f374181786c800000000015193c1876e09f5d372c3dc0c937106e56df51dfc3449ae7b9fae2eb724851078be9816435f335d75d11ad90d8bbcabb9f41b585b384942e144eefae0c62a792f823a04000000000000001100000000000000129bff1abf218e2eca1c729bb1c5de99beb171b40237ba571eec1fff16c1c30002c29e600bd3ff5cb5428b70308aa25bccd97aca6b1f1223b999c5bd9b64fcf9984563918244f40000000000000000000302c68af0bb1400000000018bcfe56800",
+      "offsets": {
+        "domainTag": {
+          "offset": 0,
+          "width": 32
+        },
+        "schemaVersion": {
+          "offset": 32,
+          "width": 2
+        },
+        "action": {
+          "offset": 34,
+          "width": 2
+        },
+        "laneVersion": {
+          "offset": 36,
+          "width": 2
+        },
+        "sourceAssetKind": {
+          "offset": 38,
+          "width": 1
+        },
+        "sourceDecimals": {
+          "offset": 39,
+          "width": 1
+        },
+        "destinationDecimals": {
+          "offset": 40,
+          "width": 1
+        },
+        "sourceQuantumAtoms": {
+          "offset": 41,
+          "width": 8
+        },
+        "destinationQuantumAtoms": {
+          "offset": 49,
+          "width": 8
+        },
+        "laneExposureCapDestinationAtoms": {
+          "offset": 57,
+          "width": 8
+        },
+        "ethereumChainId": {
+          "offset": 65,
+          "width": 8
+        },
+        "minimaNetwork": {
+          "offset": 73,
+          "width": 32
+        },
+        "ethereumVault": {
+          "offset": 105,
+          "width": 20
+        },
+        "sourceAsset": {
+          "offset": 125,
+          "width": 20
+        },
+        "laneId": {
+          "offset": 145,
+          "width": 32
+        },
+        "destinationTokenId": {
+          "offset": 177,
+          "width": 32
+        },
+        "reserveCovenant": {
+          "offset": 209,
+          "width": 32
+        },
+        "controlTokenId": {
+          "offset": 241,
+          "width": 32
+        },
+        "configurationEpoch": {
+          "offset": 273,
+          "width": 8
+        },
+        "committeeEpoch": {
+          "offset": 281,
+          "width": 4
+        },
+        "committeeRoot": {
+          "offset": 285,
+          "width": 32
+        },
+        "depositId": {
+          "offset": 317,
+          "width": 32
+        },
+        "amountSourceAtoms": {
+          "offset": 349,
+          "width": 8
+        },
+        "amountDestinationAtoms": {
+          "offset": 357,
+          "width": 8
+        },
+        "minimaRecipient": {
+          "offset": 365,
+          "width": 32
+        },
+        "finalizedBlockNumber": {
+          "offset": 397,
+          "width": 8
+        },
+        "finalizedBlockHash": {
+          "offset": 405,
+          "width": 32
+        },
+        "sourceRecordHash": {
+          "offset": 437,
+          "width": 32
+        },
+        "previousVaultStateVersion": {
+          "offset": 469,
+          "width": 8
+        },
+        "vaultStateVersion": {
+          "offset": 477,
+          "width": 8
+        },
+        "newClientStateHash": {
+          "offset": 485,
+          "width": 32
+        },
+        "newBridgeStateHash": {
+          "offset": 517,
+          "width": 32
+        },
+        "vaultBalanceSourceAtoms": {
+          "offset": 549,
+          "width": 8
+        },
+        "vaultPayoutCursor": {
+          "offset": 557,
+          "width": 8
+        },
+        "vaultCumulativePaidSourceAtoms": {
+          "offset": 565,
+          "width": 8
+        },
+        "sourceExecutionTimeMilliseconds": {
+          "offset": 573,
+          "width": 8
+        }
+      }
+    },
+    {
+      "name": "eth-return",
+      "type": "RETURN",
+      "mode": "eth",
+      "recordBytes": 417,
+      "fieldCount": 26,
+      "recordDigest": "0x5e5885c4e85b8b79ed7f7f2e5497d48f2965bca94e2911ef50af11fd87fd777c",
+      "encodedHex": "0x4252494447455f4c414e455f52455455524e5f56320000000000000000000000000100030002001212000000000000000100000000000000018ac7230489e800000000000000000001f7b1e0507cfae5e7ca97c0c0136285f324fbcff3d107ab13bec1979b0c2a3180b47b32ca4d18c41e72261191d786c83fcf0b4c670000000000000000000000000000000000000000d7bd65e879a59e7240adb739fa12e41c89e80efe9fcfc2ef2c8d5a94a73fad4947c769ff748d8123d39a6282605bf3ceec585ac0b90872488f16b2b34d876026195171390773db181d6400de7ef44664a5717d26d2c911a3e94f8756f00464f0e19cc400ebb38698e6b6ec9a5f4ae49420df3124de9aca74a2863e05edbec0a6000000000000000100000009ae6da87d7ef5014bf94c38900be1e2eb8b9a0c67a0c7300054c9c3a5d9456edda32b102e811a724151291d5aa99183de0f3ea46a5d14e06a6b1d6bcbba153b0006f05b59d3b2000006f05b59d3b2000070d6f35dffa7e26eafc6490fe6adaf9c24fc9e5447378c438c673fc99203812ff71313e636cb6c36260ff58f6d9abac38aedc57a",
+      "offsets": {
+        "domainTag": {
+          "offset": 0,
+          "width": 32
+        },
+        "schemaVersion": {
+          "offset": 32,
+          "width": 2
+        },
+        "action": {
+          "offset": 34,
+          "width": 2
+        },
+        "laneVersion": {
+          "offset": 36,
+          "width": 2
+        },
+        "sourceAssetKind": {
+          "offset": 38,
+          "width": 1
+        },
+        "sourceDecimals": {
+          "offset": 39,
+          "width": 1
+        },
+        "destinationDecimals": {
+          "offset": 40,
+          "width": 1
+        },
+        "sourceQuantumAtoms": {
+          "offset": 41,
+          "width": 8
+        },
+        "destinationQuantumAtoms": {
+          "offset": 49,
+          "width": 8
+        },
+        "laneExposureCapDestinationAtoms": {
+          "offset": 57,
+          "width": 8
+        },
+        "ethereumChainId": {
+          "offset": 65,
+          "width": 8
+        },
+        "minimaNetwork": {
+          "offset": 73,
+          "width": 32
+        },
+        "ethereumVault": {
+          "offset": 105,
+          "width": 20
+        },
+        "sourceAsset": {
+          "offset": 125,
+          "width": 20
+        },
+        "laneId": {
+          "offset": 145,
+          "width": 32
+        },
+        "destinationTokenId": {
+          "offset": 177,
+          "width": 32
+        },
+        "reserveCovenant": {
+          "offset": 209,
+          "width": 32
+        },
+        "controlTokenId": {
+          "offset": 241,
+          "width": 32
+        },
+        "configurationEpoch": {
+          "offset": 273,
+          "width": 8
+        },
+        "committeeEpoch": {
+          "offset": 281,
+          "width": 4
+        },
+        "committeeRoot": {
+          "offset": 285,
+          "width": 32
+        },
+        "returnedCoinId": {
+          "offset": 317,
+          "width": 32
+        },
+        "amountSourceAtoms": {
+          "offset": 349,
+          "width": 8
+        },
+        "amountDestinationAtoms": {
+          "offset": 357,
+          "width": 8
+        },
+        "ethereumRecipient": {
+          "offset": 365,
+          "width": 20
+        },
+        "redemptionId": {
+          "offset": 385,
+          "width": 32
+        }
+      }
+    },
+    {
+      "name": "eth-cancel",
+      "type": "CANCEL",
+      "mode": "eth",
+      "recordBytes": 634,
+      "fieldCount": 39,
+      "recordDigest": "0xef953951588abdbc5cef3c9ee814da9cf44613818b1fd08dba65cf2a5e2015bb",
+      "encodedHex": "0x4252494447455f4c414e455f43414e43454c5f56320000000000000000000000000100050002001212000000000000000100000000000000018ac7230489e800000000000000000001f7b1e0507cfae5e7ca97c0c0136285f324fbcff3d107ab13bec1979b0c2a3180b47b32ca4d18c41e72261191d786c83fcf0b4c670000000000000000000000000000000000000000d7bd65e879a59e7240adb739fa12e41c89e80efe9fcfc2ef2c8d5a94a73fad4947c769ff748d8123d39a6282605bf3ceec585ac0b90872488f16b2b34d876026195171390773db181d6400de7ef44664a5717d26d2c911a3e94f8756f00464f0e19cc400ebb38698e6b6ec9a5f4ae49420df3124de9aca74a2863e05edbec0a6000000000000000100000009ae6da87d7ef5014bf94c38900be1e2eb8b9a0c67a0c7300054c9c3a5d9456edd802feb780a654c73bd547c6a69e0bd654091e007efe355b7b3db028285c64fa61158e460913d00001158e460913d00000178e823d525da371b2a27498b1545ed50da3200a42dd9bc627a7051045a57a138449c41037849b911ee864b9bb396a49c3db3f606332256e17467cb091701d68f0d88d329eb87fa80193e65369754dc4e8a841b0100000000015193c12c0589c048dd43fe4fd545d76f7b02e90a8f847c70922c9919892151be166c9eed40f83f9f36c365da76084b3b7a5ee174977ca2f0531990eab44baea814730a00000000000000110000000000000012dc33de4cdd827da85d92a930c3455033d70c9990996aaa1f83109296d198564d5a4f1bfdd0e318418550b4b981139b35c4aa187437469560e8ddcafcbc3d7b6b4563918244f40000000000000000000302c68af0bb1400000000018bcfe56800",
+      "offsets": {
+        "domainTag": {
+          "offset": 0,
+          "width": 32
+        },
+        "schemaVersion": {
+          "offset": 32,
+          "width": 2
+        },
+        "action": {
+          "offset": 34,
+          "width": 2
+        },
+        "laneVersion": {
+          "offset": 36,
+          "width": 2
+        },
+        "sourceAssetKind": {
+          "offset": 38,
+          "width": 1
+        },
+        "sourceDecimals": {
+          "offset": 39,
+          "width": 1
+        },
+        "destinationDecimals": {
+          "offset": 40,
+          "width": 1
+        },
+        "sourceQuantumAtoms": {
+          "offset": 41,
+          "width": 8
+        },
+        "destinationQuantumAtoms": {
+          "offset": 49,
+          "width": 8
+        },
+        "laneExposureCapDestinationAtoms": {
+          "offset": 57,
+          "width": 8
+        },
+        "ethereumChainId": {
+          "offset": 65,
+          "width": 8
+        },
+        "minimaNetwork": {
+          "offset": 73,
+          "width": 32
+        },
+        "ethereumVault": {
+          "offset": 105,
+          "width": 20
+        },
+        "sourceAsset": {
+          "offset": 125,
+          "width": 20
+        },
+        "laneId": {
+          "offset": 145,
+          "width": 32
+        },
+        "destinationTokenId": {
+          "offset": 177,
+          "width": 32
+        },
+        "reserveCovenant": {
+          "offset": 209,
+          "width": 32
+        },
+        "controlTokenId": {
+          "offset": 241,
+          "width": 32
+        },
+        "configurationEpoch": {
+          "offset": 273,
+          "width": 8
+        },
+        "committeeEpoch": {
+          "offset": 281,
+          "width": 4
+        },
+        "committeeRoot": {
+          "offset": 285,
+          "width": 32
+        },
+        "depositId": {
+          "offset": 317,
+          "width": 32
+        },
+        "amountSourceAtoms": {
+          "offset": 349,
+          "width": 8
+        },
+        "amountDestinationAtoms": {
+          "offset": 357,
+          "width": 8
+        },
+        "minimaRecipient": {
+          "offset": 365,
+          "width": 32
+        },
+        "refundRecipient": {
+          "offset": 397,
+          "width": 20
+        },
+        "cancellationAuthorityPublicKey": {
+          "offset": 417,
+          "width": 32
+        },
+        "ethereumRecordStatus": {
+          "offset": 449,
+          "width": 1
+        },
+        "finalizedBlockNumber": {
+          "offset": 450,
+          "width": 8
+        },
+        "finalizedBlockHash": {
+          "offset": 458,
+          "width": 32
+        },
+        "sourceRecordHash": {
+          "offset": 490,
+          "width": 32
+        },
+        "previousVaultStateVersion": {
+          "offset": 522,
+          "width": 8
+        },
+        "vaultStateVersion": {
+          "offset": 530,
+          "width": 8
+        },
+        "newClientStateHash": {
+          "offset": 538,
+          "width": 32
+        },
+        "newBridgeStateHash": {
+          "offset": 570,
+          "width": 32
+        },
+        "vaultBalanceSourceAtoms": {
+          "offset": 602,
+          "width": 8
+        },
+        "vaultPayoutCursor": {
+          "offset": 610,
+          "width": 8
+        },
+        "vaultCumulativePaidSourceAtoms": {
+          "offset": 618,
+          "width": 8
+        },
+        "sourceExecutionTimeMilliseconds": {
+          "offset": 626,
+          "width": 8
+        }
+      }
+    },
+    {
+      "name": "eth-payout_ack",
+      "type": "PAYOUT_ACK",
+      "mode": "eth",
+      "recordBytes": 661,
+      "fieldCount": 40,
+      "recordDigest": "0x1d6698f42be618aa25243f896ddda998163e1920da835f2c4bd3a6a4884c3c62",
+      "encodedHex": "0x4252494447455f4c414e455f5041594f55545f56320000000000000000000000000100070002001212000000000000000100000000000000018ac7230489e800000000000000000001f7b1e0507cfae5e7ca97c0c0136285f324fbcff3d107ab13bec1979b0c2a3180b47b32ca4d18c41e72261191d786c83fcf0b4c670000000000000000000000000000000000000000d7bd65e879a59e7240adb739fa12e41c89e80efe9fcfc2ef2c8d5a94a73fad4947c769ff748d8123d39a6282605bf3ceec585ac0b90872488f16b2b34d876026195171390773db181d6400de7ef44664a5717d26d2c911a3e94f8756f00464f0e19cc400ebb38698e6b6ec9a5f4ae49420df3124de9aca74a2863e05edbec0a6000000000000000100000009ae6da87d7ef5014bf94c38900be1e2eb8b9a0c67a0c7300054c9c3a5d9456eddce7dc069b32750aa0aad8c7e761634b20b9de36148b791f4bea7350bf8b5bdc70000000000000003000000000000000402c68af0bb140000058d15e17628000002c68af0bb14000002c68af0bb1400008f8154d2dbf4c55ddd27db35a533719987e1e069176b7fb418a989f32971ca2e7a01687714f2532f3fbc42a79113d1c9fea4015b1a31287d53c75e19d073d6a2a00e1f7bbd5531deaddfac826fd5353bd86e35ce9ebb810e78439e121e81fb0000000000015193c21aea1c1bbec1f4a3c2cf0ee7f2b99083ec0ef35386b566b1c93d426d1fad8a0222c2e07d40450a767d095875fbe48f6fecf49c42560f7f66412214fbfb656797000000000000001200000000000000138e320f890ae9574ac816415117484806fb12cff5720b67db0ae4b54ad6261806cc95aa73af56a467ce584fdb9d033d4009b43740355a5d34ae8d63b1b846fe73429d069189e000000000018bcfe56800",
+      "offsets": {
+        "domainTag": {
+          "offset": 0,
+          "width": 32
+        },
+        "schemaVersion": {
+          "offset": 32,
+          "width": 2
+        },
+        "action": {
+          "offset": 34,
+          "width": 2
+        },
+        "laneVersion": {
+          "offset": 36,
+          "width": 2
+        },
+        "sourceAssetKind": {
+          "offset": 38,
+          "width": 1
+        },
+        "sourceDecimals": {
+          "offset": 39,
+          "width": 1
+        },
+        "destinationDecimals": {
+          "offset": 40,
+          "width": 1
+        },
+        "sourceQuantumAtoms": {
+          "offset": 41,
+          "width": 8
+        },
+        "destinationQuantumAtoms": {
+          "offset": 49,
+          "width": 8
+        },
+        "laneExposureCapDestinationAtoms": {
+          "offset": 57,
+          "width": 8
+        },
+        "ethereumChainId": {
+          "offset": 65,
+          "width": 8
+        },
+        "minimaNetwork": {
+          "offset": 73,
+          "width": 32
+        },
+        "ethereumVault": {
+          "offset": 105,
+          "width": 20
+        },
+        "sourceAsset": {
+          "offset": 125,
+          "width": 20
+        },
+        "laneId": {
+          "offset": 145,
+          "width": 32
+        },
+        "destinationTokenId": {
+          "offset": 177,
+          "width": 32
+        },
+        "reserveCovenant": {
+          "offset": 209,
+          "width": 32
+        },
+        "controlTokenId": {
+          "offset": 241,
+          "width": 32
+        },
+        "configurationEpoch": {
+          "offset": 273,
+          "width": 8
+        },
+        "committeeEpoch": {
+          "offset": 281,
+          "width": 4
+        },
+        "committeeRoot": {
+          "offset": 285,
+          "width": 32
+        },
+        "payoutBatchId": {
+          "offset": 317,
+          "width": 32
+        },
+        "priorPayoutCursor": {
+          "offset": 349,
+          "width": 8
+        },
+        "newPayoutCursor": {
+          "offset": 357,
+          "width": 8
+        },
+        "priorCumulativePaidSourceAtoms": {
+          "offset": 365,
+          "width": 8
+        },
+        "newCumulativePaidSourceAtoms": {
+          "offset": 373,
+          "width": 8
+        },
+        "batchPaidSourceAtoms": {
+          "offset": 381,
+          "width": 8
+        },
+        "batchPaidDestinationAtoms": {
+          "offset": 389,
+          "width": 8
+        },
+        "firstRedemptionId": {
+          "offset": 397,
+          "width": 32
+        },
+        "lastRedemptionId": {
+          "offset": 429,
+          "width": 32
+        },
+        "payoutRangeRoot": {
+          "offset": 461,
+          "width": 32
+        },
+        "finalizedBlockNumber": {
+          "offset": 493,
+          "width": 8
+        },
+        "finalizedBlockHash": {
+          "offset": 501,
+          "width": 32
+        },
+        "sourceRecordHash": {
+          "offset": 533,
+          "width": 32
+        },
+        "previousVaultStateVersion": {
+          "offset": 565,
+          "width": 8
+        },
+        "vaultStateVersion": {
+          "offset": 573,
+          "width": 8
+        },
+        "newClientStateHash": {
+          "offset": 581,
+          "width": 32
+        },
+        "newBridgeStateHash": {
+          "offset": 613,
+          "width": 32
+        },
+        "vaultBalanceSourceAtoms": {
+          "offset": 645,
+          "width": 8
+        },
+        "sourceExecutionTimeMilliseconds": {
+          "offset": 653,
+          "width": 8
+        }
+      }
+    }
+  ],
+  "kissRuntimeExecuted": false,
+  "txncheckExecuted": false,
+  "mainnetTransactionMined": false,
+  "noNodeWalletTokenSignatureOrTransactionCommands": true
+}

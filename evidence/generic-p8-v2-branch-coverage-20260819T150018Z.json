@@ -1,0 +1,102 @@
+{
+  "schema": "generic-bridge-p8-v2-branch-coverage/v1",
+  "capturedAt": "2026-08-19T15:00:18Z",
+  "status": "v2-release-only-p8-obstruction-confirmed",
+  "phaseGate": "P8",
+  "phaseGatePassed": false,
+  "requiredBranches": [
+    {
+      "action": "CLIENT_UPDATE",
+      "inputs": 2,
+      "outputs": 2,
+      "threshold": true
+    },
+    {
+      "action": "RELEASE",
+      "inputs": 2,
+      "outputs": 3,
+      "threshold": true
+    },
+    {
+      "action": "RETURN",
+      "inputs": 3,
+      "outputs": 2,
+      "threshold": false
+    },
+    {
+      "action": "PAYOUT_ACK",
+      "inputs": 2,
+      "outputs": 2,
+      "threshold": true
+    },
+    {
+      "action": "CANCEL",
+      "inputs": 2,
+      "outputs": 2,
+      "threshold": true,
+      "depositorAuthority": true
+    }
+  ],
+  "lanes": [
+    {
+      "name": "USDTm",
+      "scriptFile": "p7/final-mainnet-v2/usdtm-lane-v2.kiss",
+      "covenantAddress": "0x82FD9B73CD126358D84DA46A249DACDE96F2697AF29337DEDAC0F4A167D4F5AB",
+      "scriptBytes": 4354,
+      "scriptSha256": "f9da14b13a5418f88757472e0ea420c81c902d89e40aa828012c777194f48cdc",
+      "fixedInputs": 2,
+      "fixedOutputs": 3,
+      "actionDispatchCount": 0,
+      "multisigCount": 1,
+      "sameStateCount": 6,
+      "verifyOutCount": 0,
+      "supportedBranches": [
+        "RELEASE"
+      ],
+      "missingBranches": [
+        "CLIENT_UPDATE",
+        "RETURN",
+        "PAYOUT_ACK",
+        "CANCEL"
+      ],
+      "immutableAddress": true,
+      "migrationBranchPresent": false
+    },
+    {
+      "name": "ETHm",
+      "scriptFile": "p7/final-mainnet-v2/ethm-lane-v2.kiss",
+      "covenantAddress": "0xA0B23140248AC15CCB8C0FBC2DA3E0F54E06BF935C5F2A6B573E882FED05E931",
+      "scriptBytes": 4390,
+      "scriptSha256": "965d292713ec3774aa0d933a61dc76322fd2b67442e4ae2d990e8324d9537e47",
+      "fixedInputs": 2,
+      "fixedOutputs": 3,
+      "actionDispatchCount": 0,
+      "multisigCount": 1,
+      "sameStateCount": 6,
+      "verifyOutCount": 0,
+      "supportedBranches": [
+        "RELEASE"
+      ],
+      "missingBranches": [
+        "CLIENT_UPDATE",
+        "RETURN",
+        "PAYOUT_ACK",
+        "CANCEL"
+      ],
+      "immutableAddress": true,
+      "migrationBranchPresent": false
+    }
+  ],
+  "assertions": {
+    "bothMinedV2ScriptsMatchRecordedHashes": true,
+    "bothScriptsFixTwoInputsAndThreeOutputs": true,
+    "bothScriptsHaveNoActionDispatcher": true,
+    "onlyInboundReleaseShapeIsReachable": true,
+    "outboundReturnShapeIsUnreachable": true,
+    "clientUpdatePayoutAckAndCancellationShapesAreUnreachable": true,
+    "noMigrationUpgradeOrMastBranchExists": true,
+    "deployedV2AddressesAreImmutable": true
+  },
+  "consequence": "The mined v2 lanes remain valid P7 release evidence but cannot become complete P8 lineages. A fresh all-branch covenant generation and fresh valueless token/control IDs are required before another mainnet ceremony.",
+  "nextAction": "Freeze all action records and pass an offline unified KISS and complete-TxPoW hostile gate before requesting authorization for fresh mainnet assets."
+}

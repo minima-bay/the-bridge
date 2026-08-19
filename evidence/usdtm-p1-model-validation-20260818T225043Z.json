@@ -1,0 +1,21 @@
+{
+  "schema": "usdtm-p1-model-validation/v2",
+  "createdAtUtc": "2026-08-18T22:50:43.625Z",
+  "status": "passed",
+  "validator": "validate-usdtm-p1-model.mjs",
+  "validatorSha256": "c9a43db992a8884d73f91795531659cf1c17a40f7e365dea4cdeb06847cdce9c",
+  "assertionCount": 140,
+  "orderingCases": 6,
+  "acceptedDeposits": 63,
+  "cancellationFieldsMutated": 22,
+  "deliberateMutations": 27,
+  "mutationsDetected": 27,
+  "finalityAssumptionCounterexampleObserved": true,
+  "limitations": [
+    "The cancellation encoder and Ed25519 operation are model-only, not P2 bytes or Minima signature evidence.",
+    "The two ledgers, proofs, UTXOs, forks and callbacks are local state models, not EVM, KISS, light-client or consensus execution.",
+    "A late heavier Minima fork after Ethereum refund can produce refund plus release; safety is conditional on the declared settlement-finality assumption.",
+    "The sibling lookup is in-memory lineage only; clean-node bundle validation, proof import and bounded reconstruction remain P9 and P12 gates.",
+    "No ZK proof, transaction, token, vault, funds or mainnet runtime executed."
+  ]
+}
