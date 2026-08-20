@@ -1,0 +1,50 @@
+{
+  "schema": "generic-p9-wots-guard-validation/v1",
+  "createdAt": "2026-08-19T20:44:52.566Z",
+  "result": "PASS",
+  "assertions": 280,
+  "mutationCount": 14,
+  "propertySteps": 40,
+  "protectedKeys": 10,
+  "livePolicySigningEnabled": false,
+  "sourceSha256": {
+    "policy": "f309e6e9764bd4cd93e552f99038393d295ba964d449fa9f700d3749ad09b524",
+    "guard": "0bc1f1095466df9eb2a44f07ff2a07d5465b08ffea4430861dd2d11e2fa492ed",
+    "validator": "5ecf6f04f42dd864a2f47202c3018562177ffa3cf6b4cb2739f134173e25c957"
+  },
+  "currentMinimums": {
+    "committee-0": 12,
+    "committee-1": 12,
+    "committee-2": 12,
+    "committee-3": 12,
+    "committee-4": 12,
+    "committee-5": 0,
+    "committee-6": 0,
+    "cancel-usdtm": 1,
+    "cancel-ethm": 1,
+    "return-owner": 2
+  },
+  "durability": {
+    "journalFileSync": true,
+    "headFileSync": true,
+    "directorySyncAvailableOnThisRun": false,
+    "localExclusiveWriterLock": true,
+    "staleLocksNeverAutoCleared": true
+  },
+  "proved": [
+    "exact protected configuration and immutable floors",
+    "reservation durability before signing authorization",
+    "exact transaction and ordered-key binding",
+    "rollback, ahead-counter, exhaustion and partial-prefix rejection",
+    "hash-chain, head-anchor, truncation, tear and corruption rejection",
+    "single local writer and fail-closed crash behavior",
+    "typed settlement retry, supersession and confirmation states"
+  ],
+  "limitations": [
+    "A local filesystem lock does not fence a copied guard store or another host.",
+    "An administrator able to roll back both journal and trusted head together is outside this local proof.",
+    "Windows did not provide a portable directory fsync proof through Node.js.",
+    "No Minima signature or transaction was created by this validator.",
+    "The live P8 fixture signing domain is retired; enabled signing is exercised only by a synthetic test policy."
+  ]
+}

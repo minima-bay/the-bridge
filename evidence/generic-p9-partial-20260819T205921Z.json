@@ -1,0 +1,188 @@
+{
+  "schema": "generic-p9-partial-evidence/v1",
+  "createdAt": "2026-08-19T20:59:21.990Z",
+  "result": "PARTIAL_PASS_P9_REMAINS_NOW",
+  "phaseGatePassed": false,
+  "livePolicy": {
+    "policyHash": "c9bc9493013df82d0a060f661a27044d59a75f66c721987a592ba25597eaed28",
+    "signingEnabled": false,
+    "retirementReason": "The first stale-clone verification exposed an authenticated-wallet RPC on a wildcard interface without RPC authentication. No future signature is authorized from this P8 fixture key domain.",
+    "protectedKeys": 10,
+    "exactMinimumUses": {
+      "committee-0": 12,
+      "committee-1": 12,
+      "committee-2": 12,
+      "committee-3": 12,
+      "committee-4": 12,
+      "committee-5": 0,
+      "committee-6": 0,
+      "cancel-usdtm": 1,
+      "cancel-ethm": 1,
+      "return-owner": 2
+    },
+    "treeKeyShape": {
+      "size": 64,
+      "depth": 3,
+      "maximumUses": 262144
+    }
+  },
+  "externalJournal": {
+    "path": "C:\\Users\\Charles\\Documents\\Crypto\\Minima\\WotsGuards\\BridgeTestSigners-P9",
+    "outsideNodeAndBackupDomains": true,
+    "entries": 1,
+    "lastHash": "1ba6c567b06905ff3eafb49dcbd885809dadf9cbd753795ba67b2786ccf7a267",
+    "finalInspectionCode": "NODE_ACCEPTED_RETIRED",
+    "signingDomainRetired": true
+  },
+  "offlineValidation": {
+    "guard": {
+      "artifact": "generic-p9-wots-guard-20260819T205617Z.json",
+      "sha256": "d75a7573ca02c69c6b6b98dc02be22ade408831752c8803290484093bb87c6a4",
+      "assertions": 282,
+      "mutations": 14,
+      "propertySteps": 40
+    },
+    "transactionBoundaries": {
+      "artifact": "generic-p9-transaction-boundaries-20260819T205741Z.json",
+      "sha256": "040e5548b02f26a5e0205fc3b02ae327d84dcfc9de1dadbfb92cda8a9d1a9639",
+      "assertions": 182,
+      "crashCases": 12,
+      "hostileCases": 21
+    }
+  },
+  "nodeObservations": {
+    "genesis": {
+      "artifact": "generic-p9-wots-journal-genesis-retired-20260819T204219Z.json",
+      "sha256": "a94541255e9a75c95c85c734305a4fcfc4bca5cf568053b0ea567e60ab93727e"
+    },
+    "stale": {
+      "artifact": "generic-p9-wots-stale-node-retired-authenticated-20260819T204228Z.json",
+      "sha256": "e123ac0670efeefbd756f63a1ff60132aed1926cfb566396d1d41755715ca4a2",
+      "counterObservationVerdict": "COUNTER_ROLLBACK",
+      "signingAuthorizationVerdict": "SIGNING_DOMAIN_RETIRED",
+      "counters": {
+        "committee-0": 4,
+        "committee-1": 4,
+        "committee-2": 4,
+        "committee-3": 4,
+        "committee-4": 4,
+        "committee-5": 0,
+        "committee-6": 0,
+        "cancel-usdtm": 0,
+        "cancel-ethm": 0,
+        "return-owner": 0
+      },
+      "wrapperCleanup": {
+        "cleanupRecordedAt": "2026-08-19T20:42:52.6005488Z",
+        "mode": "Stale",
+        "coreJarSha256": "e8e8b20356d4a688b48d77550fbac2c141107c292af3d9de8ffeb84b3ff8a535",
+        "p2pManagerEnabled": false,
+        "rpcAuthenticated": true,
+        "rpcBindObservedBySourceInspection": "wildcard",
+        "isolatedBasePort": 19701,
+        "isolatedRpcPort": 19705,
+        "staleSourceManifestSha256": "5eec1f0b53485b124741997f72b24cce25167faf7d057e7e9d6ff6d5172d7fb8",
+        "staleCloneManifestMatched": true,
+        "processExitObservedAfterQuitAttempt": true,
+        "gracefulQuitProven": false,
+        "disposableCloneRemoved": true,
+        "originalPortsClosed": true,
+        "isolatedPortsClosed": true,
+        "networkIsolationProven": false,
+        "commandAllowlist": [
+          "keys action:list",
+          "quit"
+        ]
+      }
+    },
+    "current": {
+      "artifact": "generic-p9-wots-current-node-retired-authenticated-20260819T204252Z.json",
+      "sha256": "1fa91d818b7a6a706acc843ce5a96ca3a6e2310325e238427a53878a999ea8a5",
+      "counterObservationVerdict": "NODE_ACCEPTED",
+      "signingAuthorizationVerdict": "SIGNING_DOMAIN_RETIRED",
+      "counters": {
+        "committee-0": 12,
+        "committee-1": 12,
+        "committee-2": 12,
+        "committee-3": 12,
+        "committee-4": 12,
+        "committee-5": 0,
+        "committee-6": 0,
+        "cancel-usdtm": 1,
+        "cancel-ethm": 1,
+        "return-owner": 2
+      },
+      "wrapperCleanup": {
+        "cleanupRecordedAt": "2026-08-19T20:43:08.0486628Z",
+        "mode": "Current",
+        "coreJarSha256": "e8e8b20356d4a688b48d77550fbac2c141107c292af3d9de8ffeb84b3ff8a535",
+        "p2pManagerEnabled": false,
+        "rpcAuthenticated": true,
+        "rpcBindObservedBySourceInspection": "wildcard",
+        "isolatedBasePort": 19701,
+        "isolatedRpcPort": 19705,
+        "staleSourceManifestSha256": null,
+        "staleCloneManifestMatched": null,
+        "processExitObservedAfterQuitAttempt": true,
+        "gracefulQuitProven": false,
+        "disposableCloneRemoved": null,
+        "originalPortsClosed": true,
+        "isolatedPortsClosed": true,
+        "networkIsolationProven": false,
+        "commandAllowlist": [
+          "keys action:list",
+          "quit"
+        ]
+      }
+    }
+  },
+  "hostileReviewCorrections": [
+    "Event-envelope field smuggling rejected by event-specific payload whitelists.",
+    "Durable one-shot SIGN_STEP replaces reusable signing authorization inside one journal store.",
+    "HALT cannot later COMMIT or resume signing.",
+    "POST_ATTEMPT is durable before broadcast and duplicate post callbacks are blocked.",
+    "POST_ATTEMPT binds the intent to the reserved custom transaction, transaction body and expected settlement.",
+    "Negative reconciliation cannot clear an unknown post with evidence for a different transaction specification.",
+    "Typed non-settlement requires explicit false onchain and mempool fields, exact inputs and outputs, an expired validity window and a chain anchor.",
+    "Token accounting is nonempty and pins token IDs, witness counts and zero differences.",
+    "Loaded unsigned transaction body is rechecked before reserve, every sign step and post.",
+    "Live TreeKey shape is pinned to size 64, depth 3 and 262144 maximum uses.",
+    "Legacy live sign and post entrypoints are disabled pending a fenced P9 adapter.",
+    "Later RPC observations use random in-memory Basic authentication and record post-cleanup state."
+  ],
+  "adverseFinding": {
+    "code": "P9_STALE_CLONE_NETWORK_ISOLATION_NOT_PROVED",
+    "statement": "The first stale-clone run exposed wildcard RPC without authentication, and all clone runs exposed the Core wire listener on a wildcard base port. The wrapper issued no signing command, but outside access was not excluded.",
+    "consequence": "The P8 fixture key domain is permanently retired from future signing. Earlier node artifacts are historical only and cannot prove that no external signature occurred."
+  },
+  "unresolvedBlockers": [
+    "A copied journal or second host is not fenced by the local writer lock.",
+    "Journal and head can be rolled back together because no independent monotonic or WORM anchor exists.",
+    "Windows directory-entry fsync is not proved by Node.js.",
+    "The real live constructor is locked rather than integrated with a globally fenced guard.",
+    "Exact safe clone verification still needs an authorized measured network-isolation control for the wildcard Minima wire listener.",
+    "No trusted exact-chain reconciler backs a future unknown-post retry in live operation."
+  ],
+  "boundaries": {
+    "newMainnetTransactions": 0,
+    "newWotsSignaturesAuthorizedOrCreatedByThisSlice": 0,
+    "realAssetsAuthorized": false,
+    "oneControllerFixture": true,
+    "ethereumFactsSynthetic": true,
+    "genericMinimaConsensusLightClientExists": false,
+    "independentOperatorDecentralizationProved": false
+  },
+  "sourceSha256": {
+    "p9-wots-policy.json": "f309e6e9764bd4cd93e552f99038393d295ba964d449fa9f700d3749ad09b524",
+    "wots-write-ahead-guard.mjs": "eeb6a743d4aad01f110283dcf3fd32b3c25b693bf99e2d481a6292737184dde1",
+    "validate-wots-write-ahead-guard.mjs": "6c07496167c78db954c88fbf8335f003be2872415dd656abd87830c6beb5b93e",
+    "generic-bridge-transaction-lifecycle.mjs": "5199eead4d7f3e844479a95358518628c238eb25560c71cbd5a414304837e587",
+    "validate-generic-p9-transaction-boundaries.mjs": "d0abf0fba3f7ccac8e9205a75c730c93c77159700e8dd1fbd8c9984c2903f233",
+    "verify-p9-wots-node.mjs": "abb88056f530f56384fb2e53e2d0ecb9f01cfe332c8ecc3d95c426d36e8ac32f",
+    "invoke-p9-wots-node-verification.ps1": "77b95dc525032ceb1edbedfdb3d3b2b4822c88dc470b7923feabd48f696ed472",
+    "generic-mainnet-p8-live-branches.mjs": "4cf1f028a54a5974d0c48d5d5780295a0e526eb827e6f0aef233aaa81889b5e7",
+    "generic-mainnet-v2-live-release.mjs": "36e4d34696cb3e2614751638ff1692fe85c5437a471fdff7c33887f90eda1926",
+    "generic-mainnet-v2-genesis.mjs": "745164fcc4c68177fdddc6da4b4c10dd23959d2fb8e3e35ef938545d04aba819",
+    "finalize-generic-p9-evidence.mjs": "e247329e6a292b840d144e2876feacede7383bd1835cfb4a48492b844673df54"
+  }
+}

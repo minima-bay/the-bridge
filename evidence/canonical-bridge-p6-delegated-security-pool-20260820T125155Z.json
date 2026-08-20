@@ -1,0 +1,49 @@
+{
+  "schema": "canonical-bridge-p6-delegated-security-pool-validation/v1",
+  "createdAtUtc": "2026-08-20T12:51:55.472Z",
+  "status": "local-pass",
+  "phaseGatePassed": false,
+  "decision": "D-USDTM-026",
+  "validator": "validate-canonical-bridge-p6-delegated-security-pool.mjs",
+  "validatorSha256": "dac3e840497f0af67d342c175c1f31d5831ea780f73430617f4f96e0e458ae45",
+  "vaultSourceSha256": "521bb92360adebefc281d9951944e37445e4ea49e4df46ffdce83046524f5c54",
+  "rosterSourceSha256": "dbc0e1f8e619c6461b2f0d1d2c76800e0d5ed185dee5654568918430efd9b38a",
+  "tokenFixtureSourceSha256": "aadbb093b2481443f3c55bcb9442a7fbfc32239c85d4f45392d61463dc77c461",
+  "rewardCheckpointFixtureSourceSha256": "651492f5a89cdc0b1cd52cfd8b8e55765016022ee9b5e259afdeb6992fc9fb19",
+  "testSourceSha256": "9211beb4290728f0fc61f6815e2dd98e686e0292713a47dc753df2a73b267060",
+  "configSha256": "d4716f9758419e6daaa2e2a62b1b96b485e7dabcb44707d31578e0e6b1cbcc67",
+  "packageLockSha256": "7b73d3c0cc65ee5ba1664e0cb67e61eb0daa227e39df5e3a6f352337841dfdb6",
+  "pinnedHardhatResolutionVerified": true,
+  "compiler": "0.8.24+commit.e11b9ed9",
+  "hardhat": "3.13.0",
+  "evmTarget": "shanghai",
+  "optimizer": {
+    "enabled": true,
+    "runs": 200
+  },
+  "mochaTestsPassed": 6,
+  "compilationObserved": true,
+  "prohibitedTransferOrReleaseFunctionCount": 0,
+  "provedLocally": [
+    "A public security depositor can choose one approved attestor and contribute only to that attestor's bond accounting.",
+    "Delegated capital cannot consume the immutable minimum self-bond capacity.",
+    "An attestor pool is not ready until its complete equal bond and minimum self-bond are both present.",
+    "All seven mixed self/delegated pools can satisfy the existing unanimous roster activation gate.",
+    "Zero, nonmember-target, excess-delegation and overfunding attempts reject atomically.",
+    "Public contributions inherit exact balance-delta and callback-reentrancy protection.",
+    "Depositor positions are internal non-transferable accounting with no withdrawal or redemption function."
+  ],
+  "blockers": [
+    "A separate local index now accounts bond-risk rewards per member and depositor, but readiness, participation, challenge finality and payout claims are not implemented.",
+    "Objective slashing, first-loss execution and post-slash share accounting are not implemented.",
+    "Asynchronous withdrawal requests, challenge windows and final claims are not implemented.",
+    "The illustrative 30 percent self-bond is not a selected production value.",
+    "Legal treatment and production asset selection remain open under O-USDTM-013.",
+    "P9 remains a partial pass and cannot authorize production bridge operation."
+  ],
+  "limitations": [
+    "This is deliberately one-way local accounting because safe release depends on later risk gates.",
+    "Bridge principal is not present in these contracts or tests; the separation claim is architectural and interface-scoped.",
+    "No public deployment, security deposit, reward, real asset, signature, Minima node action or chain transaction occurred."
+  ]
+}

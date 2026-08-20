@@ -1,0 +1,60 @@
+{
+  "schema": "canonical-bridge-p6-fee-reward-treasury-validation/v1",
+  "createdAtUtc": "2026-08-20T13:49:56.885Z",
+  "status": "local-pass",
+  "phaseGatePassed": false,
+  "decision": "D-USDTM-026",
+  "validator": "validate-canonical-bridge-p6-fee-reward-treasury.mjs",
+  "validatorSha256": "65112ad295434423ab28153b46cd9aed7225d29b43c41a18076f786fcf899199",
+  "treasurySourceSha256": "f32cb83dbfd95de048399f6010002343635df09a6ebdeb59459b726e2e1a0630",
+  "rewardIndexSourceSha256": "283980c542b6eca039b45fed0c2b21c402f513ca559c53fa0a21d3669c4a6aba",
+  "exposureControllerSourceSha256": "5839940ddacec7f4c7037928420b0fd291796fd767c285bbd632bd7da29f647b",
+  "bondVaultSourceSha256": "1f63347f1bef80e07333293fa5890c392fe1d41f366c21df3c2cea7dc38c94c5",
+  "rosterSourceSha256": "ea5523b3757c93baefccb1a02115c8e89f4cc2437f98ee6627055faed322c73f",
+  "workRecorderFixtureSourceSha256": "438b27b51223c9539aa8c8c3f68c4dde9c8a2c7d8d1a134ea6c00e8dba42486b",
+  "laneFixtureSourceSha256": "a56cc8ac41123fbd233625fd4d7881ed7f03b3aa2f1817707c9731a094f2437a",
+  "tokenFixtureSourceSha256": "aadbb093b2481443f3c55bcb9442a7fbfc32239c85d4f45392d61463dc77c461",
+  "testSourceSha256": "91928b4f7378ac33f666ca5e2fb0361b43f7eb53bad80520324e46e000b8400f",
+  "configSha256": "d4716f9758419e6daaa2e2a62b1b96b485e7dabcb44707d31578e0e6b1cbcc67",
+  "packageLockSha256": "7b73d3c0cc65ee5ba1664e0cb67e61eb0daa227e39df5e3a6f352337841dfdb6",
+  "pinnedHardhatResolutionVerified": true,
+  "compiler": "0.8.24+commit.e11b9ed9",
+  "hardhat": "3.13.0",
+  "evmTarget": "shanghai",
+  "optimizer": {
+    "enabled": true,
+    "runs": 200
+  },
+  "mochaTestsPassed": 8,
+  "compilationObserved": true,
+  "creationBytecodeBytes": 7310,
+  "creationBytecodeSha256": "e263d568413314f2325bf0978c9c8318bfccf0328ba63057439f35ebce7c676e",
+  "deployedBytecodeBytes": 4042,
+  "deployedBytecodeSha256": "7d66a0b98cff0bee83df9dde8e1307ba591561d263c6caa4d9aa0dbbe769e080",
+  "payableFunctionCount": 0,
+  "privilegedOrReleaseFunctionCount": 0,
+  "provedLocally": [
+    "Only the exact two exposure-controller lanes can collect a fee, and only after the same lane has confirmed the one-use settlement identity.",
+    "A lane's fee asset and runway remain isolated from the other lane, with no cross-asset valuation or subsidy.",
+    "The complete received fee is split into attestor, safety, relayer and operations ledgers without touching the lane principal.",
+    "The attestor ledger is further split into readiness, participation and bond-risk pools, with rounding retained inside those fee ledgers.",
+    "The bond-risk pool is atomically sent to the roster-committed non-custodial index for pro-rata member and delegated-security-depositor accounting.",
+    "Cap rejection rolls the liability transition and fee collection back atomically in the production-shaped lane call.",
+    "Fee-on-transfer, false-return and callback-reentrant token behavior fails atomically; exact no-return behavior is accepted.",
+    "One-way bootstrap security funds contribute to an asset-specific minimum security-runway calculation.",
+    "The treasury exposes no payable, owner, administrator, upgrade, claim, withdrawal, release, slash, sweep or rescue function."
+  ],
+  "blockers": [
+    "The existing P4 lane vaults do not yet route confirmed fees to this treasury; tests use disposable atomic lane callers.",
+    "The exposure controller does not yet enforce the treasury's runway result before accepting new liability.",
+    "Bond-risk rewards are indexed and work weights are challenge-finalized separately, but no readiness or participation reward allocation, forfeiture or depositor claim exists.",
+    "The illustrative 50/20/10/20 protocol split and 60/25/15 attestor split are not selected production values.",
+    "Objective slashing, asynchronous security-pool withdrawal and legal treatment remain open under O-USDTM-013.",
+    "P9 remains a partial pass and cannot authorize production bridge operation."
+  ],
+  "limitations": [
+    "This is deliberately one-way local custody because payout safety depends on later attribution and risk gates.",
+    "The fee assets, lane callers, members, settlements, budgets and amounts are disposable local fixtures.",
+    "No public deployment, bridge fee, reward, principal, security deposit, signature, Minima node action or chain transaction occurred."
+  ]
+}

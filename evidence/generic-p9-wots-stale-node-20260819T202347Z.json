@@ -1,0 +1,31 @@
+{
+  "schema": "generic-p9-wots-node-verification/v1",
+  "createdAt": "2026-08-19T20:24:31.240Z",
+  "mode": "inspect",
+  "rpcCommand": "keys action:list",
+  "walletKeyCount": 74,
+  "protectedCounters": {
+    "committee-0": 4,
+    "committee-1": 4,
+    "committee-2": 4,
+    "committee-3": 4,
+    "committee-4": 4,
+    "committee-5": 0,
+    "committee-6": 0,
+    "cancel-usdtm": 0,
+    "cancel-ethm": 0,
+    "return-owner": 0
+  },
+  "verdict": {
+    "schema": "generic-bridge-wots-verdict/v1",
+    "ok": false,
+    "code": "COUNTER_ROLLBACK",
+    "details": {
+      "keyId": "committee-0",
+      "minimum": 12,
+      "observed": 4
+    }
+  },
+  "secretsPersisted": false,
+  "signingCommandsExecuted": 0
+}

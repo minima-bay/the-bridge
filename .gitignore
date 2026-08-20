@@ -1,0 +1,17 @@
+.env
+.env.*
+node_modules/
+artifacts/
+cache/
+types/
+coverage/
+dist/
+*.class
+*.log
+
+# Reproducible local dependency checkouts are not published in The Bridge repository.
+upstream/minima-core/
+upstream/winterfell.git/
+
+# Local cross-package convenience junction created by the P6 test setup.
+p4/p6/

@@ -1,0 +1,39 @@
+{
+  "schema": "generic-p9-transaction-boundary-validation/v1",
+  "createdAt": "2026-08-19T20:26:40.920Z",
+  "result": "PASS",
+  "assertions": 152,
+  "crashCases": 11,
+  "hostileCases": 19,
+  "liveNodeCommandsExecuted": false,
+  "signaturesCreated": 0,
+  "transactionsPosted": 0,
+  "witnessResolution": {
+    "requiredOrder": [
+      "reserve-and-flush",
+      "authorize-exact-unsigned-transaction",
+      "txnsign-each-key",
+      "observe-and-commit-counters",
+      "txnmmr",
+      "explicit-txnscript",
+      "txncheck",
+      "typed-post",
+      "exact-onchain-confirmation"
+    ],
+    "txnbasicsUsed": false,
+    "reason": "The P8 covenant exceeds the wallet script registry limit, so the proven explicit txnmmr plus txnscript witness path is retained."
+  },
+  "proved": [
+    "no signing callback before a durable reservation",
+    "per-key counter sequencing across five signers and every prefix crash",
+    "rejected checks permanently account for leaves",
+    "missing and ambiguous txncheck values fail closed",
+    "accepted-response-lost post outcomes reconcile the exact transaction without rebuilding",
+    "confirmation pins onchain status, exact predecessor inputs, ordered outputs, successor digest and confirmations",
+    "duplicate settlement and unresolved retries do not create a second successor"
+  ],
+  "limitations": [
+    "All transaction-boundary cases use dependency-injected fakes and disposable counters.",
+    "No restored P8 key signed and no mainnet transaction was posted."
+  ]
+}

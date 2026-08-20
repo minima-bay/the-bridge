@@ -1,0 +1,59 @@
+{
+  "schema": "canonical-bridge-p6-work-epoch-validation/v1",
+  "createdAtUtc": "2026-08-20T13:54:31.873Z",
+  "status": "local-pass",
+  "phaseGatePassed": false,
+  "validator": "validate-canonical-bridge-p6-work-epoch.mjs",
+  "validatorSha256": "21978b3b3b767ac7e7472357ab08a5cfadc5dce097d498cbb3e22588a17a327e",
+  "workEpochSourceSha256": "34e8c618cbbbaf6702ad616ee9751e35cfbc16f7d47a07dd784ea7be903c191f",
+  "decisionVerifierFixtureSourceSha256": "ecb0e4172211ded128993eca9f42d07013effcd2a4a57b9e421ac6113baeac50",
+  "laneFixtureSourceSha256": "a56cc8ac41123fbd233625fd4d7881ed7f03b3aa2f1817707c9731a094f2437a",
+  "rosterSourceSha256": "ea5523b3757c93baefccb1a02115c8e89f4cc2437f98ee6627055faed322c73f",
+  "bondVaultSourceSha256": "1f63347f1bef80e07333293fa5890c392fe1d41f366c21df3c2cea7dc38c94c5",
+  "exposureControllerSourceSha256": "5839940ddacec7f4c7037928420b0fd291796fd767c285bbd632bd7da29f647b",
+  "tokenFixtureSourceSha256": "aadbb093b2481443f3c55bcb9442a7fbfc32239c85d4f45392d61463dc77c461",
+  "testSourceSha256": "cbfe00037af2bd3a799eeeccfb8faf2d95f666cfda40a81ee348bb75e7ab67ac",
+  "configSha256": "d4716f9758419e6daaa2e2a62b1b96b485e7dabcb44707d31578e0e6b1cbcc67",
+  "packageLockSha256": "7b73d3c0cc65ee5ba1664e0cb67e61eb0daa227e39df5e3a6f352337841dfdb6",
+  "pinnedHardhatResolutionVerified": true,
+  "compiler": "0.8.24+commit.e11b9ed9",
+  "hardhat": "3.13.0",
+  "evmTarget": "shanghai",
+  "optimizer": {
+    "enabled": true,
+    "runs": 200
+  },
+  "mochaTestsPassed": 10,
+  "compilationObserved": true,
+  "creationBytecodeBytes": 9113,
+  "creationBytecodeSha256": "fd5657ad153080920fce52caa73fb26b477e341e66f6e1266b50e7aa96cd8f77",
+  "deployedBytecodeBytes": 6264,
+  "deployedBytecodeSha256": "75dffb3037384fbbf57082ee1af88d5b044c704d15ade028704c25cc6e541866",
+  "payableFunctionCount": 0,
+  "privilegedPayoutOrCustodyFunctionCount": 0,
+  "provedLocally": [
+    "The unanimous roster commits one exact work-recorder address, preventing an alternate recorder from claiming the epoch.",
+    "A direct approved-member transaction records at most one readiness heartbeat per fixed window while the roster is active and all seven bonds remain posted.",
+    "Only either exact exposure-controller lane can register a globally unique request identity and bounded decision deadline while the roster remains active and fully bonded.",
+    "Each bonded roster member can submit exactly one timely APPROVE or REJECT record per request, and both choices receive the same participation weight.",
+    "Malformed, duplicate, outsider, inactive-roster, underbonded and late records reject without creating weight.",
+    "A challenge removes exactly one participation unit only when the immutable verifier accepts the supplied evidence.",
+    "Anyone can finalize the immutable seven-member readiness and participation totals only after the complete challenge period.",
+    "The finalization digest binds the chain, recorder, roster, epoch windows, ordered member weights, totals and successful challenge count.",
+    "The recorder is non-custodial and exposes no payable, owner, administrator, upgrade, payout, claim, withdrawal, release, transfer, slash, sweep or rescue function."
+  ],
+  "blockers": [
+    "The heartbeat proves only that an approved Ethereum key acted while the roster was active and fully bonded; it does not prove node uptime, Minima connectivity or correct offchain service.",
+    "The decision record proves who submitted APPROVE or REJECT and when; it does not prove that the external bridge fact or decision was correct.",
+    "The objective decision verifier is a disposable fixed-evidence fixture, not a production fraud proof or fault adjudicator.",
+    "The lane request digest is caller supplied; production P4 adapters must bind it to canonical settlement data and prevent request spam.",
+    "There is no challenge bond, challenger reward, culpability classification, forfeiture, slashing or appeal policy.",
+    "The finalized weights are not yet connected to readiness or participation reward allocation, claims or payouts.",
+    "P9 remains a partial pass and cannot authorize production bridge operation."
+  ],
+  "limitations": [
+    "This is a local objective-action record and delayed-finalization lifecycle, not a complete attestor correctness or availability proof.",
+    "The verifier, lanes, members, bonds, assets, requests, decisions and evidence are disposable local fixtures.",
+    "No public deployment, bridge transfer, reward, payout, slash, signature, Minima node action or public-chain transaction occurred."
+  ]
+}

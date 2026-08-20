@@ -88,8 +88,25 @@ requireCondition(text.includes('`D-USDTM-020`'), 'accepted historical replay dec
 requireCondition(text.includes('`D-USDTM-021`'), 'authorized valueless mainnet ceremony is missing');
 requireCondition(text.includes('P7 LIVE MAINNET REFUTATION'), 'live P7 refutation is missing');
 requireCondition(text.includes('`D-USDTM-022`') && text.includes('P7 LIVE V2 MAINNET GATE PASSED')
-  && text.includes('| `P8` | NOW |'), 'authorized v2 live pass or P8 handoff is missing');
+  && text.includes('P8 LIVE MAINNET GATE PASSED') && text.includes('| `P8` | GATE PASSED |')
+  && text.includes('| `P9` | NOW |'), 'authorized v2/P8 live pass or P9 handoff is missing');
 requireCondition(text.includes('synthetic'), 'offline TxPoW evidence is not qualified as synthetic');
+requireCondition(text.includes('`F-USDTM-082`') && text.includes('`E-USDTM-049`'),
+  'P6 objective work-epoch finding or evidence record is missing');
+requireCondition(text.includes('`F-USDTM-083`') && text.includes('`E-USDTM-050`'),
+  'P6 objective accountability-verifier finding or evidence record is missing');
+requireCondition(text.includes('`F-USDTM-084`') && text.includes('`E-USDTM-051`'),
+  'P6 challenge-finalized work-reward finding or evidence record is missing');
+requireCondition(text.includes('`D-USDTM-027`') && text.includes('minima-bay/the-bridge'),
+  'Bay-level The Bridge rehome decision is missing');
+requireCondition(text.includes('approved-key activity at one block') && text.includes('not infrastructure uptime'),
+  'P6 readiness evidence boundary is missing');
+requireCondition(text.includes('A decision record proves choice and timing, not correctness'),
+  'P6 decision-truth evidence boundary is missing');
+requireCondition(text.includes('ECDSA accountability is not inseparably bound to Minima WOTS authorization'),
+  'P6 cross-chain signer-attribution boundary is missing');
+requireCondition(text.includes('This creates accounting balances, not claims or payouts'),
+  'P6 indexed-but-not-payable boundary is missing');
 
 const phaseRows = [...text.matchAll(/^\| `(P\d+)` \| ([A-Z ]+) \|/gm)].map((match) => ({
   id: match[1],

@@ -12,6 +12,13 @@ remain preserved as historical run records, but they do not evidence later sourc
 If `currentFixtureEvidence` is null, the current schema has no matching executed fixture evidence.
 Sidecars authenticate an evidence file itself; they do not make stale evidence current.
 
+General implementation-plan evidence is current only when schema v1 binds the exact plan,
+validator, control document, attestor framework, P6 specification, P9 completion specification,
+P9 guard status and these evidence rules. It checks all 26 binding-decision references, all 13 open
+decisions, all ten complete finding families, all 14 implementation phases, required technical
+files, local Markdown links and critical status boundaries. It is documentation-traceability
+evidence only and does not pass a bridge phase or validate bridge security.
+
 The Minima consensus RPC fixture uses the same rule separately. The manifest identifies the latest
 captured `minima-consensus-mainnet-*` fixture and a current validation artifact only when it reports:
 
@@ -92,3 +99,95 @@ input/output existence, mempool observation and exact WOTS use increments. Never
 from a failed attempt. A corrected offline candidate remains `phaseGatePassed:false` until it passes
 independent hostile rereview and a separately authorized real transaction survives ordinary posting
 lag and mines with exact successor verification.
+
+P9 evidence is current only when the final partial artifact binds the current policy, guard,
+lifecycle, production-shaped signing authority, exact-chain reconciler, all four validators and
+legacy-builder lock by SHA-256; names the exact current journal policy and head; selects matching
+sidecar-verified guard, transaction-boundary, signing-authority and chain-reconciler runs; keeps
+`phaseGatePassed:false`; records the stale-clone network-isolation refutation; and confirms the live
+P8 signing policy is disabled. Stale/current counter observations prove only the recorded key
+metadata and wrapper cleanup fields. They do not prove that the wildcard listeners were unreachable,
+that no outside signature occurred during the first stale run, or that a copied store or second host
+is fenced by a real authority. The new authority and reconciler evidence uses dependency-injected
+fakes. It does not prove a real non-expiring cross-host fence, independent WORM checkpoint, complete
+live chain source, strict node gateway or measured network isolation. The P8 fixture key domain is
+retired and must not sign again.
+
+P6 roster evidence is current only when the validator, Solidity contract, local EVM test, Hardhat
+configuration and pinned P4 lockfile hashes match; exactly seven tests pass with Solidity 0.8.24 and
+Hardhat 3.13.0; and the compiled ABI still contains no payable, owner, administrator or upgrade
+function. It proves only the moneyless unanimous-selection and pre-activation opt-out mechanism.
+Its bond-readiness dependency is a source-bound mock. It does not select candidates or economic
+values and does not implement bond custody, rewards,
+slashing adjudication, claims, bridge-message verification or a public deployment.
+
+P6 bond-vault evidence is current only when the validator, vault, roster, valueless token fixture,
+focused test, Hardhat configuration and pinned lockfile hashes match; exactly eight focused tests
+pass; and the compiled ABI contains no payable, privileged, withdrawal, slash, sweep or rescue
+function. It proves exact local one-way custody, full individual/mutual tranche partition, exact
+balance-delta receipt, minimum self-bond capacity, separated self/delegated accounting, current
+aggregate custody coverage and fail-closed hostile token behavior.
+It does not prove a production asset, beneficial ownership, economic sufficiency, withdrawal,
+objective adjudication, claims, signer attribution or public deployment.
+
+P6 delegated-security-pool evidence is current only when the validator, vault, roster, valueless
+token fixture, focused test, Hardhat configuration and pinned lockfile hashes match; exactly six
+focused tests pass; and `D-USDTM-026` remains the controlling decision. It proves that a voluntary
+public depositor can back one selected approved attestor, cannot consume the committed minimum
+self-bond capacity and cannot make the member ready before the exact full pool and self-bond are
+present. The current contributor position is internal, one-way and non-transferable. It does not
+prove per-account reward indexing or fee distribution, slashing, asynchronous withdrawal,
+beneficial ownership, legal treatment, a production self-bond percentage, a real asset or public
+deployment.
+
+P6 exposure-controller evidence is current only when the validator, controller, two-lane fixture,
+roster, bond vault, token fixture, focused test, Hardhat configuration and pinned lockfile hashes
+match; exactly seven focused tests pass; and the compiled ABI has no payable, privileged,
+lane-replacement or cap-raising function. It proves one immutable shared cap, cross-lane replay
+protection, underbonded increase rejection and lane-isolated risk-reducing release. It does not prove
+the P4 lane adapters, production deterministic deployment, retirement, replacement, slashing state,
+security runway, multi-asset valuation or public operation.
+
+P6 fee-reward-treasury evidence is current only when the validator, treasury, exposure controller,
+atomic lane fixture, two valueless token fixtures, focused test, Hardhat configuration and pinned
+lockfile hashes match; exactly eight focused tests pass; and the compiled ABI has no payable,
+privileged, claim, withdrawal, release, slash, sweep or rescue function. It proves exact-lane
+confirmed-fee admission, one-use settlement binding, complete fee-ledger conservation, principal
+separation in the atomic lane fixture, isolated per-asset runway calculation and fail-closed hostile
+token behavior. It does not prove P4 lane integration, quote correctness, runway enforcement,
+per-account reward attribution, depositor claims, challenge finality, forfeiture, slashing, a
+production allocation or public operation.
+
+P6 epoch-reward-index evidence is current only when the validator, reward index, treasury, bond
+vault, roster, exposure controller, atomic lane and token fixtures, focused test, Hardhat
+configuration and pinned lockfile hashes match; exactly eight focused tests pass; and the compiled
+ABI has no payable, privileged, payout claim, withdrawal, transfer, slash, sweep or rescue function.
+It proves roster commitment, vault-before-balance checkpoints, treasury-only indexing, equal member
+pool allocation, capital-proportional member/depositor accounting, isolated fee-asset indices,
+repeated accrual, rounding retention and underbonded atomic rollback. It does not prove objective
+readiness or participation records, challenge finality, forfeiture, post-slash updates, withdrawals,
+payouts, P4 integration, a native-ETH fee adapter or public operation.
+
+P6 work-epoch evidence is current only when schema v2 binds the validator, work recorder, objective
+decision verifier, finalized-fact-source fixture, exact lane fixture, roster, bond vault, exposure
+controller, token fixture, focused test, Hardhat configuration and pinned lockfile hashes; exactly
+twelve focused tests pass; and both compiled ABIs have no payable, privileged, payout, custody,
+claim, withdrawal, transfer, release, slash, sweep or rescue function. It proves exact-recorder
+commitment, one fully bonded member heartbeat per readiness window, active-and-bonded exact-lane
+request admission, approve-or-reject neutrality, mandatory domain-bound EIP-712 accountability,
+self-proving same-request equivocation, immutable-source fact-contradiction handling, hostile proof
+rejection, full work-history accumulation and permissionless finalization only after the challenge
+delay. It does not prove infrastructure uptime, decision truth beyond the selected fact source, a
+production source-chain verifier, Minima WOTS signer attribution, P4 request binding, challenge
+economics, reward allocation, claims, payouts, slashing, public deployment or production operation.
+
+P6 work-reward-index evidence is current only when schema v1 binds the validator, work index, work
+recorder, objective verifier, finalized-fact fixture, fee treasury, bond-risk index, bond vault,
+roster, exposure controller, lane and token fixtures, focused test, Hardhat configuration and pinned
+lockfile hashes; exactly eight focused tests pass; and the work index and treasury ABIs expose no
+payable, privileged, claim, withdrawal, redemption, release, transfer, payout, slash, sweep or rescue
+function. It proves pre-epoch exact-index registration, in-epoch confirmed-fee attribution,
+challenge-finalized one-shot readiness and participation allocation, challenged-decision removal,
+two-asset isolation, exact epoch boundaries, zero-weight handling and retained rounding without a
+token transfer. It does not prove a production fact verifier, P4 request binding, Minima WOTS signer
+attribution, forfeiture, claims, payouts, slashing, public deployment or production operation.

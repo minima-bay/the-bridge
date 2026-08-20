@@ -1,0 +1,99 @@
+{
+  "schema": "generic-bridge-mainnet-p8-node-recovery-rotation/v1",
+  "capturedAt": "2026-08-19T19:36:32Z",
+  "authorization": [
+    "D-USDTM-023",
+    "Explicit user authorization to back up, recover and rotate the exposed local database passwords"
+  ],
+  "signerRecovery": {
+    "node": "BridgeTestSigners",
+    "preRecoveryBackup": {
+      "path": "C:\\Users\\Charles\\Documents\\Crypto\\Minima\\Nodes\\BridgeTestSigners-backups\\BridgeTestSigners-pre-p8-resync-20260819T190001Z",
+      "files": 23,
+      "bytes": 630768194,
+      "mismatches": 0,
+      "manifestSha256": "9f12e10cecaf8902c9c2e89c9a06c2e89c6ab4e5d7e4bb2d62ea045d7e290d34"
+    },
+    "walletBaseline": {
+      "walletKeys": 74,
+      "activeCommitteeUses": [4, 4, 4, 4, 4],
+      "cancellationAuthorityUses": [0, 0],
+      "returnOwnerUses": 0
+    },
+    "result": {
+      "normalRestartConvergedToCanonicalMainnet": true,
+      "signerTipRecognizedByIssuer": true,
+      "recognizedTipBlock": "2269809",
+      "recognizedTipHash": "0x0000004753C7E8E39571C020EA262B8DDECFC93EB6D5589366EB50106594C68B",
+      "archiveResyncExecuted": false,
+      "reasonArchiveResyncSkipped": "The non-destructive normal restart already converged to a tip independently recognized by the canonical issuer node.",
+      "genesisProofsImportedAndTracked": [
+        "0xA74C6FC6594F5EAB0EC5F7DEEA82A3F46081E9D695C5BDD8DD4F7D1F751B0E84",
+        "0xFF31088D7B439177B3533326DBE6AB314D198739AA0A243C4154E66AA3C26086",
+        "0x622A9CDAEF6F6B1F8EF251CD18C988A83E238AD848A5B72FB7E836ED69D04B4A",
+        "0x60A1C75DE7986CF961CF548BD0EC115E4BAB356FD0B82AEA1188FAAF5C118363"
+      ]
+    }
+  },
+  "postCeremonyBackups": {
+    "BridgeTestSigners": {
+      "path": "C:\\Users\\Charles\\Documents\\Crypto\\Minima\\Nodes\\BridgeTestSigners-backups\\BridgeTestSigners-pre-dbpassword-rotation-20260819T193027Z",
+      "files": 25,
+      "bytes": 629509323,
+      "mismatches": 0,
+      "manifestSha256": "7284fd8fc52baf5c7405c35b354d77a4993158338be4657792d678d09a337bf5"
+    },
+    "USDTmIssuerP8": {
+      "path": "C:\\Users\\Charles\\Documents\\Crypto\\Minima\\Nodes\\USDTmIssuerP8-backups\\USDTmIssuerP8-pre-dbpassword-rotation-20260819T193027Z",
+      "files": 18,
+      "bytes": 784633949,
+      "mismatches": 0,
+      "manifestSha256": "cf8b34f9d87bc1ffc7c713dabb69f91284470e986005eeab47b2640f1046a5bf"
+    }
+  },
+  "passwordRotation": {
+    "method": "Offline H2 AES ChangeFileEncryption against each stopped wallet.mv.db, with a fresh 32-byte random password written only after successful rekey.",
+    "replacementPasswordCharacters": 64,
+    "passwordsPrinted": false,
+    "signer": {
+      "walletSha256Before": "9cab7e65a9b55a0095d7e7db1b8af62596ca0f5880a6e70bf6fdb9b87d56ec2a",
+      "walletSha256AfterVerifiedShutdown": "44ebe9ab9b06aff76f2420a799c6b943519be656868914c0b8f0a1e63e18487e",
+      "coreReopenVerified": true,
+      "coreVersion": "1.1.2.6",
+      "walletKeysAfterReopen": 74,
+      "activeCommitteeUsesAfterReopen": [12, 12, 12, 12, 12],
+      "cancellationAuthorityUsesAfterReopen": [1, 1],
+      "returnOwnerUsesAfterReopen": 2,
+      "stoppedAfterVerification": true
+    },
+    "issuer": {
+      "walletSha256Before": "f3eff9a1cfe79793b54c166b05eefb76c69d672e247e031b8b8743f7cceb08f0",
+      "walletSha256ImmediatelyAfterRekey": "89be7ec30b64349ab4477c6142d230045087a6c7dbf0e1abfdb6d8dde70018ef",
+      "walletSha256AfterReadOnlyOpen": "b0a8463e3c6e6fa172fac1ebc8db14c62c50c763e86636b5818fc4eb82ad143c",
+      "readOnlyJdbcOpenVerified": true,
+      "schemaTables": 38,
+      "nodeRestarted": false,
+      "retirementMarkerPreserved": "NEVER-REUSE"
+    },
+    "isolatedCloneTest": {
+      "coreOpenedWithReplacementPassword": true,
+      "p2pDisabled": true,
+      "walletKeys": 74,
+      "activeCommitteeUses": [12, 12, 12, 12, 12],
+      "cancellationAuthorityUses": [1, 1],
+      "returnOwnerUses": 2,
+      "cloneStopped": true,
+      "cloneDeleted": true,
+      "recoverableFromPostCeremonyBackup": true
+    }
+  },
+  "assertions": {
+    "noSeedOrPrivateKeyReadOrPrinted": true,
+    "noDatabasePasswordPrinted": true,
+    "bothBackupsByteVerifiedBeforeRekey": true,
+    "signerWalletIdentityAndWotsCountersPreserved": true,
+    "issuerRemainedRetiredAndStopped": true,
+    "bothReplacementPasswordsOpenTheirWalletDatabases": true,
+    "temporarySensitiveCloneRemoved": true
+  }
+}

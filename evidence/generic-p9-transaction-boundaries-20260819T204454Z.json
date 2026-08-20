@@ -1,0 +1,46 @@
+{
+  "schema": "generic-p9-transaction-boundary-validation/v1",
+  "createdAt": "2026-08-19T20:44:54.102Z",
+  "result": "PASS",
+  "assertions": 174,
+  "crashCases": 12,
+  "hostileCases": 19,
+  "liveNodeCommandsExecuted": false,
+  "signaturesCreated": 0,
+  "transactionsPosted": 0,
+  "livePolicySigningEnabled": false,
+  "sourceSha256": {
+    "policy": "f309e6e9764bd4cd93e552f99038393d295ba964d449fa9f700d3749ad09b524",
+    "guard": "0bc1f1095466df9eb2a44f07ff2a07d5465b08ffea4430861dd2d11e2fa492ed",
+    "lifecycle": "df50eddbc7ae26deb2559ae9c35057f94ec1b0a53f55939fdfc5d7d69f96fa2b",
+    "validator": "3a25d460b964c44401ce60cd67b57bef376394931c48b621cef2b3df743df2e3"
+  },
+  "witnessResolution": {
+    "requiredOrder": [
+      "reserve-and-flush",
+      "durable-one-shot-sign-step-for-exact-unsigned-transaction",
+      "txnsign-each-key",
+      "observe-and-commit-counters",
+      "txnmmr",
+      "explicit-txnscript",
+      "txncheck",
+      "typed-post",
+      "exact-onchain-confirmation"
+    ],
+    "txnbasicsUsed": false,
+    "reason": "The P8 covenant exceeds the wallet script registry limit, so the proven explicit txnmmr plus txnscript witness path is retained."
+  },
+  "proved": [
+    "no signing callback before a durable reservation",
+    "per-key counter sequencing across five signers and every prefix crash",
+    "rejected checks permanently account for leaves",
+    "missing and ambiguous txncheck values fail closed",
+    "accepted-response-lost post outcomes reconcile the exact transaction without rebuilding",
+    "confirmation pins onchain status, exact predecessor inputs, ordered outputs, successor digest and confirmations",
+    "duplicate settlement and unresolved retries do not create a second successor"
+  ],
+  "limitations": [
+    "All transaction-boundary cases use dependency-injected fakes and disposable counters.",
+    "No restored P8 key signed and no mainnet transaction was posted."
+  ]
+}

@@ -1,0 +1,38 @@
+name: Validate The Bridge
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  documentation-and-models:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: p4/package-lock.json
+      - run: npm ci --prefix p4
+      - name: Link the pinned toolchain for P6
+        run: ln -s ../p4/node_modules p6/node_modules
+      - name: Validate project control and general plan
+        run: |
+          node validate-usdtm-control.mjs
+          node validate-canonical-bridge-general-plan.mjs
+          node validate-usdtm-scope.mjs
+      - name: Validate recovery-safe offline models
+        run: |
+          node validate-wots-write-ahead-guard.mjs
+          node validate-generic-p9-transaction-boundaries.mjs
+          node validate-generic-p9-signing-authority.mjs
+          node validate-generic-p9-chain-reconciler.mjs
+      - name: Validate current attestor accounting slice
+        run: |
+          node validate-canonical-bridge-attestor-economics.mjs
+          node validate-canonical-bridge-p6-work-reward-index.mjs

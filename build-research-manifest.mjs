@@ -375,25 +375,10 @@ const currentGenericTxpowEvidence = latestMatchingEvidence(/^evidence\/generic-p
      && lane.equalHeadControlInstructions < 1024));
 
 const scopeValidatorSha256 = digest("validate-usdtm-scope.mjs");
-const poolRoot = path.resolve(root, "..", "..", "..");
-const repositoryRoot = String(execFileSync("git", ["rev-parse", "--show-toplevel"], { cwd: poolRoot, encoding: "utf8", windowsHide: true })).trim();
+const repositoryRoot = String(execFileSync("git", ["rev-parse", "--show-toplevel"], { cwd: root, encoding: "utf8", windowsHide: true })).trim();
 const repositoryHead = String(execFileSync("git", ["rev-parse", "HEAD"], { cwd: repositoryRoot, encoding: "utf8", windowsHide: true })).trim();
-const protectedTreeHash = String(execFileSync("git", ["rev-parse", "HEAD:Pool/2_development"], { cwd: repositoryRoot, encoding: "utf8", windowsHide: true })).trim();
-const currentRepositoryStatus = String(execFileSync("git", ["status", "--short", "--untracked-files=all"], { cwd: repositoryRoot, encoding: "utf8", windowsHide: true })).trim();
-const currentChangedPaths = currentRepositoryStatus ? currentRepositoryStatus.split(/\r?\n/).filter(Boolean) : [];
-const scopeAllowedPrefix = "Pool/1_working_files/working-files/zk-light-client-research/";
-const scopeAllowedExact = new Set(["Pool/1_working_files/working-files/zk-light-client-bridge-research-plan-2026-08-18.md"]);
-const currentNormalizedPaths = currentChangedPaths.map((line) => {
-  const normalized = line.replace(/\\/g, "/");
-  const raw = normalized.match(/^(?:[ MADRCU?!]{2}\s+|[MADRCU?!]\s+)(.*)$/)?.[1] || normalized;
-  return raw.includes(" -> ") ? raw.split(" -> ").at(-1) : raw;
-});
-const currentOutsideAllowlist = currentNormalizedPaths.filter((candidate) =>
-  !candidate.startsWith(scopeAllowedPrefix) && !scopeAllowedExact.has(candidate));
-const currentProtectedStatusText = String(execFileSync("git", ["status", "--short", "--untracked-files=all", "--", "Pool/2_development"], { cwd: repositoryRoot, encoding: "utf8", windowsHide: true })).trim();
-const currentProtectedChanges = currentProtectedStatusText ? currentProtectedStatusText.split(/\r?\n/).filter(Boolean) : [];
 const allScopeEvidence = evidenceFiles
-  .filter((file) => /^evidence\/usdtm-scope-validation-.*\.json$/.test(file))
+  .filter((file) => /^evidence\/bridge-standalone-scope-validation-.*\.json$/.test(file))
   .map((file) => {
     try {
       return { file, data: JSON.parse(fs.readFileSync(path.join(root, file), "utf8")) };
@@ -406,12 +391,11 @@ const allScopeEvidence = evidenceFiles
 const latestScopeEvidence = allScopeEvidence.length > 0 ? allScopeEvidence.at(-1) : null;
 const currentScopeEvidence = latestScopeEvidence
   && latestScopeEvidence.data.status === "passed"
+    && latestScopeEvidence.data.schema === "bridge-standalone-scope-validation/v2"
     && latestScopeEvidence.data.validatorSha256 === scopeValidatorSha256
-    && latestScopeEvidence.data.protectedPath === "Pool/2_development"
     && latestScopeEvidence.data.repositoryHead === repositoryHead
-    && latestScopeEvidence.data.protectedTreeHash === protectedTreeHash
-    && latestScopeEvidence.data.outsideAllowlistCount === 0
-    && latestScopeEvidence.data.protectedChangedPathCount === 0
+    && latestScopeEvidence.data.rootMatches === true
+    && latestScopeEvidence.data.outsideRepositoryChangedPathCount === 0
   ? latestScopeEvidence.file
   : null;
 
@@ -430,10 +414,8 @@ if (!currentTreeKeySignatureEvidence) throw new Error("No current TreeKey signat
 if (!currentAssetLaneEvidence) throw new Error("No current generic asset-lane evidence with a valid sidecar");
 if (!currentGenericAttestationEvidence) throw new Error("No current generic attestation evidence with a valid sidecar");
 if (!currentGenericTxpowEvidence) throw new Error("No current generic P7 TxPoW evidence with a valid sidecar");
-if (currentOutsideAllowlist.length > 0 || currentProtectedChanges.length > 0) {
-  throw new Error(`Current repository scope is dirty outside the research allowlist: ${currentOutsideAllowlist.length} outside path(s), ${currentProtectedChanges.length} protected path(s)`);
-}
-if (!currentScopeEvidence) throw new Error("No passed scope evidence matching current HEAD and protected tree");
+if (path.resolve(repositoryRoot) !== path.resolve(root)) throw new Error("The Bridge is not the Git repository root");
+if (!currentScopeEvidence) throw new Error("No passed standalone scope evidence matching current HEAD");
 
 const manifest = {
   manifestVersion: 1,

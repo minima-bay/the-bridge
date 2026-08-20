@@ -1,0 +1,88 @@
+{
+  "schema": "generic-bridge-wots-policy/v1",
+  "guardId": "bridge-test-signers-p9",
+  "nodeName": "BridgeTestSigners",
+  "coreVersion": "1.1.2.6",
+  "strictCounters": true,
+  "signingEnabled": false,
+  "retirementReason": "The first stale-clone verification exposed an authenticated-wallet RPC on a wildcard interface without RPC authentication. No future signature is authorized from this P8 fixture key domain.",
+  "committee": {
+    "threshold": 5,
+    "memberCount": 7,
+    "rootSha3": "0xD2D97FE239F65977DD867DEE7D2535DC01BA06ECBFC6F02620383D417E9188F2",
+    "singleControllerFixture": true,
+    "decentralizationEvidence": false
+  },
+  "maximumUsesPerTreeKey": 262144,
+  "treeKeySize": 64,
+  "treeKeyDepth": 3,
+  "protectedKeys": [
+    {
+      "id": "committee-0",
+      "role": "committee",
+      "publicKey": "0x7E10CDBE13C9DCDBA5B58EE5AEDACC246CA4B9A36649645427A8290B61E85614",
+      "minimumUses": 12
+    },
+    {
+      "id": "committee-1",
+      "role": "committee",
+      "publicKey": "0xDBD30A4EB60C34CD9F605765013AA9425972EB1E16EB45681DEA354A7E6E1CBA",
+      "minimumUses": 12
+    },
+    {
+      "id": "committee-2",
+      "role": "committee",
+      "publicKey": "0x391595838D46D6B34F61623F4CF634B229B48640F86D706CB4F716B8DA7DB4D3",
+      "minimumUses": 12
+    },
+    {
+      "id": "committee-3",
+      "role": "committee",
+      "publicKey": "0x752C27FC1F4CAD6009AB653E20BC4409DAF2F540D8C54FA5959A41A68975B94C",
+      "minimumUses": 12
+    },
+    {
+      "id": "committee-4",
+      "role": "committee",
+      "publicKey": "0xD44F4D6DF300F8718AD553877D9EC560F1A709DC0FD80AFFE1A05A2AF4BA3F94",
+      "minimumUses": 12
+    },
+    {
+      "id": "committee-5",
+      "role": "committee",
+      "publicKey": "0x23628DC0CAD42EF41AE95087CD47979E6D648F78F5D93EB6CA49A292CD53B950",
+      "minimumUses": 0
+    },
+    {
+      "id": "committee-6",
+      "role": "committee",
+      "publicKey": "0x28DA6E6F6A8403C8156F2A39CE42999C75840E35549F74C9140D68112E8F058A",
+      "minimumUses": 0
+    },
+    {
+      "id": "cancel-usdtm",
+      "role": "cancellation-authority",
+      "lane": "USDTm",
+      "publicKey": "0x9726C670F867FF9DA22F321C92D09C53A50161A6C8200532FC913346660EEAFD",
+      "minimumUses": 1
+    },
+    {
+      "id": "cancel-ethm",
+      "role": "cancellation-authority",
+      "lane": "ETHm",
+      "publicKey": "0xC096A0D9C7BEB3F6EBA514B3A9EC0D2B9C9DBA311E747A2231D12FF81189E4A3",
+      "minimumUses": 1
+    },
+    {
+      "id": "return-owner",
+      "role": "return-owner",
+      "publicKey": "0x223AB171D5167EC409C865E3DD11F6D50F08CAD04C108238AB978561611689C9",
+      "minimumUses": 2
+    }
+  ],
+  "limitations": [
+    "One fixture wallet controls all seven committee keys.",
+    "The policy proves key identity and WOTS counter safety only, not operator independence.",
+    "No seed, private key, signature secret or database password belongs in the journal."
+  ]
+}

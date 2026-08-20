@@ -9,6 +9,8 @@
   "decentralizationEvidence": false,
   "usesAtCreation": 0,
   "maximumUsesPerTreeKey": 262144,
+  "treeKeySize": 64,
+  "treeKeyDepth": 3,
   "publicKeys": [
     "0x7E10CDBE13C9DCDBA5B58EE5AEDACC246CA4B9A36649645427A8290B61E85614",
     "0xDBD30A4EB60C34CD9F605765013AA9425972EB1E16EB45681DEA354A7E6E1CBA",
@@ -28,6 +30,39 @@
     0,
     0
   ],
+  "keyUsesAfterLiveP8Ceremony": [
+    12,
+    12,
+    12,
+    12,
+    12,
+    0,
+    0
+  ],
+  "p8FinalProtectedUses": {
+    "cancellationAuthorities": {
+      "USDTm": 1,
+      "ETHm": 1
+    },
+    "returnOwner": 2,
+    "authoritativeEvidence": "evidence/generic-mainnet-p8-live-20260819T192848Z.json",
+    "authoritativeEvidenceSha256": "2760cc3ae4bc1a042b46c24c0c603d9f28580c79233518c0dc288e2283ed4175"
+  },
+  "p8CancellationAuthorities": {
+    "USDTm": {
+      "publicKey": "0x9726C670F867FF9DA22F321C92D09C53A50161A6C8200532FC913346660EEAFD",
+      "usesAtCreation": 0
+    },
+    "ETHm": {
+      "publicKey": "0xC096A0D9C7BEB3F6EBA514B3A9EC0D2B9C9DBA311E747A2231D12FF81189E4A3",
+      "usesAtCreation": 0
+    }
+  },
+  "p8ReturnOwner": {
+    "address": "0x49D2FB10995C4CCE7112FC4EBAB19A6F1540C083BFEBFF432675F6425E2F2B69",
+    "publicKey": "0x223AB171D5167EC409C865E3DD11F6D50F08CAD04C108238AB978561611689C9",
+    "script": "RETURN SIGNEDBY(0x223AB171D5167EC409C865E3DD11F6D50F08CAD04C108238AB978561611689C9)"
+  },
   "failedAttempts": [
     {
       "lane": "USDTm deployed v1",
@@ -101,6 +136,12 @@
     "failedTransactionIntentPersisted": true,
     "nodeStoppedAfterCheck": true,
     "limitation": "This proves one normal graceful restart only. Backup restore, database rollback and concurrent restored-seed protection remain later P9/P12 gates."
+  },
+  "p9SigningDomainStatus": {
+    "status": "RETIRED",
+    "futureSigningAuthorized": false,
+    "reason": "The first P9 stale-clone verification did not isolate wildcard Core RPC. Outside access was not excluded, so this complete fixture TreeKey domain must never sign again.",
+    "partialEvidence": "evidence/generic-p9-partial-20260819T204602Z.json"
   },
   "warning": "All seven keys are held by one local fixture wallet. This can prove stock-node signing and mineability only. It cannot satisfy P6 operator independence, bonding, geographic diversity or production security."
 }

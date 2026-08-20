@@ -1,0 +1,82 @@
+{
+  "schema": "generic-p9-wots-node-verification/v1",
+  "createdAt": "2026-08-19T20:40:06.743Z",
+  "mode": "initialize-evidence",
+  "rpcCommand": null,
+  "walletKeyCount": null,
+  "protectedCounters": {
+    "committee-0": 12,
+    "committee-1": 12,
+    "committee-2": 12,
+    "committee-3": 12,
+    "committee-4": 12,
+    "committee-5": 0,
+    "committee-6": 0,
+    "cancel-usdtm": 1,
+    "cancel-ethm": 1,
+    "return-owner": 2
+  },
+  "protectedTreeKeyShape": {
+    "committee-0": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    },
+    "committee-1": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    },
+    "committee-2": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    },
+    "committee-3": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    },
+    "committee-4": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    },
+    "committee-5": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    },
+    "committee-6": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    },
+    "cancel-usdtm": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    },
+    "cancel-ethm": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    },
+    "return-owner": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    }
+  },
+  "verdict": {
+    "schema": "generic-bridge-wots-verdict/v1",
+    "ok": true,
+    "code": "JOURNAL_INITIALIZED",
+    "details": {
+      "policyHash": "20528113c6025c31a8a098e5c5a7c5ed3a05cc1af5f127590a41b755a5f911d6",
+      "genesisHash": "108ce93645267147d73db09d33fd1718c844c6730f04f209217d878493570783",
+      "directorySync": false
+    }
+  },
+  "wrapperSourceConstrainedToProjectedKeyMetadata": true
+}

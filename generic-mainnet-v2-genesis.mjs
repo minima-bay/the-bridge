@@ -1,4 +1,4 @@
-// Guarded exact genesis for the authorized valueless v2 bridge lanes.
+// Guarded exact genesis for an authorized valueless bridge generation.
 // Build, post and confirmation are separate one-shot steps.
 
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -6,9 +6,12 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
-const STATE_PATH = resolve(ROOT, 'mainnet-v2-ceremony-state.json');
-const LANES_PATH = resolve(ROOT, 'mainnet-lanes-v2.json');
-const RPC = process.env.USDTM_V2_ISSUER_RPC || 'http://127.0.0.1:9805';
+const GENERATION = process.env.BRIDGE_MAINNET_GENERATION || 'v2';
+if (!['v2', 'p8'].includes(GENERATION)) throw new Error('BRIDGE_MAINNET_GENERATION must be v2 or p8');
+const STATE_PATH = resolve(ROOT, GENERATION === 'p8' ? 'mainnet-p8-ceremony-state.json' : 'mainnet-v2-ceremony-state.json');
+const LANES_PATH = resolve(ROOT, GENERATION === 'p8' ? 'mainnet-lanes-p8.json' : 'mainnet-lanes-v2.json');
+const RPC = GENERATION === 'p8' ? (process.env.USDTM_P8_ISSUER_RPC || 'http://127.0.0.1:9905')
+  : (process.env.USDTM_V2_ISSUER_RPC || 'http://127.0.0.1:9805');
 const action = process.argv[2] || 'status';
 const key = process.argv[3];
 const rows = (value) => Array.isArray(value) ? value : (Array.isArray(value?.response) ? value.response : []);
@@ -89,13 +92,14 @@ function checkTxn(response, lane) {
 }
 
 async function build() {
+  throw new Error('legacy live signing is disabled after P8; a P9 fenced guard adapter is required');
   const { state, lane, bridge, control, name, record } = selected();
   if (record.transactionId || record.postTxPoW || record.minedTxPoW) throw new Error(`${name} genesis is already recorded`);
   const bridgeCoin = await coin(bridge.mintTokenCoin);
   const controlCoin = await coin(control.mintTokenCoin);
   requireInput(bridgeCoin, lane.bridgeTokenId, bridge.fixedSupply, `${name} bridge`);
   requireInput(controlCoin, lane.controlTokenId, '1', `${name} control`);
-  const id = `bridge-v2-${key}-genesis`;
+  const id = `bridge-${GENERATION}-${key}-genesis`;
   const existing = await rpc(`txnlist id:${id}`);
   if (existing?.status) throw new Error(`custom transaction ${id} already exists; inspect it instead of rebuilding`);
 
@@ -131,6 +135,7 @@ async function build() {
 }
 
 async function post() {
+  throw new Error('legacy live posting is disabled after P8; a P9 fenced guard adapter is required');
   const { state, name, record } = selected();
   if (!record.transactionId || !record.customTransactionId) throw new Error(`${name} genesis is not built`);
   if (record.postTxPoW || record.minedTxPoW) throw new Error(`${name} genesis was already posted`);
@@ -178,7 +183,7 @@ async function confirm() {
   record.genesisStateExact = true;
   await rpc(`txndelete id:${record.customTransactionId}`);
   const both = ['USDTm', 'ETHm'].every((laneName) => state.genesis?.[laneName]?.minedTxPoW);
-  state.status = both ? 'both-v2-genesis-confirmed-awaiting-live-releases' : `${name.toLowerCase()}-genesis-confirmed`;
+  state.status = both ? `both-${GENERATION}-genesis-confirmed-awaiting-live-branches` : `${name.toLowerCase()}-${GENERATION}-genesis-confirmed`;
   saveState(state);
   console.log(JSON.stringify({ confirmed: true, name, transactionId: record.transactionId,
     minedTxPoW: record.minedTxPoW, createdBlock: record.createdBlock,

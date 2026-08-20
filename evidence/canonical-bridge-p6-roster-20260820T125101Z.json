@@ -1,0 +1,49 @@
+{
+  "schema": "canonical-bridge-p6-roster-validation/v1",
+  "createdAtUtc": "2026-08-20T12:51:01.287Z",
+  "status": "local-pass",
+  "phaseGatePassed": false,
+  "validator": "validate-canonical-bridge-p6-roster.mjs",
+  "validatorSha256": "b884db15aaca003c383e274314de8b80adac24b7c462230db8fdcd2c96ff2630",
+  "contractSourceSha256": "dbc0e1f8e619c6461b2f0d1d2c76800e0d5ed185dee5654568918430efd9b38a",
+  "mockBondReadinessSourceSha256": "6ca5ba7b55edc63c67f28d956bf9cc6efeb8bc34d367c9d071c5263d59fa8de2",
+  "mockRewardIndexSourceSha256": "651492f5a89cdc0b1cd52cfd8b8e55765016022ee9b5e259afdeb6992fc9fb19",
+  "testSourceSha256": "fbb1592dfc0d974fffa6a6884eaee408a022b9b0f0aa76310f419089d9811e02",
+  "configSha256": "d4716f9758419e6daaa2e2a62b1b96b485e7dabcb44707d31578e0e6b1cbcc67",
+  "packageLockSha256": "7b73d3c0cc65ee5ba1664e0cb67e61eb0daa227e39df5e3a6f352337841dfdb6",
+  "pinnedHardhatResolutionVerified": true,
+  "compiler": "0.8.24+commit.e11b9ed9",
+  "hardhat": "3.13.0",
+  "evmTarget": "shanghai",
+  "optimizer": {
+    "enabled": true,
+    "runs": 200
+  },
+  "mochaTestsPassed": 7,
+  "compilationObserved": true,
+  "creationBytecodeBytes": 4749,
+  "creationBytecodeSha256": "815e49018645875db67c51cc941a2e0389626e456b7524ae4bee325c38afca92",
+  "deployedBytecodeBytes": 2611,
+  "deployedBytecodeSha256": "d986f8080c958088dbf9cdad26fba981e2a47aceb29a8be858b4fde590dae21d",
+  "payableFunctionCount": 0,
+  "privilegedFunctionCount": 0,
+  "provedLocally": [
+    "Exactly seven unique nonzero candidates and a five-member operating quorum are pinned.",
+    "All seven candidates must accept the exact ordered roster and policy commitment before activation.",
+    "A candidate may withdraw acceptance before activation, and incomplete or not-fully-bonded rosters cannot activate.",
+    "The activation delay, bridge identity, chain context, equal-bond proposal, slash allocation, exposure cap, policy hash and dossier root are committed.",
+    "A nonzero bounded minimum self-bond percentage is committed for every candidate pool.",
+    "The registry has no payable, owner, administrator or upgrade function."
+  ],
+  "blockers": [
+    "Candidate identities, background-check dossiers, bond asset and exact self-bond and economic values remain governance decisions.",
+    "The registry itself does not custody funds; the separate local bond vault still lacks withdrawal, objective slashing, rewards and claims.",
+    "The bridge message signature format does not yet attribute an objectively slashable signer set.",
+    "P9 remains a partial pass, so this P6 component cannot authorize production bridge operation."
+  ],
+  "limitations": [
+    "This is a local moneyless Hardhat model, not a deployed contract or selected production roster.",
+    "The candidate addresses and economic values used by the tests are disposable illustrative values.",
+    "No wallet signature, public transaction, token, bond, collateral, node action or real asset was used."
+  ]
+}
