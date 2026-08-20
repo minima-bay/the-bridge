@@ -1,5 +1,12 @@
 # The Bridge
 
+![The Bridge logo](assets/bridge-logo.svg)
+
+[Bridge About page](https://minima-bay.github.io/bridge/) |
+[Minima Bay](https://minima-bay.github.io/) |
+[General implementation plan](CANONICAL-BRIDGE-GENERAL-IMPLEMENTATION-PLAN.md) |
+[Attestor framework](canonical-bridge-attestor-framework-discussion-v1.md)
+
 Canonical Bay-level repository for the valueless Ethereum and Minima asset-lane bridge research
 programme. The project moved out of The Pool on 2026-08-20 and is now a peer of The Pool, The Land
 and The Springboard.
