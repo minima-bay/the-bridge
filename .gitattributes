@@ -1,4 +1,9 @@
-# These two historical PowerShell artifacts were hashed with CRLF bytes.
-# Preserve their exact audit bytes so their committed SHA-256 sidecars verify on every platform.
+# Evidence sidecars bind exact bytes. Most artifacts were emitted with LF and must not be rewritten
+# by core.autocrlf on Windows.
+evidence/*.json text eol=lf
+evidence/*.sha256 text eol=lf
+
+# These two historical PowerShell artifacts were hashed with CRLF bytes. Preserve their exact audit
+# bytes so their committed SHA-256 sidecars verify on every platform.
 evidence/generic-p9-wots-stale-node-retired-authenticated-20260819T204228Z.json -text
 evidence/generic-p9-wots-current-node-retired-authenticated-20260819T204252Z.json -text

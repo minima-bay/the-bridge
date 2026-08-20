@@ -14,8 +14,8 @@ Sidecars authenticate an evidence file itself; they do not make stale evidence c
 
 General implementation-plan evidence is current only when schema v1 binds the exact plan,
 validator, control document, attestor framework, P6 specification, P9 completion specification,
-P9 guard status and these evidence rules. It checks all 26 binding-decision references, all 13 open
-decisions, all ten complete finding families, all 14 implementation phases, required technical
+P9 guard status and these evidence rules. It checks all 28 binding-decision references, all 13 open
+decisions, all 11 complete finding families, all 14 implementation phases, required technical
 files, local Markdown links and critical status boundaries. It is documentation-traceability
 evidence only and does not pass a bridge phase or validate bridge security.
 
@@ -112,6 +112,14 @@ is fenced by a real authority. The new authority and reconciler evidence uses de
 fakes. It does not prove a real non-expiring cross-host fence, independent WORM checkpoint, complete
 live chain source, strict node gateway or measured network isolation. The P8 fixture key domain is
 retired and must not sign again.
+
+P9 deployment-admission evidence is a separate lower rung. It is current only when schema v1 binds
+the exact architecture, selected-provider profile, admission module and validator hashes; reports
+the profile as `design` and activation as `disabled`; keeps both `phaseGatePassed` and
+`authorizationGranted` false; and records zero node startups, signatures and transactions. It
+proves strict configuration and measured-probe admission semantics only. Provider documentation,
+placeholder account identities and synthetic probe results do not prove a deployed global fence,
+independent checkpoint, strict gateway, network isolation or complete live chain source.
 
 P6 roster evidence is current only when the validator, Solidity contract, local EVM test, Hardhat
 configuration and pinned P4 lockfile hashes match; exactly seven tests pass with Solidity 0.8.24 and

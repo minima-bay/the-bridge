@@ -86,3 +86,16 @@ This increment narrows the implementation gap but does not close it. The fence a
 not deployed services. No operating-system network isolation, raw-RPC exclusion, live node or WOTS
 signature is proved. P9 therefore remains `NOW`, the live policy remains disabled and the P8 fixture
 key domain remains retired.
+
+## 2026-08-20 selected deployment-admission increment
+
+`P9-DEPLOYMENT-ARCHITECTURE.md` and `p9-deployment-profile.json` now freeze a provisional real
+topology: a non-expiring Cloudflare Durable Object fence in one trust domain, and a separate AWS
+DynamoDB conditional head plus S3 Object Lock compliance history in another. The profile remains
+unassigned, design-only and disabled.
+
+The strict admission module and validator pass 44 assertions and 36 hostile cases while keeping
+`phaseGatePassed:false` and `authorizationGranted:false`. They reject expiring leases, automatic
+stale recovery, shared rollback control, generic RPC, missing wildcard-listener probes, incomplete
+chain sources, source-unbound observations and cleanup gaps. No provider service or live Minima
+capability was exercised, so P9 remains `NOW` and the retired P8 domain remains unusable.

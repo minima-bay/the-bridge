@@ -1,0 +1,19 @@
+{
+  "schema": "usdtm-control-validation/v1",
+  "createdAtUtc": "2026-08-20T17:52:05.266Z",
+  "document": "USDTM-ZK-PROTOTYPE.md",
+  "documentSha256": "f66bd8ae7014feb6f2f200284a3bed06e4f3df534e08f0990ea54a06b8e59048",
+  "validator": "validate-usdtm-control.mjs",
+  "validatorSha256": "f1a1902b273a7942ebde8e54d2a6fb6f0cd1eafea7c9e9a9b6a9aa9a23785b90",
+  "status": "passed",
+  "file": "C:\\Users\\Charles\\Documents\\The bay\\Bridge\\USDTM-ZK-PROTOTYPE.md",
+  "phaseCount": 14,
+  "now": "P9",
+  "decisionCount": 28,
+  "openDecisionCount": 13,
+  "findingCount": 85,
+  "evidenceCount": 52,
+  "exactEvidenceReferencesChecked": 40,
+  "noEmDash": true,
+  "fundsBoundary": "valueless-only"
+}

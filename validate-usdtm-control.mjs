@@ -99,6 +99,11 @@ requireCondition(text.includes('`F-USDTM-084`') && text.includes('`E-USDTM-051`'
   'P6 challenge-finalized work-reward finding or evidence record is missing');
 requireCondition(text.includes('`D-USDTM-027`') && text.includes('minima-bay/the-bridge'),
   'Bay-level The Bridge rehome decision is missing');
+requireCondition(text.includes('`D-USDTM-028`') && text.includes('Cloudflare Durable Object')
+  && text.includes('S3 Object Lock compliance'),
+  'P9 selected-provider deployment decision is missing');
+requireCondition(text.includes('`F-USDTM-085`') && text.includes('`E-USDTM-052`'),
+  'P9 deployment-admission finding or evidence record is missing');
 requireCondition(text.includes('approved-key activity at one block') && text.includes('not infrastructure uptime'),
   'P6 readiness evidence boundary is missing');
 requireCondition(text.includes('A decision record proves choice and timing, not correctness'),

@@ -1,0 +1,98 @@
+{
+  "schema": "generic-bridge-p9-deployment-profile/v1",
+  "profileId": "bridge-p9-two-domain-candidate-v1",
+  "profileStage": "design",
+  "purpose": "valueless-research-only",
+  "signerDomain": "fresh-key-domain-not-created",
+  "activation": "disabled",
+  "retiredP8DomainNeverReuse": true,
+  "fence": {
+    "provider": "cloudflare-durable-object",
+    "trustDomainId": "UNASSIGNED-CLOUDFLARE-ACCOUNT",
+    "operatorIdentityDigest": "UNASSIGNED-FENCE-OPERATOR",
+    "objectNameDerivation": "sha256-signer-domain",
+    "globallyUniqueCoordinator": true,
+    "singleThreadedCoordination": true,
+    "transactionalStronglyConsistentStorage": true,
+    "monotonicFencingToken": true,
+    "automaticExpirySeconds": null,
+    "reassignmentPolicy": "explicit-release-or-domain-retirement",
+    "staleRecoveryPolicy": "prove-gateway-stopped-or-retire-domain",
+    "durableAuditHistory": true
+  },
+  "checkpoint": {
+    "provider": "aws-dynamodb-s3-object-lock",
+    "trustDomainId": "UNASSIGNED-AWS-ACCOUNT",
+    "operatorIdentityDigest": "UNASSIGNED-CHECKPOINT-OPERATOR",
+    "headStore": "dynamodb-conditional-head",
+    "historyStore": "s3-object-lock-versioned-history",
+    "protocol": "prepare-cas-commit/v1",
+    "conditionalCompareAndSwap": true,
+    "stronglyConsistentHeadRead": true,
+    "complianceMode": true,
+    "minimumRetentionDays": 3650,
+    "retentionCoversSignerLifetime": true,
+    "alternateInitializationRejected": true,
+    "staleFencingTokenRejected": true
+  },
+  "gateway": {
+    "deployment": "single-purpose-attestor-gateway",
+    "coordinatorTransport": "private-mtls",
+    "nodeRpcTransport": "loopback-inside-isolated-guest",
+    "nodeRpcAuthentication": "random-basic-auth-memory-only",
+    "rpcCredentialLifetime": "one-process-run",
+    "genericCommandPassthrough": false,
+    "conditionalBindingInsideGateway": true,
+    "serializesEveryMutation": true,
+    "rawRpcReachability": "gateway-only",
+    "readOperations": [
+      "keys-list-protected",
+      "txnlist-one"
+    ],
+    "mutatingOperations": [
+      "conditional-txnsign",
+      "txncheck-exact",
+      "txncreate-exact",
+      "txndelete-confirmed-only",
+      "txninput-exact",
+      "txnmmr-exact",
+      "txnoutput-exact",
+      "txnpost-exact",
+      "txnscript-exact",
+      "txnstate-exact"
+    ],
+    "unknownOutcomePolicy": "reconcile-before-any-retry",
+    "deletePolicy": "confirmed-or-definitively-never-broadcast-only"
+  },
+  "networkIsolation": {
+    "strategy": "disposable-vm-default-deny",
+    "nodeWildcardListenersExpected": true,
+    "defaultInboundPolicy": "deny",
+    "allowedNodeRpcPeer": "local-signing-gateway-only",
+    "allowedNodeWirePeers": [],
+    "preStartPolicyReadback": true,
+    "listenerInterfaceObservation": true,
+    "independentExternalDenialProbe": true,
+    "postStopListenerProbe": true,
+    "cleanupEvidencePersistedAfterCleanup": true,
+    "automaticStaleLockBreak": false
+  },
+  "chainSource": {
+    "canonicalChainBound": true,
+    "completeTransactionLookup": true,
+    "completeMempoolLookup": true,
+    "completeCoinLineageLookup": true,
+    "conflictingSpendLookup": true,
+    "typedResponses": true,
+    "concreteChainAnchor": true,
+    "validityExpiryPolicy": "founder-approved-required"
+  },
+  "evidencePolicy": {
+    "sourceHashesRequired": true,
+    "profileDigestRequired": true,
+    "externalProbeDigestRequired": true,
+    "postCleanupEvidenceRequired": true,
+    "noSelfAssertedCapabilities": true,
+    "preserveAllFailureRecords": true
+  }
+}

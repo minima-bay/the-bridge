@@ -206,6 +206,7 @@ The complete wording and consequences remain authoritative in
 | `D-USDTM-025` | Authorize offline development only under the no-funds boundary |
 | `D-USDTM-026` | Permit opt-in delegated security behind one attestor, separate from principal, with self-bond and asynchronous exit |
 | `D-USDTM-027` | Rehome The Bridge as a standalone Bay-level peer project, preserve history, and leave only a pointer under The Pool |
+| `D-USDTM-028` | Select a disabled two-provider P9 deployment candidate: Cloudflare Durable Object fence plus independent AWS DynamoDB/S3 Object Lock checkpoint |
 
 No summary in this plan can silently supersede a numbered decision.
 
@@ -232,7 +233,7 @@ These are blocking choices, not implementation defaults. Full wording is in
 
 ## 6. Findings: what the analysis established
 
-The complete append-only technical finding set of `F-USDTM-001` through `F-USDTM-084` is in
+The complete append-only technical finding set of `F-USDTM-001` through `F-USDTM-085` is in
 [USDTM-ZK-PROTOTYPE.md, section 5](USDTM-ZK-PROTOTYPE.md). The groups below cover the full register
 without replacing its exact wording or evidence level.
 
@@ -251,6 +252,7 @@ security finding. Its exact boundary and history-preservation record is in [MIGR
 | `F067-F070` P8 | Immutable v2 could not add branches; unified P8 executed and mined all five actions for USDTm and ETHm | Minima covenant mechanics passed with valueless fixtures and one controller |
 | `F071-F074` P9 | Recovery baseline and offline guard models exist, but clone isolation failed and the signing domain was retired; global authority, independent anchor and chain adapter remain fake | P9 stays `NOW`; no fresh signature or live retry is allowed |
 | `F075-F084` P6 | Economics, roster, equal/delegated bonds, shared cap, fee treasury, bond-risk index, signed work, challenges and work-reward indexing pass locally | 64 P6 tests pass, but production facts, signer attribution, slashing, claims, exits and parameters remain open |
+| `F085` P9 deployment admission | A concrete two-provider profile and strict admission contract pass 44 assertions and 36 hostile cases | The profile is unassigned and disabled; no provider capability or live control is measured |
 
 Cross-cutting findings that must remain visible:
 
@@ -494,13 +496,15 @@ Current completed local work:
 - durable post-attempt and typed unknown handling;
 - exact confirmation and definitive-nonsettlement model;
 - fake global fence, independent checkpoint, strict gateway and chain source;
+- selected Cloudflare fence and independent AWS checkpoint deployment profile;
+- strict deployment-admission schema with 36 hostile configuration and probe cases;
 - disabled legacy live build/post entrypoints;
 - permanently retired P8 signing domain.
 
 Current blocking implementation sequence:
 
-1. deploy one real global non-expiring signer-domain lease/fencing authority across hosts;
-2. deploy an independent monotonic or WORM checkpoint outside the journal rollback domain;
+1. implement and deploy the selected Cloudflare non-expiring signer-domain fence service;
+2. implement and deploy the separate AWS DynamoDB/S3 Object Lock checkpoint protocol;
 3. make raw Minima signing RPC unreachable except through a strict conditional-sign gateway;
 4. implement one complete typed Minima chain-source adapter for confirmation and nonsettlement;
 5. establish measured inbound network isolation for every future node run;
@@ -514,6 +518,8 @@ Acceptance: a real, globally fenced and independently anchored implementation pa
 hostile matrix and an authorized fresh valueless mainnet transaction confirms without leaf reuse.
 
 References: `P9-COMPLETION-SPEC.md`, `P9-WOTS-GUARD.md`, `p9-wots-policy.json`,
+`P9-DEPLOYMENT-ARCHITECTURE.md`, `p9-deployment-profile.json`,
+`generic-bridge-p9-deployment-admission.mjs`, `validate-generic-p9-deployment-admission.mjs`,
 `wots-write-ahead-guard.mjs`, `generic-bridge-transaction-lifecycle.mjs`,
 `generic-bridge-p9-signing-authority.mjs`, `generic-bridge-p9-chain-reconciler.mjs`,
 `validate-wots-write-ahead-guard.mjs`, `validate-generic-p9-transaction-boundaries.mjs`,
@@ -582,12 +588,13 @@ accepted external audit reports when they exist.
 
 The single authoritative `NOW` phase remains P9. The near-term order is:
 
-1. Select implementable providers for the global fencing authority and independent checkpoint.
-2. Specify the strict node gateway and measured network isolation topology.
-3. Implement the real chain-source adapter.
-4. Run the full P9 hostile suite without a node or signature first.
-5. Obtain explicit authorization before any fresh valueless key or live verification.
-6. Only after P9 passes, resume the phase dependency order toward P10.
+1. Implement the selected Cloudflare fence service and provider-independent conformance harness.
+2. Implement the separate AWS conditional-head and compliance-history checkpoint adapter.
+3. Implement the complete strict node gateway specified by the selected profile.
+4. Implement the real chain-source adapter and disposable-guest isolation harness.
+5. Run the full P9 hostile suite without a node or signature first.
+6. Obtain explicit authorization before any fresh valueless key or live verification.
+7. Only after P9 passes, resume the phase dependency order toward P10.
 
 Offline P6 work may continue under `D-USDTM-025` without changing the phase board. Its next safe
 sequence is objective forfeiture/slashing, post-slash accounting, then claims and asynchronous exit.
@@ -675,6 +682,8 @@ current merely because its own hash still matches.
 - `generic-p8-record-schema-v2.md`
 - `P9-COMPLETION-SPEC.md`
 - `P9-WOTS-GUARD.md`
+- `P9-DEPLOYMENT-ARCHITECTURE.md`
+- `p9-deployment-profile.json`
 
 ### Consensus proof research
 
