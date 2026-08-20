@@ -246,10 +246,20 @@ The following local components now exist:
   typed chain-source interface, and the lifecycle can record only the resulting exact proof;
 - `validate-generic-p9-chain-reconciler.mjs` rejects inconsistent, incomplete, pending, spent,
   conflicting and weak-source negative claims.
+- `P9-DEPLOYMENT-ARCHITECTURE.md` selects a provisional two-domain deployment: one Cloudflare
+  Durable Object per signer domain for fencing, plus a separate AWS DynamoDB conditional head and
+  S3 Object Lock compliance history for the external checkpoint;
+- `p9-deployment-profile.json` freezes that candidate as unassigned, design-only and disabled;
+- `generic-bridge-p9-deployment-admission.mjs` and its validator reject TTL leases, shared rollback
+  control, mutable-only history, raw RPC exposure, incomplete gateway or chain capabilities,
+  unmeasured isolation, incomplete cleanup, field smuggling and any self-authorization attempt.
 
 This is production-shaped code, not a deployed authority. A fake that declares the required
 capabilities cannot prove a real service is linearizable, non-expiring, independently durable or
 network isolated.
+
+The selected providers narrow the implementation choice but do not alter that boundary. Provider
+documentation is feasibility input, not measured conformance evidence.
 
 ## 12. Required hostile acceptance cases
 

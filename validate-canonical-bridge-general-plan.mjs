@@ -35,7 +35,7 @@ for (const section of requiredSections) {
   requireCondition(plan.includes(section), `missing required section: ${section}`);
 }
 
-for (let index = 1; index <= 27; ++index) {
+for (let index = 1; index <= 28; ++index) {
   const id = `D-USDTM-${String(index).padStart(3, "0")}`;
   requireCondition(plan.includes(`\`${id}\``), `missing binding decision reference: ${id}`);
 }
@@ -48,7 +48,7 @@ for (let phase = 0; phase <= 13; ++phase) {
   requireCondition(plan.includes(`| P${phase} |`), `missing phase-board summary P${phase}`);
 }
 for (const range of ["F001-F008", "F009-F017", "F018", "F019-F038", "F039-F040",
-  "F041-F043", "F044-F066", "F067-F070", "F071-F074", "F075-F084"]) {
+  "F041-F043", "F044-F066", "F067-F070", "F071-F074", "F075-F084", "F085"]) {
   requireCondition(plan.includes(`\`${range}\``), `missing complete finding-family coverage: ${range}`);
 }
 
@@ -58,6 +58,8 @@ const requiredReferences = [
   "P6-ETHEREUM-COMMITTEE-BOND-AND-REWARD-SPEC.md",
   "P9-COMPLETION-SPEC.md",
   "P9-WOTS-GUARD.md",
+  "P9-DEPLOYMENT-ARCHITECTURE.md",
+  "p9-deployment-profile.json",
   "MIGRATION.md",
   "evidence/README.md",
   "p4/contracts/USDTmVaultV1.sol",
@@ -73,7 +75,9 @@ const requiredReferences = [
   "wots-write-ahead-guard.mjs",
   "generic-bridge-transaction-lifecycle.mjs",
   "generic-bridge-p9-signing-authority.mjs",
-  "generic-bridge-p9-chain-reconciler.mjs"
+  "generic-bridge-p9-chain-reconciler.mjs",
+  "generic-bridge-p9-deployment-admission.mjs",
+  "validate-generic-p9-deployment-admission.mjs"
 ];
 for (const reference of requiredReferences) {
   requireCondition(plan.includes(reference), `missing required technical reference: ${reference}`);
@@ -117,9 +121,9 @@ const result = {
   p9GuardStatusSha256: fileSha("P9-WOTS-GUARD.md"),
   evidenceRulesSha256: fileSha("evidence/README.md"),
   authoritativeNow: controlNow,
-  bindingDecisionReferencesChecked: 27,
+  bindingDecisionReferencesChecked: 28,
   openDecisionReferencesChecked: 13,
-  findingFamiliesChecked: 10,
+  findingFamiliesChecked: 11,
   implementationPhasesChecked: 14,
   requiredTechnicalReferencesChecked: requiredReferences.length,
   localMarkdownLinksChecked: localMarkdownLinks.length,

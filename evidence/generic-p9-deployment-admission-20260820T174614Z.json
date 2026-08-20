@@ -1,0 +1,40 @@
+{
+  "schema": "generic-p9-deployment-admission-validation/v1",
+  "createdAt": "2026-08-20T17:46:14.445Z",
+  "result": "PASS",
+  "phaseGatePassed": false,
+  "authorizationGranted": false,
+  "evidenceLevel": "offline selected-provider profile and fail-closed deployment-admission model",
+  "selectedFenceCandidate": "Cloudflare Durable Object",
+  "selectedCheckpointCandidate": "AWS DynamoDB conditional head plus S3 Object Lock compliance history",
+  "currentProfileStage": "design",
+  "currentActivation": "disabled",
+  "currentProfileDigest": "3f26e9fb691bf9fd5ad08af77c9c6090e7cf67355222596d3c81db8f6c17debc",
+  "assertions": 44,
+  "hostileCases": 36,
+  "proved": [
+    "The selected design profile requires distinct provider, account and operator rollback domains for fence and checkpoint.",
+    "TTL lease expiry, automatic stale recovery, generic RPC passthrough, raw RPC exposure and incomplete chain lookup are rejected.",
+    "The checkpoint protocol requires conditional head advancement plus compliance-mode immutable history and crash-closed prepare/CAS/commit evidence.",
+    "A deployment probe must bind the exact profile and source hashes and prove fence, checkpoint, gateway, network, chain and post-cleanup observations.",
+    "Neither profile validation nor a complete probe can pass P9 or grant authorization."
+  ],
+  "notProved": [
+    "No Cloudflare or AWS resource, account, credential, firewall, VM, gateway or live chain adapter was created or contacted by this validator.",
+    "Provider documentation supports the candidate capability selection but is not measured deployment evidence.",
+    "No node was started and no key, signature, transaction, post, token, real asset or production operator was created."
+  ],
+  "boundaries": {
+    "nodeStartups": 0,
+    "newWotsSignatures": 0,
+    "mainnetTransactions": 0,
+    "realAssets": false,
+    "productionDeployment": false
+  },
+  "sourceSha256": {
+    "P9-DEPLOYMENT-ARCHITECTURE.md": "bcba6d30006fe557214a36aed6839bc29e7b6c87846f18561fd0f9caa859a088",
+    "p9-deployment-profile.json": "c49a7578024c1b482b6dcc29ca238f058c28c9632fb41c60a734e98e3ee739ef",
+    "generic-bridge-p9-deployment-admission.mjs": "e63599480e2c9f386c5b5532b4e70958ab3fad20d763210008036574aacf0081",
+    "validate-generic-p9-deployment-admission.mjs": "7d78b90da6b23563fbaa58b936af88bd7ea30ee28f251eda4bfd78c018a1e0b0"
+  }
+}

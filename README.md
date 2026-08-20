@@ -240,4 +240,9 @@ Hostile review found that clone network isolation, copied-store fencing, an inde
 anchor and live-constructor integration are not proved. The first stale-clone run exposed wildcard
 RPC without authentication, so the complete P8 fixture key domain is retired from future signing.
 The final live policy disables reserve creation and legacy live builders refuse signing and posting.
-See `P9-WOTS-GUARD.md` and `evidence/generic-p9-partial-20260819T210506Z.json`.
+See `P9-WOTS-GUARD.md` and `evidence/generic-p9-partial-20260820T100343Z.json`.
+
+The next deployment-shaped slice is documented in `P9-DEPLOYMENT-ARCHITECTURE.md`. Its checked-in
+`p9-deployment-profile.json` selects a Cloudflare Durable Object fence and an independent AWS
+DynamoDB/S3 Object Lock checkpoint candidate, but remains unassigned and disabled. The corresponding
+offline admission validator cannot pass P9 or authorize a node, key, signature or transaction.
