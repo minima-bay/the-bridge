@@ -24,7 +24,7 @@ destination identity and exclusion policy.
 - Bay website and About page draft review: https://github.com/minima-bay/minima-bay.github.io/pull/2
 - Initial rehome snapshot commit: `a28cf7958627268adecd673a527860d6956de03a`
 - Bay website commit: `815cfbc`
-- Local Bay-parent pointer and submodule commit: `944a120`
+- Local Bay-parent integration branch: `agent/rehome-bridge-pointer`
 
 The Bay-parent commit remains local because that parent branch already contains unrelated,
 unpublished history. The dedicated Bridge and website changes are published independently through
