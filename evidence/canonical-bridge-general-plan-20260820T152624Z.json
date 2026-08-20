@@ -1,0 +1,28 @@
+{
+  "schema": "canonical-bridge-general-implementation-plan-validation/v1",
+  "createdAtUtc": "2026-08-20T15:26:24.478Z",
+  "status": "passed",
+  "phaseGatePassed": false,
+  "validator": "validate-canonical-bridge-general-plan.mjs",
+  "validatorSha256": "8fc52ef8d66289ffabf57b3d412e38629d3128619b6290ad7080a3c032d5e715",
+  "planSha256": "239131ba72968de89df40a772975f97bd75cf57cbe46a905fea8fccf1e475ba5",
+  "controlDocumentSha256": "cd9dcbde3cf18fcf595b4d2afdecf7271c75cd827e26e76b8279187a778f2652",
+  "attestorFrameworkSha256": "abbbb29470e3161448284690e0b729d1bda4f7e8c7b5c03be6ace3120c8560b7",
+  "p6SpecificationSha256": "a47610e5920ec9969675b589363daac14d6857b9c0487880b5af4607efc5c1fa",
+  "p9CompletionSpecificationSha256": "05145d56896dbfcd3fc7145ee045503ce0ce38c76694ea8db0c06c7094ea3fc8",
+  "p9GuardStatusSha256": "25c35b3ff7736de04b0b0470c64f768da266f18c65d0336b8f5382e107ec50c9",
+  "evidenceRulesSha256": "fe6408357c3b7e31e1e1dcd5b5feddb9f2b504f4ccb1a8c55f1412a2538da6b4",
+  "authoritativeNow": "P9",
+  "bindingDecisionReferencesChecked": 26,
+  "openDecisionReferencesChecked": 13,
+  "findingFamiliesChecked": 10,
+  "implementationPhasesChecked": 14,
+  "requiredTechnicalReferencesChecked": 20,
+  "localMarkdownLinksChecked": 22,
+  "noEmDash": true,
+  "productionStatus": "prohibited",
+  "limitations": [
+    "This validator checks plan structure, traceability, local-link existence and critical status boundaries; it does not validate bridge security or pass any phase gate.",
+    "The control document, exact specifications, current source-bound validators and executed evidence remain authoritative over this navigation plan."
+  ]
+}

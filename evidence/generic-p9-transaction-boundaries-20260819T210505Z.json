@@ -1,0 +1,48 @@
+{
+  "schema": "generic-p9-transaction-boundary-validation/v1",
+  "createdAt": "2026-08-19T21:05:05.971Z",
+  "result": "PASS",
+  "assertions": 184,
+  "crashCases": 12,
+  "hostileCases": 22,
+  "liveNodeCommandsExecuted": false,
+  "signaturesCreated": 0,
+  "transactionsPosted": 0,
+  "livePolicySigningEnabled": false,
+  "sourceSha256": {
+    "policy": "f309e6e9764bd4cd93e552f99038393d295ba964d449fa9f700d3749ad09b524",
+    "guard": "eeb6a743d4aad01f110283dcf3fd32b3c25b693bf99e2d481a6292737184dde1",
+    "lifecycle": "5199eead4d7f3e844479a95358518628c238eb25560c71cbd5a414304837e587",
+    "validator": "3dd96890605b995a46beb86b793143ca821605439b5206a886656b06ed06e888"
+  },
+  "witnessResolution": {
+    "requiredOrder": [
+      "reserve-and-flush",
+      "durable-one-shot-sign-step-for-exact-unsigned-transaction",
+      "txnsign-each-key",
+      "observe-and-commit-counters",
+      "txnmmr",
+      "explicit-txnscript",
+      "txncheck",
+      "typed-post",
+      "exact-onchain-confirmation"
+    ],
+    "txnbasicsUsed": false,
+    "reason": "The P8 covenant exceeds the wallet script registry limit, so the proven explicit txnmmr plus txnscript witness path is retained."
+  },
+  "proved": [
+    "no signing callback before a durable reservation",
+    "per-key counter sequencing across five signers and every prefix crash",
+    "rejected checks permanently account for leaves",
+    "missing and ambiguous txncheck values fail closed",
+    "post authorization binds the intent to the reserved custom transaction, transaction body and expected settlement before broadcast",
+    "negative reconciliation cannot use a different transaction specification to clear an unknown post",
+    "accepted-response-lost post outcomes reconcile the exact transaction without rebuilding",
+    "confirmation pins onchain status, exact predecessor inputs, ordered outputs, successor digest and confirmations",
+    "duplicate settlement and unresolved retries do not create a second successor"
+  ],
+  "limitations": [
+    "All transaction-boundary cases use dependency-injected fakes and disposable counters.",
+    "No restored P8 key signed and no mainnet transaction was posted."
+  ]
+}

@@ -1,17 +1,30 @@
-# ZK light-client feasibility research
+# The Bridge
 
-Private, no-funds research artifacts for a generic Ethereum and Minima asset-lane bridge.
+![The Bridge logo](assets/bridge-logo.svg)
+
+[Bridge About page](https://minima-bay.github.io/bridge/) |
+[Minima Bay](https://minima-bay.github.io/) |
+[General implementation plan](CANONICAL-BRIDGE-GENERAL-IMPLEMENTATION-PLAN.md) |
+[Attestor framework](canonical-bridge-attestor-framework-discussion-v1.md)
+
+Canonical Bay-level repository for the valueless Ethereum and Minima asset-lane bridge research
+programme. The project moved out of The Pool on 2026-08-20 and is now a peer of The Pool, The Land
+and The Springboard.
+
+Read `CANONICAL-BRIDGE-GENERAL-IMPLEMENTATION-PLAN.md` for the complete readable map of the problem,
+architecture, components, decisions, findings, phase dependencies, implementation steps, technical
+files and remaining work.
 
 Read `USDTM-ZK-PROTOTYPE.md` first. Its legacy filename remains stable, but it is now the living
 status board, phase plan, decision log, findings log and evidence index for a generic asset-lane
 prototype. USDTm is one ERC-20 lane and native ETH is the first additional feasibility target.
 
-## Write boundary
+## Repository boundary
 
-This directory and the sibling `zk-light-client-bridge-research-plan-2026-08-18.md` are the only
-write targets for this work. The Pool order-book implementation, snapshot code, release artifacts,
-progress ledger, implementation plan and backup artifacts remain read-only while the concurrent
-snapshot task is active.
+This standalone repository is the only canonical bridge implementation. The former Pool location
+contains a read-only pointer and must not contain a duplicate implementation. Runtime node data,
+wallets, WOTS guard journals, backups, dependency caches and local upstream source checkouts are not
+published. See [MIGRATION.md](MIGRATION.md) for the rehome record and boundaries.
 
 ## Evidence rules
 
@@ -214,3 +227,17 @@ The first mainnet fixture run captured 32 blocks from Minima 1.1.2.6 and passed 
 consistency checks after one deliberately preserved failed assumption about compacted super-parent
 entries was corrected. Seven in-memory corruptions were rejected. This advances the fixture rung
 only; an independent binary consensus verifier has not yet been implemented.
+
+Current result: P8 is gate-passed. Fresh valueless USDTm and ETHm lane instances each mined
+CLIENT_UPDATE, RELEASE, CANCEL, RETURN and PAYOUT_ACK on stock Minima mainnet. All ten transactions
+passed full node checks, conserved both token IDs, burned zero and ended with zero issued and pending
+liability plus full reserve. The residual Minima returned to the exact funding-input address and the
+empty issuer is stopped and `NEVER-REUSE`. Byte-verified backups preceded offline rotation of both
+exposed local database passwords; the signer reopened with all 74 keys and exact WOTS counters.
+P9 remains `NOW` with a partial local result. The external journal rejects the stale counter state,
+the current counter state matches, and offline guard and transaction-boundary validators pass.
+Hostile review found that clone network isolation, copied-store fencing, an independent journal
+anchor and live-constructor integration are not proved. The first stale-clone run exposed wildcard
+RPC without authentication, so the complete P8 fixture key domain is retired from future signing.
+The final live policy disables reserve creation and legacy live builders refuse signing and posting.
+See `P9-WOTS-GUARD.md` and `evidence/generic-p9-partial-20260819T210506Z.json`.

@@ -1,0 +1,54 @@
+{
+  "schema": "canonical-bridge-p6-exposure-controller-validation/v1",
+  "createdAtUtc": "2026-08-20T12:08:07.822Z",
+  "status": "local-pass",
+  "phaseGatePassed": false,
+  "validator": "validate-canonical-bridge-p6-exposure-controller.mjs",
+  "validatorSha256": "61cb11b760b924e63ef023daeddd68a6bbc85bc428860eba580ee4a50b143394",
+  "controllerSourceSha256": "80a9435cc4f21cd10876116d77ad9d56eb9c145c4b695db64179abee47729dc3",
+  "laneFixtureSourceSha256": "c83198b7ad2cd0aa995d1ab4b372f582361739be56ea90cc24144d6d82fdef90",
+  "rosterSourceSha256": "ca13d1c941fd015edc3721904db2cd52ff4029eb5cc35e80fd546a8da8025cd2",
+  "bondVaultSourceSha256": "207814137ae6b02cbb84a34f479be343c4d2823921bfb78cd924a42d8996c201",
+  "tokenFixtureSourceSha256": "aadbb093b2481443f3c55bcb9442a7fbfc32239c85d4f45392d61463dc77c461",
+  "testSourceSha256": "7f5ae268edfba84f30127aec69e8b3fb9356188a6ba138e2b8b96ae329e690dd",
+  "configSha256": "d4716f9758419e6daaa2e2a62b1b96b485e7dabcb44707d31578e0e6b1cbcc67",
+  "packageLockSha256": "7b73d3c0cc65ee5ba1664e0cb67e61eb0daa227e39df5e3a6f352337841dfdb6",
+  "pinnedHardhatResolutionVerified": true,
+  "compiler": "0.8.24+commit.e11b9ed9",
+  "hardhat": "3.13.0",
+  "evmTarget": "shanghai",
+  "optimizer": {
+    "enabled": true,
+    "runs": 200
+  },
+  "mochaTestsPassed": 7,
+  "compilationObserved": true,
+  "creationBytecodeBytes": 4890,
+  "creationBytecodeSha256": "89592d74ef191914f571b619a067df79d1bb04bdfb3e855e7dd3718cbe749cb9",
+  "deployedBytecodeBytes": 2415,
+  "deployedBytecodeSha256": "fb98dd320ec29e5c5d79684e38ddb5a7084ef3d97d8e71a883e698de86c054d6",
+  "payableFunctionCount": 0,
+  "privilegedFunctionCount": 0,
+  "provedLocally": [
+    "Exactly two ordered lane contracts, their lane IDs, the bond vault and the controller address are committed by the roster policy hash.",
+    "One aggregate cap is derived as equal bond times quorum times the immutable safety factor.",
+    "Both lanes consume the same aggregate capacity rather than counting the committee bond twice.",
+    "Settlement identities cannot replay across lanes, and resolution identities cannot replay.",
+    "Inactive or underbonded rosters cannot increase liability.",
+    "Authorized lanes can release only their own liability even while security is underbonded.",
+    "Releasing liability reopens shared capacity without changing the immutable maximum.",
+    "The controller has no payable, owner, administrator, upgrade, lane-replacement or cap-raising function."
+  ],
+  "blockers": [
+    "The existing P4 ERC-20 and native lane vaults are not wired to this controller; tests use disposable forwarding lanes.",
+    "Retirement, replacement continuity, unresolved-slash state and security-runway pause are not yet integrated.",
+    "The two-lane policy uses one illustrative bond denomination and does not solve multi-asset valuation.",
+    "Production deterministic deployment requires an audited CREATE2 factory or equivalent commitment process.",
+    "P9 remains a partial pass and cannot authorize production bridge operation."
+  ],
+  "limitations": [
+    "The local lane fixtures are deliberately callable by anyone and prove controller accounting only, not lane authorization logic.",
+    "All addresses, liability amounts and bonds are disposable local fixtures.",
+    "No public deployment, real asset, wallet signature, Minima node action or chain transaction occurred."
+  ]
+}

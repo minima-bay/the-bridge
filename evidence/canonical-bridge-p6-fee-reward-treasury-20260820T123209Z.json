@@ -1,0 +1,56 @@
+{
+  "schema": "canonical-bridge-p6-fee-reward-treasury-validation/v1",
+  "createdAtUtc": "2026-08-20T12:32:09.347Z",
+  "status": "local-pass",
+  "phaseGatePassed": false,
+  "decision": "D-USDTM-026",
+  "validator": "validate-canonical-bridge-p6-fee-reward-treasury.mjs",
+  "validatorSha256": "427fb65b0d8873e3f5bbd87fd3c633b3efa5c78b370454c11bec88d6d6717e71",
+  "treasurySourceSha256": "cfa133810db1a533e2e17c3166fb6842dc2b0f57d6a809a172f9d7654854f2d0",
+  "exposureControllerSourceSha256": "5839940ddacec7f4c7037928420b0fd291796fd767c285bbd632bd7da29f647b",
+  "laneFixtureSourceSha256": "c78002bac92cf5e9ec1a662bc26bed35911f2ca0ca2915fc99e41b542fc2edfb",
+  "tokenFixtureSourceSha256": "aadbb093b2481443f3c55bcb9442a7fbfc32239c85d4f45392d61463dc77c461",
+  "testSourceSha256": "a43e6130c9fe7639710d85da0a851414202aa27ffa802b39b65f4ef340e7f96a",
+  "configSha256": "d4716f9758419e6daaa2e2a62b1b96b485e7dabcb44707d31578e0e6b1cbcc67",
+  "packageLockSha256": "7b73d3c0cc65ee5ba1664e0cb67e61eb0daa227e39df5e3a6f352337841dfdb6",
+  "pinnedHardhatResolutionVerified": true,
+  "compiler": "0.8.24+commit.e11b9ed9",
+  "hardhat": "3.13.0",
+  "evmTarget": "shanghai",
+  "optimizer": {
+    "enabled": true,
+    "runs": 200
+  },
+  "mochaTestsPassed": 8,
+  "compilationObserved": true,
+  "creationBytecodeBytes": 6150,
+  "creationBytecodeSha256": "392e91c587e2464ef0337f6cf82c843aa0f266cbeae51efba3fdf7db86daa157",
+  "deployedBytecodeBytes": 3767,
+  "deployedBytecodeSha256": "0148147628e32effb9d8fecbc8ba6e467e50611ba93ada72025a8a5da90019b2",
+  "payableFunctionCount": 0,
+  "privilegedOrReleaseFunctionCount": 0,
+  "provedLocally": [
+    "Only the exact two exposure-controller lanes can collect a fee, and only after the same lane has confirmed the one-use settlement identity.",
+    "A lane's fee asset and runway remain isolated from the other lane, with no cross-asset valuation or subsidy.",
+    "The complete received fee is split into attestor, safety, relayer and operations ledgers without touching the lane principal.",
+    "The attestor ledger is further split into readiness, participation and bond-risk pools, with rounding retained inside those fee ledgers.",
+    "The bond-risk pool is reserved for future pro-rata member and delegated-security-depositor accounting.",
+    "Cap rejection rolls the liability transition and fee collection back atomically in the production-shaped lane call.",
+    "Fee-on-transfer, false-return and callback-reentrant token behavior fails atomically; exact no-return behavior is accepted.",
+    "One-way bootstrap security funds contribute to an asset-specific minimum security-runway calculation.",
+    "The treasury exposes no payable, owner, administrator, upgrade, claim, withdrawal, release, slash, sweep or rescue function."
+  ],
+  "blockers": [
+    "The existing P4 lane vaults do not yet route confirmed fees to this treasury; tests use disposable atomic lane callers.",
+    "The exposure controller does not yet enforce the treasury's runway result before accepting new liability.",
+    "No per-epoch reward index, objective participation record, challenge delay, forfeiture or depositor claim exists.",
+    "The illustrative 50/20/10/20 protocol split and 60/25/15 attestor split are not selected production values.",
+    "Objective slashing, asynchronous security-pool withdrawal and legal treatment remain open under O-USDTM-013.",
+    "P9 remains a partial pass and cannot authorize production bridge operation."
+  ],
+  "limitations": [
+    "This is deliberately one-way local custody because payout safety depends on later attribution and risk gates.",
+    "The fee assets, lane callers, members, settlements, budgets and amounts are disposable local fixtures.",
+    "No public deployment, bridge fee, reward, principal, security deposit, signature, Minima node action or chain transaction occurred."
+  ]
+}

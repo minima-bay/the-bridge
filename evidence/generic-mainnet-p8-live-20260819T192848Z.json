@@ -1,0 +1,483 @@
+{
+  "schema": "generic-bridge-mainnet-p8-live-evidence/v1",
+  "capturedAt": "2026-08-19T19:28:48Z",
+  "authorizedBy": [
+    "D-USDTM-023",
+    "O-USDTM-016"
+  ],
+  "minima": {
+    "network": "mainnet",
+    "coreVersion": "1.1.2.6",
+    "coreJarSha256": "e8e8b20356d4a688b48d77550fbac2c141107c292af3d9de8ffeb84b3ff8a535",
+    "domain": "0x7AA6D7A6BD1F75D2E50B21B7036FC6A2206193BCAF64BB86367842C1A23E4F08"
+  },
+  "recovery": {
+    "node": "BridgeTestSigners",
+    "backupPath": "C:\\Users\\Charles\\Documents\\Crypto\\Minima\\Nodes\\BridgeTestSigners-backups\\BridgeTestSigners-pre-p8-resync-20260819T190001Z",
+    "verifiedFiles": 23,
+    "verifiedBytes": 630768194,
+    "manifestSha256": "9f12e10cecaf8902c9c2e89c9a06c2e89c6ab4e5d7e4bb2d62ea045d7e290d34",
+    "walletKeyCount": 74,
+    "activeUsesBeforeCeremony": [
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "strategy": "A normal restart converged to the issuer canonical tip, so the authorized destructive archive resync was not executed.",
+    "canonicalTipValidatedAgainstIssuer": true,
+    "archiveResyncExecuted": false,
+    "genesisProofsImportedAndTracked": [
+      "0xA74C6FC6594F5EAB0EC5F7DEEA82A3F46081E9D695C5BDD8DD4F7D1F751B0E84",
+      "0xFF31088D7B439177B3533326DBE6AB314D198739AA0A243C4154E66AA3C26086",
+      "0x622A9CDAEF6F6B1F8EF251CD18C988A83E238AD848A5B72FB7E836ED69D04B4A",
+      "0x60A1C75DE7986CF961CF548BD0EC115E4BAB356FD0B82AEA1188FAAF5C118363"
+    ]
+  },
+  "committee": {
+    "threshold": 5,
+    "members": 7,
+    "root": "0xD2D97FE239F65977DD867DEE7D2535DC01BA06ECBFC6F02620383D417E9188F2",
+    "publicKeys": [
+      "0x7E10CDBE13C9DCDBA5B58EE5AEDACC246CA4B9A36649645427A8290B61E85614",
+      "0xDBD30A4EB60C34CD9F605765013AA9425972EB1E16EB45681DEA354A7E6E1CBA",
+      "0x391595838D46D6B34F61623F4CF634B229B48640F86D706CB4F716B8DA7DB4D3",
+      "0x752C27FC1F4CAD6009AB653E20BC4409DAF2F540D8C54FA5959A41A68975B94C",
+      "0xD44F4D6DF300F8718AD553877D9EC560F1A709DC0FD80AFFE1A05A2AF4BA3F94",
+      "0x23628DC0CAD42EF41AE95087CD47979E6D648F78F5D93EB6CA49A292CD53B950",
+      "0x28DA6E6F6A8403C8156F2A39CE42999C75840E35549F74C9140D68112E8F058A"
+    ],
+    "finalTreeKeyUses": [
+      12,
+      12,
+      12,
+      12,
+      12,
+      0,
+      0
+    ],
+    "cancellationAuthorityUses": {
+      "USDTm": 1,
+      "ETHm": 1
+    },
+    "returnOwnerUses": 2,
+    "singleControllerFixture": true,
+    "decentralizationEvidence": false
+  },
+  "tokens": {
+    "USDTm": {
+      "tokenId": "0x62DA3EF576F4C9D1AA9F3DB41BE308EC6E54FD0AD5B021C9971D7D66982A1FBC",
+      "fixedSupply": "1000001",
+      "decimals": 6,
+      "minedTxPoW": "0x00000D11F67A78A9BF84E882C1C04C48F8A866D2789A83EF947F11F8AB05F190",
+      "createdBlock": "2269765"
+    },
+    "ETHm": {
+      "tokenId": "0xD591ECDC6260876EC67354EE8D428DE23AA296D5FEC6DD42B1F46FA464F7A5E2",
+      "fixedSupply": "11",
+      "decimals": 18,
+      "minedTxPoW": "0x000016C1A10723D601EE602EDC2147F81B9E800B2F9D69F61AD24F4AC6647960",
+      "createdBlock": "2269772"
+    },
+    "USDTmControl": {
+      "tokenId": "0xAB5B643299E8DF393C4EE31D10BBE771AAED7B15DFBAC0EAF6F1CD4C07F307D3",
+      "fixedSupply": "1",
+      "decimals": 0,
+      "minedTxPoW": "0x00001BD5BABDCA2EA2F3CCFA535F0313C1AFEA98ADDE1A66D756BFDAE7BF9949",
+      "createdBlock": "2269778"
+    },
+    "ETHmControl": {
+      "tokenId": "0x04A7A249D42DFDCC51360F441495A60718ADA253E6499487DF4755EA4E683348",
+      "fixedSupply": "1",
+      "decimals": 0,
+      "minedTxPoW": "0x00002CC8C89204DDFD481BFD707801B8D8591F7907F1FA855B9A41E6575B7EC9",
+      "createdBlock": "2269783"
+    }
+  },
+  "genesis": {
+    "USDTm": {
+      "customTransactionId": "bridge-p8-usdtm-genesis",
+      "transactionId": "0x30E446F5E74C83383895D834D31CB9CAF31CA550A43CFF113339F5F6B7AD1F66",
+      "controlCoinId": "0xA74C6FC6594F5EAB0EC5F7DEEA82A3F46081E9D695C5BDD8DD4F7D1F751B0E84",
+      "reserveCoinId": "0xFF31088D7B439177B3533326DBE6AB314D198739AA0A243C4154E66AA3C26086",
+      "txncheck": {
+        "validtransaction": true,
+        "validamounts": true,
+        "allsignaturesvalid": true,
+        "basic": true,
+        "mmrproofs": true,
+        "scripts": true,
+        "burn": "0"
+      },
+      "postTxPoW": "0xEB7A28CD45026617D740C086A15C626828C8F634FB78CEFC20EAB91CDC9F9E2B",
+      "minedTxPoW": "0x00000C32D0EC21D367AF0A37AE2D4AB78D5EB45CA97CF8DCA51DD7F2867C2B84",
+      "createdBlock": "2269787",
+      "genesisStateExact": true
+    },
+    "ETHm": {
+      "customTransactionId": "bridge-p8-ethm-genesis",
+      "transactionId": "0x8A5D127BB750DD11647C03A95F8A4A462779D6FA97B09467DAB06B83C5D59974",
+      "controlCoinId": "0x622A9CDAEF6F6B1F8EF251CD18C988A83E238AD848A5B72FB7E836ED69D04B4A",
+      "reserveCoinId": "0x60A1C75DE7986CF961CF548BD0EC115E4BAB356FD0B82AEA1188FAAF5C118363",
+      "txncheck": {
+        "validtransaction": true,
+        "validamounts": true,
+        "allsignaturesvalid": true,
+        "basic": true,
+        "mmrproofs": true,
+        "scripts": true,
+        "burn": "0"
+      },
+      "postTxPoW": "0x6D7CA2247A039A621C1FC910C499A66E6248C5373E1140EBD8E3846EE014E11A",
+      "minedTxPoW": "0x000014A362C87241EA5799551B0C631485D64B404F38FA1FA59062C02267E6DB",
+      "createdBlock": "2269790",
+      "genesisStateExact": true
+    }
+  },
+  "lanes": [
+    {
+      "name": "USDTm",
+      "laneId": "0xB3AEE6C2DD40A919A3EFCC24E2D77CAC7EE5C0638119CBE2274DB66AD0A1A994",
+      "bridgeTokenId": "0x62DA3EF576F4C9D1AA9F3DB41BE308EC6E54FD0AD5B021C9971D7D66982A1FBC",
+      "controlTokenId": "0xAB5B643299E8DF393C4EE31D10BBE771AAED7B15DFBAC0EAF6F1CD4C07F307D3",
+      "covenantAddress": "0x2ad217a06f048530883208c3ce6b7fe319c9910a3b82faf298a00936428ad6e8",
+      "scriptSha256": "c53ef4ff790b14395be7d978da842d407d989c22c14585cb5e33fa7a0f69572f",
+      "actions": [
+        {
+          "action": "CLIENT_UPDATE",
+          "transactionId": "0x5642A99D6C78CEA89A8321EB742D72B2343959F2EB040C6ABD141F12B11A0FC1",
+          "minedTxPoW": "0x00000AB99D5F1859EE4162F09DFA76D51FA24A82226E66627B9099550CB5027D",
+          "createdBlock": "2269812",
+          "serializedTxPoWBytes": 36688,
+          "recordDigest": "0x7a3adcc1cb6357ba901d2982a6a0281b68b78ab27212bb1615bc749d18c74066",
+          "controlCoinId": "0xCD6FCC8083D6D996F3E5335C81B5547EBC74FAEF1A074A11C7A665CA11D88F1C",
+          "reserveCoinId": "0x8E136DF0439B5B57BA5513822D307977A557E5F8BFC76C4A4096D16036E1F7B8",
+          "payoutCoinId": null,
+          "keyUsesBefore": [
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "keyUsesAfter": [
+            5,
+            5,
+            5,
+            5,
+            5
+          ],
+          "signatures": 5,
+          "burn": "0"
+        },
+        {
+          "action": "RELEASE",
+          "transactionId": "0xB7592E4637EB3759C12A4E588FB8210DD95525D3FE1BD60D7CB68D270543AE39",
+          "minedTxPoW": "0x0000181AC7ABC40589C156A90A84F53DF3B8F2EB46D11BE1AA05F817139625CB",
+          "createdBlock": "2269816",
+          "serializedTxPoWBytes": 38152,
+          "recordDigest": "0xb464ef04fe287d46a9b42f9b1345244540bb49d673bb80e5202553e739edc635",
+          "controlCoinId": "0x8BDD8F64F7DC48C2785B3C9A2A0836ACBE76BB5BE41F3A26ABC8482D31BE33BC",
+          "reserveCoinId": "0x856996169047594D39958639C0BDA3B84C646FEDD0C2293CA881F823BC74FA52",
+          "payoutCoinId": "0x4C58C091ADF8A69647D97CFFFB2258F81A50297B6C2BCCE4975DA68D853CC78B",
+          "keyUsesBefore": [
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          "keyUsesAfter": [
+            7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "signatures": 5,
+          "burn": "0"
+        },
+        {
+          "action": "CANCEL",
+          "transactionId": "0xCE4D3236F2511031ECBF6A0AA3CFEDC63D3918D582EF49D768111F7BF9E42149",
+          "minedTxPoW": "0x000002718D69AAA9D9DFC5D9A4A884BB1A6AE175E8C86E2B756CD65AA846CCDD",
+          "createdBlock": "2269821",
+          "serializedTxPoWBytes": 42083,
+          "recordDigest": "0x8cde975f37577a0f7b6e156dc0583d39d9a10dc9f453afaf4109bbb1f5188717",
+          "controlCoinId": "0x0B643798D777AA2459882910147A6B3B05A5517D636C77B20864847C2ED7A390",
+          "reserveCoinId": "0x8DE68955B648A99D4B2C3319787CCC4485F10BCF15D6500EEEFD5082D8931BA3",
+          "payoutCoinId": null,
+          "keyUsesBefore": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            0
+          ],
+          "keyUsesAfter": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            1
+          ],
+          "signatures": 6,
+          "burn": "0"
+        },
+        {
+          "action": "RETURN",
+          "transactionId": "0xC36CE9643CFB7309F2B0F0A5B39D76F8B4FCBA870E8DB209AD37843FA35BEE00",
+          "minedTxPoW": "0x000045EE926F6B0B78B11296DABE4F558F63920C0CCFB5522AA0F66780357439",
+          "createdBlock": "2269825",
+          "serializedTxPoWBytes": 22469,
+          "recordDigest": "0x0aec7fd5c4deaafd0e0b0914fcc30b4f7e0ae27be64a970d50b92a122977da79",
+          "controlCoinId": "0x04F26FD759509F3C191DFF5D1EF81F1B9BBEEEAAEC358444930F3B429DB8DB5D",
+          "reserveCoinId": "0x35AC1459CEA12E9FBB3950016C191B6400A966576A45CE09BB0FB62E3D0DEB77",
+          "payoutCoinId": null,
+          "keyUsesBefore": [
+            0
+          ],
+          "keyUsesAfter": [
+            1
+          ],
+          "signatures": 1,
+          "burn": "0"
+        },
+        {
+          "action": "PAYOUT_ACK",
+          "transactionId": "0xBB1648C018107E03AC46BCFABC489E96DD954B851002B105A0910C2D48DEC4DF",
+          "minedTxPoW": "0x0000322055296CA10F7B31AECDED68B804A77AFB4D9BC5B2BD45D07E8CFB3F8B",
+          "createdBlock": "2269831",
+          "serializedTxPoWBytes": 37818,
+          "recordDigest": "0xd105b0bbad88dd555ecc57df3fb6f044c6d3df17f7b1dfa29eec3c3a03811228",
+          "controlCoinId": "0x2808DF2B5AA18874FE9F6BB6F9B46072B69091BF63510A56A5BB1CE0F0DA0016",
+          "reserveCoinId": "0xBDCA01D9A4D4C9C7F581C7B979B037FEBA087201B211B52CD72CF67BF985A9B5",
+          "payoutCoinId": null,
+          "keyUsesBefore": [
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "keyUsesAfter": [
+            11,
+            11,
+            11,
+            11,
+            11
+          ],
+          "signatures": 5,
+          "burn": "0"
+        }
+      ],
+      "finalControlCoinId": "0x2808DF2B5AA18874FE9F6BB6F9B46072B69091BF63510A56A5BB1CE0F0DA0016",
+      "finalReserveCoinId": "0xBDCA01D9A4D4C9C7F581C7B979B037FEBA087201B211B52CD72CF67BF985A9B5",
+      "finalIssuedAtoms": "0",
+      "finalPendingAtoms": "0",
+      "finalReserveAtoms": "1000001000000",
+      "fixedSupplyAtoms": "1000001000000",
+      "finalPayoutCursor": "1",
+      "finalCumulativePaidAtoms": "1250000",
+      "releasePayoutConsumed": true
+    },
+    {
+      "name": "ETHm",
+      "laneId": "0x5E12DF3879A13742F61979216FD4042A2834068D21541ED4EC0FEF263433CD46",
+      "bridgeTokenId": "0xD591ECDC6260876EC67354EE8D428DE23AA296D5FEC6DD42B1F46FA464F7A5E2",
+      "controlTokenId": "0x04A7A249D42DFDCC51360F441495A60718ADA253E6499487DF4755EA4E683348",
+      "covenantAddress": "0xbd200b6bfdefd62f8f11c5465d55c3798a2cbbc2c426be89bba3bbcef6de6ed3",
+      "scriptSha256": "79dedd7cf92bb334f92da4ecbf2425c1daf146d1872c2ac8003b75b626783e38",
+      "actions": [
+        {
+          "action": "CLIENT_UPDATE",
+          "transactionId": "0xB61EAACD7EEE786E5BF0C724FA5E33161ADEC628960B06EBFCA87F295BF4D634",
+          "minedTxPoW": "0x0000152FA2B23276CDF806338792706DF67B7145C8B831FA1A72E0CD7AC55A93",
+          "createdBlock": "2269812",
+          "serializedTxPoWBytes": 36628,
+          "recordDigest": "0x784caf1a53dd9e18456181491f3dc8cd436a4d0fb39279c495e05382194d47fe",
+          "controlCoinId": "0x5108BBDE4562F19A3BDFF569DEB2D81033C05AF0D35B3EF4B6C05CD8F52B1A4D",
+          "reserveCoinId": "0x8A469ED3291871542C422D2730053787E519D81B323435F53D199CEA09509972",
+          "payoutCoinId": null,
+          "keyUsesBefore": [
+            5,
+            5,
+            5,
+            5,
+            5
+          ],
+          "keyUsesAfter": [
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          "signatures": 5,
+          "burn": "0"
+        },
+        {
+          "action": "RELEASE",
+          "transactionId": "0x4584A39F18DAD2F3B88B951A13ABA5809B5BFD717E90B493879350B954FCD11E",
+          "minedTxPoW": "0x00000BD229679A58E942FF7F1DA9A361C7F4F328DF71E0C9C3A9E925CE1043F3",
+          "createdBlock": "2269817",
+          "serializedTxPoWBytes": 38342,
+          "recordDigest": "0x7370c825aa50d4b923b7da4bc98c5fdcec52c53ce73cc1b4c93f5190e240a635",
+          "controlCoinId": "0x10FAF30EF2458CC2E656AD2F3D697C0026F2A7B091A8EEB7F7C6D05B4CEBF059",
+          "reserveCoinId": "0x06B246CFA7EC27CC5C2AB207A83811760C5C4B9B8E7D8F39E1F51046C2AC4DE4",
+          "payoutCoinId": "0x6D7BCAEF42F7B441893159F5BBCDEE3438634A062F4BBBC64985DB045D3FC7F6",
+          "keyUsesBefore": [
+            7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "keyUsesAfter": [
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          "signatures": 5,
+          "burn": "0"
+        },
+        {
+          "action": "CANCEL",
+          "transactionId": "0x0DC047A7BCFABA94AE5E01AB884D0284F193751DF520DDCA5F0C4B2C5109FF56",
+          "minedTxPoW": "0x00000E29C4210D3204AAA842E781DD206507C654B4C7F53E5CB504DEB1385035",
+          "createdBlock": "2269821",
+          "serializedTxPoWBytes": 42415,
+          "recordDigest": "0x8464123a6d3c01f58398a26f18e75329408e4f7273e476dd912ffae260bb6152",
+          "controlCoinId": "0xB57DF1B29A723AEAA4F7EE5735BFAF0D5863B8D7265D2B0D68A63806283C0192",
+          "reserveCoinId": "0xC4F256B432E5827CA92AD2A59EF57C1771054B6BEE04E154E390355FF9607E98",
+          "payoutCoinId": null,
+          "keyUsesBefore": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            0
+          ],
+          "keyUsesAfter": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            1
+          ],
+          "signatures": 6,
+          "burn": "0"
+        },
+        {
+          "action": "RETURN",
+          "transactionId": "0x976F2FF207C475C1DCC113040C1AFAAB5D661338FD1C87AD580C84419ECD5B96",
+          "minedTxPoW": "0x0000089BA9FA2C3A0AC2BC547E5987A639B7CF03801E8791B3043FBF65C70F6C",
+          "createdBlock": "2269825",
+          "serializedTxPoWBytes": 22415,
+          "recordDigest": "0xfcf9378e00681c62dedc494f45811bfb80f25d01b5e84bc1e9342dbf7e1602c7",
+          "controlCoinId": "0x255079A8945174A4252FB4B1CA8B1998F4EB12FB346DC1FAAD15BE9DEE8DDBA1",
+          "reserveCoinId": "0x09946B4E168682417E043F3CE485B57A5D698FA8D162416E794C97414C9B7FD7",
+          "payoutCoinId": null,
+          "keyUsesBefore": [
+            1
+          ],
+          "keyUsesAfter": [
+            2
+          ],
+          "signatures": 1,
+          "burn": "0"
+        },
+        {
+          "action": "PAYOUT_ACK",
+          "transactionId": "0x4F5372D3530BCE8229AE1B3349E233B82FECE79091AA4E4E764EFD8A4A452975",
+          "minedTxPoW": "0x00000DE48A6753F162D7DABDA9F85983D437219A395F5B2EC827ABA8C16ED046",
+          "createdBlock": "2269831",
+          "serializedTxPoWBytes": 37827,
+          "recordDigest": "0x7866be32de0a7b2132cd8a950e274ddf84eb7431e844d8a0fd736825698d48bc",
+          "controlCoinId": "0xD3B525E0FD5D48523F43E1EE6E3EC5C69898B35415EB4BBC0EA1A9B85CA91A70",
+          "reserveCoinId": "0x8BF160074C79DE9B67DFB8051B7642555A5E5D27C87C4C0FB9218BC6353631E8",
+          "payoutCoinId": null,
+          "keyUsesBefore": [
+            11,
+            11,
+            11,
+            11,
+            11
+          ],
+          "keyUsesAfter": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "signatures": 5,
+          "burn": "0"
+        }
+      ],
+      "finalControlCoinId": "0xD3B525E0FD5D48523F43E1EE6E3EC5C69898B35415EB4BBC0EA1A9B85CA91A70",
+      "finalReserveCoinId": "0x8BF160074C79DE9B67DFB8051B7642555A5E5D27C87C4C0FB9218BC6353631E8",
+      "finalIssuedAtoms": "0",
+      "finalPendingAtoms": "0",
+      "finalReserveAtoms": "11000000000000000000",
+      "fixedSupplyAtoms": "11000000000000000000",
+      "finalPayoutCursor": "1",
+      "finalCumulativePaidAtoms": "1250000000000000000",
+      "releasePayoutConsumed": true
+    }
+  ],
+  "fundingReturn": {
+    "fundingTxPoW": "0x000051135C2D5E8BF4C88084D8DEEFB5828EBFBB31C3DD23015D0867B74B5F10",
+    "fundingBlock": "2269761",
+    "address": "0x58438FD5C83E22A8D3A1C9B72198EB1415977D8347EB983FA4F8E38D6CFA814E",
+    "inputCoinId": "0xAAF7D580AF83681C13E5FAFE542011911026261EDA2DE8A13153C4AB68567586",
+    "transactionId": "0x4331E544CCFCC33CE275D006F63E0337BD4CB81E6EDAF4BB71CB8AA96D53B4ED",
+    "minedTxPoW": "0x000018706ADEE4855A57B84D06D6C3456515F4706238A953380A15C0830829B8",
+    "outputCoinId": "0x538A40C3BA6274BEFB93481B2E65411B0B1A12717D7E6BEB11023BF56566100F",
+    "amount": "0.09999999999999999999999988999998999998999998",
+    "createdBlock": "2269833",
+    "burn": "0"
+  },
+  "issuer": {
+    "name": "USDTmIssuerP8",
+    "address": "0xD432C25C7EDA5EC27E2AB8D7F417EC55EF5E51DABE5344392F369713BAB24A5E",
+    "emptyBeforeShutdown": true,
+    "stopped": true,
+    "retired": true,
+    "marker": "NEVER-REUSE",
+    "seedCopies": 1
+  },
+  "assertions": {
+    "allTenAuthorizedBranchTransactionsMined": true,
+    "allTransactionsPassedStockNodeTxncheck": true,
+    "allTransactionsBelow65536Bytes": true,
+    "allTransactionsBurnZero": true,
+    "exactExplicitScriptWitnessesUsed": true,
+    "clientUpdateReleaseCancelReturnAndPayoutAckMinedOnBothLanes": true,
+    "crossLaneTokenAndCovenantBindingExact": true,
+    "releasePayoutsConsumedByExactReturnBranches": true,
+    "bothFinalIssuedAndPendingLiabilitiesZero": true,
+    "bothFinalReservesEqualFixedSupply": true,
+    "payoutCursorAndCumulativeTotalsAdvancedExactly": true,
+    "wotsUsesAdvancedExactlyOncePerSignedIntent": true,
+    "allResidualMinimaReturnedToPinnedFundingInputAddress": true,
+    "issuerEmptyStoppedAndRetired": true
+  },
+  "assertionCount": 137,
+  "phaseGate": "P8",
+  "phaseGatePassed": true,
+  "limitations": [
+    "The seven committee keys remain controlled by one fixture node and do not prove decentralized operation.",
+    "The Ethereum facts are synthetic and do not prove source-chain authenticity or finality.",
+    "The backup was byte-verified, but no restored-wallet rollback simulation has yet proved WOTS non-reuse across recovery.",
+    "No real USDT, ETH or other collateral was accepted or represented."
+  ],
+  "nextGate": "P9 and P12 must prove restore-safe WOTS durability, reconstruction and operating controls. P6 still owns independent threshold operators."
+}

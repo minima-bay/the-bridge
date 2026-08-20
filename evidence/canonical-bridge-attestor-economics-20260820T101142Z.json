@@ -1,0 +1,53 @@
+{
+  "schema": "canonical-bridge-attestor-economics-validation/v1",
+  "createdAt": "2026-08-20T10:11:42.661Z",
+  "result": "PASS",
+  "evidenceLevel": "offline executable economic reference model",
+  "assertions": 416,
+  "hostileCases": 4,
+  "propertySteps": 100,
+  "illustrativeParameters": {
+    "committee": "5-of-7",
+    "equalBond": "125000",
+    "exposureSafetyBps": 8000,
+    "individualBondBps": 8000,
+    "mutualBondBps": 2000,
+    "attestorRewardSplitBps": {
+      "readiness": 6000,
+      "participation": 2500,
+      "bondRisk": 1500
+    },
+    "protocolFeeSplitBps": {
+      "attestors": 5000,
+      "safety": 2000,
+      "relayers": 1000,
+      "operations": 2000
+    }
+  },
+  "proved": [
+    "Unanimous acceptance of one complete roster is required before activation.",
+    "Aggregate multi-lane liability cannot exceed the discounted slashable quorum bond.",
+    "Principal, protocol fees, attestor rewards, safety reserves, relayer funds and operations funds remain separate.",
+    "Valid timely approval and rejection receive equal participation weight; the first five signers do not capture all rewards.",
+    "Low security runway stops new liability while redemption remains open.",
+    "Objective solo fault slashes only the culprit individual tranche.",
+    "Successful quorum fraud can use equal limited mutual tranches without taking an honest attestor individual tranche.",
+    "Subjective downtime cannot trigger catastrophic slashing."
+  ],
+  "notProved": [
+    "All percentages and amounts are illustrative founder-review parameters, not production decisions.",
+    "No Solidity bond, reward, exposure, adjudication or claim contract exists yet.",
+    "No signature-attribution fraud proof, legal enforceability, market bond valuation or actuarial sufficiency is proved.",
+    "No bond, fee, insurance deposit, real asset or chain transaction was created."
+  ],
+  "boundaries": {
+    "realAssets": false,
+    "contractsDeployed": false,
+    "transactionsPosted": 0
+  },
+  "sourceSha256": {
+    "canonical-bridge-attestor-economics-model.mjs": "ed99508704aeda83c120f673c812b70c59fe19b7a4df8504c78298bf55024f77",
+    "validate-canonical-bridge-attestor-economics.mjs": "37e16155dc06f93961ad6afed5540692a890a147291bc54cf6b2b2aaa333b74b",
+    "canonical-bridge-attestor-framework-discussion-v1.md": "18926b2fb52c33f01962b95caa1783aa063c7a01f26d5a1d14e44b6009e2de29"
+  }
+}

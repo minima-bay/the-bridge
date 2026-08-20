@@ -192,6 +192,7 @@ async function prepare() {
 }
 
 async function build() {
+  throw new Error('legacy live signing is disabled after P8; a P9 fenced guard adapter is required');
   const { state, lane, signers, genesis, name, release } = selected();
   if (!release.prepared) throw new Error(`${name} release is not prepared`);
   if (release.transactionId || release.postTxPoW || release.minedTxPoW) throw new Error(`${name} release is already recorded`);
@@ -274,6 +275,7 @@ async function build() {
 }
 
 async function post() {
+  throw new Error('legacy live posting is disabled after P8; a P9 fenced guard adapter is required');
   const { state, lane, name, release } = selected();
   if (!release.transactionId || !release.customTransactionId) throw new Error(`${name} release is not built`);
   if (release.postTxPoW || release.minedTxPoW) throw new Error(`${name} release was already posted`);

@@ -1,0 +1,31 @@
+{
+  "schema": "generic-p9-wots-node-verification/v1",
+  "createdAt": "2026-08-19T20:22:51.908Z",
+  "mode": "initialize-evidence",
+  "rpcCommand": null,
+  "walletKeyCount": null,
+  "protectedCounters": {
+    "committee-0": 12,
+    "committee-1": 12,
+    "committee-2": 12,
+    "committee-3": 12,
+    "committee-4": 12,
+    "committee-5": 0,
+    "committee-6": 0,
+    "cancel-usdtm": 1,
+    "cancel-ethm": 1,
+    "return-owner": 2
+  },
+  "verdict": {
+    "schema": "generic-bridge-wots-verdict/v1",
+    "ok": true,
+    "code": "JOURNAL_INITIALIZED",
+    "details": {
+      "policyHash": "0ed618b342e18be0f5235318b91fcc978e26c8c74c0b1db6eb31ca9c180d97ca",
+      "genesisHash": "51fb25bdd5f91e713c111461a6f141f67d6ad79bfb6a0c7abc2e2113821294bb",
+      "directorySync": false
+    }
+  },
+  "secretsPersisted": false,
+  "signingCommandsExecuted": 0
+}

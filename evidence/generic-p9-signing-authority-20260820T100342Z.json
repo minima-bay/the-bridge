@@ -1,0 +1,39 @@
+{
+  "schema": "generic-p9-signing-authority-validation/v1",
+  "createdAt": "2026-08-20T10:03:42.911Z",
+  "result": "PASS",
+  "evidenceLevel": "offline dependency-injected production-shaped authority model",
+  "assertions": 43,
+  "hostileCases": 7,
+  "concurrencyCases": 1,
+  "proved": [
+    "A global exclusive lease with monotonic fencing token is required before every protected mutation.",
+    "An independent compare-and-swap checkpoint advances before the signing RPC becomes callable.",
+    "Two copied local stores sharing the same global authority cannot both advance.",
+    "An anchor failure leaves the local store ahead and blocks the signing callback and all later startup.",
+    "The exact loaded transaction is rebound inside the lease before and after the durable sign step.",
+    "A post-authorization transaction mutation records HALT without calling txnsign.",
+    "The serialized conditional signer performs a final transaction-digest check and retires the leaf on mismatch.",
+    "The structured Minima gateway rejects operations outside its fixed allowlist.",
+    "The complete dependency-injected lifecycle reaches exact check, post and confirmation through the anchored guard."
+  ],
+  "notProved": [
+    "No real globally consistent fence or independently durable WORM service is deployed.",
+    "No Minima node, RPC listener, restored clone, WOTS key, signature, transaction or post was used.",
+    "Operating-system network isolation and elimination of every raw RPC bypass remain deployment controls.",
+    "The live P8 key domain remains retired and signing disabled."
+  ],
+  "boundaries": {
+    "newMainnetTransactions": 0,
+    "newWotsSignatures": 0,
+    "realAssets": false,
+    "livePolicyModified": false
+  },
+  "sourceSha256": {
+    "p9-wots-policy.json": "f309e6e9764bd4cd93e552f99038393d295ba964d449fa9f700d3749ad09b524",
+    "wots-write-ahead-guard.mjs": "c2bff066aa68b3635ea181b731d6055f211fcf6ca3f4202be762ec4961125192",
+    "generic-bridge-p9-signing-authority.mjs": "3fca0bf6cc381b8022e0527d3b4f97555ca7e0f01093fe8cd11fe17ec74e23e6",
+    "generic-bridge-transaction-lifecycle.mjs": "7598b4a933e7f6eb5f0a2bb25b0bac6c495d2fdec7e55b2baebaacdeafc0239e",
+    "validate-generic-p9-signing-authority.mjs": "60d3894821e46c1fc9545ba78071e452d8f770915447a0ce7ba435e543b2c3cf"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "canonical-bridge-attestor-economics-validation/v1",
+  "createdAt": "2026-08-20T12:34:19.110Z",
+  "result": "PASS",
+  "evidenceLevel": "offline executable economic reference model",
+  "assertions": 416,
+  "hostileCases": 4,
+  "propertySteps": 100,
+  "illustrativeParameters": {
+    "committee": "5-of-7",
+    "equalBond": "125000",
+    "exposureSafetyBps": 8000,
+    "individualBondBps": 8000,
+    "mutualBondBps": 2000,
+    "attestorRewardSplitBps": {
+      "readiness": 6000,
+      "participation": 2500,
+      "bondRisk": 1500
+    },
+    "protocolFeeSplitBps": {
+      "attestors": 5000,
+      "safety": 2000,
+      "relayers": 1000,
+      "operations": 2000
+    }
+  },
+  "proved": [
+    "Unanimous acceptance of one complete roster is required before activation.",
+    "Aggregate multi-lane liability cannot exceed the discounted slashable quorum bond.",
+    "Principal, protocol fees, attestor rewards, safety reserves, relayer funds and operations funds remain separate.",
+    "Valid timely approval and rejection receive equal participation weight; the first five signers do not capture all rewards.",
+    "Low security runway stops new liability while redemption remains open.",
+    "Objective solo fault slashes only the culprit individual tranche.",
+    "Successful quorum fraud can use equal limited mutual tranches without taking an honest attestor individual tranche.",
+    "Subjective downtime cannot trigger catastrophic slashing."
+  ],
+  "notProved": [
+    "All percentages and amounts are illustrative founder-review parameters, not production decisions.",
+    "Local one-way self/delegated bond accounting and an aggregate exposure controller exist, but withdrawal, reward, adjudication and claim contracts do not.",
+    "No signature-attribution fraud proof, legal enforceability, market bond valuation or actuarial sufficiency is proved.",
+    "No bond, fee, insurance deposit, real asset or chain transaction was created."
+  ],
+  "boundaries": {
+    "realAssets": false,
+    "contractsDeployed": false,
+    "transactionsPosted": 0
+  },
+  "sourceSha256": {
+    "canonical-bridge-attestor-economics-model.mjs": "ed99508704aeda83c120f673c812b70c59fe19b7a4df8504c78298bf55024f77",
+    "validate-canonical-bridge-attestor-economics.mjs": "3e24d1a47cab1f35e5bf8964cc93b0207a54645a221190c40a903a90b73a9d04",
+    "canonical-bridge-attestor-framework-discussion-v1.md": "97c567c8250b358ed6b20357140a480b9bee0723956ef1aefa6f99e15e6acdc3"
+  }
+}

@@ -17,16 +17,16 @@ legacy filename and document ID remain stable so existing evidence references do
 
 | Control | Current value |
 |---|---|
-| NOW | `P8` complete a fresh all-branch generic-lane generation; the mined v2 instances are immutable RELEASE-only evidence and cannot be upgraded |
-| Latest gate passed | `P7`: one exact five-signature release per fresh token-bound v2 lane passed stock-node `txncheck`, survived posting lag and mined on Minima mainnet within current size and KISS limits |
-| Next executable gate | The unified five-action offline candidate has passed. Obtain explicit authorization for a fresh valueless mainnet generation, then run node `txncheck` and mine every exact branch without cross-lane state changes. |
+| NOW | `P9` prove restored-backup rollback resistance, durable WOTS leaf reservation and exact recovery-safe transaction construction |
+| Latest gate passed | `P8`: all five exact covenant branches mined for both fresh valueless lane instances with full stock-node checks, zero burn and final `I=0`, `P=0`, `R=F` accounting |
+| Next executable gate | Implement a real global non-expiring signer-domain authority, independent monotonic or WORM checkpoint, strict production node gateway and complete chain-source adapter, then prove measured network isolation before requesting any fresh valueless key ceremony. |
 | Production status | Prohibited |
 | Funds status | Purpose-created valueless USDTm and ETHm are locked in mainnet test covenants; no real USDT, ETH or production asset is present |
-| Minima transaction status | Four fresh v2 valueless tokens, two exact v2 genesis transactions and one exact five-signature release per USDTm-v2 and ETHm-v2 lane are mined. The USDTm retry and ETHm release persist the exact 444-byte records in port 90, preserve exact reserve conservation and burn zero. One earlier signed v2 USDTm intent was rejected before posting and is permanently journaled. |
+| Minima transaction status | Fresh P8 USDTm and ETHm tokens and controls, both exact genesis transactions, and CLIENT_UPDATE, RELEASE, CANCEL, RETURN and PAYOUT_ACK for both lanes are mined. All ten branches passed stock-node checks, used exact explicit script witnesses, burned zero and ended with full reserves and zero issued or pending liability. |
 | Ethereum transaction status | No deployment or transaction authorized |
 | External communication status | No Minima Core contact will be pursued; the prepared draft is retained as research history only |
-| Primary blocker | The immutable v2 scripts have no action dispatcher, migration path or non-release branch. A fresh P8 generation is authorized by `D-USDTM-023` and has passed its clean no-funds preflight, but it still requires funding, token creation, exact genesis, node `txncheck` and mining of every branch. The seven keys remain one-controller fixtures, Ethereum facts remain synthetic, and rollback-safe WOTS recovery and decentralized committee operation remain later blockers. |
-| Pool snapshot isolation | Required: Pool writes remain inside this research directory; the retired issuers are isolated under `Nodes`; `Pool/2_development` remains untouched by this bridge slice |
+| Primary blocker | P9 now has source-bound offline models for a global fenced signing authority and consistent exact-chain reconciliation, but their fence, independent checkpoint and chain source are dependency-injected fakes. No real cross-host authority, WORM service, production node gateway or measured clone isolation exists. The P8 key domain remains retired. The seven keys remain one-controller fixtures, Ethereum facts remain synthetic, and generic Minima consensus light-client verification and decentralized committee operation remain later blockers. |
+| Project isolation | The Bridge is a standalone Bay-level repository. The Pool retains only a read-only pointer; runtime nodes, backups, WOTS journals and local upstream checkouts remain outside publication. |
 | Last control-document verification | Run `node validate-usdtm-control.mjs --evidence`; the newest matching evidence file is authoritative |
 
 ### Status vocabulary
@@ -191,6 +191,10 @@ identifier and date. An open decision is not guessed.
 | `D-USDTM-021` | 2026-08-19 | AUTHORIZED VALUELESS MAINNET CEREMONY | Use the one fresh `USDTmIssuer` node wallet for both purpose-created valueless `USDTm` and `ETHm` mainnet test tokens. | The command-native ceremony parameters are frozen for this valueless run only: USDTm has 6 decimals, fixed supply 1,000,001 and cap 999,999.999999; ETHm has 18 decimals, fixed supply 11 and cap 10. The one-token margins replace the earlier synthetic one-atom margins because stock Core 1.1.2.6 `tokencreate` floors the requested token count before applying decimals. Both tokens use the default unrestricted `RETURN TRUE` token-level script, while their reserve coins are covenant-controlled. The node, token creation, exact P7/P8 transaction construction, signing, posting and mining are authorized subject to pre-signing checks, mined-output verification, no real collateral, an empty issuer at completion and `NEVER-REUSE`. This is not production authorization. |
 | `D-USDTM-022` | 2026-08-19 | AUTHORIZED REPLACEMENT VALUELESS MAINNET CEREMONY | Accept `O-USDTM-017` and execute the corrected v2 live feasibility ceremony with a fresh one-use `USDTmIssuerV2` wallet and fresh `USDTm-v2`, `ETHm-v2` and per-lane control token IDs. | Regenerate every lane ID, script and covenant address from the mined v2 token IDs. Execute exact genesis and one real five-signature release per lane, verify mined outputs, return every residual Minima atom to the exact address of the funding input, empty and retire the issuer, and never reuse `USDTmIssuer`. The authorization is valueless mainnet testing only: no real collateral, production authority or production security claim. |
 | `D-USDTM-023` | 2026-08-19 | AUTHORIZED P8 ALL-BRANCH VALUELESS MAINNET CEREMONY | Execute one fresh P8 generation with the dedicated one-use `USDTmIssuerP8` wallet, fresh `USDTm-P8`, `ETHm-P8` and per-lane control token IDs, and the unified five-action covenant. | The authorization covers token and control creation, token-bound lane rendering, exact genesis, CLIENT_UPDATE, RELEASE, CANCEL, RETURN and PAYOUT_ACK on both valueless lanes, stock-node `txncheck`, posting, mining, full residual-Minima return to the exact funding-input address, and issuer retirement as `NEVER-REUSE`. It authorizes no real collateral, production authority or production security claim. Concurrent Pool Test V8 work remains out of scope. |
+| `D-USDTM-024` | 2026-08-19 | SAFETY RETIREMENT | Retire the complete P8 fixture TreeKey domain from future signing and keep P9 active. | The first stale-clone verification did not isolate wildcard Core RPC, and all clone runs opened the wildcard Minima wire listener. The wrapper issued no sign command, but outside access was not excluded. The live policy now has `signingEnabled:false`; legacy live builders refuse build and post; another clone run is disabled; and a future ceremony requires a fresh authorized key domain plus measured network isolation, global fencing and an independent journal anchor. |
+| `D-USDTM-025` | 2026-08-20 | AUTHORIZED OFFLINE DEVELOPMENT | Continue the P9 completion, Ethereum contract, accountability, proof, integration and public-interface development journey under the existing no-funds boundary. | Offline code, specifications, hostile tests and evidence may advance. This does not authorize a node startup, clone run, fresh key domain, signature, transaction, token, Ethereum deployment, bond, real collateral or production operator appointment. Any later live ceremony or deployment requires its own explicit authorization. |
+| `D-USDTM-026` | 2026-08-20 | DECIDED | Permit open delegated security pools behind approved attestors. Ordinary bridge principal remains separate and never earns security fees or bears slashing. A voluntary security depositor chooses an attestor, shares that attestor's fee allocation and accepts disclosed pool slashing risk. Every attestor must retain a minimum self-bond and first-loss exposure; public capital cannot grant signing authority, committee admission or transfer control. Initial pool positions are non-transferable and exit is asynchronous through the complete risk window. | This expands capital participation without converting the canonical 1:1 bridge into a yield-bearing principal pool. Exact self-bond percentage, fee split, asset, reward indexing, slashing waterfall, withdrawal delay and legal treatment remain under `O-USDTM-013`. Local code may implement one-way deposits and accounting, but no withdrawal or real deposit is authorized until every risk gate exists. |
+| `D-USDTM-027` | 2026-08-20 | DECIDED | Rehome the bridge from The Pool as the Bay-level project named The Bridge, preserving its Git history, publishing it in a dedicated repository, and presenting it as a peer of The Pool, The Land and The Springboard. | `minima-bay/the-bridge` is the canonical public source. The old Pool path may contain only a read-only pointer, never a duplicate implementation. Repository workflows, documentation and Bay navigation must use the new identity and boundary. |
 
 ## 4. Open founder decisions
 
@@ -210,7 +214,7 @@ answer silently.
 | `O-USDTM-010` | Approve production legal disclosure | The name USDTm is decided; the exact wording must state independent backing and no Tether or USDT0 endorsement. | `P13` |
 | `O-USDTM-011` | Select production decimals per asset lane | Six decimals are recommended for USDT atom parity. The ETH lane targets 18 for exact wei parity, subject to the explicit compatibility gate. Every other lane requires conversion and dust rules. | Before each `P8` lane token creation |
 | `O-USDTM-012` | Select the production committee and quorum | Choose operator admission, independent-control evidence, jurisdiction and infrastructure diversity, epoch length, rotation delay, exit delay and final threshold only after the full signed-transaction and liveness benchmarks. | `P6` and `P13` |
-| `O-USDTM-013` | Select attestor economics and adjudication | Choose per-operator bond, bridge exposure cap, slashable faults, fraud-proof mechanism, challenge period and recovery distribution. Slashing is deterrence and recovery, not prevention. | `P6` and `P13` |
+| `O-USDTM-013` | Select attestor economics and adjudication | `D-USDTM-026` fixes open opt-in security pools, strict bridge-principal separation, minimum attestor self-bond, depositor fee sharing and asynchronous exit as architecture. Exact self-bond percentage, pool fee split, asset, reward index, limited mutual loss, signature attribution, challenge period, withdrawal delay, adjudication and legal treatment remain open. Slashing is deterrence and recovery, not prevention. | `P6` and `P13` |
 | `O-USDTM-015` | Select production multi-asset exposure accounting | A shared committee must cover aggregate exposure across every lane. Choose isolated bond pools or a conservative common valuation and cap policy; per-lane caps may not double-count one bond. | `P6` and `P13` |
 
 ## 5. Findings log
@@ -289,6 +293,21 @@ Each finding states its evidence level. `Observed` means an executed runtime or 
 | `F-USDTM-067` | 2026-08-19 | P8 V2 IMMUTABILITY OBSTRUCTION CONFIRMED | Exact mined v2 KISS scripts and branch-coverage validator | Both mined v2 scripts require exactly two inputs and three outputs, contain only RELEASE, and have no action dispatcher, MAST branch, migration branch or upgrade path. They cannot execute CLIENT_UPDATE, RETURN, CANCEL or PAYOUT_ACK without changing the covenant address. | Preserve v2 as passing P7 evidence. P8 requires a fresh generation and cannot claim that the already mined coins are upgradeable. Evidence: `generic-p8-v2-branch-coverage-20260819T150018Z.json`, SHA-256 `339c360f63f59c53d6ea8be098199c3007ca52f3b6a2d17f6a87d76195d247c7`. |
 | `F-USDTM-068` | 2026-08-19 | P8 OFFLINE ALL-BRANCH CANDIDATE PASS | Two independent encoders and pinned Core all-action harness | Ten action/lane executions reproduce canonical records byte-for-byte, execute the exact control, reserve and RETURN-owner scripts, conserve both token IDs, reject eight freshly authorized attacks per execution, including a proof-bound undercollateralized vault mutation, and serialize complete 32-level synthetic TxPoWs below 64 KiB. The largest control branch uses 596 of 1,024 instructions; the largest observed TxPoW is below 43 KiB. | CLIENT_UPDATE and PAYOUT_ACK now enforce post-transition collateral and cap bounds before accepting a lower authenticated vault balance. This closes the offline construction and hostile-test rung only. P8 remains NOW because its binding exit gate requires fresh real mainnet UTXOs, node `txncheck` and mining of all five branches for both lanes. Evidence: `generic-p8-unified-smoke-20260819T160551Z.json`, SHA-256 `7d781f6255c0a4af6d379cf1fad563bb6d69125460c1f46afa1201868f97f803`. |
 | `F-USDTM-069` | 2026-08-19 | P8 MAINNET CEREMONY PREFLIGHT PASSED | Fresh stock-Core issuer and four no-funds token-create probes | The dedicated `USDTmIssuerP8` node synchronized on mainnet with zero confirmed, sendable and unconfirmed Minima. All four exact token definitions stopped at the expected no-funds gate, while token count and mempool remained unchanged. | `D-USDTM-023` authorizes the remaining valueless ceremony, but no token, signature or transaction was created by this preflight. Funding-input identification and exact return-address pinning are the next blocking gate. Evidence: `generic-mainnet-p8-ceremony-preflight-20260819T160833Z.json`, SHA-256 `f3376f45e290f1a4ec610bf8a2fbd71f8c8d00e4c03cb9b524fa61269b7ed9f6`. |
+| `F-USDTM-070` | 2026-08-19 | P8 LIVE MAINNET GATE PASSED | Fresh token-bound P8 covenants, stock Core 1.1.2.6 and exact live branch evidence | CLIENT_UPDATE, RELEASE, CANCEL, RETURN and PAYOUT_ACK mined for both purpose-created valueless USDTm and ETHm lanes. All ten transactions passed full node `txncheck`, used explicit script witnesses, burned zero and stayed below 64 KiB. Both final states have `I=0`, `P=0`, full reserve, payout cursor 1 and exact cumulative paid. | This proves all five Minima covenant mechanics on stock mainnet for both decimal shapes. It does not prove independent operators, authentic Ethereum facts, consensus light-client proofs or production safety. Evidence: `generic-mainnet-p8-live-20260819T192848Z.json`, SHA-256 `2760cc3ae4bc1a042b46c24c0c603d9f28580c79233518c0dc288e2283ed4175`. |
+| `F-USDTM-071` | 2026-08-19 | P9 RECOVERY BASELINE AND PASSWORD ROTATION PASS | Byte-verified stopped-node backups, canonical-tip comparison, isolated clone and stock Core wallet reopen | The signer recovered non-destructively after a normal restart, its tip was recognized by the canonical issuer, and all four P8 genesis proofs imported. Fresh post-P8 backups matched byte-for-byte. Offline H2 rekeying replaced both exposed local database passwords without printing either secret; the signer reopened with all 74 keys and exact WOTS counters, while the retired issuer wallet opened read-only and remained stopped. | This establishes a safe recovery baseline and closes the local password exposure. It does not yet prove restored-backup rollback protection or durable cross-operator WOTS leaf reservation, so P9 remains active. Evidence: `generic-mainnet-p8-node-recovery-rotation-20260819T193632Z.json`, SHA-256 `7fe825012da067a9a965f760714016512135c56476b96becf1db7644d639855a`. |
+| `F-USDTM-072` | 2026-08-19 | P9 LOCAL PARTIAL PASS | External journal, mutation/property tests and dependency-injected transaction lifecycle | The policy pins all ten keys, exact floors and live TreeKey shape `64^3=262144`. The guard validator passes 282 assertions, 14 corruption mutations and 40 property steps. The transaction-boundary validator passes 184 assertions, 12 crash cases and 22 hostile cases with durable one-shot sign steps, pre-broadcast intent, exact loaded-body, post, reconciliation and confirmation binding. | This is synthetic/local evidence. A copied store or second host is not fenced, journal and head can roll back together, Windows directory fsync is unproved, and the real live builder is locked rather than integrated. P9 remains `NOW`. |
+| `F-USDTM-073` | 2026-08-19 | P9 HOSTILE NETWORK-ISOLATION REFUTATION, CONTAINED | Independent post-run source review and read-only cleanup verification | The first stale-clone run exposed wildcard RPC without authentication. Later runs authenticated RPC, but `-nop2p` did not prevent Core from opening its wildcard Minima wire listener. The wrapper issued only `keys action:list` and `quit`, stale counters rejected, current counters matched, both nodes stopped and every disposable clone was removed. Outside access during the first run cannot be excluded. | The P8 fixture key domain is permanently retired from future signing, the live policy rejects reservations, legacy sign/post entrypoints are disabled and the clone runner now fails before startup. Historical node observations are counter metadata and cleanup evidence only, not proof that no outside signature occurred. |
+| `F-USDTM-074` | 2026-08-20 | P9 PRODUCTION-SHAPED OFFLINE INCREMENT PASSED | Source-bound dependency-injected signing-authority and consistent-chain validators | A global non-expiring fence interface, independent compare-and-swap checkpoint, serialized conditional signing gateway and exact chain reconciler now integrate with the recovery-safe lifecycle. The authority suite passes 43 assertions, seven hostile cases and one copied-store concurrency case. The reconciler passes 21 assertions and nine hostile cases. All prior 282 guard and 184 boundary assertions still pass. | This narrows the real-integration gap but does not pass P9. The global fence, independent anchor and complete chain source are fakes; no raw-RPC isolation, live node, clone, key, signature, transaction or post was exercised. Current consolidated evidence is `generic-p9-partial-20260820T100343Z.json`, SHA-256 `e726fbae0c56496be73ba4926dadbac5133b4caa8d512f20b1c17b4986002de8`. |
+| `F-USDTM-075` | 2026-08-20 | P6 ECONOMIC REFERENCE MODEL PASS, DECISIONS OPEN | Offline integer-only attestor economics model | The 416-assertion run covers unanimous roster acceptance, equal bonds, aggregate multi-lane exposure, principal and fee separation, approve/reject-neutral participation pay, security runway, open redemption during pause, objective solo fault, limited mutual quorum loss and 100 randomized accounting steps. | This is a contradiction-finding reference model, not Solidity or a selected production policy. All monetary values and percentages remain illustrative under `O-USDTM-013`; signature attribution, adjudication, legal enforceability and actuarial adequacy remain unresolved. |
+| `F-USDTM-076` | 2026-08-20 | P6 MONEYLESS ROSTER REGISTRY LOCAL PASS | Solidity 0.8.24 and local Hardhat EVM | A no-admin registry pins exactly seven ordered candidates, a five-member operating quorum, equal-bond proposal, slash allocation, exposure cap, policy hash and dossier root. All seven candidates must accept the exact commitment, any candidate may withdraw before delayed activation, and an immutable readiness interface must report that all exact-roster bonds are posted. Seven local EVM tests pass and the ABI has no payable or privileged function. | `phaseGatePassed:false`. The focused registry test uses a clearly named readiness mock and the registry itself holds no funds. A separate local vault now covers one-way custody, but rewards, objective adjudication, signer attribution, claims and production deployment remain absent. P9 is still partial. |
+| `F-USDTM-077` | 2026-08-20 | P6 EXACT BOND CUSTODY LOCAL PASS | Solidity 0.8.24, local Hardhat EVM and valueless token fixture | The separate no-admin vault registers only a roster whose complete fields reproduce its domain-separated hash and point back to that vault. Each of seven members can post one exact equal bond; 80% individual and 20% mutual tranches cover the full bond. Eight focused tests reject outsiders, duplicates, wrong readiness, fee-on-transfer, false, reverting and reentrant token behavior; readiness also fails if current aggregate custody drops below accounted obligations. | `phaseGatePassed:false`. No withdrawal or slashing route exists until liability, challenge, claim and exit-delay controls are implemented. The asset, members and amounts are disposable, signature attribution is unresolved and no contract was deployed publicly. |
+| `F-USDTM-078` | 2026-08-20 | P6 AGGREGATE TWO-LANE EXPOSURE LOCAL PASS | Solidity 0.8.24, local Hardhat EVM and disposable lane forwarders | A roster policy now commits the controller address, bond vault and ordered USDTm/ETHm lane callers. One shared cap equals equal bond times quorum times the 80% safety factor. Seven tests prove both lanes consume that single cap, cross-lane settlement replay rejects, inactive or underbonded increases reject, and each lane can still release only its own liability. | `phaseGatePassed:false`. The P4 vaults are not integrated, the lanes are permissive mocks, deterministic deployment uses a local predicted address, and retirement, replacement, unresolved-slash, security-runway and multi-asset valuation policy remain open. |
+| `F-USDTM-079` | 2026-08-20 | P6 OPEN DELEGATED SECURITY POOL LOCAL PASS | Solidity 0.8.24, local Hardhat EVM and valueless token fixture | `D-USDTM-026` permits a voluntary depositor to back one approved attestor and later share that attestor's security fees and slashing risk without receiving signing, admission or governance power. The local vault enforces a committed minimum attestor self-bond, keeps bridge principal outside the pool and activates a member only when its exact equal bond is fully funded. Six focused tests cover the illustrative 30% self-bond and 70% delegated-capacity split, incomplete pools, seven mixed pools, outsiders, overfunding, fee-on-transfer and reentrancy. | `phaseGatePassed:false`. Contributions are intentionally one-way and non-transferable. Reward indexing, fee distribution, slashing, asynchronous withdrawals, legal treatment and the production self-bond percentage remain open under `O-USDTM-013`. No real deposit, asset, signature, deployment or public transaction exists. |
+| `F-USDTM-080` | 2026-08-20 | P6 SEPARATE FEE AND REWARD TREASURY LOCAL PASS | Solidity 0.8.24, local Hardhat EVM and two valueless fee assets | A separate principal-free treasury accepts fees only from the exact two exposure-controller lanes and only after the same lane confirms the one-use settlement identity. Eight tests prove complete fee conservation across attestor, safety, relayer and operations ledgers, the readiness/participation/bond-risk subdivision, lane-asset isolation, atomic cap failure, hostile-token rejection and per-asset runway calculation. The bond-risk pool is atomically sent to the roster-committed index. | `phaseGatePassed:false`. P4 lanes are not integrated, runway is observable but not enforced, and no work-weight allocation, payout claim, forfeiture or slashing route exists. All percentages, budgets and assets are illustrative; no real fee, principal, deposit, deployment or public transaction exists. |
+| `F-USDTM-081` | 2026-08-20 | P6 EPOCH BOND-RISK REWARD INDEX LOCAL PASS | Solidity 0.8.24, local Hardhat EVM and two valueless fee assets | The unanimous roster now commits a non-custodial reward index. Only the bond vault checkpoints contribution changes and only the bound treasury indexes rewards. Eight tests prove equal member-pool allocation, 30/35/35 self/depositor proportional sharing, independent fee-asset indices, repeated accrual without a first-five race, retained rounding and atomic rollback when live bond custody is insufficient. | `phaseGatePassed:false`. This indexes objectively measurable capital risk at each confirmed fee event, not readiness or participation work. No challenge-finality close, forfeiture, post-slash update, claim, payout, withdrawal, P4 integration or native-ETH fee adapter exists. |
+| `F-USDTM-082` | 2026-08-20 | P6 OBJECTIVE WORK RECORD AND DELAYED EPOCH FINALIZATION LOCAL PASS | Solidity 0.8.24, local Hardhat EVM and disposable verifier | The unanimous roster commits one exact work recorder. Ten tests prove one fully bonded member heartbeat per fixed readiness window, active-and-bonded exact-lane unique request admission, one timely approve or reject record per member with equal weight, immutable-verifier-only challenge success, exact one-unit removal and permissionless finalization only after the challenge delay. The complete P6 suite passes 54 tests. | `phaseGatePassed:false`. A heartbeat proves approved-key activity at a block, not infrastructure uptime. A decision record proves choice and timing, not truth. The verifier is a fixed-evidence fixture; P4 request binding, production fraud proofs, challenger economics, work-reward allocation, claims, slashing and public deployment remain absent. |
+| `F-USDTM-083` | 2026-08-20 | P6 OBJECTIVE DECISION ACCOUNTABILITY VERIFIER LOCAL PASS | Solidity 0.8.24, local Hardhat EVM and mock finalized-fact source | Every participation record now requires an EIP-712 member signature bound to chain, verifier, recorder, roster, request, request digest and decision. Two opposite signatures from the same member objectively prove equivocation. An immutable-source opposite finalized fact can also remove one credit. The recorder hash-chains every accepted action into delayed finalization. Twelve focused tests and all 56 P6 tests pass. | `phaseGatePassed:false`. The finalized-fact source is mutable test code and verifies no source-chain consensus. ECDSA accountability is not inseparably bound to Minima WOTS authorization. P4 request binding, challenger economics, reward allocation, claims, slashing and deployment remain absent. |
+| `F-USDTM-084` | 2026-08-20 | P6 CHALLENGE-FINALIZED WORK REWARD INDEX LOCAL PASS | Solidity 0.8.24, local Hardhat EVM and two valueless fee assets | One immutable deployment graph now binds the roster, work recorder, treasury and future work-reward index. Only confirmed fees collected inside the exact work epoch enter its readiness and participation buckets. After delayed finalization, anyone can index each asset once using the final seven-member weights. Eight focused tests prove challenged-decision removal, approve/reject neutrality, exact epoch boundaries, two-asset isolation, zero-weight handling, retained rounding and unchanged treasury token custody. All 64 P6 tests pass. | `phaseGatePassed:false`. This creates accounting balances, not claims or payouts. The fact source remains a mock, P4 request and lane integration are absent, ECDSA is not inseparably bound to Minima WOTS, and forfeiture, slashing, production parameters and deployment remain open. |
 
 ## 6. Phase board
 
@@ -304,8 +323,8 @@ The `Current status` column is the authoritative plan state. Only one row may be
 | `P5` | BLOCKED | Implement generic Minima consensus light-client proofs and the Ethereum verifier for Minima-to-Ethereum settlement. | Stateful prior-to-new updates, fork choice, Cascade and MMR verification pass hostile vectors with measured Ethereum gas; exact reserve-return binding is deferred to the post-P8/P9 re-gate. Begin after P4 review and the short P7 feasibility benchmark, then re-gate against mined P8/P9 shapes. |
 | `P6` | BLOCKED | Implement decentralized attestor membership, Ethereum bonds, delayed rotation, slashing adjudication and liveness policy. | Independent-control criteria, quorum economics, exit delay, false-attestation and equivocation evidence, exposure recovery and no-central-coordinator liveness pass hostile tests. Blocked on the P7 exact signature form and on founder decisions `O-USDTM-012` and `O-USDTM-013` for production promotion. |
 | `P7` | GATE PASSED | Under `D-USDTM-022`, prove the stock-Core 5-of-7 generic asset-lane branch is operationally mineable with fresh token-bound v2 lanes. | Canonical lane records reject cross-asset replay and hostile mutations; exact KISS branches cover six-decimal ERC-20 and 18-decimal native ETH lanes; a fully signed worst-case valueless transaction passes `txncheck`, survives ordinary posting lag and mines within 64 KiB and 1,024 operations. Failed WOTS uses are journaled and never reused. |
-| `P8` | NOW | Implement isolated valueless Minima reserve covenants from one generic five-action lane template. | Every exact branch mines on Minima mainnet with purpose-created valueless assets for both USDTm and ETHm lane instances; 18-decimal compatibility and cross-lane isolation pass. No signer-only unrestricted spend exists. |
-| `P9` | BLOCKED | Build exact Minima transaction constructors and recovery behavior. | Exact transactions mine on Minima mainnet, successor coins confirm, typed verdicts are unambiguous, retries cannot duplicate settlement, and durable WOTS leaf reservation survives rollback and restored-node attacks. Blocked on `P8`. |
+| `P8` | GATE PASSED | Implement isolated valueless Minima reserve covenants from one generic five-action lane template. | Every exact branch mines on Minima mainnet with purpose-created valueless assets for both USDTm and ETHm lane instances; 18-decimal compatibility and cross-lane isolation pass. No signer-only unrestricted spend exists. |
+| `P9` | NOW | Build exact Minima transaction constructors and recovery behavior. | Exact transactions mine on Minima mainnet, successor coins confirm, typed verdicts are unambiguous, retries cannot duplicate settlement, and durable WOTS leaf reservation survives rollback and restored-node attacks. |
 | `P10` | BLOCKED | Execute complete two-way valueless lifecycles with independent relayers. | One ERC-20 lane and the native ETH lane each complete deposit, attestation, reserve release, return, proof and mock payout twice without privileged relayer keys or cross-lane state changes. Blocked on `P5` through `P9`. |
 | `P11` | BLOCKED | Run the full adversarial campaign. | Independent refuters return no unresolved critical or high defect. Blocked on `P10`. |
 | `P12` | BLOCKED | Prove operations, observability, recovery and safe halt behavior. | A clean operator reconstructs authoritative state from chains and proofs; monitors are not validity gates. Blocked on `P11`. |
@@ -490,12 +509,16 @@ Required sequence:
 1. `txncreate`.
 2. Add inputs without `scriptmmr:true`.
 3. Add exact outputs and transaction state.
-4. `txnsign`.
-5. `txnbasics`.
-6. `txncheck` and require script, amount and MMR verdicts.
-7. `txnpost auto:false`.
-8. Confirm the exact mined transaction and successor coins.
-9. `txndelete` only after definite pre-broadcast refusal or on-chain reconciliation proves the
+4. Bind the exact loaded unsigned body and flush an all-key reservation.
+5. Flush one non-reusable `SIGN_STEP` immediately before each `txnsign` and recheck the exact body
+   plus counter prefix before advancing to the next signer.
+6. For the P8 scripts that exceed the wallet registry limit, use the proved `txnmmr` then explicit
+   `txnscript` witness path. `txnbasics` is not a substitute for this exact witness.
+7. `txncheck` and require nonempty exact token accounting plus script, amount, signature, script
+   witness and MMR verdicts.
+8. Flush `POST_ATTEMPT`, then `txnpost auto:false` exactly once.
+9. Confirm the exact on-chain transaction body, predecessor inputs, successor outputs and coins.
+10. `txndelete` only after definite pre-broadcast refusal or on-chain reconciliation proves the
    transaction did not settle.
 
 Additional tasks:
@@ -512,6 +535,13 @@ Additional tasks:
 - normalize typed `txncheck` booleans and reject missing or ambiguous verdict fields;
 - prove no signature is produced before reservation durability, and test backup rollback,
   concurrent restore and broadcast-unknown recovery without WOTS reuse;
+- hold one global non-expiring signer-domain fence through the conditional node signing call and
+  require acknowledged revocation before reassignment;
+- advance an independently durable monotonic or WORM checkpoint before the signing RPC is callable;
+- serialize a strict node-command allowlist and make raw signing RPC unreachable to coordinators,
+  restored copies and other network clients;
+- derive confirmation and definitive non-settlement from one complete typed chain source rather
+  than caller-supplied independent booleans;
 - exclude covenant and watch-only coins from ordinary funding selection.
 
 ### P10: Two-way integration
@@ -631,6 +661,27 @@ represented as current.
 | `E-USDTM-028` | 2026-08-19 | `evidence/generic-p8-v2-branch-coverage-20260819T150018Z.json`, SHA-256 `339c360f63f59c53d6ea8be098199c3007ca52f3b6a2d17f6a87d76195d247c7` | Exact immutable-v2 branch coverage | Confirms that both deployed scripts implement RELEASE only and cannot satisfy the P8 branch set | Read-only script evidence; it proves obstruction, not a replacement covenant |
 | `E-USDTM-029` | 2026-08-19 | `evidence/generic-p8-record-validation-20260819T151018Z.json`, SHA-256 `ef7dee5c531a0f8ac37478ee87c8bd1dfd7702b6fd4cea9f19337d9ed64b5277`; `evidence/generic-p8-unified-smoke-20260819T160551Z.json`, SHA-256 `7d781f6255c0a4af6d379cf1fad563bb6d69125460c1f46afa1201868f97f803` | P8 canonical records and unified KISS execution | Two encoders agree across ten records and 346 field mutations. All five exact branches execute for both lanes with full synthetic TxPoW sizing and 80 freshly authorized hostile rejections, including undercollateralized authenticated-head attempts on every action. | Synthetic 32-level proofs and deterministic offline keys only; no current mainnet UTXO, node `txncheck`, mining or independent operator evidence |
 | `E-USDTM-030` | 2026-08-19 | `evidence/generic-mainnet-p8-ceremony-preflight-20260819T160833Z.json`, SHA-256 `f3376f45e290f1a4ec610bf8a2fbd71f8c8d00e4c03cb9b524fa61269b7ed9f6` | Fresh P8 issuer preflight | Stock Core 1.1.2.6 was connected on mainnet with a clean zero balance; four exact no-funds token-create probes failed safely with unchanged token count and mempool. | No chain write succeeded; exact funding input and residual-return address are not yet present |
+| `E-USDTM-031` | 2026-08-19 | `evidence/generic-mainnet-p8-live-20260819T192848Z.json`, SHA-256 `2760cc3ae4bc1a042b46c24c0c603d9f28580c79233518c0dc288e2283ed4175` | Live stock-mainnet all-branch P8 gate | Both valueless lanes mined all five exact branches with complete stock-node checks, real proofs, explicit scripts, exact successor states, zero burn and final `I=P=0`, `R=F` accounting. Every residual Minima atom returned to the pinned funding-input address and the empty issuer was stopped and retired. | One fixture controls all test keys and Ethereum facts remain synthetic. This is covenant-mechanics evidence, not decentralization, light-client or production evidence. |
+| `E-USDTM-032` | 2026-08-19 | `evidence/generic-mainnet-p8-node-recovery-rotation-20260819T193632Z.json`, SHA-256 `7fe825012da067a9a965f760714016512135c56476b96becf1db7644d639855a` | P9 recovery and secret-rotation baseline | Exact stopped-node backups were byte-verified; non-destructive canonical convergence avoided an unnecessary archive reset; all four genesis proofs imported; both exposed database passwords were rekeyed offline and reopened without key or WOTS-counter drift. | No restored-backup rollback attack or independent durable leaf-reservation service has passed yet. |
+| `E-USDTM-033` | 2026-08-19 | `evidence/generic-p9-wots-guard-20260819T205617Z.json`, SHA-256 `d75a7573ca02c69c6b6b98dc02be22ade408831752c8803290484093bb87c6a4` | P9 local guard validation | Current source hashes bind a 282-assertion run with 14 corruption mutations, 40 property steps, one-shot durable sign steps, strict counters, exhaustion rejection, exact post and reconciliation binding, local concurrency and crash faults. | Synthetic enabled test policy only. Live signing is disabled; copied stores, a second host, paired journal/head rollback and Windows directory fsync remain unproved. |
+| `E-USDTM-034` | 2026-08-19 | `evidence/generic-p9-transaction-boundaries-20260819T210505Z.json`, SHA-256 `01fdb280d8d2448eb49b780875c6cd0278afccedf848d06a947ee2d9ad916b16` | P9 offline transaction-boundary validation | Current source hashes bind 184 assertions, 12 crash cases and 22 hostile cases for exact loaded-body checks, five-key prefix crashes, rejected-check leaf accounting, durable transaction-bound post attempt, cross-spec post, reconciliation and confirmation rejection, and exact confirmation. | Dependency-injected fakes only; no live node command, signature, post or globally fenced constructor executed. |
+| `E-USDTM-035` | 2026-08-19 | `evidence/generic-p9-wots-journal-genesis-retired-20260819T204219Z.json`, SHA-256 `a94541255e9a75c95c85c734305a4fcfc4bca5cf568053b0ea567e60ab93727e`; `evidence/generic-p9-wots-stale-node-retired-authenticated-20260819T204228Z.json`, SHA-256 `e123ac0670efeefbd756f63a1ff60132aed1926cfb566396d1d41755715ca4a2`; `evidence/generic-p9-wots-current-node-retired-authenticated-20260819T204252Z.json`, SHA-256 `1fa91d818b7a6a706acc843ce5a96ca3a6e2310325e238427a53878a999ea8a5` | Retired-policy counter observation | Correct `64^3` TreeKey shape and all ten keys were observed. Stale floors reject at `[4,4,4,4,4,0,0]`, cancellation `[0,0]`, return `0`; current floors match `[12,12,12,12,12,0,0]`, cancellation `[1,1]`, return `2`. Wrapper artifacts record RPC authentication, stop observation, closed ports and clone removal. | Core's wildcard wire listener was not isolated, and the first earlier run also lacked RPC authentication. These are metadata observations, not proof that no outside signature occurred. The key domain is retired. |
+| `E-USDTM-036` | 2026-08-19 | `evidence/generic-p9-partial-20260819T210506Z.json`, SHA-256 `40620e09977d7a81ebd98ae1c0438993010c4243666346f73c392ccb10ae3505` | P9 consolidated partial evidence | Binds final policy, guard, lifecycle, validators and disabled legacy builders; verifies exact validator schemas and current source hashes, verifies the current retired journal, and selects sidecar-checked offline and node artifacts with conservative shutdown provenance. | `phaseGatePassed:false`. Explicitly records network-isolation refutation, retirement and every remaining global-fencing, independent-anchor, live-integration and exact-reconciliation blocker. |
+| `E-USDTM-037` | 2026-08-20 | `evidence/generic-p9-wots-guard-20260820T100340Z.json`, SHA-256 `bbfe390a21aebd2319ccd69b31bdc55d5ef3600025ca614a3b1f24f9bdd39472`; `evidence/generic-p9-transaction-boundaries-20260820T100342Z.json`, SHA-256 `924516dae293cf76b1c7887d29a7c2aa37b05be59048a3f900291a1fb87fd6c7` | Refreshed P9 local guard and lifecycle evidence | Current source hashes bind the unchanged 282 guard assertions and 184 transaction assertions after the checkpoint and reconciler integration. | Local and dependency-injected only; the live policy remains disabled and no node or signing action occurred. |
+| `E-USDTM-038` | 2026-08-20 | `evidence/generic-p9-signing-authority-20260820T100342Z.json`, SHA-256 `307d98ef6f4130e037140d5342bffff343f3998663a1f496c3f502c0f4dadfc6` | P9 production-shaped signing-authority model | Source-bound 43-assertion run proves modeled fence-before-mutation, checkpoint-before-sign, copied-store exclusion, conditional transaction rebinding, strict RPC allowlisting and fail-closed local-ahead behavior. | The global fence and independent checkpoint are declared fake capabilities, not deployed cross-host or WORM services. No live signature occurred. |
+| `E-USDTM-039` | 2026-08-20 | `evidence/generic-p9-chain-reconciler-20260820T100343Z.json`, SHA-256 `34510d0bd8d94a35ef3dbf9d4af919a695ac453d03421be9e8bcb2066cf3af54` | P9 consistent exact-chain reconciliation model | Source-bound 21-assertion run derives exact confirmation and definitive non-settlement from one consistent typed chain source and rejects pending, incomplete, spent, output-present, conflicting and weak-source claims. | No live complete Minima chain source implements the interface; confirmation policy remains open. |
+| `E-USDTM-040` | 2026-08-20 | `evidence/generic-p9-partial-20260820T100343Z.json`, SHA-256 `e726fbae0c56496be73ba4926dadbac5133b4caa8d512f20b1c17b4986002de8` | Consolidated P9 production-shaped partial evidence | Binds the current policy, guard, lifecycle, authority, reconciler and all four selected validator artifacts to current source hashes while preserving the retired node evidence and adverse isolation finding. | `phaseGatePassed:false`. Real global authority, independent durable anchor, strict node adapter, complete chain source and measured network isolation remain missing. |
+| `E-USDTM-041` | 2026-08-20 | `evidence/canonical-bridge-attestor-economics-20260820T145019Z.json`, SHA-256 `329945b2ad9508e318c191213d72c08fc7fddab1ee6b7b746a51fbfcae1c0d87` | Attestor economics reference-model validation | Current source hashes bind 416 assertions, four hostile cases and 100 randomized steps for roster, bond, cap, fee, remuneration, runway, slashing, delegated-security-pool separation and principal-separation rules. | Offline model only. Signed work records and EIP-712 equivocation checks now exist locally, but no work-reward allocation, withdrawal, production finalized-fact verifier, Minima WOTS attribution, claim, real asset or public transaction exists, and illustrative parameters remain open under `O-USDTM-013`. |
+| `E-USDTM-042` | 2026-08-20 | `evidence/usdtm-p4-evm-validation-20260820T101527Z.json`, SHA-256 `bd255722fdeee9bf9aefef8e8654de561e8656eee2af92a861f97bd8eba15aed` | Refreshed local Ethereum lane-vault baseline | Exact current Solidity, tests, lockfile, compiler and tool hashes bind 22 passing ERC-20 and native-vault bytecode tests with zero moderate-or-higher dependency findings. | `phaseGatePassed:false`. Local Hardhat, mock token and mock Minima verifier only; no public deployment, signature, transaction or funds. Independent hostile review remains open. |
+| `E-USDTM-043` | 2026-08-20 | `evidence/canonical-bridge-p6-roster-20260820T134859Z.json`, SHA-256 `32be22673f668b1a39a7dded1eae46d8373bc7c71fce238595fa10daea9ff8b0` | Moneyless attestor roster registry validation | Exact registry, readiness, reward-index and work-recorder fixtures, test, config, lockfile, compiler, tool and bytecode hashes bind seven passing local EVM tests. The roster commits the minimum self-bond and exact reward-index and work-recorder addresses; the ABI has no payable, owner, administrator or upgrade function. | `phaseGatePassed:false`. This selects no real candidates, bond asset or economic values. Bond readiness is mocked; no production slash, work-reward allocation, claim or bridge-message verification exists. |
+| `E-USDTM-044` | 2026-08-20 | `evidence/canonical-bridge-p6-bond-vault-20260820T134913Z.json`, SHA-256 `03012d86db8fe71929e752d157b5d3c2ab0af015fb4127277cee2baf37048a40` | Exact attestor bond-custody validation | Exact vault, roster, reward-checkpoint, work-recorder and token fixtures, test, config, lockfile, compiler, tool and bytecode hashes bind eight passing local EVM tests. The vault checkpoints reward debt before successful bond-balance increases and retains separated self/delegated accounting; its ABI has no payable, privileged, withdrawal, slash, sweep or rescue function. | `phaseGatePassed:false`. Local fixtures only; no release, work-reward allocation, claim or production adjudication path exists, and no real token, bond, signature or public transaction exists. |
+| `E-USDTM-045` | 2026-08-20 | `evidence/canonical-bridge-p6-exposure-controller-20260820T134943Z.json`, SHA-256 `2ed0151ac245619a4c5af4462e34b8e3357e31412458f02140b5cc5c1a7122b1` | Aggregate two-lane exposure-controller validation | Exact controller, lane, roster, bond-vault, reward-checkpoint, work-recorder and token fixtures, test, config, lockfile, compiler, tool and bytecode hashes bind seven passing local EVM tests. The controller records each settlement's exact lane; its ABI has no payable, privileged, lane-replacement or cap-raising function. | `phaseGatePassed:false`. Disposable forwarding lanes only; no P4 vault integration, runway enforcement, production deployment factory, multi-asset valuation, signature, real asset or public transaction exists. |
+| `E-USDTM-046` | 2026-08-20 | `evidence/canonical-bridge-p6-delegated-security-pool-20260820T134931Z.json`, SHA-256 `7eed35a122d3e7f548cbf90189d21c9fd8a8d39dfe4e64c31fce0fbd60cbbc41` | Open delegated security-pool validation | Exact current vault, roster, reward-checkpoint, work-recorder and token fixtures, focused test, config, lockfile, compiler, tool and bytecode hashes bind six passing local EVM tests for selected-attestor contributions, minimum self-bond capacity, full-pool readiness, hostile token behavior and reentrancy rejection. | `phaseGatePassed:false`. Bond-risk indexing and separate work records exist, but this custody remains one-way and non-transferable with no payout claim, slashing, withdrawal, legal ownership, production parameter, real asset or public deployment. |
+| `E-USDTM-047` | 2026-08-20 | `evidence/canonical-bridge-p6-fee-reward-treasury-20260820T134956Z.json`, SHA-256 `2606f150892fd010d4b62d2251f7251e73afa7a65002d7ae0afa4255820f5bf6` | Separate fee and reward treasury validation | Exact treasury, reward index, exposure controller, bond vault, roster, work-recorder, atomic lane and token fixtures, test, config, lockfile, compiler, tool and bytecode hashes bind eight passing local EVM tests. The bond-risk bucket is indexed atomically; the treasury ABI has no payable, privileged, claim, withdrawal, release, slash, sweep or rescue function. | `phaseGatePassed:false`. Fee quotes and P4 routing are not integrated; runway is not an exposure gate; work weights are not allocated; forfeiture and claims do not exist; all assets and parameters are disposable. |
+| `E-USDTM-048` | 2026-08-20 | `evidence/canonical-bridge-p6-epoch-reward-index-20260820T135010Z.json`, SHA-256 `52b7a5076c708f33efd8dcf35fcaed7bb6b8b66cbcfe6292dcf8f548628810e4` | Epoch bond-risk reward-index validation | Exact reward index, treasury, bond vault, roster, controller, lane, work-recorder and token fixtures, focused test, config, lockfile, compiler, tool and bytecode hashes bind eight passing local EVM tests. The public view is explicitly an indexed balance, not a claim; the ABI is non-custodial and has no payable, privileged, payout, withdrawal, transfer, slash, sweep or rescue function. | `phaseGatePassed:false`. Capital-risk accounting only; separately finalized work weights are not allocated here, and forfeiture, post-slash updates, claims, native-ETH adaptation and P4 integration remain absent. |
+| `E-USDTM-049` | 2026-08-20 | `evidence/canonical-bridge-p6-work-epoch-20260820T135431Z.json`, SHA-256 `67f9b68c8ad3d391c1895f88fc4f6a80b0df7bf02501026820b785989c4210ab` | Objective work record and challenge-delayed finalization validation | Exact work recorder, immutable verifier fixture, two-lane fixture, roster, bond vault, exposure controller, token, test, config, lockfile, compiler, tool and bytecode hashes bind ten passing local EVM tests. The ABI is non-custodial and has no payable, privileged, payout, claim, withdrawal, release, transfer, slash, sweep or rescue function. | `phaseGatePassed:false`. Action and timing records only; no infrastructure-uptime proof, decision-truth proof, production verifier, P4 request binding, challenge economics, work-reward allocation, claim, slash or public deployment exists. |
+| `E-USDTM-050` | 2026-08-20 | `evidence/canonical-bridge-p6-work-epoch-20260820T144902Z.json`, SHA-256 `34dc95c86611be39f100891f12648f07a36c24492985b16bfb93f05736a4272d` | Objective accountability and work-finalization validation | Schema v2 binds exact work recorder, objective verifier, finalized-fact fixture, lanes, roster, bond vault, controller, token, test, config, lockfile, compiler, tool and both bytecodes. Twelve tests prove mandatory EIP-712 accountability, exact-domain equivocation, fact-contradiction handling, hostile proof rejection and complete ordered work accumulation. Both ABIs are non-custodial and unprivileged. | `phaseGatePassed:false`. Local ECDSA fixture signatures only. No production fact verifier, Minima WOTS attribution, P4 request binding, challenge economics, work-reward allocation, claim, slash, deployment or public transaction exists. |
+| `E-USDTM-051` | 2026-08-20 | `evidence/canonical-bridge-p6-work-reward-index-20260820T150507Z.json`, SHA-256 `c39f0b9368a0f328eff7aa472c709ca60e8ff4f227a2bb55152056e3d45e600e` | Challenge-finalized work-reward consumption validation | Schema v1 binds the exact work index, recorder, objective verifier, fact fixture, treasury, bond index, bond vault, roster, controller, lanes, tokens, test, compiler profile and bytecodes. Eight tests prove pre-epoch registration, exact in-epoch fee attribution, challenged-decision removal, one-shot per-asset indexing, asset isolation, zero-weight handling and retained rounding without custody movement. Both inspected ABIs are nonpayable and expose no privileged or payout escape. | `phaseGatePassed:false`. Indexed balances are not claimable. No production fact source, P4 request binding, Minima WOTS attribution, forfeiture, slashing, deployment, real asset or public transaction exists. |
 
 ## 10. Execution journal
 
@@ -1154,11 +1205,306 @@ mempool were unchanged. No token, signature or transaction was created. The exac
 address is now published for the small ceremony funding transfer, after which the mined funding
 input address must be pinned as the only residual-return destination.
 
+### Slice 24: live P8 completion, recovery baseline and issuer retirement
+
+The founder funded the dedicated issuer with 0.1 Minima from the pinned address. Four fresh
+purpose-created token IDs mined, both token-bound covenant scripts reproduced identically across
+the Java renderer and two stock nodes, and exact two-input/two-output genesis transactions created
+the USDTm and ETHm control/reserve pairs. A stale signer cascade initially rejected the imported
+proof. A full stopped-node backup was byte-verified before recovery. The normal restart then
+converged to a tip recognized by the canonical issuer, so the authorized destructive archive reset
+was unnecessary. All four canonical genesis proofs imported and tracked without wallet mutation.
+
+CLIENT_UPDATE, RELEASE, CANCEL, RETURN and PAYOUT_ACK then mined for both lanes. All ten
+transactions passed stock-node signatures, MMR proofs, scripts, amounts and exact output checks,
+burned zero and stayed below 64 KiB. Both final controls carry 41 exact state ports with `I=0`,
+`P=0`, full reserve, payout cursor 1 and exact cumulative paid. The five active committee TreeKeys
+end at use 12, both cancellation authorities at use 1, and the return owner at use 2. The complete
+residual Minima balance returned to the exact funding-input address at block 2269833. The empty
+issuer was stopped and marked `NEVER-REUSE`.
+
+Fresh post-ceremony backups of the signer and issuer matched byte-for-byte before both exposed local
+database passwords were replaced with offline H2 AES rekeying. An isolated signer clone and the
+original signer reopened with all 74 keys and exact WOTS counters. The retired issuer wallet opened
+through a read-only JDBC check without restarting its node. P8 is gate-passed and P9 became the
+current `NOW` phase;
+restore rollback, durable leaf reservation and independent operator recovery remain open.
+
+### Slice 25: P9 local guard, rollback observation and hostile refutation
+
+An external journal was created outside every signer-node and backup directory. Its final policy
+pins the exact ten protected TreeKeys, P8 floors and live `64^3=262144` capacity. The current journal
+contains only the final retired-policy genesis. Earlier policy journals remain preserved as
+explicit obsolete siblings. The offline guard suite passes 282 assertions, 14 corruption mutations
+and 40 property steps. The transaction-boundary suite passes 184 assertions, 12 crash cases and 22
+hostile cases with durable one-shot sign steps, exact loaded-body rebinding, nonempty token
+accounting, transaction-bound pre-broadcast `POST_ATTEMPT`, cross-spec post, reconciliation and
+confirmation rejection, and exact confirmation.
+
+A disposable clone of the stale backup reported committee counters `[4,4,4,4,4,0,0]`, cancellation
+`[0,0]` and return owner `0`, and the guard returned `COUNTER_ROLLBACK`. The current signer reported
+`[12,12,12,12,12,0,0]`, cancellation `[1,1]` and return owner `2`. Both nodes are stopped, isolated
+test ports are closed, backups remain preserved and every disposable clone was removed.
+
+Post-run hostile review refuted the network-isolation proof. The first stale-clone run exposed Core
+RPC on a wildcard interface without authentication. Later observations used random in-memory Basic
+authentication, but Core still opened its Minima wire listener on the wildcard base port even with
+`-nop2p`. The wrapper itself issued only `keys action:list` and `quit`, but outside access during the
+first window cannot be excluded. Therefore the entire P8 fixture TreeKey domain is retired from
+future signing. The live policy rejects reservation, legacy build/post entrypoints are disabled and
+the clone runner now fails before startup.
+
+P9 remains `NOW`. Full exit still requires a fresh separately authorized key domain, measured clone
+network isolation, one global fencing authority across restored copies, an independent monotonic or
+WORM journal anchor, a production-equivalent guarded constructor and a trusted exact-chain
+reconciler. No new mainnet transaction or WOTS signature was authorized or intentionally created in
+this slice.
+
+### Slice 26: P9 production-shaped authority and reconciler
+
+The local journal now exposes a validated immutable checkpoint. A new authority wrapper requires a
+declared global exclusive fence with monotonic tokens, no automatic operation expiry and acknowledged
+revocation before reassignment. Every local mutation is compared with an independent checkpoint,
+and the checkpoint advances before a serialized conditional signing operation becomes callable.
+The exact loaded transaction is rebound before and after the durable sign step and inside the final
+conditional gateway. Exact post-sign counters are observed while the same fence remains held.
+
+The authority validator passes 43 assertions, seven hostile cases and one copied-store concurrency
+case. It proves one of two copied local stores is rejected by the shared authority, anchor failure
+prevents the signing callback, last-moment transaction substitution advances no node counter, and
+the complete dependency-injected lifecycle reaches exact check, post and confirmation.
+
+A separate consistent-chain reconciler now derives confirmation and definitive non-settlement from
+one typed source model. Its 21 assertions and nine hostile cases require expiry, complete transaction
+and mempool searches, exact unspent predecessors, absent predicted outputs, no conflicting spend and
+one concrete chain anchor. Caller-supplied independent booleans are no longer sufficient in the
+production-shaped lifecycle path.
+
+All prior 282 guard assertions and 184 transaction-boundary assertions still pass. Fresh source-
+bound evidence consolidates all four validators in `E-USDTM-040`. P9 still does not pass: the global
+fence, independent checkpoint and chain source are fakes; no strict live node adapter or measured
+network isolation exists. The live policy remains disabled, every legacy builder remains locked and
+no node, key, signature, transaction or post ran in this slice.
+
+### Slice 27: executable attestor economics and Ethereum baseline refresh
+
+The attestor discussion is now backed by an integer-only executable reference model. Its current
+source-bound run passes 416 assertions, four hostile cases and 100 randomized accounting steps. It
+requires unanimous acceptance of one ordered roster, equal bonds, a discounted aggregate committee
+cap across lanes, strict principal and fee separation, approve/reject-neutral participation pay,
+security-runway pause with redemption still open, objective-fault-only slashing and a limited equal
+mutual tranche that never consumes an honest member's individual tranche.
+
+Every monetary value and percentage remains illustrative under `O-USDTM-013`. The model is not a
+Solidity implementation and does not solve Minima signer attribution, legal enforcement or actuarial
+sufficiency. `P6-ETHEREUM-COMMITTEE-BOND-AND-REWARD-SPEC.md` separates the future roster, bond,
+exposure, treasury, adjudicator and claim contracts and forbids any route from those components to
+lane principal.
+
+The unchanged P4 Ethereum vault suite was rebuilt with the exact pinned compiler and rerun. All 22
+ERC-20 and native-vault bytecode tests pass, and the dependency audit reports zero moderate, high or
+critical findings. This is a refreshed local baseline only. P4 independent hostile review remains
+open, no committee or bond Solidity exists, and no public Ethereum deployment or transaction was
+performed.
+
+### Slice 28: moneyless unanimous attestor roster registry
+
+The first P6 Solidity component now implements only committee formation. It fixes seven ordered
+candidates and a five-member operating quorum, but activation requires all seven candidates to
+accept the exact roster commitment. The commitment also binds the chain and contract domain,
+bridge identity, epoch, delayed activation block, equal-bond proposal, individual and mutual slash
+allocations, aggregate exposure cap, policy hash and candidate-dossier root. Any candidate may
+withdraw before activation, which supplies the requested opt-out and mutual-vetting behavior. Final
+activation also calls one immutable readiness interface for the exact roster hash and rejects until
+all equal bonds are reported posted. The current readiness contract is explicitly a disposable mock.
+
+Seven local EVM tests cover zero and duplicate candidates, malformed parameters, outsiders, wrong
+commitments, duplicate acceptance, withdrawal, incomplete activation, activation delay, finality
+and ordered-roster domain separation. Source-bound evidence also verifies that the ABI contains no
+payable, owner, administrator or upgrade function. This is intentionally moneyless: it does not
+hold a bond, distribute fees, adjudicate faults, verify bridge messages or deploy publicly. Those
+remain separate review gates under `O-USDTM-013`, and P9 remains a partial pass.
+
+### Slice 29: exact equal-bond custody without release authority
+
+`AttestorBondVaultV1` now supplies the roster's real local readiness interface. Registration is
+permissionless but succeeds only when the target registry points back to the vault and its complete
+onchain proposal plus ordered members reproduce the registry's domain-separated roster hash. Every
+authorized member can then post exactly one equal bond in the exact committed asset. The individual
+and mutual tranches must partition 100% of that bond, currently illustrated as 80% and 20%.
+
+Eight focused local EVM tests cover wrong registries and readiness contracts, outsiders, duplicate
+bonds, seven-member readiness, exact balance-delta accounting, unsolicited balances,
+fee-on-transfer tokens, false and reverting responses, no-return tokens and callback reentrancy.
+Readiness also rechecks that current aggregate custody still covers the full accounted obligation
+for the asset. The compiled ABI exposes no payable, owner, administrator, upgrade, withdrawal,
+slash, sweep or rescue function.
+
+This intentional one-way custody model cannot be used in production. A release path must not exist
+until aggregate liability, replacement continuity, fraud challenges, adjudications, claims and the
+exit delay can all be proved complete. The tests use a locally minted valueless token and disposable
+accounts only. No Ethereum deployment, public transaction, signature, Minima node action or real
+bond occurred.
+
+### Slice 30: one aggregate liability cap across both lanes
+
+`AttestorExposureControllerV1` now commits exactly two ordered lane callers and lane IDs, the bond
+vault and the controller address through the roster policy hash. Its immutable maximum aggregate
+liability is `equal bond * quorum * exposure safety factor`, so the illustrative 100,000 bond,
+five-member quorum and 80% factor produce one 400,000 cap shared by both lanes.
+
+Seven focused local EVM tests prove that neither lane receives its own copy of the cap, settlement
+identities cannot replay across lanes, resolution identities cannot replay, an inactive or
+underbonded roster cannot increase exposure, and one lane cannot release the other lane's
+liability. Release does not depend on current bond readiness, so a valid risk-reducing refund or
+redemption path remains available when new liability is blocked.
+
+The test binds disposable forwarding lanes to a deterministically predicted controller address.
+The actual P4 ERC-20 and native vaults are not integrated, and production deployment would require
+an audited CREATE2 factory or equivalent commitment process. Retirement, replacement continuity,
+unresolved slashing, security-runway pause and multi-asset valuation remain open. No public
+deployment, real asset, signature, Minima node action or chain transaction occurred.
+
+### Slice 31: voluntary delegated security behind approved attestors
+
+`D-USDTM-026` records the decision to let a public depositor choose an approved attestor, add capital
+to that attestor's security pool and eventually share that pool's bridge-security fees and slashing
+risk. Bridge principal remains completely separate. Delegated capital grants no signing, roster,
+admission or governance authority, and an attestor must retain a committed minimum self-bond as
+first-loss alignment.
+
+`AttestorRosterRegistryV1` now commits the minimum self-bond basis points. The local
+`AttestorBondVaultV1` separately accounts self-bond, delegated bond and each contributor's selected
+member position. A public contribution cannot consume the reserved self-bond capacity, and a member
+becomes ready only when its exact equal bond is fully funded and its minimum self-bond is present.
+The illustrative tests use 30% member self-bond and permit at most 70% delegated backing.
+
+Six focused delegated-pool tests and the prior 22 roster, custody and exposure tests all pass, for
+28 local Solidity tests in total. Positions are deliberately internal, non-transferable and one-way
+at this rung. Fee indexing, reward claims, objective slashing, asynchronous exit, legal treatment
+and production percentages must be implemented and reviewed before any real capital can enter. No
+public deployment, real asset, signature, Minima node action or chain transaction occurred.
+
+### Slice 32: separate confirmed-fee treasury and security runway
+
+`AttestorFeeRewardTreasuryV1` now keeps protocol fees completely outside the bridge principal and
+bond vaults. Only the exact two exposure-controller lanes may call it, and a fee is admitted only
+after the controller records the same lane for the one-use settlement identity. The controller now
+persists that settlement-to-lane binding. Each lane has a distinct fee asset, ledger and security
+runway, so one asset cannot silently subsidize another through an unapproved valuation rule.
+
+The illustrative complete fee split is 50% attestors, 20% safety, 10% relayers and 20% operations.
+The attestor amount is then separated into 60% readiness, 25% participation and 15% bond risk. The
+bond-risk ledger is the only pool intended for pro-rata sharing with voluntary security depositors;
+readiness and participation compensate operator work. Integer remainders stay inside the isolated
+fee ledgers, never principal.
+
+Eight focused tests cover exact fee conservation, principal preservation in an atomic lane call,
+cross-lane and replay rejection, rollback when the aggregate cap rejects, fee-on-transfer, false,
+no-return and reentrant tokens, bootstrap funding and independent runway thresholds. The treasury
+is deliberately one-way: no attribution, payout, claim, challenge, forfeiture, slash or withdrawal
+route exists. The P4 lanes do not yet call it and the exposure controller does not yet enforce its
+runway. The complete P6 suite now passes 36 local Solidity tests. No public deployment, real fee,
+principal, asset, security deposit, signature, Minima node action or chain transaction occurred.
+
+### Slice 33: roster-committed epoch bond-risk reward index
+
+`AttestorEpochRewardIndexV1` now implements the objectively measurable portion of the epoch reward
+model. The unanimous roster commits its exact address. The bond vault invokes it before a
+contributor balance can change, establishing reward debt at the current index, and only the bound
+treasury can add a confirmed bond-risk reward. A future contribution therefore cannot inherit fees
+already indexed before that capital became slashable.
+
+Each fee event divides the bond-risk bucket equally across all seven fully bonded member pools, so
+the first five signatures receive no special capital reward. Within a member pool, reward per share
+allocates the amount between the attestor self-bond and chosen voluntary depositors in proportion to
+their recorded bond capital. Each of the two fee assets uses a distinct index. Indivisible member
+and per-share remainders remain unclaimed in treasury custody.
+
+Eight focused tests prove the exact roster, vault, treasury and asset binding; equal self-bonded
+allocation; a 30/35/35 member/depositor split; asset isolation; repeated accumulation; rounding;
+unauthorized-mutation rejection; and atomic rollback when current bond custody is insufficient. The
+complete P6 suite now passes 44 local Solidity tests. Readiness and approve-or-reject participation
+remain unindexed until canonical work records exist. No payout, claim, challenge-finality close,
+forfeiture, slash, withdrawal, public deployment, real asset, signature, Minima node action or chain
+transaction occurred.
+
+### Slice 34: objective work records and challenge-delayed epoch finalization
+
+`AttestorWorkEpochV1` now records the two operator-work inputs that were intentionally excluded from
+the bond-risk index. The unanimous roster commits the exact recorder address. Each member can post
+one readiness heartbeat per fixed block window only while the roster is active and every bond is
+posted. Either exact controller lane can register a unique request and bounded deadline. Every
+member can then submit one timely `APPROVE` or `REJECT`; both choices receive equal participation
+weight, so honest refusal remains eligible and the first five do not capture all work credit.
+
+An immutable verifier is the only route for a challenge to remove one participation unit. Anyone
+may finalize the ordered seven-member weights only after the complete challenge delay. The final
+digest commits chain, recorder, roster, windows, weights, totals and successful challenge count.
+Ten focused tests cover exact bindings, inactive-roster, outsider and underbonded rejection, duplicate and deadline
+rejection, approve/reject neutrality, challenge gating, delayed permissionless finalization and
+alternate-recorder rejection. The complete P6 suite now passes 54 local Solidity tests.
+
+The evidence boundary is strict. A heartbeat proves approved-key activity at one block, not
+infrastructure uptime. A decision record proves choice and timing, not correctness. The immutable
+verifier is a disposable fixed-evidence fixture, not a production fraud proof. No P4 request binding,
+challenge bond, forfeiture, reward allocation, payout, claim, slash, public deployment, real asset,
+signature, Minima node action or public-chain transaction occurred.
+
+### Slice 35: objective accountability signatures and exact work-history finalization
+
+`ObjectiveDecisionVerifierV1` replaces the fixed-evidence verifier used in slice 34. Every counted
+approve or reject now requires the member's valid EIP-712 accountability signature. Its domain binds
+the Ethereum chain, exact verifier, exact work recorder, roster, request identity, request digest and
+decision. A foreign signer, request digest, chain, high-s signature or malformed signature rejects.
+Two valid signatures from the same member for opposite decisions on the exact same request prove
+equivocation without asking any oracle which choice was true.
+
+A second verifier programme handles contradiction with a finalized external fact. It accepts only
+an opposite decision for the exact roster, request and request digest from the immutable fact-source
+address. The test source is deliberately mutable and named `MockFinalizedDecisionFactSource`; it
+does not verify Ethereum or Minima consensus. This keeps the production source-chain verifier and
+Minima finality problem visible instead of converting a mock response into objective truth.
+
+The recorder now hash-chains every accepted readiness heartbeat, request, signed decision and
+successful challenge. Failed attempts do not mutate the accumulator. Delayed finalization binds the
+complete ordered accumulator, record counts, member weights and challenge total, closing the prior
+same-totals/different-history ambiguity. Twelve focused tests and all 56 P6 tests pass. Disposable
+local ECDSA signatures were generated; no Minima WOTS signature, public deployment, bridge transfer,
+reward, payout, claim, slash, Minima node action or public-chain transaction occurred. EIP-712 to
+Minima-WOTS attribution, real P4 request binding, a production finalized-fact source, challenge
+economics and work-reward allocation remain blockers.
+
+### Slice 36: challenge-finalized work-reward consumption
+
+`AttestorWorkRewardIndexV1` now closes the local accounting gap between finalized work and the
+separate fee treasury. The roster commits the work recorder, the recorder commits one future index,
+and that index must register with the exact treasury before the epoch starts. This prevents a later
+replacement from choosing different members, weights, assets or accounting rules after work is
+known.
+
+For each configured asset, only confirmed fees collected inside the exact inclusive work-epoch
+block interval enter the epoch readiness and participation buckets. After the complete challenge
+delay, anyone may index that asset once. The index reads the final ordered seven-member readiness
+and participation weights, so a successfully challenged decision earns zero participation reward.
+A timely approve and timely reject remain equally weighted. Readiness and participation are divided
+independently, the two fee assets cannot cross, and integer or zero-weight remainder stays in
+treasury custody.
+
+Eight focused hostile tests and all 64 P6 Solidity tests pass. Indexing does not transfer tokens,
+and neither the recorder nor index has a claim, payout, withdrawal, owner, administrator or upgrade
+entrypoint. This supersedes only the earlier statement that work-reward allocation was absent. It
+does not make rewards payable and does not close production fact verification, P4 settlement
+binding, ECDSA-to-WOTS attribution, forfeiture, slashing, runway enforcement or P9.
+
 ## 11. Supporting specifications
 
 This control document does not duplicate every byte table or covenant port. The following files are
 the detailed supporting artifacts, with their evidence level kept explicit:
 
+- `CANONICAL-BRIDGE-GENERAL-IMPLEMENTATION-PLAN.md`: readable end-to-end map of the problem,
+  architecture, decisions, finding families, phase dependencies, implementation tasks, acceptance
+  gates and technical references; subordinate to this control document and exact specifications;
 - `bridge-public-inputs-v1.md`: canonical research schema, no deployed verifier;
 - `reserve-covenant-transition-spec-v1.md`: design only, with inbound release revised for threshold
   authentication and remaining inbound branches still to harmonize;
@@ -1180,15 +1526,69 @@ the detailed supporting artifacts, with their evidence level kept explicit:
   synthetic TxPoW serialization and KISS execution against pinned Core;
 - `p7/TreeKeySignatureBenchmark.java` and `validate-minima-treekey-signatures.mjs`: offline pinned
   official-Core signature verification and serialization-size rung;
+- `P9-WOTS-GUARD.md`, `p9-wots-policy.json`, `wots-write-ahead-guard.mjs` and
+  `validate-wots-write-ahead-guard.mjs`: retired live policy plus synthetic enabled local guard,
+  durability, concurrency, mutation and crash validation;
+- `generic-bridge-transaction-lifecycle.mjs` and
+  `validate-generic-p9-transaction-boundaries.mjs`: dependency-injected recovery-safe transaction
+  model and hostile boundary simulation, not a live adapter;
+- `P9-COMPLETION-SPEC.md`, `generic-bridge-p9-signing-authority.mjs` and
+  `validate-generic-p9-signing-authority.mjs`: production-shaped global fence, independent checkpoint
+  and strict conditional-signing interfaces exercised with fakes only;
+- `generic-bridge-p9-chain-reconciler.mjs` and
+  `validate-generic-p9-chain-reconciler.mjs`: one-source exact confirmation and definitive
+  non-settlement model, without a live complete Minima chain-source adapter;
+- `canonical-bridge-attestor-framework-discussion-v1.md`: discussion proposal for committee
+  admission, mutual selection, equal bonds, limited mutual responsibility, remuneration, recovery
+  and public disclosure; not an implemented or production-approved economic policy;
+- `canonical-bridge-attestor-economics-model.mjs` and
+  `validate-canonical-bridge-attestor-economics.mjs`: integer-only executable review model for the
+  illustrative roster, bond, exposure, fee, reward, runway and loss-waterfall rules; not Solidity,
+  adjudication or a production economic decision;
+- `P6-ETHEREUM-COMMITTEE-BOND-AND-REWARD-SPEC.md`: offline contract decomposition and hostile-test
+  requirements for roster, bond, exposure, fee, work-record, adjudication and claim components; no
+  production parameter is selected;
+- `p6/contracts/AttestorRosterRegistryV1.sol`, its local EVM test and
+  `validate-canonical-bridge-p6-roster.mjs`: moneyless unanimous roster and pre-activation opt-out
+  implementation; local evidence only, with no selected candidates, funds or deployment;
+- `p6/contracts/AttestorBondVaultV1.sol`, `MockValuelessBondToken.sol`, the focused local test and
+  `validate-canonical-bridge-p6-bond-vault.mjs`: exact one-way equal-bond custody and live readiness
+  accounting; local valueless evidence only, without withdrawal, slashing or deployment;
+- `p6/test/AttestorDelegatedSecurityPoolV1.js` and
+  `validate-canonical-bridge-p6-delegated-security-pool.mjs`: voluntary selected-attestor backing,
+  minimum self-bond capacity and one-way contributor accounting; local valueless evidence only,
+  without rewards, slashing, withdrawals, transferable positions or deployment;
+- `p6/contracts/AttestorExposureControllerV1.sol`, `MockExposureLane.sol`, the focused local test and
+  `validate-canonical-bridge-p6-exposure-controller.mjs`: one immutable shared cap across the two
+  current lane identities; local forwarding fixtures only, without P4 vault integration;
+- `p6/contracts/AttestorFeeRewardTreasuryV1.sol`, `MockFeeLane.sol`, the focused local test and
+  `validate-canonical-bridge-p6-fee-reward-treasury.mjs`: exact confirmed-fee separation, immutable
+  reward-bucket accounting and isolated security-runway calculation; local one-way custody only,
+  without P4 routing, claims, slashing, withdrawal or deployment;
+- `p6/contracts/AttestorEpochRewardIndexV1.sol`, its focused local test and
+  `validate-canonical-bridge-p6-epoch-reward-index.mjs`: roster-committed, treasury-only,
+  capital-weighted bond-risk indices for two isolated fee assets; local non-custodial accounting
+  only, without work-weight allocation, forfeiture, claims, payouts or deployment;
+- `p6/contracts/AttestorWorkEpochV1.sol`, `ObjectiveDecisionVerifierV1.sol`,
+  `MockFinalizedDecisionFactSource.sol`, the focused local test and
+  `validate-canonical-bridge-p6-work-epoch.mjs`: roster-committed readiness heartbeats, neutral
+  signed approve-or-reject records, self-proving exact-domain equivocation, immutable-source
+  contradiction challenges, ordered history accumulation and delayed permissionless finalization;
+  local evidence only, without uptime proof, production fact verification, Minima WOTS attribution,
+  claims, slashing or deployment;
+- `p6/contracts/AttestorWorkRewardIndexV1.sol`, its focused local test and
+  `validate-canonical-bridge-p6-work-reward-index.mjs`: exact pre-epoch registration and one-shot,
+  per-asset consumption of challenge-finalized readiness and participation weights; non-custodial
+  local accounting only, without claims, payouts, forfeiture, slashing or deployment;
 - `minima-core-zk-verifier-rfc-2026-08-18.md`: Core-facing native-verifier RFC draft;
 - `minima-core-native-verifier-proposal-2026-08-18.md`: concise unsent proposal;
 - `proof-system-selection-matrix.md`: candidates and benchmark gates;
 - `minima-consensus-fixture-spec-v1.md`: first fixture rung;
 - `feasibility-findings-2026-08-18.md`: executed first-candidate findings;
 - `validate-usdtm-control.mjs`: structural and evidence-reference validator for this document;
-- `validate-usdtm-scope.mjs`: read-only final-state check for protected Pool application files;
+- `validate-usdtm-scope.mjs`: standalone-repository boundary check for The Bridge;
 - `research-manifest.json`: artifact hashes;
-- sibling `zk-light-client-bridge-research-plan-2026-08-18.md`: broader research rationale.
+- `MIGRATION.md`: bridge rehome, history-preservation and publication boundary record.
 
 If a supporting file conflicts with a founder decision here, stop and update the conflict openly.
 If an exact encoding conflicts with this summary, inspect both and resolve the discrepancy before

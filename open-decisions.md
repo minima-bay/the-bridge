@@ -79,9 +79,15 @@ No remaining choice below is inferred by the research package.
 9. Attestor bonds and adjudication
 
    Select the per-operator bond, bridge exposure cap, slashable faults, fraud-proof mechanism,
-   challenge period and recovery distribution. The minimum slashable bond of any valid quorum
-   should cover the chosen cap. Slashing can deter or compensate fraud but cannot prevent a quorum
-   from signing a lie.
+   challenge period, recovery distribution and final remuneration schedule. The discussion proposal
+   uses equal bonds, an illustrative 80/20 individual/mutual split, an 80% exposure factor and
+   readiness/participation/risk rewards. The executable reference model tests those values without
+   selecting them. `D-USDTM-026` now fixes open opt-in security pools, strict separation from bridge
+   principal, a minimum attestor self-bond, depositor fee participation, non-transferable initial
+   positions and asynchronous exit as architecture. Select the exact self-bond percentage, pool fee
+   split, asset, reward index, withdrawal delay and legal treatment. The minimum slashable bond of
+   any valid quorum should cover the chosen cap. Slashing can deter or compensate fraud but cannot
+   prevent a quorum from signing a lie.
 
 10. Multi-asset exposure accounting
 
@@ -160,3 +166,18 @@ token-bound genesis and mining CLIENT_UPDATE, RELEASE, CANCEL, RETURN and PAYOUT
 then returning all residual Minima to the exact funding-input address and retiring the empty issuer
 as `NEVER-REUSE`. It does not authorize real collateral, production deployment or changes to the
 concurrent Pool Test V8 work.
+
+P8 outcome: the authorized ceremony completed. Both fresh valueless lane instances mined all five
+exact branches, passed stock-node checks, burned zero and ended with `I=0`, `P=0` and full reserve.
+The complete residual Minima balance returned to the pinned funding-input address, and the empty
+issuer is stopped and `NEVER-REUSE`. P8 is gate-passed and P9 is current. The signer recovery used a
+byte-verified backup and non-destructive canonical convergence; both exposed local database
+passwords were rotated offline with wallet identity and exact WOTS counters preserved. Production,
+real collateral and independent-operator claims remain unauthorized.
+
+P9 partial result: the external rollback detector and offline one-shot leaf-reservation model pass,
+but P9 does not. The first stale-clone run exposed wildcard unauthenticated RPC, and later runs still
+opened Core's wildcard Minima wire listener. The P8 fixture key domain is now retired from all future
+signing, the live policy is disabled, and legacy live builders are locked. A future fresh-key
+ceremony requires separate authorization plus global fencing, an independent monotonic journal
+anchor, measured network isolation and a production-equivalent guarded constructor.

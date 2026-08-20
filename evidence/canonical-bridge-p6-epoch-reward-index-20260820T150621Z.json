@@ -1,0 +1,60 @@
+{
+  "schema": "canonical-bridge-p6-epoch-reward-index-validation/v1",
+  "createdAtUtc": "2026-08-20T15:06:21.811Z",
+  "status": "local-pass",
+  "phaseGatePassed": false,
+  "decision": "D-USDTM-026",
+  "validator": "validate-canonical-bridge-p6-epoch-reward-index.mjs",
+  "validatorSha256": "f8a422b8bbf1a97e8038f6f62d4ca03234973e1bacf467e8ab33ec5527f5d032",
+  "rewardIndexSourceSha256": "283980c542b6eca039b45fed0c2b21c402f513ca559c53fa0a21d3669c4a6aba",
+  "treasurySourceSha256": "1a315f7619e02a7e842c18a981d8c5b7895e81250da77ba04bea98c30fb05ba6",
+  "bondVaultSourceSha256": "1f63347f1bef80e07333293fa5890c392fe1d41f366c21df3c2cea7dc38c94c5",
+  "rosterSourceSha256": "ea5523b3757c93baefccb1a02115c8e89f4cc2437f98ee6627055faed322c73f",
+  "exposureControllerSourceSha256": "5839940ddacec7f4c7037928420b0fd291796fd767c285bbd632bd7da29f647b",
+  "laneFixtureSourceSha256": "a56cc8ac41123fbd233625fd4d7881ed7f03b3aa2f1817707c9731a094f2437a",
+  "workRecorderFixtureSourceSha256": "438b27b51223c9539aa8c8c3f68c4dde9c8a2c7d8d1a134ea6c00e8dba42486b",
+  "tokenFixtureSourceSha256": "aadbb093b2481443f3c55bcb9442a7fbfc32239c85d4f45392d61463dc77c461",
+  "testSourceSha256": "a59ffeea879b65edccec99b97da49a5d2fe9f7ebc228ee6857eb55b902db499d",
+  "configSha256": "d4716f9758419e6daaa2e2a62b1b96b485e7dabcb44707d31578e0e6b1cbcc67",
+  "packageLockSha256": "7b73d3c0cc65ee5ba1664e0cb67e61eb0daa227e39df5e3a6f352337841dfdb6",
+  "pinnedHardhatResolutionVerified": true,
+  "compiler": "0.8.24+commit.e11b9ed9",
+  "hardhat": "3.13.0",
+  "evmTarget": "shanghai",
+  "optimizer": {
+    "enabled": true,
+    "runs": 200
+  },
+  "mochaTestsPassed": 8,
+  "compilationObserved": true,
+  "creationBytecodeBytes": 4737,
+  "creationBytecodeSha256": "4296b6b2d0b9060e4881cc4a09f60c1f93c374cbcd0fbe9d2bf5900e7dff8bb6",
+  "deployedBytecodeBytes": 3970,
+  "deployedBytecodeSha256": "9c744a8a3eea1a402aaedb101b873bb4c3dfd5c07f5bd7f9caa43d09a8ff5aa1",
+  "payableFunctionCount": 0,
+  "privilegedClaimOrReleaseFunctionCount": 0,
+  "provedLocally": [
+    "The exact reward index is committed by the unanimous roster and bound to one bond vault, predicted treasury and two isolated fee assets.",
+    "Only the bond vault can checkpoint a contribution change, and only the bound treasury can index confirmed bond-risk rewards.",
+    "Every fully bonded member pool receives an equal bond-risk amount, avoiding a first-five signer reward race.",
+    "Within one member pool, the member self-bond and voluntary depositor positions accrue pro rata to their recorded slashable capital.",
+    "Reward-per-share debt prevents a future contribution change from inheriting already indexed rewards.",
+    "USDT-like and ETH-like fee rewards use independent indexed accounting without a conversion oracle.",
+    "Repeated confirmed-fee allocations accumulate, while indivisible epoch and per-share rounding remains unclaimed in treasury custody.",
+    "Insufficient live bond custody rejects indexing and atomically rolls back fee custody and settlement-fee consumption.",
+    "The index is non-custodial and exposes no payable, owner, administrator, upgrade, claim, withdrawal, transfer, slash, sweep or rescue function."
+  ],
+  "blockers": [
+    "Only the objectively measurable bond-risk bucket is indexed; readiness and participation records now finalize separately but are not allocated here.",
+    "No culpability forfeiture, post-slash balance update or payout claim exists.",
+    "Current one-way bonds cannot exercise a real post-index withdrawal or replacement checkpoint path.",
+    "The existing P4 lanes are not integrated and the native-ETH fee representation remains a production adapter decision.",
+    "Reward percentages, fee assets and legal treatment remain open under O-USDTM-013.",
+    "P9 remains a partial pass and cannot authorize production bridge operation."
+  ],
+  "limitations": [
+    "This is local capital-weighted accounting at each confirmed fee event, not a complete availability or participation epoch.",
+    "All members, depositors, assets, settlements, fees and reward values are disposable local fixtures.",
+    "No public deployment, claim, payout, real fee, principal, security deposit, signature, Minima node action or chain transaction occurred."
+  ]
+}

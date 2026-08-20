@@ -1,0 +1,102 @@
+{
+  "schema": "generic-p9-wots-node-verification/v1",
+  "createdAt": "2026-08-19T20:40:35.34Z",
+  "mode": "inspect",
+  "rpcCommand": "keys action:list",
+  "walletKeyCount": 74,
+  "protectedCounters": {
+    "committee-0": 4,
+    "committee-1": 4,
+    "committee-2": 4,
+    "committee-3": 4,
+    "committee-4": 4,
+    "committee-5": 0,
+    "committee-6": 0,
+    "cancel-usdtm": 0,
+    "cancel-ethm": 0,
+    "return-owner": 0
+  },
+  "protectedTreeKeyShape": {
+    "committee-0": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    },
+    "committee-1": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    },
+    "committee-2": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    },
+    "committee-3": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    },
+    "committee-4": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    },
+    "committee-5": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    },
+    "committee-6": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    },
+    "cancel-usdtm": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    },
+    "cancel-ethm": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    },
+    "return-owner": {
+      "maximumUses": 262144,
+      "size": 64,
+      "depth": 3
+    }
+  },
+  "verdict": {
+    "schema": "generic-bridge-wots-verdict/v1",
+    "ok": false,
+    "code": "COUNTER_ROLLBACK",
+    "details": {
+      "keyId": "committee-0",
+      "minimum": 12,
+      "observed": 4
+    }
+  },
+  "wrapperSourceConstrainedToProjectedKeyMetadata": true,
+  "wrapperRun": {
+    "cleanupRecordedAt": "2026-08-19T20:40:40.2349219Z",
+    "mode": "Stale",
+    "coreJarSha256": "e8e8b20356d4a688b48d77550fbac2c141107c292af3d9de8ffeb84b3ff8a535",
+    "p2pManagerEnabled": false,
+    "rpcAuthenticated": true,
+    "rpcBindObservedBySourceInspection": "wildcard",
+    "isolatedBasePort": 19701,
+    "isolatedRpcPort": 19705,
+    "staleSourceManifestSha256": "5eec1f0b53485b124741997f72b24cce25167faf7d057e7e9d6ff6d5172d7fb8",
+    "staleCloneManifestMatched": true,
+    "stoppedCleanly": true,
+    "disposableCloneRemoved": true,
+    "originalPortsClosed": true,
+    "isolatedPortsClosed": true,
+    "commandAllowlist": [
+      "keys action:list",
+      "quit"
+    ]
+  }
+}

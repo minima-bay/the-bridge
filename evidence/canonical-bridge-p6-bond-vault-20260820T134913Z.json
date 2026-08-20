@@ -1,0 +1,57 @@
+{
+  "schema": "canonical-bridge-p6-bond-vault-validation/v1",
+  "createdAtUtc": "2026-08-20T13:49:13.761Z",
+  "status": "local-pass",
+  "phaseGatePassed": false,
+  "validator": "validate-canonical-bridge-p6-bond-vault.mjs",
+  "validatorSha256": "cf4bfb23571d90014979a508dd384f7a9db480afff2a69cf99ef44c2eee2e540",
+  "vaultSourceSha256": "1f63347f1bef80e07333293fa5890c392fe1d41f366c21df3c2cea7dc38c94c5",
+  "rosterSourceSha256": "ea5523b3757c93baefccb1a02115c8e89f4cc2437f98ee6627055faed322c73f",
+  "tokenFixtureSourceSha256": "aadbb093b2481443f3c55bcb9442a7fbfc32239c85d4f45392d61463dc77c461",
+  "rewardCheckpointFixtureSourceSha256": "651492f5a89cdc0b1cd52cfd8b8e55765016022ee9b5e259afdeb6992fc9fb19",
+  "workRecorderFixtureSourceSha256": "438b27b51223c9539aa8c8c3f68c4dde9c8a2c7d8d1a134ea6c00e8dba42486b",
+  "testSourceSha256": "daf2fd4f2263e27566385c8c3be54c841097df6f6a02e0115c4282506213e6d0",
+  "configSha256": "d4716f9758419e6daaa2e2a62b1b96b485e7dabcb44707d31578e0e6b1cbcc67",
+  "packageLockSha256": "7b73d3c0cc65ee5ba1664e0cb67e61eb0daa227e39df5e3a6f352337841dfdb6",
+  "pinnedHardhatResolutionVerified": true,
+  "compiler": "0.8.24+commit.e11b9ed9",
+  "hardhat": "3.13.0",
+  "evmTarget": "shanghai",
+  "optimizer": {
+    "enabled": true,
+    "runs": 200
+  },
+  "mochaTestsPassed": 8,
+  "compilationObserved": true,
+  "creationBytecodeBytes": 8098,
+  "creationBytecodeSha256": "5a069adf81343c6b338954807661d7cbba2770a2e13929bc3e5fb8b526f0a24d",
+  "deployedBytecodeBytes": 8069,
+  "deployedBytecodeSha256": "7a95e3aba40eb3cae88747f6fce7422b50723856592ecfcb099e16f92403acf9",
+  "payableFunctionCount": 0,
+  "privilegedOrReleaseFunctionCount": 0,
+  "provedLocally": [
+    "A roster is registered only when its complete onchain fields reproduce its domain-separated hash and point back to this vault.",
+    "Each of seven authorized members can post exactly one equal bond in the exact roster asset.",
+    "The 80 percent individual and 20 percent mutual tranches partition the complete equal bond.",
+    "The roster commits a minimum self-bond amount that delegated capital cannot replace.",
+    "Roster readiness remains false until all seven exact bonds are accounted.",
+    "Readiness becomes false if current aggregate custody falls below the accounted obligation for the bond asset.",
+    "Fee-on-transfer, false-return, reverting and reentrant token behavior fails atomically.",
+    "A no-return token is accepted only when the exact measured balance delta arrives.",
+    "Unsolicited balances do not create member credit or readiness.",
+    "The roster-committed reward index checkpoints contributor debt before any successful bond-balance increase.",
+    "The vault exposes no payable, owner, administrator, upgrade, withdrawal, slash, sweep or rescue function."
+  ],
+  "blockers": [
+    "No withdrawal is implemented until liability, challenge, adjudication, claim and exit-delay gates exist.",
+    "Local readiness and participation records exist separately, but no work-reward allocation, production objective slashing or claim distribution is implemented.",
+    "The bond asset and economic values remain illustrative founder decisions.",
+    "The bridge signature format still lacks an Ethereum-verifiable culpable-signer proof.",
+    "P9 remains a partial pass and cannot authorize production bridge operation."
+  ],
+  "limitations": [
+    "The token, members and amounts are disposable local fixtures; no public contract or real bond exists.",
+    "Current aggregate balance coverage does not prove economic quality, beneficial ownership or future behavior of a selected asset.",
+    "No wallet signature, public transaction, token issuance, Minima node action or real asset was used."
+  ]
+}

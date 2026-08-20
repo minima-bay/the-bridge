@@ -1,0 +1,30 @@
+{
+  "schema": "generic-p9-chain-reconciler-validation/v1",
+  "createdAt": "2026-08-20T10:03:43.000Z",
+  "result": "PASS",
+  "evidenceLevel": "offline dependency-injected consistent-chain reconciliation model",
+  "assertions": 21,
+  "hostileCases": 9,
+  "proved": [
+    "Confirmation derives transaction body, input lineage, outputs, successor digest and depth from one canonical chain source.",
+    "Definitive non-settlement requires expiry, complete transaction and mempool searches, exact unspent predecessors, absent predicted outputs and no conflicting spend.",
+    "Mempool presence, input spending, output presence, conflicting successors, incomplete searches and weak source capabilities fail closed.",
+    "The negative proof is generated from consistent source state rather than caller-supplied independent booleans."
+  ],
+  "notProved": [
+    "No live Minima archive or MegaMMR-backed source implements the required complete lookup interface.",
+    "No RPC, explorer, node, transaction, signature or post was used.",
+    "Minima settlement depth and late-heavier-fork policy remain founder decisions."
+  ],
+  "boundaries": {
+    "newMainnetTransactions": 0,
+    "newWotsSignatures": 0,
+    "realAssets": false
+  },
+  "sourceSha256": {
+    "wots-write-ahead-guard.mjs": "c2bff066aa68b3635ea181b731d6055f211fcf6ca3f4202be762ec4961125192",
+    "generic-bridge-transaction-lifecycle.mjs": "7598b4a933e7f6eb5f0a2bb25b0bac6c495d2fdec7e55b2baebaacdeafc0239e",
+    "generic-bridge-p9-chain-reconciler.mjs": "ca262f378930dc27edf337b51ef0db48d13b7337df78494011732b944a9b2158",
+    "validate-generic-p9-chain-reconciler.mjs": "84ce2ebd5ca0625aa9e5e3d220388c05d8f2ccc91fc6644fdf47caa92d3a7250"
+  }
+}

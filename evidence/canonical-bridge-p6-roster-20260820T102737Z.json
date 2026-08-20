@@ -1,0 +1,46 @@
+{
+  "schema": "canonical-bridge-p6-roster-validation/v1",
+  "createdAtUtc": "2026-08-20T10:27:37.595Z",
+  "status": "local-pass",
+  "phaseGatePassed": false,
+  "validator": "validate-canonical-bridge-p6-roster.mjs",
+  "validatorSha256": "61f68f598e5c6a32828693e1a30ed885d3139b33164f49f9d5cace88937741b5",
+  "contractSourceSha256": "941fc2e98f91815363d473a3db521c645b0176bae69c3b37795dca394302a0dc",
+  "testSourceSha256": "dde3431351e1c9d687c07778126272e3d6c54d1b2ad5a2b08ac18238453927a5",
+  "configSha256": "d4716f9758419e6daaa2e2a62b1b96b485e7dabcb44707d31578e0e6b1cbcc67",
+  "packageLockSha256": "7b73d3c0cc65ee5ba1664e0cb67e61eb0daa227e39df5e3a6f352337841dfdb6",
+  "pinnedHardhatResolutionVerified": true,
+  "compiler": "0.8.24+commit.e11b9ed9",
+  "hardhat": "3.13.0",
+  "evmTarget": "shanghai",
+  "optimizer": {
+    "enabled": true,
+    "runs": 200
+  },
+  "mochaTestsPassed": 7,
+  "compilationObserved": true,
+  "creationBytecodeBytes": 3768,
+  "creationBytecodeSha256": "a8621fb5d1901aa481a649e75e918840597cd869d36300bd45f589342235fdb5",
+  "deployedBytecodeBytes": 2207,
+  "deployedBytecodeSha256": "604021bce5fae18f5cb4141cfeb43ae2fa46bd327789396032166b3a91519d46",
+  "payableFunctionCount": 0,
+  "privilegedFunctionCount": 0,
+  "provedLocally": [
+    "Exactly seven unique nonzero candidates and a five-member operating quorum are pinned.",
+    "All seven candidates must accept the exact ordered roster and policy commitment before activation.",
+    "A candidate may withdraw acceptance before activation, and incomplete rosters cannot activate.",
+    "The activation delay, bridge identity, chain context, equal-bond proposal, slash allocation, exposure cap, policy hash and dossier root are committed.",
+    "The registry has no payable, owner, administrator or upgrade function."
+  ],
+  "blockers": [
+    "Candidate identities, background-check dossiers, bond asset and economic values remain governance decisions.",
+    "Bond custody, reward distribution, objective fault proofs, slashing adjudication and claims are not implemented.",
+    "The bridge message signature format does not yet attribute an objectively slashable signer set.",
+    "P9 remains a partial pass, so this P6 component cannot authorize production bridge operation."
+  ],
+  "limitations": [
+    "This is a local moneyless Hardhat model, not a deployed contract or selected production roster.",
+    "The candidate addresses and economic values used by the tests are disposable illustrative values.",
+    "No wallet signature, public transaction, token, bond, collateral, node action or real asset was used."
+  ]
+}

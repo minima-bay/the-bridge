@@ -1,0 +1,54 @@
+{
+  "schema": "canonical-bridge-p6-bond-vault-validation/v1",
+  "createdAtUtc": "2026-08-20T12:07:55.560Z",
+  "status": "local-pass",
+  "phaseGatePassed": false,
+  "validator": "validate-canonical-bridge-p6-bond-vault.mjs",
+  "validatorSha256": "35e21dc350c1eb5f3b50cea4e6fbb812012174ab3e699fe22fda469ed8304c3a",
+  "vaultSourceSha256": "207814137ae6b02cbb84a34f479be343c4d2823921bfb78cd924a42d8996c201",
+  "rosterSourceSha256": "ca13d1c941fd015edc3721904db2cd52ff4029eb5cc35e80fd546a8da8025cd2",
+  "tokenFixtureSourceSha256": "aadbb093b2481443f3c55bcb9442a7fbfc32239c85d4f45392d61463dc77c461",
+  "testSourceSha256": "fe252e8d6e06a559a8dda479ac222b42d39b9f28e488a81b44b522bffec8f614",
+  "configSha256": "d4716f9758419e6daaa2e2a62b1b96b485e7dabcb44707d31578e0e6b1cbcc67",
+  "packageLockSha256": "7b73d3c0cc65ee5ba1664e0cb67e61eb0daa227e39df5e3a6f352337841dfdb6",
+  "pinnedHardhatResolutionVerified": true,
+  "compiler": "0.8.24+commit.e11b9ed9",
+  "hardhat": "3.13.0",
+  "evmTarget": "shanghai",
+  "optimizer": {
+    "enabled": true,
+    "runs": 200
+  },
+  "mochaTestsPassed": 8,
+  "compilationObserved": true,
+  "creationBytecodeBytes": 6931,
+  "creationBytecodeSha256": "67ee882dc10b32e41f13c45dde3367fb55e434923795a9b843b96447eb7c3d0e",
+  "deployedBytecodeBytes": 6902,
+  "deployedBytecodeSha256": "fab583ba3770806316dab2b713511a64ee04543b5b430be526337999d6a67fcc",
+  "payableFunctionCount": 0,
+  "privilegedOrReleaseFunctionCount": 0,
+  "provedLocally": [
+    "A roster is registered only when its complete onchain fields reproduce its domain-separated hash and point back to this vault.",
+    "Each of seven authorized members can post exactly one equal bond in the exact roster asset.",
+    "The 80 percent individual and 20 percent mutual tranches partition the complete equal bond.",
+    "The roster commits a minimum self-bond amount that delegated capital cannot replace.",
+    "Roster readiness remains false until all seven exact bonds are accounted.",
+    "Readiness becomes false if current aggregate custody falls below the accounted obligation for the bond asset.",
+    "Fee-on-transfer, false-return, reverting and reentrant token behavior fails atomically.",
+    "A no-return token is accepted only when the exact measured balance delta arrives.",
+    "Unsolicited balances do not create member credit or readiness.",
+    "The vault exposes no payable, owner, administrator, upgrade, withdrawal, slash, sweep or rescue function."
+  ],
+  "blockers": [
+    "No withdrawal is implemented until liability, challenge, adjudication, claim and exit-delay gates exist.",
+    "No objective slashing or claim distribution is implemented.",
+    "The bond asset and economic values remain illustrative founder decisions.",
+    "The bridge signature format still lacks an Ethereum-verifiable culpable-signer proof.",
+    "P9 remains a partial pass and cannot authorize production bridge operation."
+  ],
+  "limitations": [
+    "The token, members and amounts are disposable local fixtures; no public contract or real bond exists.",
+    "Current aggregate balance coverage does not prove economic quality, beneficial ownership or future behavior of a selected asset.",
+    "No wallet signature, public transaction, token issuance, Minima node action or real asset was used."
+  ]
+}

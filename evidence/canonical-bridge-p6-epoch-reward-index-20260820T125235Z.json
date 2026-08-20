@@ -1,0 +1,59 @@
+{
+  "schema": "canonical-bridge-p6-epoch-reward-index-validation/v1",
+  "createdAtUtc": "2026-08-20T12:52:35.611Z",
+  "status": "local-pass",
+  "phaseGatePassed": false,
+  "decision": "D-USDTM-026",
+  "validator": "validate-canonical-bridge-p6-epoch-reward-index.mjs",
+  "validatorSha256": "3e5dc2eec42242724dfe0f860ffdea74fc98032afd8972ad52f143507f1fcd97",
+  "rewardIndexSourceSha256": "bce4a9b6a21ee675ea5ef20b2fe8b3dac933703387bf2a5ec0faadd33ddc2276",
+  "treasurySourceSha256": "f32cb83dbfd95de048399f6010002343635df09a6ebdeb59459b726e2e1a0630",
+  "bondVaultSourceSha256": "521bb92360adebefc281d9951944e37445e4ea49e4df46ffdce83046524f5c54",
+  "rosterSourceSha256": "dbc0e1f8e619c6461b2f0d1d2c76800e0d5ed185dee5654568918430efd9b38a",
+  "exposureControllerSourceSha256": "5839940ddacec7f4c7037928420b0fd291796fd767c285bbd632bd7da29f647b",
+  "laneFixtureSourceSha256": "c78002bac92cf5e9ec1a662bc26bed35911f2ca0ca2915fc99e41b542fc2edfb",
+  "tokenFixtureSourceSha256": "aadbb093b2481443f3c55bcb9442a7fbfc32239c85d4f45392d61463dc77c461",
+  "testSourceSha256": "cdac3b3ecbcbd8aae63a424fcb4ce545aad0d57c8f92b30ccd3cc8c927a39b84",
+  "configSha256": "d4716f9758419e6daaa2e2a62b1b96b485e7dabcb44707d31578e0e6b1cbcc67",
+  "packageLockSha256": "7b73d3c0cc65ee5ba1664e0cb67e61eb0daa227e39df5e3a6f352337841dfdb6",
+  "pinnedHardhatResolutionVerified": true,
+  "compiler": "0.8.24+commit.e11b9ed9",
+  "hardhat": "3.13.0",
+  "evmTarget": "shanghai",
+  "optimizer": {
+    "enabled": true,
+    "runs": 200
+  },
+  "mochaTestsPassed": 8,
+  "compilationObserved": true,
+  "creationBytecodeBytes": 4737,
+  "creationBytecodeSha256": "d058b2ead7e056d317bf0529f982c84ea0ec5e09a7ab159f3db97b4227b26596",
+  "deployedBytecodeBytes": 3970,
+  "deployedBytecodeSha256": "0ddd1b68db7348b70423b08561b8c523bb35fce4ef1c64535372b91e67acf3a1",
+  "payableFunctionCount": 0,
+  "privilegedClaimOrReleaseFunctionCount": 0,
+  "provedLocally": [
+    "The exact reward index is committed by the unanimous roster and bound to one bond vault, predicted treasury and two isolated fee assets.",
+    "Only the bond vault can checkpoint a contribution change, and only the bound treasury can index confirmed bond-risk rewards.",
+    "Every fully bonded member pool receives an equal bond-risk amount, avoiding a first-five signer reward race.",
+    "Within one member pool, the member self-bond and voluntary depositor positions accrue pro rata to their recorded slashable capital.",
+    "Reward-per-share debt prevents a future contribution change from inheriting already indexed rewards.",
+    "USDT-like and ETH-like fee rewards use independent indices and claimable accounting without a conversion oracle.",
+    "Repeated confirmed-fee allocations accumulate, while indivisible epoch and per-share rounding remains unclaimed in treasury custody.",
+    "Insufficient live bond custody rejects indexing and atomically rolls back fee custody and settlement-fee consumption.",
+    "The index is non-custodial and exposes no payable, owner, administrator, upgrade, claim, withdrawal, transfer, slash, sweep or rescue function."
+  ],
+  "blockers": [
+    "Only the objectively measurable bond-risk bucket is indexed; readiness and participation need objective work records.",
+    "No challenge-finality epoch close, culpability forfeiture, post-slash balance update or payout claim exists.",
+    "Current one-way bonds cannot exercise a real post-index withdrawal or replacement checkpoint path.",
+    "The existing P4 lanes are not integrated and the native-ETH fee representation remains a production adapter decision.",
+    "Reward percentages, fee assets and legal treatment remain open under O-USDTM-013.",
+    "P9 remains a partial pass and cannot authorize production bridge operation."
+  ],
+  "limitations": [
+    "This is local capital-weighted accounting at each confirmed fee event, not a complete availability or participation epoch.",
+    "All members, depositors, assets, settlements, fees and reward values are disposable local fixtures.",
+    "No public deployment, claim, payout, real fee, principal, security deposit, signature, Minima node action or chain transaction occurred."
+  ]
+}
