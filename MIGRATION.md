@@ -22,7 +22,7 @@ destination identity and exclusion policy.
 - Canonical repository: https://github.com/minima-bay/the-bridge
 - Bridge rehome draft review: https://github.com/minima-bay/the-bridge/pull/1
 - Bay website and About page draft review: https://github.com/minima-bay/minima-bay.github.io/pull/2
-- Current rehome snapshot commit: `a28cf799a4b985971ce1c8530a1f458fd7a98d03`
+- Initial rehome snapshot commit: `a28cf7958627268adecd673a527860d6956de03a`
 - Bay website commit: `815cfbc`
 - Local Bay-parent pointer and submodule commit: `944a120`
 
