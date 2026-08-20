@@ -17,6 +17,19 @@ The pre-move inventory is recorded in `migration/bridge-rehome-preflight.json` w
 sidecar. It records the source parent commit, committed and uncommitted public path counts,
 destination identity and exclusion policy.
 
+## Publication records
+
+- Canonical repository: https://github.com/minima-bay/the-bridge
+- Bridge rehome draft review: https://github.com/minima-bay/the-bridge/pull/1
+- Bay website and About page draft review: https://github.com/minima-bay/minima-bay.github.io/pull/2
+- Current rehome snapshot commit: `a28cf799a4b985971ce1c8530a1f458fd7a98d03`
+- Bay website commit: `815cfbc`
+- Local Bay-parent pointer and submodule commit: `944a120`
+
+The Bay-parent commit remains local because that parent branch already contains unrelated,
+unpublished history. The dedicated Bridge and website changes are published independently through
+the two scoped draft reviews above.
+
 ## Publication boundary
 
 Published:
