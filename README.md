@@ -2,7 +2,7 @@
 
 ![The Bridge logo](assets/bridge-logo.svg)
 
-[Bridge About page](https://minima-bay.github.io/bridge/) |
+[The Bridge: how it works](https://github.com/minima-bay/the-bay/blob/main/docs/BRIDGE.md) |
 [Minima Bay](https://minima-bay.github.io/) |
 [General implementation plan](CANONICAL-BRIDGE-GENERAL-IMPLEMENTATION-PLAN.md) |
 [Attestor framework](canonical-bridge-attestor-framework-discussion-v1.md)
